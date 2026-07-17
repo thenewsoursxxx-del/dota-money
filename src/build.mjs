@@ -13,6 +13,51 @@ const DATA_DIR = join(ROOT, "docs", "data");
 
 const PAGES = Number(process.env.PAGES || 40); // 40 * 100 = up to 4000 recent pro matches
 
+// Per-team timing profile from Tier-1 game durations: early / mid / late strength + tempo.
+function computeTiming(tier1) {
+  const acc = new Map(); // id -> { games, durSum, winDurSum, winDurN, lossDurSum, lossDurN, buckets }
+  const ensure = (id) => {
+    if (!acc.has(id)) {
+      acc.set(id, {
+        games: 0, durSum: 0, winDurSum: 0, winDurN: 0, lossDurSum: 0, lossDurN: 0,
+        short: { g: 0, w: 0 }, mid: { g: 0, w: 0 }, long: { g: 0, w: 0 },
+      });
+    }
+    return acc.get(id);
+  };
+  const add = (id, dur, won) => {
+    if (!dur || dur < 600) return; // ignore broken/very short entries
+    const t = ensure(id);
+    t.games++; t.durSum += dur;
+    if (won) { t.winDurSum += dur; t.winDurN++; } else { t.lossDurSum += dur; t.lossDurN++; }
+    const bucket = dur < 1800 ? t.short : dur <= 2400 ? t.mid : t.long;
+    bucket.g++; if (won) bucket.w++;
+  };
+  for (const m of tier1) {
+    add(m.radiant_team_id, m.duration, m.radiant_win === true);
+    add(m.dire_team_id, m.duration, m.radiant_win === false);
+  }
+  const wr = (b) => (b.g >= 3 ? b.w / b.g : null);
+  const out = new Map();
+  for (const [id, t] of acc) {
+    if (t.games < 5) continue;
+    const avgWin = t.winDurN ? t.winDurSum / t.winDurN : null;
+    const avgLoss = t.lossDurN ? t.lossDurSum / t.lossDurN : null;
+    out.set(id, {
+      games: t.games,
+      avgMin: Math.round(t.durSum / t.games / 60),
+      avgWinMin: avgWin ? Math.round(avgWin / 60) : null,
+      avgLossMin: avgLoss ? Math.round(avgLoss / 60) : null,
+      short: { g: t.short.g, wr: wr(t.short) },
+      mid: { g: t.mid.g, wr: wr(t.mid) },
+      long: { g: t.long.g, wr: wr(t.long) },
+      // Closes games fast when their wins are shorter than their losses.
+      closesFast: avgWin != null && avgLoss != null ? avgWin < avgLoss : null,
+    });
+  }
+  return out;
+}
+
 async function main() {
   console.log("1/4 Загружаю лиги (ищу Tier-1: premium + professional)...");
   const leagues = await getLeagues();
@@ -52,8 +97,9 @@ async function main() {
     console.log("   (не удалось получить /teams, продолжаю без лого)");
   }
 
-  console.log("4/4 Считаю Elo-рейтинги...");
+  console.log("4/4 Считаю Elo-рейтинги и тайминг команд...");
   const eloMap = buildElo(tier1);
+  const timingMap = computeTiming(tier1);
 
   const teamsOut = [...eloMap.values()]
     .map((t) => {
@@ -68,6 +114,7 @@ async function main() {
         wins: t.wins,
         losses: t.losses,
         lastPlayed: t.lastPlayed,
+        timing: timingMap.get(t.id) || null,
       };
     })
     .sort((a, b) => b.rating - a.rating);

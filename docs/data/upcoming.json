@@ -1,11 +1,12 @@
 {
-  "_comment": "Будущие матчи Tier-1 сцены. teamA/teamB — по team_id (надёжнее) или по названию. oddsA/oddsB — десятичные кэфы букмекера на победу в серии; их можно менять вручную. Приложение само посчитает вероятность и value.",
-  "_source": "Реальные оставшиеся матчи Esports World Cup 2026 (плей-офф, Париж). Обновлено 17.07.2026 по факту сыгранных четвертьфиналов (Yandex, PARIVISION, Vici, BetBoom вышли в 1/2). Финал и матч за 3-е место (19.07) добавятся, когда определятся участники.",
+  "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
+  "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
+  "generatedAt": "2026-07-17T19:33:25.724Z",
   "matches": [
     {
-      "id": "ewc2026-sf1",
-      "date": "2026-07-18T11:00:00Z",
-      "event": "Esports World Cup 2026 · Полуфинал 1",
+      "id": "liq-1784372400-0",
+      "date": "2026-07-18T11:00:00.000Z",
+      "event": "Esports World Cup 2026",
       "format": "bo3",
       "teamA": "8255888",
       "teamB": "726228",
@@ -13,9 +14,9 @@
       "oddsB": 2.9
     },
     {
-      "id": "ewc2026-sf2",
-      "date": "2026-07-18T14:30:00Z",
-      "event": "Esports World Cup 2026 · Полуфинал 2",
+      "id": "liq-1784385000-1",
+      "date": "2026-07-18T14:30:00.000Z",
+      "event": "Esports World Cup 2026",
       "format": "bo3",
       "teamA": "9823272",
       "teamB": "9824702",

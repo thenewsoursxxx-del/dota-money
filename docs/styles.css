@@ -172,6 +172,26 @@ button.primary:active { transform: scale(.99); }
 .draft-note.neutral { color: var(--muted); background: var(--bg-3); border-color: var(--border); }
 .draft-note b { color: #ffd23f; }
 
+.style-line {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+.style-line b { color: var(--text); }
+
+.timing-block { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
+.tb-title { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.timing-detail { margin-bottom: 10px; }
+.td-name { font-size: 12px; margin-bottom: 4px; }
+.td-name .hl { color: #ffd23f; font-weight: 600; }
+.td-buckets { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 11px; color: var(--muted); }
+.td-buckets b { color: var(--text); }
+
 .threat-group { margin-top: 16px; border-top: 1px solid var(--border); padding-top: 12px; }
 .threat-head { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
 .threat-sub { font-size: 11px; color: var(--muted); margin-bottom: 10px; }

@@ -99,6 +99,38 @@ function draftNote(prediction, nameA, nameB) {
   return `<div class="draft-note">🎲 Драфт в пользу <b>${favored}</b>: пул ${exposed} читается/контрится (${shift}% к шансу за игру). Детали — во вкладке «Драфт».</div>`;
 }
 
+function timingTag(t) {
+  if (!t) return null;
+  const avg = t.avgMin;
+  let tag;
+  if (avg <= 37) tag = "темповые";
+  else if (avg >= 43) tag = "лейтовые";
+  else tag = "универсалы";
+  return { avg, tag, closesFast: t.closesFast, lateWr: t.long && t.long.wr, earlyWr: t.short && t.short.wr };
+}
+
+function styleLine(a, b) {
+  const ta = timingTag(a.timing);
+  const tb = timingTag(b.timing);
+  if (!ta || !tb) return "";
+  return `<div class="style-line">⏱ <b>${a.name}</b> ~${ta.avg}м · ${ta.tag} &nbsp;·&nbsp; <b>${b.name}</b> ~${tb.avg}м · ${tb.tag}</div>`;
+}
+
+function timingDetail(team) {
+  const t = team.timing;
+  if (!t) return "";
+  const p = (x) => (x == null ? "—" : (x * 100).toFixed(0) + "%");
+  const tag = timingTag(t);
+  return `<div class="timing-detail">
+    <div class="td-name">${team.name} · ~${t.avgMin} мин · <span class="hl">${tag.tag}</span>${t.closesFast === true ? " · закрывают быстро" : t.closesFast === false ? " · тянут в лейт" : ""}</div>
+    <div class="td-buckets">
+      <span>ранняя &lt;30м: <b>${p(t.short.wr)}</b> (${t.short.g})</span>
+      <span>средняя 30-40м: <b>${p(t.mid.wr)}</b> (${t.mid.g})</span>
+      <span>лейт &gt;40м: <b>${p(t.long.wr)}</b> (${t.long.g})</span>
+    </div>
+  </div>`;
+}
+
 function probBar(pa) {
   const a = Math.round(pa * 100);
   const b = 100 - a;
@@ -150,6 +182,7 @@ function renderMatches() {
       ${probBar(p.series.a)}
       ${market}
       ${draftNote(p, a.name, b.name)}
+      ${styleLine(a, b)}
       ${valueBadge(p)}
     </div>`;
   }).join("");
@@ -211,6 +244,7 @@ function runCalc() {
       ${market}
       <div class="kv"><span>Надёжность оценки</span><span>${pct(p.reliability)}</span></div>
       ${draftNote(p, aTeam.name, bTeam.name) ? `<div style="margin-top:10px">${draftNote(p, aTeam.name, bTeam.name)}</div>` : ""}
+      ${(aTeam.timing || bTeam.timing) ? `<div class="timing-block"><div class="tb-title">⏱ Стиль и темп</div>${timingDetail(aTeam)}${timingDetail(bTeam)}</div>` : ""}
       <div style="margin-top:12px">${valueBadge(p)}</div>
     </div>`;
 }

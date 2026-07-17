@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T18:14:28.033Z",
+  "generatedAt": "2026-07-17T19:32:12.720Z",
   "tier1LeagueCount": 2679,
   "matchesUsed": 1150,
   "teams": [
@@ -12,7 +12,26 @@
       "games": 37,
       "wins": 29,
       "losses": 8,
-      "lastPlayed": 1784204826
+      "lastPlayed": 1784204826,
+      "timing": {
+        "games": 37,
+        "avgMin": 44,
+        "avgWinMin": 41,
+        "avgLossMin": 54,
+        "short": {
+          "g": 7,
+          "wr": 0.8571428571428571
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.9
+        },
+        "long": {
+          "g": 20,
+          "wr": 0.7
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 8255888,
@@ -23,7 +42,26 @@
       "games": 58,
       "wins": 37,
       "losses": 21,
-      "lastPlayed": 1784301541
+      "lastPlayed": 1784301541,
+      "timing": {
+        "games": 58,
+        "avgMin": 45,
+        "avgWinMin": 42,
+        "avgLossMin": 49,
+        "short": {
+          "g": 5,
+          "wr": 1
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 35,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9824702,
@@ -34,7 +72,26 @@
       "games": 23,
       "wins": 19,
       "losses": 4,
-      "lastPlayed": 1784215740
+      "lastPlayed": 1784215740,
+      "timing": {
+        "games": 23,
+        "avgMin": 40,
+        "avgWinMin": 37,
+        "avgLossMin": 51,
+        "short": {
+          "g": 4,
+          "wr": 1
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.9
+        },
+        "long": {
+          "g": 9,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9572001,
@@ -45,7 +102,26 @@
       "games": 40,
       "wins": 28,
       "losses": 12,
-      "lastPlayed": 1782408313
+      "lastPlayed": 1782408313,
+      "timing": {
+        "games": 40,
+        "avgMin": 40,
+        "avgWinMin": 38,
+        "avgLossMin": 45,
+        "short": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "mid": {
+          "g": 13,
+          "wr": 1
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.47619047619047616
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10136357,
@@ -56,7 +132,26 @@
       "games": 44,
       "wins": 28,
       "losses": 16,
-      "lastPlayed": 1784301541
+      "lastPlayed": 1784301541,
+      "timing": {
+        "games": 44,
+        "avgMin": 41,
+        "avgWinMin": 39,
+        "avgLossMin": 43,
+        "short": {
+          "g": 6,
+          "wr": 1
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.5555555555555556
+        },
+        "long": {
+          "g": 20,
+          "wr": 0.6
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 7119388,
@@ -67,7 +162,26 @@
       "games": 63,
       "wins": 41,
       "losses": 22,
-      "lastPlayed": 1784204826
+      "lastPlayed": 1784204826,
+      "timing": {
+        "games": 63,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 46,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.7777777777777778
+        },
+        "long": {
+          "g": 40,
+          "wr": 0.6
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10150538,
@@ -78,7 +192,26 @@
       "games": 56,
       "wins": 37,
       "losses": 19,
-      "lastPlayed": 1784134860
+      "lastPlayed": 1784134860,
+      "timing": {
+        "games": 56,
+        "avgMin": 46,
+        "avgWinMin": 47,
+        "avgLossMin": 45,
+        "short": {
+          "g": 5,
+          "wr": 0.8
+        },
+        "mid": {
+          "g": 23,
+          "wr": 0.6521739130434783
+        },
+        "long": {
+          "g": 28,
+          "wr": 0.6428571428571429
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 726228,
@@ -89,7 +222,26 @@
       "games": 61,
       "wins": 35,
       "losses": 26,
-      "lastPlayed": 1784291941
+      "lastPlayed": 1784291941,
+      "timing": {
+        "games": 61,
+        "avgMin": 47,
+        "avgWinMin": 46,
+        "avgLossMin": 47,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 17,
+          "wr": 0.5294117647058824
+        },
+        "long": {
+          "g": 40,
+          "wr": 0.575
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9247354,
@@ -100,7 +252,26 @@
       "games": 56,
       "wins": 38,
       "losses": 18,
-      "lastPlayed": 1784291941
+      "lastPlayed": 1784291941,
+      "timing": {
+        "games": 56,
+        "avgMin": 46,
+        "avgWinMin": 49,
+        "avgLossMin": 40,
+        "short": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "mid": {
+          "g": 13,
+          "wr": 0.6923076923076923
+        },
+        "long": {
+          "g": 39,
+          "wr": 0.717948717948718
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10108947,
@@ -111,7 +282,26 @@
       "games": 9,
       "wins": 9,
       "losses": 0,
-      "lastPlayed": 1777650919
+      "lastPlayed": 1777650919,
+      "timing": {
+        "games": 9,
+        "avgMin": 42,
+        "avgWinMin": 42,
+        "avgLossMin": null,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 1
+        },
+        "long": {
+          "g": 4,
+          "wr": 1
+        },
+        "closesFast": null
+      }
     },
     {
       "id": 5017210,
@@ -122,7 +312,26 @@
       "games": 15,
       "wins": 12,
       "losses": 3,
-      "lastPlayed": 1781767220
+      "lastPlayed": 1781767220,
+      "timing": {
+        "games": 15,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 43,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 1
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.7
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182748,
@@ -133,7 +342,26 @@
       "games": 8,
       "wins": 8,
       "losses": 0,
-      "lastPlayed": 1782934647
+      "lastPlayed": 1782934647,
+      "timing": {
+        "games": 8,
+        "avgMin": 22,
+        "avgWinMin": 22,
+        "avgLossMin": null,
+        "short": {
+          "g": 6,
+          "wr": 1
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": null
+      }
     },
     {
       "id": 9467224,
@@ -144,7 +372,26 @@
       "games": 70,
       "wins": 41,
       "losses": 29,
-      "lastPlayed": 1784118474
+      "lastPlayed": 1784118474,
+      "timing": {
+        "games": 70,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 46,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 24,
+          "wr": 0.5833333333333334
+        },
+        "long": {
+          "g": 42,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182693,
@@ -155,7 +402,26 @@
       "games": 6,
       "wins": 6,
       "losses": 0,
-      "lastPlayed": 1782911902
+      "lastPlayed": 1782911902,
+      "timing": {
+        "games": 6,
+        "avgMin": 37,
+        "avgWinMin": 37,
+        "avgLossMin": null,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": null
+      }
     },
     {
       "id": 10150633,
@@ -166,7 +432,26 @@
       "games": 10,
       "wins": 8,
       "losses": 2,
-      "lastPlayed": 1780418546
+      "lastPlayed": 1780418546,
+      "timing": {
+        "games": 10,
+        "avgMin": 46,
+        "avgWinMin": 44,
+        "avgLossMin": 54,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 1
+        },
+        "long": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10177742,
@@ -177,7 +462,26 @@
       "games": 12,
       "wins": 9,
       "losses": 3,
-      "lastPlayed": 1782934840
+      "lastPlayed": 1782934840,
+      "timing": {
+        "games": 12,
+        "avgMin": 46,
+        "avgWinMin": 45,
+        "avgLossMin": 51,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 8,
+          "wr": 0.625
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10186491,
@@ -188,7 +492,26 @@
       "games": 13,
       "wins": 10,
       "losses": 3,
-      "lastPlayed": 1782955139
+      "lastPlayed": 1782955139,
+      "timing": {
+        "games": 12,
+        "avgMin": 34,
+        "avgWinMin": 32,
+        "avgLossMin": 42,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 5,
+          "wr": 1
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182492,
@@ -199,7 +522,26 @@
       "games": 11,
       "wins": 8,
       "losses": 3,
-      "lastPlayed": 1782928004
+      "lastPlayed": 1782928004,
+      "timing": {
+        "games": 11,
+        "avgMin": 39,
+        "avgWinMin": 40,
+        "avgLossMin": 37,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "long": {
+          "g": 4,
+          "wr": 1
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182514,
@@ -210,7 +552,26 @@
       "games": 7,
       "wins": 6,
       "losses": 1,
-      "lastPlayed": 1782955139
+      "lastPlayed": 1782955139,
+      "timing": {
+        "games": 7,
+        "avgMin": 33,
+        "avgWinMin": 33,
+        "avgLossMin": 32,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182833,
@@ -221,7 +582,26 @@
       "games": 7,
       "wins": 6,
       "losses": 1,
-      "lastPlayed": 1782919338
+      "lastPlayed": 1782919338,
+      "timing": {
+        "games": 7,
+        "avgMin": 36,
+        "avgWinMin": 34,
+        "avgLossMin": 43,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 8532176,
@@ -232,7 +612,26 @@
       "games": 11,
       "wins": 8,
       "losses": 3,
-      "lastPlayed": 1782934746
+      "lastPlayed": 1782934746,
+      "timing": {
+        "games": 11,
+        "avgMin": 39,
+        "avgWinMin": 38,
+        "avgLossMin": 40,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182496,
@@ -243,7 +642,26 @@
       "games": 7,
       "wins": 6,
       "losses": 1,
-      "lastPlayed": 1782920112
+      "lastPlayed": 1782920112,
+      "timing": {
+        "games": 7,
+        "avgMin": 36,
+        "avgWinMin": 34,
+        "avgLossMin": 46,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10136133,
@@ -254,7 +672,26 @@
       "games": 7,
       "wins": 6,
       "losses": 1,
-      "lastPlayed": 1780396611
+      "lastPlayed": 1780396611,
+      "timing": {
+        "games": 7,
+        "avgMin": 51,
+        "avgWinMin": 48,
+        "avgLossMin": 69,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.8571428571428571
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10020555,
@@ -265,7 +702,26 @@
       "games": 39,
       "wins": 20,
       "losses": 19,
-      "lastPlayed": 1781902332
+      "lastPlayed": 1781902332,
+      "timing": {
+        "games": 39,
+        "avgMin": 45,
+        "avgWinMin": 42,
+        "avgLossMin": 48,
+        "short": {
+          "g": 6,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.47619047619047616
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10186492,
@@ -276,7 +732,26 @@
       "games": 11,
       "wins": 8,
       "losses": 3,
-      "lastPlayed": 1782952339
+      "lastPlayed": 1782952339,
+      "timing": {
+        "games": 11,
+        "avgMin": 42,
+        "avgWinMin": 42,
+        "avgLossMin": 44,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9855768,
@@ -287,7 +762,26 @@
       "games": 15,
       "wins": 10,
       "losses": 5,
-      "lastPlayed": 1782928004
+      "lastPlayed": 1782928004,
+      "timing": {
+        "games": 15,
+        "avgMin": 32,
+        "avgWinMin": 28,
+        "avgLossMin": 41,
+        "short": {
+          "g": 7,
+          "wr": 1
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "long": {
+          "g": 4,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182824,
@@ -298,7 +792,8 @@
       "games": 4,
       "wins": 4,
       "losses": 0,
-      "lastPlayed": 1782933382
+      "lastPlayed": 1782933382,
+      "timing": null
     },
     {
       "id": 9425776,
@@ -309,7 +804,8 @@
       "games": 4,
       "wins": 4,
       "losses": 0,
-      "lastPlayed": 1777833725
+      "lastPlayed": 1777833725,
+      "timing": null
     },
     {
       "id": 10149530,
@@ -320,7 +816,26 @@
       "games": 21,
       "wins": 13,
       "losses": 8,
-      "lastPlayed": 1782653592
+      "lastPlayed": 1782653592,
+      "timing": {
+        "games": 21,
+        "avgMin": 48,
+        "avgWinMin": 50,
+        "avgLossMin": 44,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 17,
+          "wr": 0.7058823529411765
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182648,
@@ -331,7 +846,8 @@
       "games": 4,
       "wins": 4,
       "losses": 0,
-      "lastPlayed": 1782896676
+      "lastPlayed": 1782896676,
+      "timing": null
     },
     {
       "id": 10182357,
@@ -342,7 +858,26 @@
       "games": 13,
       "wins": 8,
       "losses": 5,
-      "lastPlayed": 1784133282
+      "lastPlayed": 1784133282,
+      "timing": {
+        "games": 13,
+        "avgMin": 45,
+        "avgWinMin": 42,
+        "avgLossMin": 50,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 9,
+          "wr": 0.5555555555555556
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10158550,
@@ -353,7 +888,26 @@
       "games": 5,
       "wins": 4,
       "losses": 1,
-      "lastPlayed": 1780409729
+      "lastPlayed": 1780409729,
+      "timing": {
+        "games": 5,
+        "avgMin": 47,
+        "avgWinMin": 44,
+        "avgLossMin": 57,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182459,
@@ -364,7 +918,26 @@
       "games": 12,
       "wins": 8,
       "losses": 4,
-      "lastPlayed": 1782913026
+      "lastPlayed": 1782913026,
+      "timing": {
+        "games": 12,
+        "avgMin": 39,
+        "avgWinMin": 37,
+        "avgLossMin": 41,
+        "short": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 36,
@@ -375,7 +948,26 @@
       "games": 42,
       "wins": 25,
       "losses": 17,
-      "lastPlayed": 1782566905
+      "lastPlayed": 1782566905,
+      "timing": {
+        "games": 42,
+        "avgMin": 41,
+        "avgWinMin": 41,
+        "avgLossMin": 41,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 20,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10135834,
@@ -386,7 +978,26 @@
       "games": 25,
       "wins": 15,
       "losses": 10,
-      "lastPlayed": 1782214039
+      "lastPlayed": 1782214039,
+      "timing": {
+        "games": 25,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 42,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.375
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.6923076923076923
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9678463,
@@ -397,7 +1008,26 @@
       "games": 21,
       "wins": 12,
       "losses": 9,
-      "lastPlayed": 1781800291
+      "lastPlayed": 1781800291,
+      "timing": {
+        "games": 21,
+        "avgMin": 42,
+        "avgWinMin": 40,
+        "avgLossMin": 45,
+        "short": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.8
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.46153846153846156
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10108655,
@@ -408,7 +1038,26 @@
       "games": 22,
       "wins": 12,
       "losses": 10,
-      "lastPlayed": 1781888837
+      "lastPlayed": 1781888837,
+      "timing": {
+        "games": 22,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 44,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "long": {
+          "g": 11,
+          "wr": 0.45454545454545453
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 2586976,
@@ -419,7 +1068,26 @@
       "games": 34,
       "wins": 16,
       "losses": 18,
-      "lastPlayed": 1783863780
+      "lastPlayed": 1783863780,
+      "timing": {
+        "games": 34,
+        "avgMin": 45,
+        "avgWinMin": 49,
+        "avgLossMin": 42,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8193371,
@@ -430,7 +1098,26 @@
       "games": 7,
       "wins": 5,
       "losses": 2,
-      "lastPlayed": 1782890035
+      "lastPlayed": 1782890035,
+      "timing": {
+        "games": 7,
+        "avgMin": 31,
+        "avgWinMin": 30,
+        "avgLossMin": 32,
+        "short": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 2576071,
@@ -441,7 +1128,26 @@
       "games": 17,
       "wins": 10,
       "losses": 7,
-      "lastPlayed": 1782667298
+      "lastPlayed": 1782667298,
+      "timing": {
+        "games": 16,
+        "avgMin": 49,
+        "avgWinMin": 48,
+        "avgLossMin": 51,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182498,
@@ -452,7 +1158,26 @@
       "games": 6,
       "wins": 4,
       "losses": 2,
-      "lastPlayed": 1782894345
+      "lastPlayed": 1782894345,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 38,
+        "avgLossMin": 36,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182639,
@@ -463,7 +1188,26 @@
       "games": 10,
       "wins": 6,
       "losses": 4,
-      "lastPlayed": 1782934746
+      "lastPlayed": 1782934746,
+      "timing": {
+        "games": 10,
+        "avgMin": 44,
+        "avgWinMin": 41,
+        "avgLossMin": 48,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9995872,
@@ -474,7 +1218,8 @@
       "games": 2,
       "wins": 2,
       "losses": 0,
-      "lastPlayed": 1780321452
+      "lastPlayed": 1780321452,
+      "timing": null
     },
     {
       "id": 10169967,
@@ -485,7 +1230,8 @@
       "games": 2,
       "wins": 2,
       "losses": 0,
-      "lastPlayed": 1780835453
+      "lastPlayed": 1780835453,
+      "timing": null
     },
     {
       "id": 10186432,
@@ -496,7 +1242,8 @@
       "games": 4,
       "wins": 3,
       "losses": 1,
-      "lastPlayed": 1782857642
+      "lastPlayed": 1782857642,
+      "timing": null
     },
     {
       "id": 9839631,
@@ -507,7 +1254,8 @@
       "games": 4,
       "wins": 3,
       "losses": 1,
-      "lastPlayed": 1777833725
+      "lastPlayed": 1777833725,
+      "timing": null
     },
     {
       "id": 2163,
@@ -518,7 +1266,26 @@
       "games": 56,
       "wins": 28,
       "losses": 28,
-      "lastPlayed": 1784123767
+      "lastPlayed": 1784123767,
+      "timing": {
+        "games": 56,
+        "avgMin": 43,
+        "avgWinMin": 43,
+        "avgLossMin": 43,
+        "short": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 22,
+          "wr": 0.45454545454545453
+        },
+        "long": {
+          "g": 28,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10158718,
@@ -529,7 +1296,8 @@
       "games": 2,
       "wins": 2,
       "losses": 0,
-      "lastPlayed": 1780163399
+      "lastPlayed": 1780163399,
+      "timing": null
     },
     {
       "id": 9291486,
@@ -540,7 +1308,8 @@
       "games": 2,
       "wins": 2,
       "losses": 0,
-      "lastPlayed": 1780818835
+      "lastPlayed": 1780818835,
+      "timing": null
     },
     {
       "id": 10186547,
@@ -551,7 +1320,26 @@
       "games": 8,
       "wins": 5,
       "losses": 3,
-      "lastPlayed": 1782909991
+      "lastPlayed": 1782909991,
+      "timing": {
+        "games": 8,
+        "avgMin": 41,
+        "avgWinMin": 39,
+        "avgLossMin": 43,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 1
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9964962,
@@ -562,7 +1350,26 @@
       "games": 39,
       "wins": 19,
       "losses": 20,
-      "lastPlayed": 1783766400
+      "lastPlayed": 1783766400,
+      "timing": {
+        "games": 39,
+        "avgMin": 40,
+        "avgWinMin": 30,
+        "avgLossMin": 50,
+        "short": {
+          "g": 12,
+          "wr": 1
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.3
+        },
+        "long": {
+          "g": 17,
+          "wr": 0.23529411764705882
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9627650,
@@ -573,7 +1380,26 @@
       "games": 5,
       "wins": 3,
       "losses": 2,
-      "lastPlayed": 1781457244
+      "lastPlayed": 1781457244,
+      "timing": {
+        "games": 5,
+        "avgMin": 37,
+        "avgWinMin": 31,
+        "avgLossMin": 46,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 7777322,
@@ -584,7 +1410,26 @@
       "games": 5,
       "wins": 3,
       "losses": 2,
-      "lastPlayed": 1778429621
+      "lastPlayed": 1778429621,
+      "timing": {
+        "games": 5,
+        "avgMin": 38,
+        "avgWinMin": 41,
+        "avgLossMin": 33,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10115526,
@@ -595,7 +1440,8 @@
       "games": 3,
       "wins": 2,
       "losses": 1,
-      "lastPlayed": 1777828446
+      "lastPlayed": 1777828446,
+      "timing": null
     },
     {
       "id": 2393994,
@@ -606,7 +1452,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1779024589
+      "lastPlayed": 1779024589,
+      "timing": null
     },
     {
       "id": 10096172,
@@ -617,7 +1464,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780048544
+      "lastPlayed": 1780048544,
+      "timing": null
     },
     {
       "id": 9973656,
@@ -628,7 +1476,26 @@
       "games": 14,
       "wins": 7,
       "losses": 7,
-      "lastPlayed": 1781811392
+      "lastPlayed": 1781811392,
+      "timing": {
+        "games": 14,
+        "avgMin": 35,
+        "avgWinMin": 34,
+        "avgLossMin": 35,
+        "short": {
+          "g": 6,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9517326,
@@ -639,7 +1506,8 @@
       "games": 3,
       "wins": 2,
       "losses": 1,
-      "lastPlayed": 1782749307
+      "lastPlayed": 1782749307,
+      "timing": null
     },
     {
       "id": 10135319,
@@ -650,7 +1518,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1777817193
+      "lastPlayed": 1777817193,
+      "timing": null
     },
     {
       "id": 10135323,
@@ -661,7 +1530,8 @@
       "games": 3,
       "wins": 2,
       "losses": 1,
-      "lastPlayed": 1777827081
+      "lastPlayed": 1777827081,
+      "timing": null
     },
     {
       "id": 9367752,
@@ -672,7 +1542,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1777817544
+      "lastPlayed": 1777817544,
+      "timing": null
     },
     {
       "id": 10033493,
@@ -683,7 +1554,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1779016314
+      "lastPlayed": 1779016314,
+      "timing": null
     },
     {
       "id": 9896031,
@@ -694,7 +1566,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1779020590
+      "lastPlayed": 1779020590,
+      "timing": null
     },
     {
       "id": 10102110,
@@ -705,7 +1578,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780027703
+      "lastPlayed": 1780027703,
+      "timing": null
     },
     {
       "id": 10144695,
@@ -716,7 +1590,26 @@
       "games": 19,
       "wins": 11,
       "losses": 8,
-      "lastPlayed": 1782103792
+      "lastPlayed": 1782103792,
+      "timing": {
+        "games": 19,
+        "avgMin": 43,
+        "avgWinMin": 41,
+        "avgLossMin": 47,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 7,
+          "wr": 1
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9449429,
@@ -727,7 +1620,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780045266
+      "lastPlayed": 1780045266,
+      "timing": null
     },
     {
       "id": 10129305,
@@ -738,7 +1632,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780045328
+      "lastPlayed": 1780045328,
+      "timing": null
     },
     {
       "id": 10094876,
@@ -749,7 +1644,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780063537
+      "lastPlayed": 1780063537,
+      "timing": null
     },
     {
       "id": 10158090,
@@ -760,7 +1656,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780074795
+      "lastPlayed": 1780074795,
+      "timing": null
     },
     {
       "id": 8337978,
@@ -771,7 +1668,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780074891
+      "lastPlayed": 1780074891,
+      "timing": null
     },
     {
       "id": 8766111,
@@ -782,7 +1680,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780243817
+      "lastPlayed": 1780243817,
+      "timing": null
     },
     {
       "id": 10026281,
@@ -793,7 +1692,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780244019
+      "lastPlayed": 1780244019,
+      "timing": null
     },
     {
       "id": 7626304,
@@ -804,7 +1704,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1780250954
+      "lastPlayed": 1780250954,
+      "timing": null
     },
     {
       "id": 8215874,
@@ -815,7 +1716,8 @@
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1782767509
+      "lastPlayed": 1782767509,
+      "timing": null
     },
     {
       "id": 10182705,
@@ -826,7 +1728,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1782952339
+      "lastPlayed": 1782952339,
+      "timing": {
+        "games": 9,
+        "avgMin": 36,
+        "avgWinMin": 39,
+        "avgLossMin": 32,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8291895,
@@ -837,7 +1758,26 @@
       "games": 21,
       "wins": 10,
       "losses": 11,
-      "lastPlayed": 1779105538
+      "lastPlayed": 1779105538,
+      "timing": {
+        "games": 21,
+        "avgMin": 48,
+        "avgWinMin": 47,
+        "avgLossMin": 49,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.2857142857142857
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.5384615384615384
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10150610,
@@ -848,7 +1788,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1780327325
+      "lastPlayed": 1780327325,
+      "timing": {
+        "games": 9,
+        "avgMin": 38,
+        "avgWinMin": 32,
+        "avgLossMin": 45,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182732,
@@ -859,7 +1818,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1782849125
+      "lastPlayed": 1782849125,
+      "timing": {
+        "games": 9,
+        "avgMin": 39,
+        "avgWinMin": 45,
+        "avgLossMin": 32,
+        "short": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182738,
@@ -870,7 +1848,26 @@
       "games": 8,
       "wins": 4,
       "losses": 4,
-      "lastPlayed": 1782934647
+      "lastPlayed": 1782934647,
+      "timing": {
+        "games": 8,
+        "avgMin": 28,
+        "avgWinMin": 26,
+        "avgLossMin": 30,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182706,
@@ -881,7 +1878,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1782904234
+      "lastPlayed": 1782904234,
+      "timing": {
+        "games": 9,
+        "avgMin": 34,
+        "avgWinMin": 34,
+        "avgLossMin": 33,
+        "short": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182713,
@@ -892,7 +1908,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1782843592
+      "lastPlayed": 1782843592,
+      "timing": {
+        "games": 9,
+        "avgMin": 37,
+        "avgWinMin": 29,
+        "avgLossMin": 47,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10186464,
@@ -903,7 +1938,26 @@
       "games": 12,
       "wins": 6,
       "losses": 6,
-      "lastPlayed": 1782923299
+      "lastPlayed": 1782923299,
+      "timing": {
+        "games": 12,
+        "avgMin": 44,
+        "avgWinMin": 39,
+        "avgLossMin": 49,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 1
+        },
+        "long": {
+          "g": 8,
+          "wr": 0.25
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182699,
@@ -914,7 +1968,8 @@
       "games": 3,
       "wins": 2,
       "losses": 1,
-      "lastPlayed": 1782829769
+      "lastPlayed": 1782829769,
+      "timing": null
     },
     {
       "id": 10182519,
@@ -925,7 +1980,26 @@
       "games": 13,
       "wins": 7,
       "losses": 6,
-      "lastPlayed": 1782934840
+      "lastPlayed": 1782934840,
+      "timing": {
+        "games": 13,
+        "avgMin": 43,
+        "avgWinMin": 39,
+        "avgLossMin": 48,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.5
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9351740,
@@ -936,7 +2010,26 @@
       "games": 16,
       "wins": 8,
       "losses": 8,
-      "lastPlayed": 1781781307
+      "lastPlayed": 1781781307,
+      "timing": {
+        "games": 16,
+        "avgMin": 49,
+        "avgWinMin": 44,
+        "avgLossMin": 54,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.3
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9895247,
@@ -947,7 +2040,26 @@
       "games": 27,
       "wins": 11,
       "losses": 16,
-      "lastPlayed": 1784215740
+      "lastPlayed": 1784215740,
+      "timing": {
+        "games": 27,
+        "avgMin": 46,
+        "avgWinMin": 46,
+        "avgLossMin": 45,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.4166666666666667
+        },
+        "long": {
+          "g": 14,
+          "wr": 0.35714285714285715
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182654,
@@ -958,7 +2070,26 @@
       "games": 11,
       "wins": 6,
       "losses": 5,
-      "lastPlayed": 1782903640
+      "lastPlayed": 1782903640,
+      "timing": {
+        "games": 11,
+        "avgMin": 38,
+        "avgWinMin": 43,
+        "avgLossMin": 31,
+        "short": {
+          "g": 4,
+          "wr": 0
+        },
+        "mid": {
+          "g": 3,
+          "wr": 1
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182773,
@@ -969,7 +2100,26 @@
       "games": 8,
       "wins": 4,
       "losses": 4,
-      "lastPlayed": 1782915053
+      "lastPlayed": 1782915053,
+      "timing": {
+        "games": 8,
+        "avgMin": 37,
+        "avgWinMin": 31,
+        "avgLossMin": 43,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182524,
@@ -980,7 +2130,26 @@
       "games": 11,
       "wins": 6,
       "losses": 5,
-      "lastPlayed": 1782928125
+      "lastPlayed": 1782928125,
+      "timing": {
+        "games": 11,
+        "avgMin": 33,
+        "avgWinMin": 37,
+        "avgLossMin": 28,
+        "short": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 3,
+          "wr": 1
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182601,
@@ -991,7 +2160,26 @@
       "games": 6,
       "wins": 3,
       "losses": 3,
-      "lastPlayed": 1782909581
+      "lastPlayed": 1782909581,
+      "timing": {
+        "games": 6,
+        "avgMin": 33,
+        "avgWinMin": 38,
+        "avgLossMin": 28,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9799036,
@@ -1002,7 +2190,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1780424891
+      "lastPlayed": 1780424891,
+      "timing": {
+        "games": 9,
+        "avgMin": 34,
+        "avgWinMin": 34,
+        "avgLossMin": 33,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10150267,
@@ -1013,7 +2220,26 @@
       "games": 20,
       "wins": 10,
       "losses": 10,
-      "lastPlayed": 1781716429
+      "lastPlayed": 1781716429,
+      "timing": {
+        "games": 20,
+        "avgMin": 42,
+        "avgWinMin": 44,
+        "avgLossMin": 41,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182755,
@@ -1024,7 +2250,26 @@
       "games": 10,
       "wins": 5,
       "losses": 5,
-      "lastPlayed": 1782904947
+      "lastPlayed": 1782904947,
+      "timing": {
+        "games": 10,
+        "avgMin": 39,
+        "avgWinMin": 43,
+        "avgLossMin": 36,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "long": {
+          "g": 3,
+          "wr": 1
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8254145,
@@ -1035,7 +2280,26 @@
       "games": 19,
       "wins": 10,
       "losses": 9,
-      "lastPlayed": 1782140588
+      "lastPlayed": 1782140588,
+      "timing": {
+        "games": 19,
+        "avgMin": 42,
+        "avgWinMin": 39,
+        "avgLossMin": 45,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "long": {
+          "g": 11,
+          "wr": 0.36363636363636365
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10061609,
@@ -1046,7 +2310,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1777823237
+      "lastPlayed": 1777823237,
+      "timing": null
     },
     {
       "id": 8715395,
@@ -1057,7 +2322,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1777824836
+      "lastPlayed": 1777824836,
+      "timing": null
     },
     {
       "id": 10145416,
@@ -1068,7 +2334,26 @@
       "games": 9,
       "wins": 5,
       "losses": 4,
-      "lastPlayed": 1780338103
+      "lastPlayed": 1780338103,
+      "timing": {
+        "games": 9,
+        "avgMin": 44,
+        "avgWinMin": 41,
+        "avgLossMin": 48,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10001733,
@@ -1079,7 +2364,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780056131
+      "lastPlayed": 1780056131,
+      "timing": null
     },
     {
       "id": 9629413,
@@ -1090,7 +2376,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1777821175
+      "lastPlayed": 1777821175,
+      "timing": null
     },
     {
       "id": 10116138,
@@ -1101,7 +2388,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780031378
+      "lastPlayed": 1780031378,
+      "timing": null
     },
     {
       "id": 10144697,
@@ -1112,7 +2400,8 @@
       "games": 4,
       "wins": 2,
       "losses": 2,
-      "lastPlayed": 1780117967
+      "lastPlayed": 1780117967,
+      "timing": null
     },
     {
       "id": 9766265,
@@ -1123,7 +2412,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780048544
+      "lastPlayed": 1780048544,
+      "timing": null
     },
     {
       "id": 10108233,
@@ -1134,7 +2424,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780048323
+      "lastPlayed": 1780048323,
+      "timing": null
     },
     {
       "id": 9781592,
@@ -1145,7 +2436,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780051878
+      "lastPlayed": 1780051878,
+      "timing": null
     },
     {
       "id": 10122515,
@@ -1156,7 +2448,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780078298
+      "lastPlayed": 1780078298,
+      "timing": null
     },
     {
       "id": 9640559,
@@ -1167,7 +2460,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780079606
+      "lastPlayed": 1780079606,
+      "timing": null
     },
     {
       "id": 10163403,
@@ -1178,7 +2472,8 @@
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780228937
+      "lastPlayed": 1780228937,
+      "timing": null
     },
     {
       "id": 10182650,
@@ -1189,7 +2484,26 @@
       "games": 8,
       "wins": 4,
       "losses": 4,
-      "lastPlayed": 1782867863
+      "lastPlayed": 1782867863,
+      "timing": {
+        "games": 8,
+        "avgMin": 38,
+        "avgWinMin": 38,
+        "avgLossMin": 37,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9895392,
@@ -1200,7 +2514,26 @@
       "games": 45,
       "wins": 20,
       "losses": 25,
-      "lastPlayed": 1784037059
+      "lastPlayed": 1784037059,
+      "timing": {
+        "games": 45,
+        "avgMin": 45,
+        "avgWinMin": 47,
+        "avgLossMin": 44,
+        "short": {
+          "g": 4,
+          "wr": 0
+        },
+        "mid": {
+          "g": 15,
+          "wr": 0.4
+        },
+        "long": {
+          "g": 26,
+          "wr": 0.5384615384615384
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9894442,
@@ -1211,7 +2544,8 @@
       "games": 4,
       "wins": 2,
       "losses": 2,
-      "lastPlayed": 1777698876
+      "lastPlayed": 1777698876,
+      "timing": null
     },
     {
       "id": 9556121,
@@ -1222,7 +2556,26 @@
       "games": 6,
       "wins": 3,
       "losses": 3,
-      "lastPlayed": 1780321452
+      "lastPlayed": 1780321452,
+      "timing": {
+        "games": 6,
+        "avgMin": 39,
+        "avgWinMin": 38,
+        "avgLossMin": 40,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10143469,
@@ -1233,7 +2586,8 @@
       "games": 4,
       "wins": 2,
       "losses": 2,
-      "lastPlayed": 1780835453
+      "lastPlayed": 1780835453,
+      "timing": null
     },
     {
       "id": 10170769,
@@ -1244,7 +2598,26 @@
       "games": 9,
       "wins": 4,
       "losses": 5,
-      "lastPlayed": 1782522531
+      "lastPlayed": 1782522531,
+      "timing": {
+        "games": 9,
+        "avgMin": 33,
+        "avgWinMin": 36,
+        "avgLossMin": 30,
+        "short": {
+          "g": 6,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 7554697,
@@ -1255,7 +2628,26 @@
       "games": 5,
       "wins": 2,
       "losses": 3,
-      "lastPlayed": 1777650919
+      "lastPlayed": 1777650919,
+      "timing": {
+        "games": 5,
+        "avgMin": 41,
+        "avgWinMin": 44,
+        "avgLossMin": 39,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182793,
@@ -1266,7 +2658,26 @@
       "games": 9,
       "wins": 4,
       "losses": 5,
-      "lastPlayed": 1782858846
+      "lastPlayed": 1782858846,
+      "timing": {
+        "games": 9,
+        "avgMin": 35,
+        "avgWinMin": 37,
+        "avgLossMin": 34,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 5014799,
@@ -1277,7 +2688,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1780134650
+      "lastPlayed": 1780134650,
+      "timing": null
     },
     {
       "id": 10182851,
@@ -1288,7 +2700,26 @@
       "games": 7,
       "wins": 3,
       "losses": 4,
-      "lastPlayed": 1782860651
+      "lastPlayed": 1782860651,
+      "timing": {
+        "games": 7,
+        "avgMin": 34,
+        "avgWinMin": 26,
+        "avgLossMin": 40,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10027376,
@@ -1299,7 +2730,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1780164124
+      "lastPlayed": 1780164124,
+      "timing": null
     },
     {
       "id": 9928636,
@@ -1310,7 +2742,26 @@
       "games": 9,
       "wins": 4,
       "losses": 5,
-      "lastPlayed": 1780342323
+      "lastPlayed": 1780342323,
+      "timing": {
+        "games": 9,
+        "avgMin": 41,
+        "avgWinMin": 39,
+        "avgLossMin": 42,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10150500,
@@ -1321,7 +2772,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780033999
+      "lastPlayed": 1780033999,
+      "timing": null
     },
     {
       "id": 9895350,
@@ -1332,7 +2784,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1780168809
+      "lastPlayed": 1780168809,
+      "timing": null
     },
     {
       "id": 7173025,
@@ -1343,7 +2796,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780234774
+      "lastPlayed": 1780234774,
+      "timing": null
     },
     {
       "id": 10164510,
@@ -1354,7 +2808,26 @@
       "games": 7,
       "wins": 3,
       "losses": 4,
-      "lastPlayed": 1782907891
+      "lastPlayed": 1782907891,
+      "timing": {
+        "games": 7,
+        "avgMin": 35,
+        "avgWinMin": 41,
+        "avgLossMin": 31,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10176802,
@@ -1365,7 +2838,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1782833409
+      "lastPlayed": 1782833409,
+      "timing": null
     },
     {
       "id": 10186715,
@@ -1376,7 +2850,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1782909991
+      "lastPlayed": 1782909991,
+      "timing": null
     },
     {
       "id": 10182309,
@@ -1387,7 +2862,26 @@
       "games": 10,
       "wins": 4,
       "losses": 6,
-      "lastPlayed": 1783778088
+      "lastPlayed": 1783778088,
+      "timing": {
+        "games": 10,
+        "avgMin": 42,
+        "avgWinMin": 36,
+        "avgLossMin": 45,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9303383,
@@ -1398,7 +2892,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777399803
+      "lastPlayed": 1777399803,
+      "timing": null
     },
     {
       "id": 10007878,
@@ -1409,7 +2904,26 @@
       "games": 12,
       "wins": 5,
       "losses": 7,
-      "lastPlayed": 1781698511
+      "lastPlayed": 1781698511,
+      "timing": {
+        "games": 12,
+        "avgMin": 48,
+        "avgWinMin": 51,
+        "avgLossMin": 46,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 8,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9104159,
@@ -1420,7 +2934,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777817193
+      "lastPlayed": 1777817193,
+      "timing": null
     },
     {
       "id": 10122270,
@@ -1431,7 +2946,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777817301
+      "lastPlayed": 1777817301,
+      "timing": null
     },
     {
       "id": 8993358,
@@ -1442,7 +2958,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777817370
+      "lastPlayed": 1777817370,
+      "timing": null
     },
     {
       "id": 10134538,
@@ -1453,7 +2970,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777817417
+      "lastPlayed": 1777817417,
+      "timing": null
     },
     {
       "id": 10135326,
@@ -1464,7 +2982,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777817544
+      "lastPlayed": 1777817544,
+      "timing": null
     },
     {
       "id": 10135318,
@@ -1475,7 +2994,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777818221
+      "lastPlayed": 1777818221,
+      "timing": null
     },
     {
       "id": 10116149,
@@ -1486,7 +3006,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777818241
+      "lastPlayed": 1777818241,
+      "timing": null
     },
     {
       "id": 9730797,
@@ -1497,7 +3018,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777818542
+      "lastPlayed": 1777818542,
+      "timing": null
     },
     {
       "id": 10135320,
@@ -1508,7 +3030,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777821038
+      "lastPlayed": 1777821038,
+      "timing": null
     },
     {
       "id": 10135325,
@@ -1519,7 +3042,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1777821529
+      "lastPlayed": 1777821529,
+      "timing": null
     },
     {
       "id": 9530890,
@@ -1530,7 +3054,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1779016314
+      "lastPlayed": 1779016314,
+      "timing": null
     },
     {
       "id": 9672414,
@@ -1541,7 +3066,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780027449
+      "lastPlayed": 1780027449,
+      "timing": null
     },
     {
       "id": 10144217,
@@ -1552,7 +3078,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780027703
+      "lastPlayed": 1780027703,
+      "timing": null
     },
     {
       "id": 2108395,
@@ -1563,7 +3090,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780029317
+      "lastPlayed": 1780029317,
+      "timing": null
     },
     {
       "id": 10137060,
@@ -1574,7 +3102,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780030867
+      "lastPlayed": 1780030867,
+      "timing": null
     },
     {
       "id": 9861098,
@@ -1585,7 +3114,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780045266
+      "lastPlayed": 1780045266,
+      "timing": null
     },
     {
       "id": 3892751,
@@ -1596,7 +3126,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780045328
+      "lastPlayed": 1780045328,
+      "timing": null
     },
     {
       "id": 8376366,
@@ -1607,7 +3138,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780045371
+      "lastPlayed": 1780045371,
+      "timing": null
     },
     {
       "id": 9866162,
@@ -1618,7 +3150,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780045709
+      "lastPlayed": 1780045709,
+      "timing": null
     },
     {
       "id": 10150876,
@@ -1629,7 +3162,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780047547
+      "lastPlayed": 1780047547,
+      "timing": null
     },
     {
       "id": 10157892,
@@ -1640,7 +3174,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780049071
+      "lastPlayed": 1780049071,
+      "timing": null
     },
     {
       "id": 10047709,
@@ -1651,7 +3186,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780049561
+      "lastPlayed": 1780049561,
+      "timing": null
     },
     {
       "id": 10143624,
@@ -1662,7 +3198,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780050224
+      "lastPlayed": 1780050224,
+      "timing": null
     },
     {
       "id": 8419968,
@@ -1673,7 +3210,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780051377
+      "lastPlayed": 1780051377,
+      "timing": null
     },
     {
       "id": 9965097,
@@ -1684,7 +3222,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780063537
+      "lastPlayed": 1780063537,
+      "timing": null
     },
     {
       "id": 10040639,
@@ -1695,7 +3234,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780071274
+      "lastPlayed": 1780071274,
+      "timing": null
     },
     {
       "id": 9798986,
@@ -1706,7 +3246,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1780077754
+      "lastPlayed": 1780077754,
+      "timing": null
     },
     {
       "id": 9948957,
@@ -1717,7 +3258,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780074369
+      "lastPlayed": 1780074369,
+      "timing": null
     },
     {
       "id": 10150414,
@@ -1728,7 +3270,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780074413
+      "lastPlayed": 1780074413,
+      "timing": null
     },
     {
       "id": 10158067,
@@ -1739,7 +3282,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780074575
+      "lastPlayed": 1780074575,
+      "timing": null
     },
     {
       "id": 8571354,
@@ -1750,7 +3294,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780074795
+      "lastPlayed": 1780074795,
+      "timing": null
     },
     {
       "id": 10095819,
@@ -1761,7 +3306,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780074891
+      "lastPlayed": 1780074891,
+      "timing": null
     },
     {
       "id": 6765751,
@@ -1772,7 +3318,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780075553
+      "lastPlayed": 1780075553,
+      "timing": null
     },
     {
       "id": 9776093,
@@ -1783,7 +3330,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780077786
+      "lastPlayed": 1780077786,
+      "timing": null
     },
     {
       "id": 10137663,
@@ -1794,7 +3342,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780109032
+      "lastPlayed": 1780109032,
+      "timing": null
     },
     {
       "id": 9271656,
@@ -1805,7 +3354,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780243817
+      "lastPlayed": 1780243817,
+      "timing": null
     },
     {
       "id": 10162622,
@@ -1816,7 +3366,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780244019
+      "lastPlayed": 1780244019,
+      "timing": null
     },
     {
       "id": 8133215,
@@ -1827,7 +3378,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780250954
+      "lastPlayed": 1780250954,
+      "timing": null
     },
     {
       "id": 9538765,
@@ -1838,7 +3390,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1781457244
+      "lastPlayed": 1781457244,
+      "timing": null
     },
     {
       "id": 10186455,
@@ -1849,7 +3402,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1782754930
+      "lastPlayed": 1782754930,
+      "timing": null
     },
     {
       "id": 10182501,
@@ -1860,7 +3414,26 @@
       "games": 7,
       "wins": 3,
       "losses": 4,
-      "lastPlayed": 1782851256
+      "lastPlayed": 1782851256,
+      "timing": {
+        "games": 7,
+        "avgMin": 41,
+        "avgWinMin": 54,
+        "avgLossMin": 31,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8830114,
@@ -1871,7 +3444,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1782838134
+      "lastPlayed": 1782838134,
+      "timing": null
     },
     {
       "id": 9486230,
@@ -1882,7 +3456,8 @@
       "games": 3,
       "wins": 1,
       "losses": 2,
-      "lastPlayed": 1778429621
+      "lastPlayed": 1778429621,
+      "timing": null
     },
     {
       "id": 10041696,
@@ -1893,7 +3468,26 @@
       "games": 5,
       "wins": 2,
       "losses": 3,
-      "lastPlayed": 1780407968
+      "lastPlayed": 1780407968,
+      "timing": {
+        "games": 5,
+        "avgMin": 27,
+        "avgWinMin": 32,
+        "avgLossMin": 24,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9433599,
@@ -1904,7 +3498,8 @@
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1780860778
+      "lastPlayed": 1780860778,
+      "timing": null
     },
     {
       "id": 9547052,
@@ -1915,7 +3510,26 @@
       "games": 5,
       "wins": 2,
       "losses": 3,
-      "lastPlayed": 1780311237
+      "lastPlayed": 1780311237,
+      "timing": {
+        "games": 5,
+        "avgMin": 29,
+        "avgWinMin": 40,
+        "avgLossMin": 22,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 5095368,
@@ -1926,7 +3540,26 @@
       "games": 7,
       "wins": 3,
       "losses": 4,
-      "lastPlayed": 1782843328
+      "lastPlayed": 1782843328,
+      "timing": {
+        "games": 7,
+        "avgMin": 32,
+        "avgWinMin": 34,
+        "avgLossMin": 30,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9055189,
@@ -1937,7 +3570,26 @@
       "games": 9,
       "wins": 4,
       "losses": 5,
-      "lastPlayed": 1782848383
+      "lastPlayed": 1782848383,
+      "timing": {
+        "games": 9,
+        "avgMin": 38,
+        "avgWinMin": 26,
+        "avgLossMin": 48,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182476,
@@ -1948,7 +3600,26 @@
       "games": 7,
       "wins": 3,
       "losses": 4,
-      "lastPlayed": 1782909581
+      "lastPlayed": 1782909581,
+      "timing": {
+        "games": 7,
+        "avgMin": 36,
+        "avgWinMin": 39,
+        "avgLossMin": 33,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9600331,
@@ -1959,7 +3630,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1780429570
+      "lastPlayed": 1780429570,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 42,
+        "avgLossMin": 37,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9886092,
@@ -1970,7 +3660,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1781550700
+      "lastPlayed": 1781550700,
+      "timing": null
     },
     {
       "id": 10186431,
@@ -1981,7 +3672,8 @@
       "games": 4,
       "wins": 1,
       "losses": 3,
-      "lastPlayed": 1782851934
+      "lastPlayed": 1782851934,
+      "timing": null
     },
     {
       "id": 2885851,
@@ -1992,7 +3684,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1780164838
+      "lastPlayed": 1780164838,
+      "timing": null
     },
     {
       "id": 10144722,
@@ -2003,7 +3696,26 @@
       "games": 9,
       "wins": 4,
       "losses": 5,
-      "lastPlayed": 1780608831
+      "lastPlayed": 1780608831,
+      "timing": {
+        "games": 9,
+        "avgMin": 24,
+        "avgWinMin": 25,
+        "avgLossMin": 22,
+        "short": {
+          "g": 7,
+          "wr": 0.42857142857142855
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10158121,
@@ -2014,7 +3726,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1780163810
+      "lastPlayed": 1780163810,
+      "timing": null
     },
     {
       "id": 10170364,
@@ -2025,7 +3738,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782508204
+      "lastPlayed": 1782508204,
+      "timing": {
+        "games": 6,
+        "avgMin": 36,
+        "avgWinMin": 44,
+        "avgLossMin": 32,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10186497,
@@ -2036,7 +3768,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782868812
+      "lastPlayed": 1782868812,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 41,
+        "avgLossMin": 36,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182860,
@@ -2047,7 +3798,8 @@
       "games": 4,
       "wins": 1,
       "losses": 3,
-      "lastPlayed": 1782835160
+      "lastPlayed": 1782835160,
+      "timing": null
     },
     {
       "id": 10182678,
@@ -2058,7 +3810,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782838762
+      "lastPlayed": 1782838762,
+      "timing": {
+        "games": 6,
+        "avgMin": 49,
+        "avgWinMin": 53,
+        "avgLossMin": 48,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182469,
@@ -2069,7 +3840,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782890035
+      "lastPlayed": 1782890035,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 50,
+        "avgLossMin": 32,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10108166,
@@ -2080,7 +3870,8 @@
       "games": 4,
       "wins": 1,
       "losses": 3,
-      "lastPlayed": 1777632220
+      "lastPlayed": 1777632220,
+      "timing": null
     },
     {
       "id": 9828897,
@@ -2091,7 +3882,26 @@
       "games": 53,
       "wins": 23,
       "losses": 30,
-      "lastPlayed": 1783852811
+      "lastPlayed": 1783852811,
+      "timing": {
+        "games": 53,
+        "avgMin": 43,
+        "avgWinMin": 45,
+        "avgLossMin": 42,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.4444444444444444
+        },
+        "long": {
+          "g": 33,
+          "wr": 0.45454545454545453
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9239282,
@@ -2102,7 +3912,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1780146327
+      "lastPlayed": 1780146327,
+      "timing": null
     },
     {
       "id": 4006794,
@@ -2113,7 +3924,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1780163399
+      "lastPlayed": 1780163399,
+      "timing": null
     },
     {
       "id": 10182482,
@@ -2124,7 +3936,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782832226
+      "lastPlayed": 1782832226,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 29,
+        "avgLossMin": 42,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182656,
@@ -2135,7 +3966,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1782771803
+      "lastPlayed": 1782771803,
+      "timing": null
     },
     {
       "id": 10182810,
@@ -2146,7 +3978,26 @@
       "games": 10,
       "wins": 4,
       "losses": 6,
-      "lastPlayed": 1782935611
+      "lastPlayed": 1782935611,
+      "timing": {
+        "games": 10,
+        "avgMin": 43,
+        "avgWinMin": 41,
+        "avgLossMin": 44,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182458,
@@ -2157,7 +4008,8 @@
       "games": 4,
       "wins": 1,
       "losses": 3,
-      "lastPlayed": 1782829169
+      "lastPlayed": 1782829169,
+      "timing": null
     },
     {
       "id": 10182892,
@@ -2168,7 +4020,26 @@
       "games": 9,
       "wins": 3,
       "losses": 6,
-      "lastPlayed": 1782940007
+      "lastPlayed": 1782940007,
+      "timing": {
+        "games": 9,
+        "avgMin": 38,
+        "avgWinMin": 40,
+        "avgLossMin": 37,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10186683,
@@ -2179,7 +4050,8 @@
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1782859392
+      "lastPlayed": 1782859392,
+      "timing": null
     },
     {
       "id": 9981569,
@@ -2190,7 +4062,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1780410004
+      "lastPlayed": 1780410004,
+      "timing": {
+        "games": 6,
+        "avgMin": 39,
+        "avgWinMin": 27,
+        "avgLossMin": 45,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182715,
@@ -2201,7 +4092,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782850069
+      "lastPlayed": 1782850069,
+      "timing": {
+        "games": 6,
+        "avgMin": 46,
+        "avgWinMin": 68,
+        "avgLossMin": 36,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10008067,
@@ -2212,7 +4122,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1781673040
+      "lastPlayed": 1781673040,
+      "timing": {
+        "games": 6,
+        "avgMin": 33,
+        "avgWinMin": 27,
+        "avgLossMin": 36,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10164198,
@@ -2223,7 +4152,26 @@
       "games": 6,
       "wins": 2,
       "losses": 4,
-      "lastPlayed": 1782496758
+      "lastPlayed": 1782496758,
+      "timing": {
+        "games": 6,
+        "avgMin": 40,
+        "avgWinMin": 43,
+        "avgLossMin": 39,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10163973,
@@ -2234,7 +4182,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782303363
+      "lastPlayed": 1782303363,
+      "timing": {
+        "games": 5,
+        "avgMin": 40,
+        "avgWinMin": 50,
+        "avgLossMin": 38,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10081680,
@@ -2245,7 +4212,26 @@
       "games": 32,
       "wins": 13,
       "losses": 19,
-      "lastPlayed": 1782115744
+      "lastPlayed": 1782115744,
+      "timing": {
+        "games": 32,
+        "avgMin": 41,
+        "avgWinMin": 42,
+        "avgLossMin": 40,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.14285714285714285
+        },
+        "long": {
+          "g": 20,
+          "wr": 0.45
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8965331,
@@ -2256,7 +4242,26 @@
       "games": 7,
       "wins": 2,
       "losses": 5,
-      "lastPlayed": 1780438735
+      "lastPlayed": 1780438735,
+      "timing": {
+        "games": 7,
+        "avgMin": 38,
+        "avgWinMin": 52,
+        "avgLossMin": 33,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10150568,
@@ -2267,7 +4272,26 @@
       "games": 7,
       "wins": 2,
       "losses": 5,
-      "lastPlayed": 1781708042
+      "lastPlayed": 1781708042,
+      "timing": {
+        "games": 7,
+        "avgMin": 34,
+        "avgWinMin": 31,
+        "avgLossMin": 35,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9338413,
@@ -2278,7 +4302,26 @@
       "games": 18,
       "wins": 6,
       "losses": 12,
-      "lastPlayed": 1784051160
+      "lastPlayed": 1784051160,
+      "timing": {
+        "games": 18,
+        "avgMin": 46,
+        "avgWinMin": 40,
+        "avgLossMin": 49,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.25
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9691969,
@@ -2289,7 +4332,26 @@
       "games": 35,
       "wins": 18,
       "losses": 17,
-      "lastPlayed": 1783852811
+      "lastPlayed": 1783852811,
+      "timing": {
+        "games": 35,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 44,
+        "short": {
+          "g": 5,
+          "wr": 0.8
+        },
+        "mid": {
+          "g": 9,
+          "wr": 0.4444444444444444
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.47619047619047616
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 7872957,
@@ -2300,7 +4362,26 @@
       "games": 9,
       "wins": 3,
       "losses": 6,
-      "lastPlayed": 1780497908
+      "lastPlayed": 1780497908,
+      "timing": {
+        "games": 9,
+        "avgMin": 35,
+        "avgWinMin": 53,
+        "avgLossMin": 25,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8795230,
@@ -2311,7 +4392,8 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782857034
+      "lastPlayed": 1782857034,
+      "timing": null
     },
     {
       "id": 10182710,
@@ -2322,7 +4404,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782874656
+      "lastPlayed": 1782874656,
+      "timing": {
+        "games": 5,
+        "avgMin": 42,
+        "avgWinMin": 60,
+        "avgLossMin": 37,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 8838495,
@@ -2333,7 +4434,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782837306
+      "lastPlayed": 1782837306,
+      "timing": {
+        "games": 5,
+        "avgMin": 38,
+        "avgWinMin": 51,
+        "avgLossMin": 35,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9872558,
@@ -2344,7 +4464,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782206656
+      "lastPlayed": 1782206656,
+      "timing": {
+        "games": 5,
+        "avgMin": 39,
+        "avgWinMin": 37,
+        "avgLossMin": 40,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9886289,
@@ -2355,7 +4494,26 @@
       "games": 7,
       "wins": 2,
       "losses": 5,
-      "lastPlayed": 1781681547
+      "lastPlayed": 1781681547,
+      "timing": {
+        "games": 7,
+        "avgMin": 41,
+        "avgWinMin": 39,
+        "avgLossMin": 42,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 8207902,
@@ -2366,7 +4524,8 @@
       "games": 3,
       "wins": 0,
       "losses": 3,
-      "lastPlayed": 1782828678
+      "lastPlayed": 1782828678,
+      "timing": null
     },
     {
       "id": 10186458,
@@ -2377,7 +4536,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782843835
+      "lastPlayed": 1782843835,
+      "timing": {
+        "games": 5,
+        "avgMin": 22,
+        "avgWinMin": 39,
+        "avgLossMin": 18,
+        "short": {
+          "g": 4,
+          "wr": 0
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9819302,
@@ -2388,7 +4566,8 @@
       "games": 3,
       "wins": 0,
       "losses": 3,
-      "lastPlayed": 1780145605
+      "lastPlayed": 1780145605,
+      "timing": null
     },
     {
       "id": 10164102,
@@ -2399,7 +4578,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1780597370
+      "lastPlayed": 1780597370,
+      "timing": {
+        "games": 5,
+        "avgMin": 23,
+        "avgWinMin": 27,
+        "avgLossMin": 23,
+        "short": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182877,
@@ -2410,7 +4608,8 @@
       "games": 3,
       "wins": 0,
       "losses": 3,
-      "lastPlayed": 1782780605
+      "lastPlayed": 1782780605,
+      "timing": null
     },
     {
       "id": 10182752,
@@ -2421,7 +4620,26 @@
       "games": 7,
       "wins": 2,
       "losses": 5,
-      "lastPlayed": 1782858186
+      "lastPlayed": 1782858186,
+      "timing": {
+        "games": 7,
+        "avgMin": 40,
+        "avgWinMin": 51,
+        "avgLossMin": 35,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182486,
@@ -2432,7 +4650,26 @@
       "games": 5,
       "wins": 1,
       "losses": 4,
-      "lastPlayed": 1782840976
+      "lastPlayed": 1782840976,
+      "timing": {
+        "games": 5,
+        "avgMin": 36,
+        "avgWinMin": 44,
+        "avgLossMin": 34,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182485,
@@ -2443,7 +4680,8 @@
       "games": 3,
       "wins": 0,
       "losses": 3,
-      "lastPlayed": 1782896741
+      "lastPlayed": 1782896741,
+      "timing": null
     },
     {
       "id": 9600141,
@@ -2454,7 +4692,26 @@
       "games": 8,
       "wins": 2,
       "losses": 6,
-      "lastPlayed": 1780331284
+      "lastPlayed": 1780331284,
+      "timing": {
+        "games": 8,
+        "avgMin": 40,
+        "avgWinMin": 32,
+        "avgLossMin": 42,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 7917893,
@@ -2465,7 +4722,26 @@
       "games": 7,
       "wins": 2,
       "losses": 5,
-      "lastPlayed": 1782018400
+      "lastPlayed": 1782018400,
+      "timing": {
+        "games": 7,
+        "avgMin": 49,
+        "avgWinMin": 58,
+        "avgLossMin": 46,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 7299465,
@@ -2476,7 +4752,26 @@
       "games": 14,
       "wins": 5,
       "losses": 9,
-      "lastPlayed": 1782482172
+      "lastPlayed": 1782482172,
+      "timing": {
+        "games": 14,
+        "avgMin": 53,
+        "avgWinMin": 53,
+        "avgLossMin": 53,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9098294,
@@ -2487,7 +4782,26 @@
       "games": 17,
       "wins": 7,
       "losses": 10,
-      "lastPlayed": 1782011290
+      "lastPlayed": 1782011290,
+      "timing": {
+        "games": 17,
+        "avgMin": 41,
+        "avgWinMin": 44,
+        "avgLossMin": 39,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.375
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10101793,
@@ -2498,7 +4812,26 @@
       "games": 8,
       "wins": 2,
       "losses": 6,
-      "lastPlayed": 1780311650
+      "lastPlayed": 1780311650,
+      "timing": {
+        "games": 8,
+        "avgMin": 34,
+        "avgWinMin": 33,
+        "avgLossMin": 35,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10157986,
@@ -2509,7 +4842,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1780549149
+      "lastPlayed": 1780549149,
+      "timing": null
     },
     {
       "id": 8971308,
@@ -2520,7 +4854,26 @@
       "games": 6,
       "wins": 1,
       "losses": 5,
-      "lastPlayed": 1781632554
+      "lastPlayed": 1781632554,
+      "timing": {
+        "games": 6,
+        "avgMin": 38,
+        "avgWinMin": 46,
+        "avgLossMin": 36,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0
+        },
+        "long": {
+          "g": 2,
+          "wr": null
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10102001,
@@ -2531,7 +4884,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1780827934
+      "lastPlayed": 1780827934,
+      "timing": null
     },
     {
       "id": 2500088,
@@ -2542,7 +4896,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782755056
+      "lastPlayed": 1782755056,
+      "timing": null
     },
     {
       "id": 10186456,
@@ -2553,7 +4908,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782832157
+      "lastPlayed": 1782832157,
+      "timing": null
     },
     {
       "id": 2239113,
@@ -2564,7 +4920,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782845072
+      "lastPlayed": 1782845072,
+      "timing": null
     },
     {
       "id": 9546449,
@@ -2575,7 +4932,26 @@
       "games": 8,
       "wins": 2,
       "losses": 6,
-      "lastPlayed": 1781927939
+      "lastPlayed": 1781927939,
+      "timing": {
+        "games": 8,
+        "avgMin": 44,
+        "avgWinMin": 29,
+        "avgLossMin": 49,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 4,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10182032,
@@ -2586,7 +4962,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782759816
+      "lastPlayed": 1782759816,
+      "timing": null
     },
     {
       "id": 9256405,
@@ -2597,7 +4974,26 @@
       "games": 10,
       "wins": 2,
       "losses": 8,
-      "lastPlayed": 1783775274
+      "lastPlayed": 1783775274,
+      "timing": {
+        "games": 10,
+        "avgMin": 36,
+        "avgWinMin": 43,
+        "avgLossMin": 34,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10150413,
@@ -2608,7 +5004,26 @@
       "games": 24,
       "wins": 8,
       "losses": 16,
-      "lastPlayed": 1780151101
+      "lastPlayed": 1780151101,
+      "timing": {
+        "games": 24,
+        "avgMin": 46,
+        "avgWinMin": 46,
+        "avgLossMin": 47,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 16,
+          "wr": 0.25
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9866136,
@@ -2619,7 +5034,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782430845
+      "lastPlayed": 1782430845,
+      "timing": null
     },
     {
       "id": 10182769,
@@ -2630,7 +5046,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782756709
+      "lastPlayed": 1782756709,
+      "timing": null
     },
     {
       "id": 10182460,
@@ -2641,7 +5058,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782838385
+      "lastPlayed": 1782838385,
+      "timing": null
     },
     {
       "id": 10182897,
@@ -2652,7 +5070,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782836207
+      "lastPlayed": 1782836207,
+      "timing": null
     },
     {
       "id": 10157562,
@@ -2663,7 +5082,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1781599321
+      "lastPlayed": 1781599321,
+      "timing": null
     },
     {
       "id": 9586367,
@@ -2674,7 +5094,8 @@
       "games": 4,
       "wins": 0,
       "losses": 4,
-      "lastPlayed": 1782757943
+      "lastPlayed": 1782757943,
+      "timing": null
     },
     {
       "id": 8261500,
@@ -2685,7 +5106,26 @@
       "games": 55,
       "wins": 22,
       "losses": 33,
-      "lastPlayed": 1784040961
+      "lastPlayed": 1784040961,
+      "timing": {
+        "games": 55,
+        "avgMin": 49,
+        "avgWinMin": 53,
+        "avgLossMin": 46,
+        "short": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "mid": {
+          "g": 11,
+          "wr": 0.18181818181818182
+        },
+        "long": {
+          "g": 40,
+          "wr": 0.475
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 9255039,
@@ -2696,7 +5136,26 @@
       "games": 18,
       "wins": 5,
       "losses": 13,
-      "lastPlayed": 1782464923
+      "lastPlayed": 1782464923,
+      "timing": {
+        "games": 18,
+        "avgMin": 42,
+        "avgWinMin": 35,
+        "avgLossMin": 44,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 9,
+          "wr": 0.5555555555555556
+        },
+        "long": {
+          "g": 9,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 9885310,
@@ -2707,7 +5166,26 @@
       "games": 11,
       "wins": 3,
       "losses": 8,
-      "lastPlayed": 1781592010
+      "lastPlayed": 1781592010,
+      "timing": {
+        "games": 11,
+        "avgMin": 42,
+        "avgWinMin": 47,
+        "avgLossMin": 41,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10150434,
@@ -2718,7 +5196,26 @@
       "games": 10,
       "wins": 2,
       "losses": 8,
-      "lastPlayed": 1781938326
+      "lastPlayed": 1781938326,
+      "timing": {
+        "games": 10,
+        "avgMin": 44,
+        "avgWinMin": 47,
+        "avgLossMin": 44,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 55,
@@ -2729,7 +5226,26 @@
       "games": 23,
       "wins": 7,
       "losses": 16,
-      "lastPlayed": 1783765956
+      "lastPlayed": 1783765956,
+      "timing": {
+        "games": 23,
+        "avgMin": 42,
+        "avgWinMin": 47,
+        "avgLossMin": 40,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 9,
+          "wr": 0.2222222222222222
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.4166666666666667
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10182299,
@@ -2740,7 +5256,26 @@
       "games": 10,
       "wins": 1,
       "losses": 9,
-      "lastPlayed": 1783775274
+      "lastPlayed": 1783775274,
+      "timing": {
+        "games": 10,
+        "avgMin": 37,
+        "avgWinMin": 33,
+        "avgLossMin": 38,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": true
+      }
     },
     {
       "id": 10144195,
@@ -2751,7 +5286,26 @@
       "games": 14,
       "wins": 2,
       "losses": 12,
-      "lastPlayed": 1779015601
+      "lastPlayed": 1779015601,
+      "timing": {
+        "games": 14,
+        "avgMin": 44,
+        "avgWinMin": 51,
+        "avgLossMin": 43,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 8,
+          "wr": 0.125
+        },
+        "closesFast": false
+      }
     },
     {
       "id": 10019843,
@@ -2762,7 +5316,26 @@
       "games": 22,
       "wins": 5,
       "losses": 17,
-      "lastPlayed": 1783862341
+      "lastPlayed": 1783862341,
+      "timing": {
+        "games": 22,
+        "avgMin": 44,
+        "avgWinMin": 59,
+        "avgLossMin": 40,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.4166666666666667
+        },
+        "closesFast": false
+      }
     }
   ],
   "recentMatches": [
