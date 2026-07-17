@@ -1,6 +1,6 @@
 // DOTA MONEY v1 — fully client-side (static, works on GitHub Pages & as Telegram Mini App).
 
-import { predict } from "./model.mjs";
+import { predict, fairImplied, valueForSide } from "./model.mjs";
 import { analyzeMatchup, applyDraftAdjustment } from "./draft.mjs";
 import { analyzeDraft } from "./live_draft.mjs";
 
@@ -595,6 +595,28 @@ function confBadge(conf) {
   return `<div class="badge ${cls}">Уверенность: ${conf.label} (${(conf.value * 100).toFixed(0)}%)</div>`;
 }
 
+// Compare our series probability to bookmaker odds → value / EV / Kelly.
+function valueBlock(pA, nameA, nameB, oddsA, oddsB) {
+  const oA = Number(oddsA), oB = Number(oddsB);
+  if (!(oA > 1) || !(oB > 1)) return "";
+  const fair = fairImplied(oA, oB);
+  const vA = valueForSide(pA, oA);
+  const vB = valueForSide(1 - pA, oB);
+  const cand = [];
+  if (vA && vA.ev > 0) cand.push({ side: nameA, ...vA });
+  if (vB && vB.ev > 0) cand.push({ side: nameB, ...vB });
+  cand.sort((x, y) => y.ev - x.ev);
+  const best = cand[0];
+  const rec = !best
+    ? `<div class="badge novalue">Value нет — кэфы уже учитывают перевес</div>`
+    : best.ev >= 0.05
+    ? `<div class="badge value">VALUE: ${best.side} @ ${best.odds} · EV +${(best.ev * 100).toFixed(1)}% · Kelly ${(best.kelly * 100).toFixed(1)}%</div>`
+    : `<div class="badge small">Лёгкий перевес: ${best.side} (EV +${(best.ev * 100).toFixed(1)}%), но ниже порога 5%</div>`;
+  return `
+    <div class="kv"><span>Кэфы → честная вер-ть (без вига)</span><span>${fair ? pct(fair.a) + " / " + pct(fair.b) : "—"}</span></div>
+    <div style="margin:8px 0">${rec}</div>`;
+}
+
 function runLiveAnalysis() {
   const out = document.getElementById("live-result");
   if (!metaData) { out.innerHTML = `<div class="loading">Нет мета-данных (build-meta).</div>`; return; }
@@ -653,6 +675,7 @@ function runLiveAnalysis() {
       ${earlyLine}
       <div class="kv"><span>Серия (${format.toUpperCase()})</span><span>${pct(res.seriesA)} / ${pct(1 - res.seriesA)}</span></div>
       <div style="margin:10px 0">${confBadge(res.confidence)}</div>
+      ${valueBlock(res.seriesA, nameA, nameB, document.getElementById("liveOddsA").value, document.getElementById("liveOddsB").value)}
       <div class="curves-wrap">
         ${curveBars(res.score.curves.a, nameA + " — кривая силы")}
         ${curveBars(res.score.curves.b, nameB + " — кривая силы")}

@@ -56,8 +56,13 @@ async function main() {
       const [players, teamHeroesRaw] = await Promise.all([getTeamPlayers(t.id), getTeamHeroes(t.id)]);
       await sleep(DELAY);
 
-      const current = players
-        .filter((p) => p.is_current_team_member && p.account_id)
+      // OpenDota's is_current_team_member flag is unreliable (often false for whole rosters,
+      // e.g. PARIVISION). Trust it only when it marks a plausible roster (>=3); otherwise fall
+      // back to the most-active players on this team_id.
+      const withAcc = players.filter((p) => p.account_id);
+      const flagged = withAcc.filter((p) => p.is_current_team_member);
+      const base = flagged.length >= 3 ? flagged : withAcc;
+      const current = base
         .sort((a, b) => (b.games_played || 0) - (a.games_played || 0))
         .slice(0, N_PLAYERS);
 

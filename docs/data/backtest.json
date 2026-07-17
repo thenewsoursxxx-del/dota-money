@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-07-17T21:28:46.503Z",
+  "matchesInHistory": 1770,
+  "evaluatedMatches": 1098,
+  "warmupGames": 5,
+  "radiantWinRate": 0.5364,
+  "overall": {
+    "accuracy": 0.6066,
+    "brier": 0.2339,
+    "logloss": 0.6602,
+    "baselineBrier_baseRate": 0.2487,
+    "brierSkillScore": 0.0595
+  },
+  "calibration": [
+    {
+      "bucket": "0-10%",
+      "n": 0,
+      "predicted": null,
+      "actual": null
+    },
+    {
+      "bucket": "10-20%",
+      "n": 5,
+      "predicted": 0.18298678760569614,
+      "actual": 0.6
+    },
+    {
+      "bucket": "20-30%",
+      "n": 41,
+      "predicted": 0.26247219830098534,
+      "actual": 0.1951219512195122
+    },
+    {
+      "bucket": "30-40%",
+      "n": 150,
+      "predicted": 0.3581602665649675,
+      "actual": 0.36
+    },
+    {
+      "bucket": "40-50%",
+      "n": 329,
+      "predicted": 0.455845894172472,
+      "actual": 0.48328267477203646
+    },
+    {
+      "bucket": "50-60%",
+      "n": 350,
+      "predicted": 0.5485654248286526,
+      "actual": 0.5885714285714285
+    },
+    {
+      "bucket": "60-70%",
+      "n": 158,
+      "predicted": 0.6409921475574788,
+      "actual": 0.689873417721519
+    },
+    {
+      "bucket": "70-80%",
+      "n": 62,
+      "predicted": 0.7406250994216178,
+      "actual": 0.7741935483870968
+    },
+    {
+      "bucket": "80-90%",
+      "n": 3,
+      "predicted": 0.8145955840851085,
+      "actual": 0.6666666666666666
+    },
+    {
+      "bucket": "90-100%",
+      "n": 0,
+      "predicted": null,
+      "actual": null
+    }
+  ],
+  "timeSplitCalibration": {
+    "trainN": 768,
+    "testN": 330,
+    "fitted": {
+      "scale_a": 0.892,
+      "sideBias_b": 0.2044
+    },
+    "testRaw": {
+      "accuracy": 0.6667,
+      "brier": 0.2208,
+      "logloss": 0.6329
+    },
+    "testCalibrated": {
+      "accuracy": 0.6091,
+      "brier": 0.226,
+      "logloss": 0.6439
+    }
+  }
+}
