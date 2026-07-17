@@ -3,6 +3,7 @@
 import { predict, fairImplied, valueForSide } from "./model.mjs";
 import { analyzeMatchup, applyDraftAdjustment } from "./draft.mjs";
 import { analyzeDraft } from "./live_draft.mjs";
+import { predictML } from "./model_ml.mjs";
 
 const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
 if (tg) { try { tg.ready(); tg.expand(); } catch (e) {} }
@@ -20,23 +21,26 @@ let upcoming = null;     // { matches }
 let draftData = null;    // { heroes, teams: { [id]: {...} } }
 let metaData = null;     // { heroes, synergy, counter }
 let knowledge = null;    // { heroes: { [name]: {...} } }
+let mlModel = null;      // trained logistic model (docs/data/model.json)
 let heroList = [];       // [{ id, name }] sorted, for the picker
 let byId = new Map();
 let byName = new Map();
 
 async function loadData() {
-  const [ds, up, dr, mt, kn] = await Promise.all([
+  const [ds, up, dr, mt, kn, ml] = await Promise.all([
     fetch("data/dataset.json").then((r) => r.json()),
     fetch("data/upcoming.json").then((r) => r.json()).catch(() => ({ matches: [] })),
     fetch("data/draft.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/meta.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/hero_knowledge.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/model.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
   dataset = ds;
   upcoming = up;
   draftData = dr;
   metaData = mt;
   knowledge = kn;
+  mlModel = ml;
   byId = new Map();
   byName = new Map();
   for (const t of dataset.teams) {
@@ -58,9 +62,16 @@ function draftTeam(id) {
   return draftData.teams[String(id)] || null;
 }
 
-// Elo prediction, adjusted by draft/hero-pool analysis when data is available for both teams.
+// Trained ML per-game probability (A wins) from the teams' current-form snapshots.
+// Returns null when the model or a snapshot is missing → callers fall back to raw Elo.
+function mlBaseProb(aTeam, bTeam) {
+  if (!mlModel || !aTeam || !bTeam || !aTeam.ml || !bTeam.ml) return null;
+  return predictML(mlModel, aTeam.ml, bTeam.ml);
+}
+
+// Prediction (ML when available, else Elo), adjusted by draft/hero-pool analysis for both teams.
 function predictFull(aTeam, bTeam, opts) {
-  const base = predict(aTeam, bTeam, opts);
+  const base = predict(aTeam, bTeam, { ...opts, pGameOverride: mlBaseProb(aTeam, bTeam) });
   const dA = draftTeam(aTeam.id);
   const dB = draftTeam(bTeam.id);
   if (dA && dB && dA.roster && dA.roster.length && dB.roster && dB.roster.length) {
@@ -242,8 +253,9 @@ function runCalc() {
   const market = p.market
     ? `<div class="kv"><span>Букмекер (без маржи)</span><span>${pct(p.market.impliedA)} / ${pct(p.market.impliedB)}</span></div>`
     : "";
+  const baseName = mlModel ? "ML" : "Elo";
   const draftRow = p.draft
-    ? `<div class="kv"><span>За игру: Elo → с драфтом</span><span>${pct(p.draft.basePerGame.a)} → ${pct(p.perGame.a)}</span></div>`
+    ? `<div class="kv"><span>За игру: ${baseName} → с драфтом</span><span>${pct(p.draft.basePerGame.a)} → ${pct(p.perGame.a)}</span></div>`
     : "";
   out.innerHTML = `
     <div class="result-block">
@@ -645,6 +657,7 @@ function runLiveAnalysis() {
     assignA: Object.keys(live.assignA).length ? live.assignA : null,
     assignB: Object.keys(live.assignB).length ? live.assignB : null,
     teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
+    baseProbA: mlBaseProb(tA, tB),
     earlyGame: eg,
     nameA, nameB, heroName, format,
   };
@@ -655,9 +668,10 @@ function runLiveAnalysis() {
     .map((x) => `<div class="rz-bullet"><span class="rz-icon">${x.icon}</span><span>${x.text}</span></div>`)
     .join("");
 
+  const baseLabel = mlModel ? "База (ML-модель) → с драфтом" : "База по Elo → с драфтом";
   const eloLine = res.eloProbA != null
-    ? `<div class="kv"><span>База по Elo → с драфтом</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
-    : `<div class="kv"><span>Прогноз по драфту (без Elo)</span><span>${pct(res.priorProbA)}</span></div>`;
+    ? `<div class="kv"><span>${baseLabel}</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
+    : `<div class="kv"><span>Прогноз по драфту (без базы)</span><span>${pct(res.priorProbA)}</span></div>`;
   const egLabel = liveLoadedId ? "+ экономика игры (live)" : "+ ранняя игра (~10 мин)";
   const earlyLine = res.early
     ? `<div class="kv hl-row"><span>${egLabel}</span><span><b>${pct(res.priorProbA)} → ${pct(p)}</b></span></div>`

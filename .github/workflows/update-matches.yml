@@ -24,8 +24,13 @@ jobs:
         with:
           node-version: 22
 
-      - name: Refresh Tier-1 ratings & timing (OpenDota)
+      - name: Refresh Tier-1 ratings, form & training data (OpenDota)
         run: npm run build-data
+        env:
+          PAGES: "150"
+
+      - name: Retrain ML outcome model
+        run: npm run train
 
       - name: Fetch upcoming Tier-1 matches (Liquipedia)
         run: npm run fetch-upcoming

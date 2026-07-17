@@ -351,7 +351,11 @@ export function analyzeDraft(radiant, dire, ctx) {
   const score = scoreDraft(radiant, dire, ctx);
   let probA = score.probA;
   let eloProbA = null;
-  if (ctx.teamsElo && ctx.teamsElo.a && ctx.teamsElo.b) {
+  if (ctx.baseProbA != null) {
+    // Trained ML model supplied the pre-draft probability.
+    eloProbA = ctx.baseProbA;
+    probA = blend(eloProbA, score.probA);
+  } else if (ctx.teamsElo && ctx.teamsElo.a && ctx.teamsElo.b) {
     eloProbA = eloExpected(ctx.teamsElo.a.rating, ctx.teamsElo.b.rating);
     probA = blend(eloProbA, score.probA);
   }

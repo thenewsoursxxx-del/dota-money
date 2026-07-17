@@ -5,7 +5,75 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getLeagues, getTeams, getProMatches } from "./opendota.mjs";
-import { buildElo } from "../docs/model.mjs";
+import { buildElo, eloExpected } from "../docs/model.mjs";
+
+// ---- ML features: time-decayed Elo + recent form, to fight stale/roster-change bias ----
+const DECAY_TAU_DAYS = 120; // rating regresses to mean with this time-constant on inactivity
+const ML_K = 32;
+const WARMUP = 5;           // min prior games per team before a match becomes a training row
+const DAY = 86400;
+
+// Regress a rating toward 1500 based on days idle (recent meta/roster matters more).
+function regressElo(rating, lastPlayed, atTime) {
+  if (!lastPlayed) return rating;
+  const gapDays = Math.max(0, (atTime - lastPlayed) / DAY);
+  return 1500 + (rating - 1500) * Math.exp(-gapDays / DECAY_TAU_DAYS);
+}
+
+// Shrunk win rate + recent-window stats from a team's prior games (all games are < atTime).
+function formWindows(games, lastPlayed, atTime) {
+  const last10 = games.slice(-10);
+  const w10 = last10.reduce((a, g) => a + (g.won ? 1 : 0), 0);
+  const form10 = (w10 + 2.5) / (last10.length + 5); // shrink toward 0.5
+
+  const cutoff = atTime - 45 * DAY;
+  const recent = games.filter((g) => g.t >= cutoff);
+  const w45 = recent.reduce((a, g) => a + (g.won ? 1 : 0), 0);
+  const form45 = (w45 + 2.5) / (recent.length + 5);
+
+  const rust = lastPlayed ? Math.min((atTime - lastPlayed) / DAY, 60) : 21;
+  return { form10, form45, act: recent.length, rust };
+}
+
+// Chronological walk: emit training rows (snapshot pre-match state + outcome) and a
+// final "as of now" snapshot per team for client-side serving.
+function computeMLData(tier1, nowSec) {
+  const st = new Map(); // id -> { elo, lastPlayed, games:[{t,won}] }
+  const ensure = (id) => {
+    if (!st.has(id)) st.set(id, { elo: 1500, lastPlayed: 0, games: [] });
+    return st.get(id);
+  };
+  const snap = (s, atTime) => ({
+    elo: regressElo(s.elo, s.lastPlayed, atTime),
+    ...formWindows(s.games, s.lastPlayed, atTime),
+  });
+
+  const rows = [];
+  const sorted = [...tier1].sort((a, b) => a.start_time - b.start_time);
+  for (const m of sorted) {
+    const A = ensure(m.radiant_team_id);
+    const B = ensure(m.dire_team_id);
+    const t = m.start_time;
+    const sa = snap(A, t), sb = snap(B, t);
+    const y = m.radiant_win ? 1 : 0;
+    if (A.games.length >= WARMUP && B.games.length >= WARMUP) {
+      rows.push({ t, a: sa, b: sb, y });
+    }
+    // Commit decay, then Elo update.
+    const eA = regressElo(A.elo, A.lastPlayed, t);
+    const eB = regressElo(B.elo, B.lastPlayed, t);
+    const exp = eloExpected(eA, eB);
+    A.elo = eA + ML_K * (y - exp);
+    B.elo = eB + ML_K * ((1 - y) - (1 - exp));
+    A.lastPlayed = B.lastPlayed = t;
+    A.games.push({ t, won: y === 1 });
+    B.games.push({ t, won: y === 0 });
+  }
+
+  const snapById = new Map();
+  for (const [id, s] of st) snapById.set(id, snap(s, nowSec));
+  return { rows, snapById };
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -97,13 +165,17 @@ async function main() {
     console.log("   (не удалось получить /teams, продолжаю без лого)");
   }
 
-  console.log("4/4 Считаю Elo-рейтинги и тайминг команд...");
+  console.log("4/4 Считаю Elo-рейтинги, тайминг и ML-фичи (decay + форма)...");
   const eloMap = buildElo(tier1);
   const timingMap = computeTiming(tier1);
+  const nowSec = Math.floor(Date.now() / 1000);
+  const { rows, snapById } = computeMLData(tier1, nowSec);
 
+  const round3 = (x) => Number(x.toFixed(3));
   const teamsOut = [...eloMap.values()]
     .map((t) => {
       const meta = teamMeta.get(t.id) || {};
+      const s = snapById.get(t.id);
       return {
         id: t.id,
         name: (meta.name || t.name || "").trim(),
@@ -115,6 +187,10 @@ async function main() {
         losses: t.losses,
         lastPlayed: t.lastPlayed,
         timing: timingMap.get(t.id) || null,
+        // ML serving snapshot ("as of now"): decayed Elo + recent form.
+        ml: s
+          ? { elo: Math.round(s.elo), form10: round3(s.form10), form45: round3(s.form45), act: s.act, rust: Math.round(s.rust) }
+          : null,
       };
     })
     .sort((a, b) => b.rating - a.rating);
@@ -143,7 +219,12 @@ async function main() {
 
   await mkdir(DATA_DIR, { recursive: true });
   await writeFile(join(DATA_DIR, "dataset.json"), JSON.stringify(dataset, null, 2), "utf8");
+
+  // Training rows (not served to the client) → consumed by src/train_model.mjs.
+  const train = { generatedAt: dataset.generatedAt, nowSec, count: rows.length, rows };
+  await writeFile(join(ROOT, "train.json"), JSON.stringify(train), "utf8");
   console.log(`\nГотово. Команд: ${teamsOut.length}, матчей в основе рейтинга: ${tier1.length}`);
+  console.log(`Обучающих строк (train.json): ${rows.length}`);
   console.log("Топ-10 Tier-1 команд по Elo:");
   teamsOut.slice(0, 10).forEach((t, i) => console.log(`  ${i + 1}. ${t.name} — ${t.rating} (${t.games} игр)`));
 }

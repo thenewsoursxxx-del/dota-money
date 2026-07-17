@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-17T22:01:54.376Z",
+  "type": "logistic_regression",
+  "features": [
+    "eloDiff",
+    "form10Diff",
+    "form45Diff",
+    "actDiff",
+    "rustDiff"
+  ],
+  "halflifeDays": 90,
+  "l2": 1,
+  "trainedRows": 1115,
+  "mean": [
+    0.04401,
+    0.00708,
+    0.00391,
+    0.22547,
+    0.0011
+  ],
+  "std": [
+    0.757,
+    0.15484,
+    0.14108,
+    3.06997,
+    0.12226
+  ],
+  "weights": [
+    0.32303,
+    0.30001,
+    -0.1756,
+    0.16272,
+    -0.05724
+  ],
+  "intercept": 0.2008,
+  "calibration": {
+    "a": 1.78181,
+    "b": -0.54
+  },
+  "metrics": {
+    "holdout": {
+      "n": 223,
+      "elo": {
+        "name": "Elo",
+        "acc": 0.6816143497757847,
+        "brier": 0.21507258872273008,
+        "logloss": 0.6209432697492185
+      },
+      "mlRaw": {
+        "name": "ML(raw)",
+        "acc": 0.6278026905829597,
+        "brier": 0.2208815020710188,
+        "logloss": 0.6324638473080372
+      },
+      "mlCal": {
+        "name": "ML(calibrated)",
+        "acc": 0.6995515695067265,
+        "brier": 0.21045731825187347,
+        "logloss": 0.609984587517798
+      }
+    },
+    "walkForwardBrier": {
+      "elo": 0.2329,
+      "ml": 0.2337,
+      "folds": 5
+    }
+  }
+}

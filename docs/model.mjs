@@ -87,8 +87,10 @@ export function reliability(gamesA, gamesB) {
 
 // Full head-to-head prediction.
 // teamA/teamB: { id, name, rating, games }
-export function predict(teamA, teamB, { format = "bo3", oddsA = null, oddsB = null } = {}) {
-  const pGame = eloExpected(teamA.rating, teamB.rating);
+export function predict(teamA, teamB, { format = "bo3", oddsA = null, oddsB = null, pGameOverride = null } = {}) {
+  // pGameOverride lets a richer model (e.g. the trained ML model) supply the per-game
+  // probability while we reuse all the series/value/recommendation math below.
+  const pGame = pGameOverride != null ? pGameOverride : eloExpected(teamA.rating, teamB.rating);
   const pSeriesA = seriesWinProb(pGame, format);
   const pSeriesB = 1 - pSeriesA;
 
