@@ -19,6 +19,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="matches">Матчи</button>
     <button class="tab" data-tab="calc">Калькулятор</button>
+    <button class="tab" data-tab="draft">Драфт</button>
     <button class="tab" data-tab="ratings">Рейтинг</button>
   </nav>
 
@@ -56,6 +57,23 @@
         </div>
         <button id="calcBtn" class="primary">Рассчитать</button>
         <div id="calc-result"></div>
+      </div>
+    </section>
+
+    <section id="tab-draft" class="tab-panel">
+      <div class="panel-hint">Анализ пулов героев и контр-драфта. Показывает, чьих игроков легче «читать» и наказывать пиком — с учётом того, играет ли соперник нужную контру.</div>
+      <div class="calc">
+        <div class="calc-row">
+          <label>Команда A
+            <select id="draftA"></select>
+          </label>
+          <span class="vs">VS</span>
+          <label>Команда B
+            <select id="draftB"></select>
+          </label>
+        </div>
+        <button id="draftBtn" class="primary">Анализ драфта</button>
+        <div id="draft-result"></div>
       </div>
     </section>
 

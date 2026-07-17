@@ -28,6 +28,31 @@ export async function getLeagues() {
   return getJSON("/leagues");
 }
 
+export async function getHeroes() {
+  return getJSON("/heroes");
+}
+
+// Hero-vs-hero matchups (pro-level). Returns [{ hero_id, games_played, wins }],
+// where `wins` are wins of `heroId` against `hero_id`.
+export async function getHeroMatchups(heroId) {
+  return getJSON(`/heroes/${heroId}/matchups`);
+}
+
+// Team roster: [{ account_id, name, games_played, wins, is_current_team_member }]
+export async function getTeamPlayers(teamId) {
+  return getJSON(`/teams/${teamId}/players`);
+}
+
+// Team hero tendencies: [{ hero_id, localized_name, games_played, wins }]
+export async function getTeamHeroes(teamId) {
+  return getJSON(`/teams/${teamId}/heroes`);
+}
+
+// Player hero pool: [{ hero_id, last_played, games, win, ... }]
+export async function getPlayerHeroes(accountId) {
+  return getJSON(`/players/${accountId}/heroes`);
+}
+
 export async function getTeams() {
   // Returns up to ~1000 teams ordered by their internal rating.
   return getJSON("/teams");

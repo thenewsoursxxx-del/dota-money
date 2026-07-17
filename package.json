@@ -6,6 +6,7 @@
   "description": "Dota 2 Tier-1 match outcome & value predictor (v1)",
   "scripts": {
     "build-data": "node src/build.mjs",
+    "build-draft": "node src/build_draft.mjs",
     "start": "node server.mjs",
     "dev": "node server.mjs"
   },
