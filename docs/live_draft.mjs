@@ -1,0 +1,356 @@
+// Live draft intelligence engine (v3) — client-side, pure functions.
+// Given two drafted line-ups (+ optional player assignment) it scores the matchup
+// on the factors research shows actually decide games: meta strength, synergy,
+// counters, power-curve/timing, lane economy, damage balance, lockdown, composition,
+// and player-pool lock. Produces a draft win-probability, a blended prob with Elo,
+// a confidence level, and a commentator-style explanation.
+//
+// Draft-only prediction is capped (~55-70%) on purpose: peer-reviewed models show
+// draft alone tops out there; high confidence needs early-game economy (next stage).
+
+import { eloExpected, seriesWinProb } from "./model.mjs";
+
+// ---------- math helpers ----------
+const K_SHRINK = 6; // pull thin winrate samples toward 0.5
+const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
+const sigmoid = (x) => 1 / (1 + Math.exp(-x));
+const logit = (p) => Math.log(clamp(p, 1e-4, 1 - 1e-4) / (1 - clamp(p, 1e-4, 1 - 1e-4)));
+const shrunkWR = (g, w, prior = 0.5) => (w + K_SHRINK * prior) / (g + K_SHRINK);
+const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0);
+const pairKey = (a, b) => (a < b ? `${a},${b}` : `${b},${a}`);
+
+// ---------- weights (edge in logit-ish units, A's perspective) ----------
+const W = {
+  meta: 1.0,
+  synergy: 0.9,
+  counter: 1.3,
+  lane: 0.7,
+  timing: 0.4,
+  dmg: 0.6,
+  lock: 0.35,
+  pool: 1.1,
+};
+const EDGE_CAP = 0.75; // base cap on total draft edge
+const EDGE_CAP_EXTREME = 1.05; // when strong pool-lock / hard counters present
+const K_PROB = 1.7; // edge -> probability steepness
+const BLEND = 0.7; // how much draft logit adds on top of Elo logit
+
+// ---------- per-hero lookups ----------
+function heroWR(meta, id) {
+  const h = meta.heroes[id];
+  if (!h) return 0.5;
+  if (h.games >= 6) return shrunkWR(h.games, h.wins);
+  if (h.winrate != null) return h.winrate;
+  return 0.5;
+}
+
+function heroCurve(meta, id) {
+  const h = meta.heroes[id];
+  const d = h && h.dur;
+  const b = (x) => (x && x.g ? shrunkWR(x.g, x.w) : 0.5);
+  return { early: b(d && d.short), mid: b(d && d.mid), late: b(d && d.long) };
+}
+
+function heroKnow(knowledge, meta, id) {
+  const name = meta.heroes[id] && meta.heroes[id].name;
+  const k = name && knowledge.heroes[name];
+  if (k) return k;
+  // Fallback from roles when not curated.
+  const roles = (meta.heroes[id] && meta.heroes[id].roles) || [];
+  const has = (r) => roles.includes(r);
+  return {
+    dmg: "mix",
+    lock: has("Disabler") ? 2 : 0,
+    tf: has("Initiator") ? 2 : has("Nuker") ? 1 : 0,
+    push: has("Pusher") ? 2 : 0,
+    pickoff: has("Escape") || has("Nuker") ? 2 : 1,
+    save: has("Support") ? 0 : 0,
+    scale: has("Carry") ? "late" : "mid",
+    _inferred: true,
+  };
+}
+
+// ---------- team aggregates ----------
+function teamMeta(meta, ids) {
+  return avg(ids.map((id) => heroWR(meta, id) - 0.5));
+}
+
+function teamSynergy(meta, ids) {
+  const vals = [];
+  for (let i = 0; i < ids.length; i++)
+    for (let j = i + 1; j < ids.length; j++) {
+      const e = meta.synergy[pairKey(ids[i], ids[j])];
+      if (e) vals.push(shrunkWR(e[0], e[1]) - 0.5);
+    }
+  return avg(vals);
+}
+
+// Average winrate of `mine` heroes vs `theirs` (directional counter matrix).
+function teamCounter(meta, mine, theirs) {
+  const vals = [];
+  const hardCounters = [];
+  for (const a of mine)
+    for (const b of theirs) {
+      const e = meta.counter[`${a},${b}`];
+      if (e && e[0] >= 4) {
+        const wr = shrunkWR(e[0], e[1]);
+        vals.push(wr - 0.5);
+        if (wr <= 0.43) hardCounters.push({ a, b, wr, g: e[0] });
+      }
+    }
+  return { edge: avg(vals), hardCounters };
+}
+
+function teamCurves(meta, ids) {
+  const cs = ids.map((id) => heroCurve(meta, id));
+  return {
+    early: avg(cs.map((c) => c.early)),
+    mid: avg(cs.map((c) => c.mid)),
+    late: avg(cs.map((c) => c.late)),
+  };
+}
+
+function teamNW10(meta, ids) {
+  const vals = ids.map((id) => meta.heroes[id] && meta.heroes[id].nw10).filter((x) => x != null);
+  return vals.length ? vals.reduce((a, b) => a + b, 0) : null;
+}
+
+function teamDamage(knowledge, meta, ids) {
+  const counts = { phys: 0, mag: 0, pure: 0, mix: 0 };
+  for (const id of ids) counts[heroKnow(knowledge, meta, id).dmg]++;
+  // mixed heroes split their weight.
+  const phys = counts.phys + counts.mix * 0.5;
+  const mag = counts.mag + counts.pure + counts.mix * 0.5;
+  const total = phys + mag || 1;
+  const fracPhys = phys / total;
+  const dominant = fracPhys >= 0.5 ? "физический" : "магический";
+  const frac = Math.max(fracPhys, 1 - fracPhys);
+  return { fracPhys, dominant, frac, imbalance: Math.max(0, frac - 0.62) };
+}
+
+function teamArchetype(knowledge, meta, ids) {
+  let tf = 0, push = 0, pickoff = 0, lock = 0, lockPierce = 0, save = 0;
+  for (const id of ids) {
+    const k = heroKnow(knowledge, meta, id);
+    tf += k.tf || 0; push += k.push || 0; pickoff += k.pickoff || 0;
+    lock += k.lock || 0; if ((k.lock || 0) >= 3) lockPierce++;
+    save += k.save || 0;
+  }
+  const labelPick = [["тимфайт", tf], ["пуш", push], ["пикофф", pickoff]].sort((a, b) => b[1] - a[1])[0][0];
+  return { tf, push, pickoff, lock, lockPierce, save, label: labelPick };
+}
+
+// ---------- player-pool lock (optional) ----------
+// assignA/assignB: map heroId(number) -> roster player object (with signature[]) or absent.
+function poolFindings(meta, assign, myIds, oppIds) {
+  const oppSet = new Set(oppIds);
+  const findings = [];
+  let penalty = 0; // reduces this team's edge
+  if (!assign) return { penalty, findings };
+  for (const id of myIds) {
+    const pl = assign[id];
+    if (!pl || !pl.signature || !pl.signature.length) continue;
+    const sigIds = pl.signature.map((s) => s.id);
+    const onComfort = sigIds.includes(id);
+    const topSig = pl.signature[0];
+    if (!onComfort) {
+      // Forced off their comfort pool.
+      const sev = 0.05 * (0.6 + (pl.predictability || 0));
+      penalty += sev;
+      // Did the opponent pre-empt/counter their signature heroes?
+      const counteredSig = pl.signature
+        .filter((s) => (s.topCounters || []).some((c) => oppSet.has(c.id)))
+        .slice(0, 2)
+        .map((s) => s.name);
+      findings.push({
+        type: "offpool",
+        player: pl.name,
+        hero: meta.heroes[id] ? meta.heroes[id].name : `Hero ${id}`,
+        signature: topSig ? topSig.name : null,
+        counteredSig,
+        severity: sev,
+      });
+    }
+  }
+  return { penalty, findings };
+}
+
+// ---------- core scoring ----------
+// radiant/dire: arrays of hero ids (team A / team B). ctx = { meta, knowledge, assignA, assignB }.
+export function scoreDraft(radiant, dire, ctx) {
+  const { meta, knowledge, assignA = null, assignB = null } = ctx;
+  const A = radiant.filter(Boolean);
+  const B = dire.filter(Boolean);
+
+  const eMeta = teamMeta(meta, A) - teamMeta(meta, B);
+  const eSyn = teamSynergy(meta, A) - teamSynergy(meta, B);
+  const cAB = teamCounter(meta, A, B);
+  const cBA = teamCounter(meta, B, A);
+  const eCounter = cAB.edge - cBA.edge;
+
+  const curvesA = teamCurves(meta, A);
+  const curvesB = teamCurves(meta, B);
+  const eEarly = curvesA.early - curvesB.early;
+  const eLate = curvesA.late - curvesB.late;
+  // Timing edge: whoever is stronger in more windows, lightly.
+  const eTiming = (eEarly + (curvesA.mid - curvesB.mid) + eLate) / 3;
+
+  const nwA = teamNW10(meta, A);
+  const nwB = teamNW10(meta, B);
+  const eLane = nwA != null && nwB != null ? clamp((nwA - nwB) / 6000, -0.4, 0.4) : 0;
+
+  const dmgA = teamDamage(knowledge, meta, A);
+  const dmgB = teamDamage(knowledge, meta, B);
+  const eDmg = dmgB.imbalance - dmgA.imbalance; // A benefits if B is one-dimensional
+
+  const archA = teamArchetype(knowledge, meta, A);
+  const archB = teamArchetype(knowledge, meta, B);
+  const eLock = clamp((archA.lock - archB.lock) / 12, -0.35, 0.35);
+
+  const poolA = poolFindings(meta, assignA, A, B);
+  const poolB = poolFindings(meta, assignB, B, A);
+  const ePool = poolB.penalty - poolA.penalty;
+
+  const rawEdge =
+    W.meta * eMeta +
+    W.synergy * eSyn +
+    W.counter * eCounter +
+    W.lane * eLane +
+    W.timing * eTiming +
+    W.dmg * eDmg +
+    W.lock * eLock +
+    W.pool * ePool;
+
+  const extreme = cAB.hardCounters.length + cBA.hardCounters.length >= 3 || poolA.findings.length + poolB.findings.length >= 2;
+  const cap = extreme ? EDGE_CAP_EXTREME : EDGE_CAP;
+  const edge = clamp(rawEdge, -cap, cap);
+  const probA = sigmoid(K_PROB * edge);
+
+  // Data reliability: how much signal backed the score.
+  const nHeroesKnown = [...A, ...B].filter((id) => meta.heroes[id] && meta.heroes[id].games >= 6).length;
+  const reliability = clamp(nHeroesKnown / 10, 0.2, 1);
+
+  return {
+    probA,
+    edge,
+    rawEdge,
+    reliability,
+    components: {
+      meta: W.meta * eMeta, synergy: W.synergy * eSyn, counter: W.counter * eCounter,
+      lane: W.lane * eLane, timing: W.timing * eTiming, dmg: W.dmg * eDmg,
+      lock: W.lock * eLock, pool: W.pool * ePool,
+    },
+    raw: { eMeta, eSyn, eCounter, eEarly, eLate, eLane, eDmg, eLock, ePool },
+    curves: { a: curvesA, b: curvesB },
+    nw: { a: nwA, b: nwB },
+    dmg: { a: dmgA, b: dmgB },
+    arch: { a: archA, b: archB },
+    counters: { aVsB: cAB.hardCounters, bVsA: cBA.hardCounters },
+    pool: { a: poolA, b: poolB },
+  };
+}
+
+// Blend draft probability with an Elo base rate (both A-perspective, per-game).
+export function blend(eloProbA, draftProbA) {
+  const finalLogit = logit(eloProbA) + BLEND * logit(draftProbA);
+  return clamp(sigmoid(finalLogit), 0.02, 0.98);
+}
+
+// Confidence 0..1 + label. Draft-stage is intentionally capped.
+export function confidence(finalProbA, reliability) {
+  const decisiveness = Math.abs(finalProbA - 0.5) * 2; // 0..1
+  const raw = clamp(0.35 * reliability + 0.65 * decisiveness, 0, 1);
+  // Draft-only ceiling: cannot claim near-certainty pre-game.
+  const capped = Math.min(raw, 0.72);
+  const label = capped < 0.34 ? "низкая" : capped < 0.55 ? "средняя" : "высокая";
+  return { value: capped, label };
+}
+
+// ---------- commentator-style explanation ----------
+export function explain(score, nameA, nameB, heroName) {
+  const b = [];
+  const pct = (x) => (x * 100).toFixed(0) + "%";
+  const favA = score.probA >= 0.5;
+  const strongSide = favA ? nameA : nameB;
+  const hn = heroName || ((id) => `Hero ${id}`);
+
+  // 1) Timing / power curve — the headline the user cares about.
+  const ca = score.curves.a, cb = score.curves.b;
+  const aLate = ca.late, bLate = cb.late, aEarly = ca.early, bEarly = cb.early;
+  if (Math.abs(aLate - bLate) >= 0.04 || Math.abs(aEarly - bEarly) >= 0.04) {
+    const lateTeam = aLate >= bLate ? nameA : nameB;
+    const earlyTeam = aEarly >= bEarly ? nameA : nameB;
+    if (lateTeam !== earlyTeam) {
+      b.push({
+        icon: "⏱",
+        text: `Гонка по таймингам: <b>${earlyTeam}</b> сильнее рано (${pct(Math.max(aEarly, bEarly))} в коротких), <b>${lateTeam}</b> — в лейте (${pct(Math.max(aLate, bLate))} в долгих). ${earlyTeam} обязаны ломать темп и закрывать, иначе лейт уплывает.`,
+      });
+    } else {
+      b.push({ icon: "⏱", text: `<b>${lateTeam}</b> сильнее и рано, и в лейте по кривым винрейта — контроль темпа за ними.` });
+    }
+  }
+
+  // 2) Hard counters.
+  const hc = [...score.counters.aVsB.map((c) => ({ ...c, by: nameA })), ...score.counters.bVsA.map((c) => ({ ...c, by: nameB }))]
+    .sort((x, y) => x.wr - y.wr)
+    .slice(0, 3);
+  for (const c of hc) {
+    b.push({ icon: "🎯", text: `Контра: <b>${hn(c.a)}</b> тащит против <b>${hn(c.b)}</b> (WR ${pct(c.wr)}, ${c.g} игр) — плюс для ${c.by}.` });
+  }
+
+  // 3) Pool lock (hands tied) — strongest human-factor bullet.
+  for (const side of [{ p: score.pool.a, team: nameA, opp: nameB }, { p: score.pool.b, team: nameB, opp: nameA }]) {
+    for (const f of side.p.findings) {
+      let t = `У <b>${f.player}</b> (${side.team}) связаны руки: ${f.hero} — вне его сигнатурного пула`;
+      if (f.signature) t += ` (коронка — ${f.signature})`;
+      if (f.counteredSig && f.counteredSig.length) t += `, а ${side.opp} закрыли/контрят его ${f.counteredSig.join(", ")}`;
+      t += ".";
+      b.push({ icon: "🔒", text: t });
+    }
+  }
+
+  // 4) Damage balance.
+  for (const side of [{ d: score.dmg.a, team: nameA }, { d: score.dmg.b, team: nameB }]) {
+    if (side.d.imbalance > 0.05) {
+      b.push({ icon: "💥", text: `У <b>${side.team}</b> ${pct(side.d.frac)} урона — ${side.d.dominant}. Одномерный дамаг легко резать одним типом защиты (BKB/броня/сопротивление).` });
+    }
+  }
+
+  // 5) Synergy / composition.
+  const archA = score.arch.a, archB = score.arch.b;
+  if (score.raw.eSyn >= 0.02 || score.raw.eSyn <= -0.02) {
+    const synTeam = score.raw.eSyn > 0 ? nameA : nameB;
+    b.push({ icon: "🧩", text: `Связки лучше собраны у <b>${synTeam}</b> (по винрейту пар в одной команде).` });
+  }
+  b.push({ icon: "⚔️", text: `Стиль: <b>${nameA}</b> — ${archA.label} (лок ${archA.lock}), <b>${nameB}</b> — ${archB.label} (лок ${archB.lock}).` });
+
+  // 6) Lane economy.
+  if (score.nw.a != null && score.nw.b != null && Math.abs(score.nw.a - score.nw.b) > 1500) {
+    const laneTeam = score.nw.a > score.nw.b ? nameA : nameB;
+    b.push({ icon: "🌱", text: `Ранняя экономика (сумма нетворса героев к 10-й мин) выше у <b>${laneTeam}</b> — им проще выиграть темп на линиях. Но линия ≠ игра: если состав соперника сильнее в файтах/лейте, преимущество надо конвертировать быстро.` });
+  }
+
+  return { bullets: b, strongSide, favA };
+}
+
+// Full analysis entrypoint used by the UI. teamsElo optional { a:{rating,games}, b:{...} }.
+export function analyzeDraft(radiant, dire, ctx) {
+  const score = scoreDraft(radiant, dire, ctx);
+  let probA = score.probA;
+  let eloProbA = null;
+  if (ctx.teamsElo && ctx.teamsElo.a && ctx.teamsElo.b) {
+    eloProbA = eloExpected(ctx.teamsElo.a.rating, ctx.teamsElo.b.rating);
+    probA = blend(eloProbA, score.probA);
+  }
+  const format = ctx.format || "bo1";
+  const conf = confidence(probA, score.reliability);
+  const exp = explain(score, ctx.nameA || "Команда A", ctx.nameB || "Команда B", ctx.heroName);
+  return {
+    score,
+    eloProbA,
+    perGameA: probA,
+    seriesA: seriesWinProb(probA, format),
+    confidence: conf,
+    explanation: exp,
+  };
+}

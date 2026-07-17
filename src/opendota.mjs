@@ -32,6 +32,17 @@ export async function getHeroes() {
   return getJSON("/heroes");
 }
 
+// Rich per-hero stats: base stats + gains, roles, and pro/pub pick/ban/win by patch.
+export async function getHeroStats() {
+  return getJSON("/heroStats");
+}
+
+// Full match detail: picks_bans, duration, radiant_win, and (if parsed) per-player
+// gold_t/xp_t timelines + lane_role. Used to build synergy/counter/power-curve/lane data.
+export async function getMatch(matchId) {
+  return getJSON(`/matches/${matchId}`);
+}
+
 // Hero-vs-hero matchups (pro-level). Returns [{ hero_id, games_played, wins }],
 // where `wins` are wins of `heroId` against `hero_id`.
 export async function getHeroMatchups(heroId) {

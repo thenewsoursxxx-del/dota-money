@@ -19,6 +19,7 @@
   <nav class="tabs">
     <button class="tab active" data-tab="matches">Матчи</button>
     <button class="tab" data-tab="calc">Калькулятор</button>
+    <button class="tab" data-tab="live">Live-драфт</button>
     <button class="tab" data-tab="draft">Драфт</button>
     <button class="tab" data-tab="ratings">Рейтинг</button>
   </nav>
@@ -60,6 +61,47 @@
       </div>
     </section>
 
+    <section id="tab-live" class="tab-panel">
+      <div class="panel-hint">Введи 10 героев по окончании стадии пиков (+ опц. выбери команды и назначь игроков). Движок оценит матчап по мете, синергиям, контрам, кривым силы, лайнам и пулам — и объяснит, кто и почему победит.</div>
+      <div class="calc">
+        <div class="calc-row">
+          <label>Команда A (опц.)
+            <select id="liveTeamA"></select>
+          </label>
+          <span class="vs">VS</span>
+          <label>Команда B (опц.)
+            <select id="liveTeamB"></select>
+          </label>
+          <label>Формат
+            <select id="liveFormat">
+              <option value="bo1" selected>BO1</option>
+              <option value="bo3">BO3</option>
+              <option value="bo5">BO5</option>
+            </select>
+          </label>
+        </div>
+        <div class="live-cols">
+          <div class="live-col side-a">
+            <div class="live-col-title" id="liveTitleA">Команда A · Radiant</div>
+            <input id="liveSearchA" class="hero-search" placeholder="Добавить героя…" autocomplete="off" />
+            <div id="liveDropA" class="hero-drop"></div>
+            <div id="livePicksA" class="hero-picks"></div>
+          </div>
+          <div class="live-col side-b">
+            <div class="live-col-title" id="liveTitleB">Команда B · Dire</div>
+            <input id="liveSearchB" class="hero-search" placeholder="Добавить героя…" autocomplete="off" />
+            <div id="liveDropB" class="hero-drop"></div>
+            <div id="livePicksB" class="hero-picks"></div>
+          </div>
+        </div>
+        <div class="live-actions">
+          <button id="liveBtn" class="primary">Анализ драфта</button>
+          <button id="liveClear" class="ghost">Очистить</button>
+        </div>
+        <div id="live-result"></div>
+      </div>
+    </section>
+
     <section id="tab-draft" class="tab-panel">
       <div class="panel-hint">Анализ пулов героев и контр-драфта. Показывает, чьих игроков легче «читать» и наказывать пиком — с учётом того, играет ли соперник нужную контру.</div>
       <div class="calc">
@@ -84,7 +126,7 @@
   </main>
 
   <footer class="app-footer">
-    v1 · данные: OpenDota · модель: Elo по Tier-1 · <span id="foot-meta"></span>
+    v3 · данные: OpenDota · Elo + драфт-интеллект · <span id="foot-meta"></span>
   </footer>
 
   <script type="module" src="app.js"></script>

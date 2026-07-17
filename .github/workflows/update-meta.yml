@@ -1,0 +1,41 @@
+name: Update draft meta (heroes, synergy, counters)
+
+on:
+  schedule:
+    - cron: "0 5 * * 1" # раз в неделю, понедельник 05:00 UTC (после драфта в 04:00)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-meta
+  cancel-in-progress: false
+
+jobs:
+  meta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build meta (hero meta + synergy/counter matrices + power curves)
+        run: npm run build-meta
+
+      - name: Commit updated meta
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/meta.json
+          if git diff --staged --quiet; then
+            echo "Нет изменений."
+          else
+            git commit -m "chore: auto-update draft meta [skip ci]"
+            git push
+          fi

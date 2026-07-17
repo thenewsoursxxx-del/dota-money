@@ -2,6 +2,7 @@
 
 import { predict } from "./model.mjs";
 import { analyzeMatchup, applyDraftAdjustment } from "./draft.mjs";
+import { analyzeDraft } from "./live_draft.mjs";
 
 const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
 if (tg) { try { tg.ready(); tg.expand(); } catch (e) {} }
@@ -17,18 +18,25 @@ const fmtDate = (iso) => {
 let dataset = null;      // { teams, recentMatches, ... }
 let upcoming = null;     // { matches }
 let draftData = null;    // { heroes, teams: { [id]: {...} } }
+let metaData = null;     // { heroes, synergy, counter }
+let knowledge = null;    // { heroes: { [name]: {...} } }
+let heroList = [];       // [{ id, name }] sorted, for the picker
 let byId = new Map();
 let byName = new Map();
 
 async function loadData() {
-  const [ds, up, dr] = await Promise.all([
+  const [ds, up, dr, mt, kn] = await Promise.all([
     fetch("data/dataset.json").then((r) => r.json()),
     fetch("data/upcoming.json").then((r) => r.json()).catch(() => ({ matches: [] })),
     fetch("data/draft.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/meta.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/hero_knowledge.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
   dataset = ds;
   upcoming = up;
   draftData = dr;
+  metaData = mt;
+  knowledge = kn;
   byId = new Map();
   byName = new Map();
   for (const t of dataset.teams) {
@@ -36,7 +44,14 @@ async function loadData() {
     byName.set(t.name.toLowerCase(), t);
     if (t.tag) byName.set(String(t.tag).toLowerCase(), t);
   }
+  heroList = metaData
+    ? Object.entries(metaData.heroes)
+        .map(([id, h]) => ({ id: Number(id), name: h.name }))
+        .sort((a, b) => a.name.localeCompare(b.name))
+    : [];
 }
+
+const heroName = (id) => (metaData && metaData.heroes[id] ? metaData.heroes[id].name : `Hero ${id}`);
 
 function draftTeam(id) {
   if (!draftData || !draftData.teams) return null;
@@ -326,6 +341,181 @@ function runDraftAnalysis() {
     </div>`;
 }
 
+// ---- Live draft tab ----
+const live = { a: [], b: [], assignA: {}, assignB: {} };
+
+function fillLiveTeams() {
+  const opts = `<option value="">— без команды —</option>` +
+    dataset.teams
+      .filter((t) => t.games >= 3)
+      .sort((a, b) => b.rating - a.rating)
+      .map((t) => `<option value="${t.id}">${t.name} (${t.rating})</option>`)
+      .join("");
+  const a = document.getElementById("liveTeamA");
+  const b = document.getElementById("liveTeamB");
+  a.innerHTML = opts;
+  b.innerHTML = opts;
+}
+
+function liveRosterFor(side) {
+  const sel = document.getElementById(side === "a" ? "liveTeamA" : "liveTeamB");
+  const dt = sel && sel.value ? draftTeam(sel.value) : null;
+  return dt && dt.roster ? dt.roster : null;
+}
+
+function renderLivePicks(side) {
+  const wrap = document.getElementById(side === "a" ? "livePicksA" : "livePicksB");
+  const ids = live[side];
+  const roster = liveRosterFor(side);
+  const assign = side === "a" ? live.assignA : live.assignB;
+  wrap.innerHTML = ids
+    .map((id) => {
+      let playerSel = "";
+      if (roster && roster.length) {
+        const opts = `<option value="">игрок…</option>` +
+          roster.map((p, i) => `<option value="${i}"${assign[id] && assign[id].account_id === p.account_id ? " selected" : ""}>${p.name}</option>`).join("");
+        playerSel = `<select class="pick-player" data-side="${side}" data-hero="${id}">${opts}</select>`;
+      }
+      return `<div class="pick-chip"><span class="pc-name">${heroName(id)}</span>${playerSel}<button class="pc-x" data-side="${side}" data-hero="${id}">×</button></div>`;
+    })
+    .join("") || `<div class="picks-empty">Пусто (0/5)</div>`;
+
+  wrap.querySelectorAll(".pc-x").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const id = Number(btn.dataset.hero);
+      live[side] = live[side].filter((x) => x !== id);
+      delete (side === "a" ? live.assignA : live.assignB)[id];
+      renderLivePicks(side);
+    })
+  );
+  wrap.querySelectorAll(".pick-player").forEach((sel) =>
+    sel.addEventListener("change", () => {
+      const id = Number(sel.dataset.hero);
+      const a = side === "a" ? live.assignA : live.assignB;
+      if (sel.value === "") delete a[id];
+      else a[id] = roster[Number(sel.value)];
+    })
+  );
+}
+
+function renderHeroDrop(side, query) {
+  const drop = document.getElementById(side === "a" ? "liveDropA" : "liveDropB");
+  const q = query.trim().toLowerCase();
+  if (!q) { drop.innerHTML = ""; return; }
+  const chosen = new Set([...live.a, ...live.b]);
+  const matches = heroList.filter((h) => h.name.toLowerCase().includes(q) && !chosen.has(h.id)).slice(0, 10);
+  drop.innerHTML = matches.map((h) => `<button class="hero-opt" data-side="${side}" data-hero="${h.id}">${h.name}</button>`).join("");
+  drop.querySelectorAll(".hero-opt").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const id = Number(btn.dataset.hero);
+      if (live[side].length >= 5 || live[side].includes(id)) return;
+      live[side].push(id);
+      const input = document.getElementById(side === "a" ? "liveSearchA" : "liveSearchB");
+      input.value = "";
+      drop.innerHTML = "";
+      renderLivePicks(side);
+    })
+  );
+}
+
+function wireLiveTab() {
+  if (!metaData) {
+    document.getElementById("live-result").innerHTML =
+      `<div class="loading">Мета-данные не собраны. Запусти: npm run build-meta</div>`;
+  }
+  fillLiveTeams();
+  renderLivePicks("a");
+  renderLivePicks("b");
+
+  for (const side of ["a", "b"]) {
+    const input = document.getElementById(side === "a" ? "liveSearchA" : "liveSearchB");
+    input.addEventListener("input", () => renderHeroDrop(side, input.value));
+    const teamSel = document.getElementById(side === "a" ? "liveTeamA" : "liveTeamB");
+    teamSel.addEventListener("change", () => {
+      const dt = teamSel.value ? draftTeam(teamSel.value) : null;
+      const t = teamSel.value ? byId.get(teamSel.value) : null;
+      const title = document.getElementById(side === "a" ? "liveTitleA" : "liveTitleB");
+      title.textContent = (t ? t.name : side === "a" ? "Команда A" : "Команда B") + (side === "a" ? " · Radiant" : " · Dire");
+      if (side === "a") live.assignA = {}; else live.assignB = {};
+      renderLivePicks(side);
+      if (teamSel.value && !dt) {
+        // Team has no draft roster data — player assignment unavailable.
+      }
+    });
+  }
+  document.getElementById("liveBtn").addEventListener("click", runLiveAnalysis);
+  document.getElementById("liveClear").addEventListener("click", () => {
+    live.a = []; live.b = []; live.assignA = {}; live.assignB = {};
+    renderLivePicks("a"); renderLivePicks("b");
+    document.getElementById("live-result").innerHTML = "";
+  });
+}
+
+function curveBars(curves, label) {
+  const row = (name, v) => `<div class="cv-row"><span class="cv-lbl">${name}</span><div class="cv-track"><div class="cv-fill" style="width:${Math.round(v * 100)}%"></div></div><span class="cv-val">${(v * 100).toFixed(0)}%</span></div>`;
+  return `<div class="curve-block"><div class="cv-title">${label}</div>${row("ранняя", curves.early)}${row("средняя", curves.mid)}${row("лейт", curves.late)}</div>`;
+}
+
+function confBadge(conf) {
+  const cls = conf.label === "высокая" ? "value" : conf.label === "средняя" ? "small" : "novalue";
+  return `<div class="badge ${cls}">Уверенность: ${conf.label} (${(conf.value * 100).toFixed(0)}%)</div>`;
+}
+
+function runLiveAnalysis() {
+  const out = document.getElementById("live-result");
+  if (!metaData) { out.innerHTML = `<div class="loading">Нет мета-данных (build-meta).</div>`; return; }
+  if (live.a.length < 2 || live.b.length < 2) {
+    out.innerHTML = `<div class="loading">Добавь хотя бы по 2 героя в каждую команду (лучше по 5).</div>`;
+    return;
+  }
+  const teamAId = document.getElementById("liveTeamA").value;
+  const teamBId = document.getElementById("liveTeamB").value;
+  const tA = teamAId ? byId.get(teamAId) : null;
+  const tB = teamBId ? byId.get(teamBId) : null;
+  const nameA = tA ? tA.name : "Команда A";
+  const nameB = tB ? tB.name : "Команда B";
+  const format = document.getElementById("liveFormat").value;
+
+  const ctx = {
+    meta: metaData,
+    knowledge: knowledge || { heroes: {} },
+    assignA: Object.keys(live.assignA).length ? live.assignA : null,
+    assignB: Object.keys(live.assignB).length ? live.assignB : null,
+    teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
+    nameA, nameB, heroName, format,
+  };
+  const res = analyzeDraft(live.a, live.b, ctx);
+  const p = res.perGameA;
+
+  const bullets = res.explanation.bullets
+    .map((x) => `<div class="rz-bullet"><span class="rz-icon">${x.icon}</span><span>${x.text}</span></div>`)
+    .join("");
+
+  const eloLine = res.eloProbA != null
+    ? `<div class="kv"><span>База по Elo → с драфтом</span><span>${pct(res.eloProbA)} → ${pct(p)}</span></div>`
+    : `<div class="kv"><span>Прогноз по драфту (без Elo)</span><span>${pct(p)}</span></div>`;
+
+  out.innerHTML = `
+    <div class="result-block">
+      <div class="match-teams">
+        <div class="team"><div><div class="team-name">${nameA}</div><div class="team-rating">${live.a.length} героев</div></div></div>
+        <span class="vs-mid">VS</span>
+        <div class="team right"><div><div class="team-name">${nameB}</div><div class="team-rating">${live.b.length} героев</div></div></div>
+      </div>
+      ${probBar(p)}
+      ${eloLine}
+      <div class="kv"><span>Серия (${format.toUpperCase()})</span><span>${pct(res.seriesA)} / ${pct(1 - res.seriesA)}</span></div>
+      <div style="margin:10px 0">${confBadge(res.confidence)}</div>
+      <div class="curves-wrap">
+        ${curveBars(res.score.curves.a, nameA + " — кривая силы")}
+        ${curveBars(res.score.curves.b, nameB + " — кривая силы")}
+      </div>
+      <div class="rz-title">Разбор</div>
+      <div class="reasoning">${bullets || '<div class="threat-empty">Явных перекосов не найдено — матчап близкий.</div>'}</div>
+      <div class="disclaimer">Прогноз по драфту (потолок ~65%). Точность 80–90%+ будет на след. этапе — по экономике первых 10 минут.</div>
+    </div>`;
+}
+
 // ---- Init ----
 async function init() {
   try {
@@ -335,6 +525,7 @@ async function init() {
     renderRatings();
     fillCalcTeams();
     fillDraftTeams();
+    wireLiveTab();
     document.getElementById("calcBtn").addEventListener("click", runCalc);
     document.getElementById("draftBtn").addEventListener("click", runDraftAnalysis);
   } catch (e) {

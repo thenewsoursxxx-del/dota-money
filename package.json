@@ -7,6 +7,7 @@
   "scripts": {
     "build-data": "node src/build.mjs",
     "build-draft": "node src/build_draft.mjs",
+    "build-meta": "node src/build_meta.mjs",
     "fetch-upcoming": "node src/fetch_upcoming.mjs",
     "start": "node server.mjs",
     "dev": "node server.mjs"
