@@ -1,55 +1,26 @@
 {
-  "_comment": "Будущие матчи Tier-1 сцены. teamA/teamB можно задавать по team_id (надёжнее) или по названию. oddsA/oddsB — кэфы букмекера на победу в серии (десятичные), их можно менять вручную. Приложение само посчитает вероятность и value.",
+  "_comment": "Будущие матчи Tier-1 сцены. teamA/teamB — по team_id (надёжнее) или по названию. oddsA/oddsB — десятичные кэфы букмекера на победу в серии; их можно менять вручную. Приложение само посчитает вероятность и value.",
+  "_source": "Реальные оставшиеся матчи Esports World Cup 2026 (плей-офф, Париж). Обновлено 17.07.2026 по факту сыгранных четвертьфиналов (Yandex, PARIVISION, Vici, BetBoom вышли в 1/2). Финал и матч за 3-е место (19.07) добавятся, когда определятся участники.",
   "matches": [
     {
-      "id": "ewc-1",
-      "date": "2026-07-18T15:00:00Z",
-      "event": "Esports World Cup 2026",
-      "format": "bo3",
-      "teamA": "9247354",
-      "teamB": "9823272",
-      "oddsA": 1.45,
-      "oddsB": 2.75
-    },
-    {
-      "id": "ewc-2",
-      "date": "2026-07-18T18:00:00Z",
-      "event": "Esports World Cup 2026",
-      "format": "bo3",
-      "teamA": "7119388",
-      "teamB": "726228",
-      "oddsA": 1.6,
-      "oddsB": 2.35
-    },
-    {
-      "id": "ewc-3",
-      "date": "2026-07-19T15:00:00Z",
-      "event": "Esports World Cup 2026",
+      "id": "ewc2026-sf1",
+      "date": "2026-07-18T11:00:00Z",
+      "event": "Esports World Cup 2026 · Полуфинал 1",
       "format": "bo3",
       "teamA": "8255888",
-      "teamB": "10136357",
-      "oddsA": 1.85,
-      "oddsB": 1.95
+      "teamB": "726228",
+      "oddsA": 1.4,
+      "oddsB": 2.9
     },
     {
-      "id": "ewc-4",
-      "date": "2026-07-19T18:00:00Z",
-      "event": "Esports World Cup 2026",
+      "id": "ewc2026-sf2",
+      "date": "2026-07-18T14:30:00Z",
+      "event": "Esports World Cup 2026 · Полуфинал 2",
       "format": "bo3",
-      "teamA": "9824702",
-      "teamB": "9247354",
-      "oddsA": 3.2,
-      "oddsB": 1.35
-    },
-    {
-      "id": "ewc-5",
-      "date": "2026-07-20T16:00:00Z",
-      "event": "Esports World Cup 2026 — Playoff",
-      "format": "bo5",
-      "teamA": "7119388",
-      "teamB": "9823272",
-      "oddsA": 1.7,
-      "oddsB": 2.1
+      "teamA": "9823272",
+      "teamB": "9824702",
+      "oddsA": 1.62,
+      "oddsB": 2.25
     }
   ]
 }
