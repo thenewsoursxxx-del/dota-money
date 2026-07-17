@@ -476,12 +476,20 @@ function runLiveAnalysis() {
   const nameB = tB ? tB.name : "Команда B";
   const format = document.getElementById("liveFormat").value;
 
+  const eg = {
+    nwDiff: document.getElementById("egNw").value,
+    xpDiff: document.getElementById("egXp").value,
+    towersA: document.getElementById("egTowersA").value,
+    towersB: document.getElementById("egTowersB").value,
+    firstBlood: document.getElementById("egFb").value,
+  };
   const ctx = {
     meta: metaData,
     knowledge: knowledge || { heroes: {} },
     assignA: Object.keys(live.assignA).length ? live.assignA : null,
     assignB: Object.keys(live.assignB).length ? live.assignB : null,
     teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
+    earlyGame: eg,
     nameA, nameB, heroName, format,
   };
   const res = analyzeDraft(live.a, live.b, ctx);
@@ -492,8 +500,11 @@ function runLiveAnalysis() {
     .join("");
 
   const eloLine = res.eloProbA != null
-    ? `<div class="kv"><span>База по Elo → с драфтом</span><span>${pct(res.eloProbA)} → ${pct(p)}</span></div>`
-    : `<div class="kv"><span>Прогноз по драфту (без Elo)</span><span>${pct(p)}</span></div>`;
+    ? `<div class="kv"><span>База по Elo → с драфтом</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
+    : `<div class="kv"><span>Прогноз по драфту (без Elo)</span><span>${pct(res.priorProbA)}</span></div>`;
+  const earlyLine = res.early
+    ? `<div class="kv hl-row"><span>+ ранняя игра (~10 мин)</span><span><b>${pct(res.priorProbA)} → ${pct(p)}</b></span></div>`
+    : "";
 
   out.innerHTML = `
     <div class="result-block">
@@ -504,6 +515,7 @@ function runLiveAnalysis() {
       </div>
       ${probBar(p)}
       ${eloLine}
+      ${earlyLine}
       <div class="kv"><span>Серия (${format.toUpperCase()})</span><span>${pct(res.seriesA)} / ${pct(1 - res.seriesA)}</span></div>
       <div style="margin:10px 0">${confBadge(res.confidence)}</div>
       <div class="curves-wrap">

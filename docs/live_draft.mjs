@@ -256,12 +256,25 @@ export function blend(eloProbA, draftProbA) {
   return clamp(sigmoid(finalLogit), 0.02, 0.98);
 }
 
-// Confidence 0..1 + label. Draft-stage is intentionally capped.
-export function confidence(finalProbA, reliability) {
+// Stage 2 — early game (~10 min). Economy dominates: net worth / XP leads, towers,
+// first blood. Shifts the pre-game prior toward the observed reality. Research shows
+// accuracy climbs sharply once ~10-min economy is known.
+export function applyEarlyGame(priorProbA, eg) {
+  const nwK = (Number(eg.nwDiff) || 0) / 1000; // A minus B, gold
+  const xpK = (Number(eg.xpDiff) || 0) / 1000; // A minus B, xp
+  const tower = (Number(eg.towersA) || 0) - (Number(eg.towersB) || 0);
+  const fb = eg.firstBlood === "a" ? 1 : eg.firstBlood === "b" ? -1 : 0;
+  const econLogit = 0.32 * nwK + 0.22 * xpK + 0.35 * tower + 0.12 * fb;
+  const probA = clamp(sigmoid(logit(priorProbA) + econLogit), 0.02, 0.98);
+  return { probA, econLogit, magnitude: Math.abs(econLogit) };
+}
+
+// Confidence 0..1 + label. Draft-stage is intentionally capped; early-game lifts the cap.
+export function confidence(finalProbA, reliability, hasEarly = false, earlyMag = 0) {
   const decisiveness = Math.abs(finalProbA - 0.5) * 2; // 0..1
   const raw = clamp(0.35 * reliability + 0.65 * decisiveness, 0, 1);
-  // Draft-only ceiling: cannot claim near-certainty pre-game.
-  const capped = Math.min(raw, 0.72);
+  const cap = hasEarly ? Math.min(0.92, 0.68 + 0.12 * earlyMag) : 0.72;
+  const capped = Math.min(raw, cap);
   const label = capped < 0.34 ? "низкая" : capped < 0.55 ? "средняя" : "высокая";
   return { value: capped, label };
 }
@@ -343,11 +356,26 @@ export function analyzeDraft(radiant, dire, ctx) {
     probA = blend(eloProbA, score.probA);
   }
   const format = ctx.format || "bo1";
-  const conf = confidence(probA, score.reliability);
+
+  const priorProbA = probA; // after Elo blend, before early game
+
+  // Stage 2: fold in early-game state if provided.
+  let early = null;
+  const eg = ctx.earlyGame;
+  const hasEarly = eg && (eg.nwDiff || eg.xpDiff || eg.towersA || eg.towersB || eg.firstBlood);
+  if (hasEarly) {
+    early = applyEarlyGame(probA, eg);
+    probA = early.probA;
+  }
+
+  const conf = confidence(probA, score.reliability, !!hasEarly, early ? early.magnitude : 0);
   const exp = explain(score, ctx.nameA || "Команда A", ctx.nameB || "Команда B", ctx.heroName);
   return {
     score,
     eloProbA,
+    draftProbA: score.probA,
+    priorProbA,
+    early,
     perGameA: probA,
     seriesA: seriesWinProb(probA, format),
     confidence: conf,

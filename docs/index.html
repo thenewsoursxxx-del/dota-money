@@ -94,6 +94,31 @@
             <div id="livePicksB" class="hero-picks"></div>
           </div>
         </div>
+        <details class="early-box">
+          <summary>Стадия игры (~10 мин) — опционально, для точности 80–90%</summary>
+          <div class="early-grid">
+            <label>Нетворс A − B (голда)
+              <input id="egNw" type="number" step="100" placeholder="напр. 3000" />
+            </label>
+            <label>Опыт A − B
+              <input id="egXp" type="number" step="100" placeholder="напр. 2000" />
+            </label>
+            <label>Вышек снёс A
+              <input id="egTowersA" type="number" min="0" step="1" placeholder="0" />
+            </label>
+            <label>Вышек снёс B
+              <input id="egTowersB" type="number" min="0" step="1" placeholder="0" />
+            </label>
+            <label>Первая кровь
+              <select id="egFb">
+                <option value="">—</option>
+                <option value="a">за A</option>
+                <option value="b">за B</option>
+              </select>
+            </label>
+          </div>
+          <div class="early-hint">A − B: положительное = преимущество команды A. Заполни по табло на ~10-й минуте — прогноз пересчитается с учётом экономики.</div>
+        </details>
         <div class="live-actions">
           <button id="liveBtn" class="primary">Анализ драфта</button>
           <button id="liveClear" class="ghost">Очистить</button>

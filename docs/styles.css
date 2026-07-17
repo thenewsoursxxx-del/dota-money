@@ -245,6 +245,16 @@ button.ghost:hover { color: var(--text); border-color: var(--accent-2); }
 .rz-icon { flex: 0 0 auto; }
 .disclaimer { margin-top: 12px; font-size: 11px; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 8px; }
 
+.early-box { margin-top: 12px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 8px 12px; }
+.early-box summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--muted); }
+.early-box[open] summary { color: var(--text); margin-bottom: 10px; }
+.early-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.early-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--muted); }
+.early-grid input, .early-grid select { background: var(--bg-3); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 7px 8px; font-size: 13px; }
+.early-hint { font-size: 11px; color: var(--muted); margin-top: 8px; }
+.kv.hl-row { background: var(--green-soft); border-radius: 8px; padding: 4px 8px; }
+.kv.hl-row b { color: #56d364; }
+
 @media (max-width: 560px) {
   .live-cols { grid-template-columns: 1fr; }
   .curves-wrap { grid-template-columns: 1fr; }
