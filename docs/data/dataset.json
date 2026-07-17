@@ -1,0 +1,3610 @@
+{
+  "generatedAt": "2026-07-17T18:14:28.033Z",
+  "tier1LeagueCount": 2679,
+  "matchesUsed": 1150,
+  "teams": [
+    {
+      "id": 9823272,
+      "name": "Team Yandex",
+      "tag": "TY",
+      "logo": "https://cdn.steamusercontent.com/ugc/12970505637628494427/B04C3358F4E815ADFC2F8B1B8BE3AB0CE75C8881/",
+      "rating": 1760,
+      "games": 37,
+      "wins": 29,
+      "losses": 8,
+      "lastPlayed": 1784204826
+    },
+    {
+      "id": 8255888,
+      "name": "BoomBoys",
+      "tag": "BB",
+      "logo": "https://cdn.steamusercontent.com/ugc/9995426432403529725/51E13136D4CCC8C7D8062861541A1D13B8ED87E0/",
+      "rating": 1704,
+      "games": 58,
+      "wins": 37,
+      "losses": 21,
+      "lastPlayed": 1784301541
+    },
+    {
+      "id": 9824702,
+      "name": "PVISION",
+      "tag": "PV",
+      "logo": "https://cdn.steamusercontent.com/ugc/11751543457229798134/1569CC553CB72963C8EC4C3F807EE50DA925BDC2/",
+      "rating": 1691,
+      "games": 23,
+      "wins": 19,
+      "losses": 4,
+      "lastPlayed": 1784215740
+    },
+    {
+      "id": 9572001,
+      "name": "TEAM VISION",
+      "tag": "VSN",
+      "logo": "https://cdn.steamusercontent.com/ugc/10380389074903512947/5D074799695A862D17D4205285315FE20399B28D/",
+      "rating": 1677,
+      "games": 40,
+      "wins": 28,
+      "losses": 12,
+      "lastPlayed": 1782408313
+    },
+    {
+      "id": 10136357,
+      "name": "Nigma Galaxy",
+      "tag": "NGX",
+      "logo": "https://cdn.steamusercontent.com/ugc/16959999218725724364/1D334B91A52606CA3E0027832D6F646E2A094391/",
+      "rating": 1645,
+      "games": 44,
+      "wins": 28,
+      "losses": 16,
+      "lastPlayed": 1784301541
+    },
+    {
+      "id": 7119388,
+      "name": "Team Spirit",
+      "tag": "TSpirit",
+      "logo": "https://cdn.steamusercontent.com/ugc/1839179120711951766/CD7E0885CB527334205CC7885E9C101B7BC17702/",
+      "rating": 1639,
+      "games": 63,
+      "wins": 41,
+      "losses": 22,
+      "lastPlayed": 1784204826
+    },
+    {
+      "id": 10150538,
+      "name": "LGD Gaming",
+      "tag": "LGD",
+      "logo": "https://cdn.steamusercontent.com/ugc/10055782735581672481/2B2BCEA9CC05286D7164E4548A2EB64CDBC77F31/",
+      "rating": 1636,
+      "games": 56,
+      "wins": 37,
+      "losses": 19,
+      "lastPlayed": 1784134860
+    },
+    {
+      "id": 726228,
+      "name": "Vici Gaming",
+      "tag": "VG",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/726228.png",
+      "rating": 1633,
+      "games": 61,
+      "wins": 35,
+      "losses": 26,
+      "lastPlayed": 1784291941
+    },
+    {
+      "id": 9247354,
+      "name": "Team Falcons",
+      "tag": "FLCN",
+      "logo": "https://cdn.steamusercontent.com/ugc/2314350571781870059/2B5C9FE9BA0A2DC303A13261444532AA08352843/",
+      "rating": 1624,
+      "games": 56,
+      "wins": 38,
+      "losses": 18,
+      "lastPlayed": 1784291941
+    },
+    {
+      "id": 10108947,
+      "name": "SouthAmericaRejects",
+      "tag": "SAR",
+      "logo": null,
+      "rating": 1620,
+      "games": 9,
+      "wins": 9,
+      "losses": 0,
+      "lastPlayed": 1777650919
+    },
+    {
+      "id": 5017210,
+      "name": "Team Resilience",
+      "tag": "Resilience",
+      "logo": "https://cdn.steamusercontent.com/ugc/15907413066975203049/68C9F7C15D104837639C65B11E95D0DF81D268F2/",
+      "rating": 1618,
+      "games": 15,
+      "wins": 12,
+      "losses": 3,
+      "lastPlayed": 1781767220
+    },
+    {
+      "id": 10182748,
+      "name": "Team South Africa",
+      "tag": "RSA",
+      "logo": null,
+      "rating": 1614,
+      "games": 8,
+      "wins": 8,
+      "losses": 0,
+      "lastPlayed": 1782934647
+    },
+    {
+      "id": 9467224,
+      "name": "Aurora Gaming",
+      "tag": "Aurora",
+      "logo": "https://cdn.steamusercontent.com/ugc/13052583756685508/22B0338D7E09FB2F021E5DB5BBEFFD170D5E5E1A/",
+      "rating": 1599,
+      "games": 70,
+      "wins": 41,
+      "losses": 29,
+      "lastPlayed": 1784118474
+    },
+    {
+      "id": 10182693,
+      "name": "Lebanon",
+      "tag": "LB",
+      "logo": null,
+      "rating": 1592,
+      "games": 6,
+      "wins": 6,
+      "losses": 0,
+      "lastPlayed": 1782911902
+    },
+    {
+      "id": 10150633,
+      "name": "Pipsqueak + 4",
+      "tag": "PIPS",
+      "logo": "https://cdn.steamusercontent.com/ugc/14365062618861662751/1A5661C7BF9D0F452A87DE5FD3A74E72E55381CF/",
+      "rating": 1591,
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "lastPlayed": 1780418546
+    },
+    {
+      "id": 10177742,
+      "name": "Great Britain",
+      "tag": "GB",
+      "logo": null,
+      "rating": 1588,
+      "games": 12,
+      "wins": 9,
+      "losses": 3,
+      "lastPlayed": 1782934840
+    },
+    {
+      "id": 10186491,
+      "name": "Cuba",
+      "tag": "CUB",
+      "logo": null,
+      "rating": 1585,
+      "games": 13,
+      "wins": 10,
+      "losses": 3,
+      "lastPlayed": 1782955139
+    },
+    {
+      "id": 10182492,
+      "name": "Kyrgyzstan",
+      "tag": null,
+      "logo": null,
+      "rating": 1582,
+      "games": 11,
+      "wins": 8,
+      "losses": 3,
+      "lastPlayed": 1782928004
+    },
+    {
+      "id": 10182514,
+      "name": "Canada",
+      "tag": null,
+      "logo": null,
+      "rating": 1582,
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "lastPlayed": 1782955139
+    },
+    {
+      "id": 10182833,
+      "name": "Czech Republic",
+      "tag": null,
+      "logo": null,
+      "rating": 1581,
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "lastPlayed": 1782919338
+    },
+    {
+      "id": 8532176,
+      "name": "GREECE",
+      "tag": null,
+      "logo": null,
+      "rating": 1579,
+      "games": 11,
+      "wins": 8,
+      "losses": 3,
+      "lastPlayed": 1782934746
+    },
+    {
+      "id": 10182496,
+      "name": "Team Finland",
+      "tag": null,
+      "logo": null,
+      "rating": 1578,
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "lastPlayed": 1782920112
+    },
+    {
+      "id": 10136133,
+      "name": "Two Move",
+      "tag": "TM",
+      "logo": "https://cdn.steamusercontent.com/ugc/14832539996629907250/104CC9C96E6BE157DA1A8E63FB26084539394C70/",
+      "rating": 1573,
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "lastPlayed": 1780396611
+    },
+    {
+      "id": 10020555,
+      "name": "PlayTime",
+      "tag": "PlayTime",
+      "logo": "https://cdn.steamusercontent.com/ugc/11668290585730417471/FB22B7ED74C1C73D4E27C0CBBBF47FC194611231/",
+      "rating": 1572,
+      "games": 39,
+      "wins": 20,
+      "losses": 19,
+      "lastPlayed": 1781902332
+    },
+    {
+      "id": 10186492,
+      "name": "Ecuador",
+      "tag": null,
+      "logo": null,
+      "rating": 1572,
+      "games": 11,
+      "wins": 8,
+      "losses": 3,
+      "lastPlayed": 1782952339
+    },
+    {
+      "id": 9855768,
+      "name": "Türkiye",
+      "tag": null,
+      "logo": null,
+      "rating": 1568,
+      "games": 15,
+      "wins": 10,
+      "losses": 5,
+      "lastPlayed": 1782928004
+    },
+    {
+      "id": 10182824,
+      "name": "Peru",
+      "tag": null,
+      "logo": null,
+      "rating": 1565,
+      "games": 4,
+      "wins": 4,
+      "losses": 0,
+      "lastPlayed": 1782933382
+    },
+    {
+      "id": 9425776,
+      "name": "Red Raiders",
+      "tag": null,
+      "logo": null,
+      "rating": 1564,
+      "games": 4,
+      "wins": 4,
+      "losses": 0,
+      "lastPlayed": 1777833725
+    },
+    {
+      "id": 10149530,
+      "name": "HULIGANI",
+      "tag": "HU",
+      "logo": "https://cdn.steamusercontent.com/ugc/14844266645370842778/47230D9640A722EAF06548C2EEB813ED4296AE3F/",
+      "rating": 1563,
+      "games": 21,
+      "wins": 13,
+      "losses": 8,
+      "lastPlayed": 1782653592
+    },
+    {
+      "id": 10182648,
+      "name": "Mongolia",
+      "tag": null,
+      "logo": null,
+      "rating": 1560,
+      "games": 4,
+      "wins": 4,
+      "losses": 0,
+      "lastPlayed": 1782896676
+    },
+    {
+      "id": 10182357,
+      "name": "1w",
+      "tag": "1w",
+      "logo": "https://cdn.steamusercontent.com/ugc/10678669599334676082/E48827F4A163D4D02F817EA3C32166D5F1D5FC98/",
+      "rating": 1559,
+      "games": 13,
+      "wins": 8,
+      "losses": 5,
+      "lastPlayed": 1784133282
+    },
+    {
+      "id": 10158550,
+      "name": "Poor Rangers",
+      "tag": null,
+      "logo": null,
+      "rating": 1556,
+      "games": 5,
+      "wins": 4,
+      "losses": 1,
+      "lastPlayed": 1780409729
+    },
+    {
+      "id": 10182459,
+      "name": "Georgia",
+      "tag": null,
+      "logo": null,
+      "rating": 1556,
+      "games": 12,
+      "wins": 8,
+      "losses": 4,
+      "lastPlayed": 1782913026
+    },
+    {
+      "id": 36,
+      "name": "Natus Vincere",
+      "tag": "NAVI",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/36.png",
+      "rating": 1555,
+      "games": 42,
+      "wins": 25,
+      "losses": 17,
+      "lastPlayed": 1782566905
+    },
+    {
+      "id": 10135834,
+      "name": "TEAM GRIND",
+      "tag": "GrindBack",
+      "logo": "https://cdn.steamusercontent.com/ugc/18313019652320109896/09DE0090D6F99C3AF44DA97360CCDAEA1CA7D214/",
+      "rating": 1549,
+      "games": 25,
+      "wins": 15,
+      "losses": 10,
+      "lastPlayed": 1782214039
+    },
+    {
+      "id": 9678463,
+      "name": "Estar Backs",
+      "tag": "EB",
+      "logo": "https://cdn.steamusercontent.com/ugc/8546247575522013/0940BE82E218C71369C672C95943445AA450EF45/",
+      "rating": 1549,
+      "games": 21,
+      "wins": 12,
+      "losses": 9,
+      "lastPlayed": 1781800291
+    },
+    {
+      "id": 10108655,
+      "name": "Amaru Gaming",
+      "tag": "AMG",
+      "logo": "https://cdn.steamusercontent.com/ugc/16655450785419366752/02929B63DBEA6EBE7FF68CBBF7E29A7130183072/",
+      "rating": 1543,
+      "games": 22,
+      "wins": 12,
+      "losses": 10,
+      "lastPlayed": 1781888837
+    },
+    {
+      "id": 2586976,
+      "name": "OG",
+      "tag": "OG",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2586976.png",
+      "rating": 1539,
+      "games": 34,
+      "wins": 16,
+      "losses": 18,
+      "lastPlayed": 1783863780
+    },
+    {
+      "id": 8193371,
+      "name": "Myanmar",
+      "tag": "MMR",
+      "logo": "https://cdn.steamusercontent.com/ugc/1691626114738399297/4A804C22D3F9C48B0A275095A66F43F34D006385/",
+      "rating": 1539,
+      "games": 7,
+      "wins": 5,
+      "losses": 2,
+      "lastPlayed": 1782890035
+    },
+    {
+      "id": 2576071,
+      "name": "Yellow Submarine",
+      "tag": "YeS",
+      "logo": "https://cdn.steamusercontent.com/ugc/2506900380361558769/01D7A1FC1156B0550B4EF9EA2A3A2AF84D9BF884/",
+      "rating": 1538,
+      "games": 17,
+      "wins": 10,
+      "losses": 7,
+      "lastPlayed": 1782667298
+    },
+    {
+      "id": 10182498,
+      "name": "Team Philippines",
+      "tag": null,
+      "logo": null,
+      "rating": 1537,
+      "games": 6,
+      "wins": 4,
+      "losses": 2,
+      "lastPlayed": 1782894345
+    },
+    {
+      "id": 10182639,
+      "name": "Serbia",
+      "tag": null,
+      "logo": null,
+      "rating": 1534,
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "lastPlayed": 1782934746
+    },
+    {
+      "id": 9995872,
+      "name": "TEAM DK",
+      "tag": null,
+      "logo": null,
+      "rating": 1533,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1780321452
+    },
+    {
+      "id": 10169967,
+      "name": "АГПЗ",
+      "tag": null,
+      "logo": null,
+      "rating": 1533,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1780835453
+    },
+    {
+      "id": 10186432,
+      "name": "Algeria",
+      "tag": null,
+      "logo": null,
+      "rating": 1533,
+      "games": 4,
+      "wins": 3,
+      "losses": 1,
+      "lastPlayed": 1782857642
+    },
+    {
+      "id": 9839631,
+      "name": "Wrecking Crew",
+      "tag": null,
+      "logo": null,
+      "rating": 1532,
+      "games": 4,
+      "wins": 3,
+      "losses": 1,
+      "lastPlayed": 1777833725
+    },
+    {
+      "id": 2163,
+      "name": "Team Liquid",
+      "tag": "Liquid",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2163.png",
+      "rating": 1531,
+      "games": 56,
+      "wins": 28,
+      "losses": 28,
+      "lastPlayed": 1784123767
+    },
+    {
+      "id": 10158718,
+      "name": "Team Slayers",
+      "tag": null,
+      "logo": null,
+      "rating": 1531,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1780163399
+    },
+    {
+      "id": 9291486,
+      "name": "TeammateArena",
+      "tag": null,
+      "logo": null,
+      "rating": 1531,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1780818835
+    },
+    {
+      "id": 10186547,
+      "name": "Team Thailand",
+      "tag": null,
+      "logo": null,
+      "rating": 1530,
+      "games": 8,
+      "wins": 5,
+      "losses": 3,
+      "lastPlayed": 1782909991
+    },
+    {
+      "id": 9964962,
+      "name": "GamerLegion",
+      "tag": "GL",
+      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
+      "rating": 1523,
+      "games": 39,
+      "wins": 19,
+      "losses": 20,
+      "lastPlayed": 1783766400
+    },
+    {
+      "id": 9627650,
+      "name": "5vpotoke",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 5,
+      "wins": 3,
+      "losses": 2,
+      "lastPlayed": 1781457244
+    },
+    {
+      "id": 7777322,
+      "name": "Oshi hi teo Gaming",
+      "tag": "OG",
+      "logo": "https://cdn.steamusercontent.com/ugc/14050897008803262158/1FD5BAE3F059692AEFC7340136D3FB7D0E756F6D/",
+      "rating": 1517,
+      "games": 5,
+      "wins": 3,
+      "losses": 2,
+      "lastPlayed": 1778429621
+    },
+    {
+      "id": 10115526,
+      "name": "DiceRoll reborn",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1777828446
+    },
+    {
+      "id": 2393994,
+      "name": "Bigbia",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1779024589
+    },
+    {
+      "id": 10096172,
+      "name": "Shizageddon",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780048544
+    },
+    {
+      "id": 9973656,
+      "name": "Red Hot Chili Pibble",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 14,
+      "wins": 7,
+      "losses": 7,
+      "lastPlayed": 1781811392
+    },
+    {
+      "id": 9517326,
+      "name": "Egypt",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1782749307
+    },
+    {
+      "id": 10135319,
+      "name": "GGVP",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1777817193
+    },
+    {
+      "id": 10135323,
+      "name": "KPFU",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1777827081
+    },
+    {
+      "id": 9367752,
+      "name": "shvang team",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1777817544
+    },
+    {
+      "id": 10033493,
+      "name": "The kitten club",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1779016314
+    },
+    {
+      "id": 9896031,
+      "name": "Team Lotus",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1779020590
+    },
+    {
+      "id": 10102110,
+      "name": "Satan666",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780027703
+    },
+    {
+      "id": 10144695,
+      "name": "Mentality Monsters",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 19,
+      "wins": 11,
+      "losses": 8,
+      "lastPlayed": 1782103792
+    },
+    {
+      "id": 9449429,
+      "name": "Team Ganjubas Reborn",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780045266
+    },
+    {
+      "id": 10129305,
+      "name": "Kundalini",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780045328
+    },
+    {
+      "id": 10094876,
+      "name": "地狱归来",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780063537
+    },
+    {
+      "id": 10158090,
+      "name": "Tailung Mafia",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780074795
+    },
+    {
+      "id": 8337978,
+      "name": "Sad BoyS",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780074891
+    },
+    {
+      "id": 8766111,
+      "name": "Rems Isekai Adventure",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780243817
+    },
+    {
+      "id": 10026281,
+      "name": "Team Epoch",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780244019
+    },
+    {
+      "id": 7626304,
+      "name": "SAND KING GÓMEZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780250954
+    },
+    {
+      "id": 8215874,
+      "name": "CHILE",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1782767509
+    },
+    {
+      "id": 10182705,
+      "name": "Bolivia",
+      "tag": null,
+      "logo": null,
+      "rating": 1514,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1782952339
+    },
+    {
+      "id": 8291895,
+      "name": "Tundra Esports",
+      "tag": "Tundra",
+      "logo": "https://cdn.steamusercontent.com/ugc/2031716132171967904/07B168B8063D9B22CDAD53AB421ECAF3D4B2E07E/",
+      "rating": 1513,
+      "games": 21,
+      "wins": 10,
+      "losses": 11,
+      "lastPlayed": 1779105538
+    },
+    {
+      "id": 10150610,
+      "name": "Flame Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1513,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1780327325
+    },
+    {
+      "id": 10182732,
+      "name": "Team Saudi Arabia",
+      "tag": null,
+      "logo": null,
+      "rating": 1512,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1782849125
+    },
+    {
+      "id": 10182738,
+      "name": "Team Madagascar",
+      "tag": null,
+      "logo": null,
+      "rating": 1512,
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "lastPlayed": 1782934647
+    },
+    {
+      "id": 10182706,
+      "name": "Team Hungary",
+      "tag": null,
+      "logo": null,
+      "rating": 1511,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1782904234
+    },
+    {
+      "id": 10182713,
+      "name": "Team Uzbekistan",
+      "tag": null,
+      "logo": null,
+      "rating": 1511,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1782843592
+    },
+    {
+      "id": 10186464,
+      "name": "Team Belgium",
+      "tag": null,
+      "logo": null,
+      "rating": 1511,
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "lastPlayed": 1782923299
+    },
+    {
+      "id": 10182699,
+      "name": "Team Estonia",
+      "tag": null,
+      "logo": null,
+      "rating": 1510,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1782829769
+    },
+    {
+      "id": 10182519,
+      "name": "Team France",
+      "tag": null,
+      "logo": null,
+      "rating": 1509,
+      "games": 13,
+      "wins": 7,
+      "losses": 6,
+      "lastPlayed": 1782934840
+    },
+    {
+      "id": 9351740,
+      "name": "Yakutou Brothers",
+      "tag": "YB",
+      "logo": "https://cdn.steamusercontent.com/ugc/14543392377443204174/5F300A650D1FC1059F69071F890E047F600BD79D/",
+      "rating": 1508,
+      "games": 16,
+      "wins": 8,
+      "losses": 8,
+      "lastPlayed": 1781781307
+    },
+    {
+      "id": 9895247,
+      "name": "Rune Eaters",
+      "tag": "RE",
+      "logo": "https://cdn.steamusercontent.com/ugc/11845515088670662060/69AF28B666A859915784A1FF3C77F23E29057C3F/",
+      "rating": 1508,
+      "games": 27,
+      "wins": 11,
+      "losses": 16,
+      "lastPlayed": 1784215740
+    },
+    {
+      "id": 10182654,
+      "name": "LATVIA",
+      "tag": null,
+      "logo": null,
+      "rating": 1508,
+      "games": 11,
+      "wins": 6,
+      "losses": 5,
+      "lastPlayed": 1782903640
+    },
+    {
+      "id": 10182773,
+      "name": "Team Romania",
+      "tag": null,
+      "logo": null,
+      "rating": 1506,
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "lastPlayed": 1782915053
+    },
+    {
+      "id": 10182524,
+      "name": "Team Nigeria",
+      "tag": null,
+      "logo": null,
+      "rating": 1506,
+      "games": 11,
+      "wins": 6,
+      "losses": 5,
+      "lastPlayed": 1782928125
+    },
+    {
+      "id": 10182601,
+      "name": "Team Pakistan",
+      "tag": null,
+      "logo": null,
+      "rating": 1506,
+      "games": 6,
+      "wins": 3,
+      "losses": 3,
+      "lastPlayed": 1782909581
+    },
+    {
+      "id": 9799036,
+      "name": "TeamDk",
+      "tag": null,
+      "logo": null,
+      "rating": 1505,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1780424891
+    },
+    {
+      "id": 10150267,
+      "name": "Hokori",
+      "tag": null,
+      "logo": null,
+      "rating": 1505,
+      "games": 20,
+      "wins": 10,
+      "losses": 10,
+      "lastPlayed": 1781716429
+    },
+    {
+      "id": 10182755,
+      "name": "Team Iran",
+      "tag": null,
+      "logo": null,
+      "rating": 1504,
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "lastPlayed": 1782904947
+    },
+    {
+      "id": 8254145,
+      "name": "Execration",
+      "tag": "XctN",
+      "logo": "https://cdn.steamusercontent.com/ugc/2490004871924581269/9132E5E0903B2A368A00780415D69766292F5893/",
+      "rating": 1502,
+      "games": 19,
+      "wins": 10,
+      "losses": 9,
+      "lastPlayed": 1782140588
+    },
+    {
+      "id": 10061609,
+      "name": "fp anti-mage",
+      "tag": null,
+      "logo": null,
+      "rating": 1500,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1777823237
+    },
+    {
+      "id": 8715395,
+      "name": "Evil Masters",
+      "tag": null,
+      "logo": null,
+      "rating": 1500,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1777824836
+    },
+    {
+      "id": 10145416,
+      "name": "Team G",
+      "tag": null,
+      "logo": null,
+      "rating": 1500,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1780338103
+    },
+    {
+      "id": 10001733,
+      "name": "Hive",
+      "tag": null,
+      "logo": null,
+      "rating": 1500,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780056131
+    },
+    {
+      "id": 9629413,
+      "name": "Team Sherlock",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1777821175
+    },
+    {
+      "id": 10116138,
+      "name": "5 silly mice",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780031378
+    },
+    {
+      "id": 10144697,
+      "name": "Ivory",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 4,
+      "wins": 2,
+      "losses": 2,
+      "lastPlayed": 1780117967
+    },
+    {
+      "id": 9766265,
+      "name": "Team Lipstick",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780048544
+    },
+    {
+      "id": 10108233,
+      "name": "ShIShUlI",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780048323
+    },
+    {
+      "id": 9781592,
+      "name": "Golden Retrievers",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780051878
+    },
+    {
+      "id": 10122515,
+      "name": "The House Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780078298
+    },
+    {
+      "id": 9640559,
+      "name": "Chincha Players",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780079606
+    },
+    {
+      "id": 10163403,
+      "name": "dust 2",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780228937
+    },
+    {
+      "id": 10182650,
+      "name": "Costa Rica",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "lastPlayed": 1782867863
+    },
+    {
+      "id": 9895392,
+      "name": "Virtus.pro",
+      "tag": "VP",
+      "logo": "https://cdn.steamusercontent.com/ugc/13061694558372404982/7AC363D410AC6F2F4B016EE7D73B7C266D0113F9/",
+      "rating": 1498,
+      "games": 45,
+      "wins": 20,
+      "losses": 25,
+      "lastPlayed": 1784037059
+    },
+    {
+      "id": 9894442,
+      "name": "Cloud Dawning",
+      "tag": null,
+      "logo": null,
+      "rating": 1497,
+      "games": 4,
+      "wins": 2,
+      "losses": 2,
+      "lastPlayed": 1777698876
+    },
+    {
+      "id": 9556121,
+      "name": "Team Cat",
+      "tag": null,
+      "logo": null,
+      "rating": 1497,
+      "games": 6,
+      "wins": 3,
+      "losses": 3,
+      "lastPlayed": 1780321452
+    },
+    {
+      "id": 10143469,
+      "name": "Газики",
+      "tag": null,
+      "logo": null,
+      "rating": 1495,
+      "games": 4,
+      "wins": 2,
+      "losses": 2,
+      "lastPlayed": 1780835453
+    },
+    {
+      "id": 10170769,
+      "name": "4 Anchors + Ilmeria",
+      "tag": null,
+      "logo": null,
+      "rating": 1495,
+      "games": 9,
+      "wins": 4,
+      "losses": 5,
+      "lastPlayed": 1782522531
+    },
+    {
+      "id": 7554697,
+      "name": "Nigma Galaxy",
+      "tag": "NGX",
+      "logo": "https://cdn.steamusercontent.com/ugc/1827894588975105240/421C0D8318D71D5DD31FD08A7933AB622AE26590/",
+      "rating": 1493,
+      "games": 5,
+      "wins": 2,
+      "losses": 3,
+      "lastPlayed": 1777650919
+    },
+    {
+      "id": 10182793,
+      "name": "Switzerland",
+      "tag": null,
+      "logo": null,
+      "rating": 1488,
+      "games": 9,
+      "wins": 4,
+      "losses": 5,
+      "lastPlayed": 1782858846
+    },
+    {
+      "id": 5014799,
+      "name": "Nemiga Gaming",
+      "tag": "Nemiga",
+      "logo": "https://cdn.steamusercontent.com/ugc/1761446291384253796/DDD9E9CE3AC50467578944F685C4BD84ED0285B7/",
+      "rating": 1487,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780134650
+    },
+    {
+      "id": 10182851,
+      "name": "Team Kenya",
+      "tag": null,
+      "logo": null,
+      "rating": 1487,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1782860651
+    },
+    {
+      "id": 10027376,
+      "name": "NEW GROWTH",
+      "tag": null,
+      "logo": null,
+      "rating": 1486,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780164124
+    },
+    {
+      "id": 9928636,
+      "name": "Team Lynx",
+      "tag": "LYNX",
+      "logo": "https://cdn.steamusercontent.com/ugc/14941196846611701531/643518619FD1EC99DB98FC12C5D8970751E16A2E/",
+      "rating": 1486,
+      "games": 9,
+      "wins": 4,
+      "losses": 5,
+      "lastPlayed": 1780342323
+    },
+    {
+      "id": 10150500,
+      "name": "Six Cats",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780033999
+    },
+    {
+      "id": 9895350,
+      "name": "Perrito Panzon",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780168809
+    },
+    {
+      "id": 7173025,
+      "name": "white give",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780234774
+    },
+    {
+      "id": 10164510,
+      "name": "Norge",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1782907891
+    },
+    {
+      "id": 10176802,
+      "name": "Syria",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1782833409
+    },
+    {
+      "id": 10186715,
+      "name": "Myanmar",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1782909991
+    },
+    {
+      "id": 10182309,
+      "name": "PTime",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "lastPlayed": 1783778088
+    },
+    {
+      "id": 9303383,
+      "name": "L1GA TEAM",
+      "tag": "L1",
+      "logo": "https://cdn.steamusercontent.com/ugc/40063200209690390/20B527165E8E637C83F27A62FFE1AE957CB43018/",
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777399803
+    },
+    {
+      "id": 10007878,
+      "name": "Team Refuser",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "lastPlayed": 1781698511
+    },
+    {
+      "id": 9104159,
+      "name": "Party 2 play",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817193
+    },
+    {
+      "id": 10122270,
+      "name": "PMN TEAM",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817301
+    },
+    {
+      "id": 8993358,
+      "name": "ProfGameTeam",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817370
+    },
+    {
+      "id": 10134538,
+      "name": "Low cortisol",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817417
+    },
+    {
+      "id": 10135326,
+      "name": "манки кинг",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817544
+    },
+    {
+      "id": 10135318,
+      "name": "СЛАБЫМ КАБЗДА",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777818221
+    },
+    {
+      "id": 10116149,
+      "name": "ГРА",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777818241
+    },
+    {
+      "id": 9730797,
+      "name": "Paseka",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777818542
+    },
+    {
+      "id": 10135320,
+      "name": "Ggvp",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777821038
+    },
+    {
+      "id": 10135325,
+      "name": "бурмалда",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777821529
+    },
+    {
+      "id": 9530890,
+      "name": "Сосу члены",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1779016314
+    },
+    {
+      "id": 9672414,
+      "name": "ATC",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780027449
+    },
+    {
+      "id": 10144217,
+      "name": "Asia Spirit",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780027703
+    },
+    {
+      "id": 2108395,
+      "name": "TNC Predator",
+      "tag": "TNC",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2108395.png",
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780029317
+    },
+    {
+      "id": 10137060,
+      "name": "Flame Junior",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780030867
+    },
+    {
+      "id": 9861098,
+      "name": "Sagonovsi",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780045266
+    },
+    {
+      "id": 3892751,
+      "name": "Stoges of deth",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780045328
+    },
+    {
+      "id": 8376366,
+      "name": "RAINBOW TIGERS",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780045371
+    },
+    {
+      "id": 9866162,
+      "name": "Sky Forge",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780045709
+    },
+    {
+      "id": 10150876,
+      "name": "stable mental state",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780047547
+    },
+    {
+      "id": 10157892,
+      "name": "FTL Team",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780049071
+    },
+    {
+      "id": 10047709,
+      "name": "Ilbirs Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780049561
+    },
+    {
+      "id": 10143624,
+      "name": "Zolak Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780050224
+    },
+    {
+      "id": 8419968,
+      "name": "Korkino Lions",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780051377
+    },
+    {
+      "id": 9965097,
+      "name": "谢钦州代表队",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780063537
+    },
+    {
+      "id": 10040639,
+      "name": "Ember Enjoyers",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780071274
+    },
+    {
+      "id": 9798986,
+      "name": "Tt Game",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780077754
+    },
+    {
+      "id": 9948957,
+      "name": "LA RESIS",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074369
+    },
+    {
+      "id": 10150414,
+      "name": "UF Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074413
+    },
+    {
+      "id": 10158067,
+      "name": "Team Cangreburger",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074575
+    },
+    {
+      "id": 8571354,
+      "name": "Anvorguesa",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074795
+    },
+    {
+      "id": 10095819,
+      "name": "Lunatic`s",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074891
+    },
+    {
+      "id": 6765751,
+      "name": "Belial Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780075553
+    },
+    {
+      "id": 9776093,
+      "name": "TUVIEJACACHERA",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780077786
+    },
+    {
+      "id": 10137663,
+      "name": "Korba",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780109032
+    },
+    {
+      "id": 9271656,
+      "name": "God King Empty Cloud and his minions",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780243817
+    },
+    {
+      "id": 10162622,
+      "name": "CDUB Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780244019
+    },
+    {
+      "id": 8133215,
+      "name": "Sand King Gomez",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780250954
+    },
+    {
+      "id": 9538765,
+      "name": "Talanti dagestana",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1781457244
+    },
+    {
+      "id": 10186455,
+      "name": "TEAM CAMEROON",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1782754930
+    },
+    {
+      "id": 10182501,
+      "name": "Team Portugal",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1782851256
+    },
+    {
+      "id": 8830114,
+      "name": "Team Kosova",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1782838134
+    },
+    {
+      "id": 9486230,
+      "name": "command",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1778429621
+    },
+    {
+      "id": 10041696,
+      "name": "sifr00",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 5,
+      "wins": 2,
+      "losses": 3,
+      "lastPlayed": 1780407968
+    },
+    {
+      "id": 9433599,
+      "name": "322",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780860778
+    },
+    {
+      "id": 9547052,
+      "name": "F9",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 5,
+      "wins": 2,
+      "losses": 3,
+      "lastPlayed": 1780311237
+    },
+    {
+      "id": 5095368,
+      "name": "Israel",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1782843328
+    },
+    {
+      "id": 9055189,
+      "name": "Croatia",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 9,
+      "wins": 4,
+      "losses": 5,
+      "lastPlayed": 1782848383
+    },
+    {
+      "id": 10182476,
+      "name": "INDIA",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1782909581
+    },
+    {
+      "id": 9600331,
+      "name": "Zetta Games",
+      "tag": null,
+      "logo": null,
+      "rating": 1474,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1780429570
+    },
+    {
+      "id": 9886092,
+      "name": "Rising Rage",
+      "tag": null,
+      "logo": null,
+      "rating": 1474,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1781550700
+    },
+    {
+      "id": 10186431,
+      "name": "Algeria",
+      "tag": null,
+      "logo": null,
+      "rating": 1473,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1782851934
+    },
+    {
+      "id": 2885851,
+      "name": "GIOR DOTA",
+      "tag": null,
+      "logo": null,
+      "rating": 1472,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780164838
+    },
+    {
+      "id": 10144722,
+      "name": "IGNITE",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 9,
+      "wins": 4,
+      "losses": 5,
+      "lastPlayed": 1780608831
+    },
+    {
+      "id": 10158121,
+      "name": "KRD",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780163810
+    },
+    {
+      "id": 10170364,
+      "name": "The Bug",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782508204
+    },
+    {
+      "id": 10186497,
+      "name": "CHILE",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782868812
+    },
+    {
+      "id": 10182860,
+      "name": "Kosovo Team",
+      "tag": null,
+      "logo": null,
+      "rating": 1470,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1782835160
+    },
+    {
+      "id": 10182678,
+      "name": "Team Azerbaijan",
+      "tag": null,
+      "logo": null,
+      "rating": 1470,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782838762
+    },
+    {
+      "id": 10182469,
+      "name": "Australia",
+      "tag": null,
+      "logo": null,
+      "rating": 1470,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782890035
+    },
+    {
+      "id": 10108166,
+      "name": "Mideng dreamer",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1777632220
+    },
+    {
+      "id": 9828897,
+      "name": "REKONIX",
+      "tag": "RKX",
+      "logo": "https://cdn.steamusercontent.com/ugc/16170413258693955016/5ABDC787F5CF4BBDD603F15933D9F5B0F8EB0D8A/",
+      "rating": 1469,
+      "games": 53,
+      "wins": 23,
+      "losses": 30,
+      "lastPlayed": 1783852811
+    },
+    {
+      "id": 9239282,
+      "name": "ss",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780146327
+    },
+    {
+      "id": 4006794,
+      "name": "Black Crows",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780163399
+    },
+    {
+      "id": 10182482,
+      "name": "Team Tajikistan",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782832226
+    },
+    {
+      "id": 10182656,
+      "name": "Venezuela",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1782771803
+    },
+    {
+      "id": 10182810,
+      "name": "Argentina",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "lastPlayed": 1782935611
+    },
+    {
+      "id": 10182458,
+      "name": "Team Syria",
+      "tag": null,
+      "logo": null,
+      "rating": 1468,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1782829169
+    },
+    {
+      "id": 10182892,
+      "name": "Mexico",
+      "tag": null,
+      "logo": null,
+      "rating": 1468,
+      "games": 9,
+      "wins": 3,
+      "losses": 6,
+      "lastPlayed": 1782940007
+    },
+    {
+      "id": 10186683,
+      "name": "PARAGUAY",
+      "tag": null,
+      "logo": null,
+      "rating": 1467,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1782859392
+    },
+    {
+      "id": 9981569,
+      "name": "All Good",
+      "tag": null,
+      "logo": null,
+      "rating": 1466,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1780410004
+    },
+    {
+      "id": 10182715,
+      "name": "Team Ireland",
+      "tag": null,
+      "logo": null,
+      "rating": 1466,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782850069
+    },
+    {
+      "id": 10008067,
+      "name": "Game Master",
+      "tag": null,
+      "logo": null,
+      "rating": 1465,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1781673040
+    },
+    {
+      "id": 10164198,
+      "name": "Team Bald",
+      "tag": null,
+      "logo": null,
+      "rating": 1465,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782496758
+    },
+    {
+      "id": 10163973,
+      "name": "RE ARISE",
+      "tag": null,
+      "logo": null,
+      "rating": 1465,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782303363
+    },
+    {
+      "id": 10081680,
+      "name": "GLYPH",
+      "tag": "GLYPH",
+      "logo": "https://cdn.steamusercontent.com/ugc/17521324169419112276/F3F4EBC942578E127594737DB79BF3087A18C1DF/",
+      "rating": 1464,
+      "games": 32,
+      "wins": 13,
+      "losses": 19,
+      "lastPlayed": 1782115744
+    },
+    {
+      "id": 8965331,
+      "name": "Chandogs",
+      "tag": null,
+      "logo": null,
+      "rating": 1463,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1780438735
+    },
+    {
+      "id": 10150568,
+      "name": "Lindorfitos",
+      "tag": null,
+      "logo": null,
+      "rating": 1462,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1781708042
+    },
+    {
+      "id": 9338413,
+      "name": "MOUZ",
+      "tag": "MOUZ",
+      "logo": "https://cdn.steamusercontent.com/ugc/14936784213521439739/3EA33A8516BDE538B7963F044CD1B7AB4B0BB60D/",
+      "rating": 1459,
+      "games": 18,
+      "wins": 6,
+      "losses": 12,
+      "lastPlayed": 1784051160
+    },
+    {
+      "id": 9691969,
+      "name": "Team Nemesis",
+      "tag": "NMSS",
+      "logo": "https://cdn.steamusercontent.com/ugc/16578975333650734744/040492179D9E0E83DA0559848D88CFC17A1EFCAC/",
+      "rating": 1458,
+      "games": 35,
+      "wins": 18,
+      "losses": 17,
+      "lastPlayed": 1783852811
+    },
+    {
+      "id": 7872957,
+      "name": "K.O.",
+      "tag": null,
+      "logo": null,
+      "rating": 1458,
+      "games": 9,
+      "wins": 3,
+      "losses": 6,
+      "lastPlayed": 1780497908
+    },
+    {
+      "id": 8795230,
+      "name": "Panama",
+      "tag": null,
+      "logo": null,
+      "rating": 1458,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782857034
+    },
+    {
+      "id": 10182710,
+      "name": "COLOMBIA",
+      "tag": null,
+      "logo": null,
+      "rating": 1457,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782874656
+    },
+    {
+      "id": 8838495,
+      "name": "Lithuania",
+      "tag": null,
+      "logo": null,
+      "rating": 1456,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782837306
+    },
+    {
+      "id": 9872558,
+      "name": "VP.Prodigy",
+      "tag": null,
+      "logo": null,
+      "rating": 1455,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782206656
+    },
+    {
+      "id": 9886289,
+      "name": "Cloud Rising",
+      "tag": null,
+      "logo": null,
+      "rating": 1455,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1781681547
+    },
+    {
+      "id": 8207902,
+      "name": "Slovakia",
+      "tag": null,
+      "logo": null,
+      "rating": 1455,
+      "games": 3,
+      "wins": 0,
+      "losses": 3,
+      "lastPlayed": 1782828678
+    },
+    {
+      "id": 10186458,
+      "name": "TEAM MALAWI",
+      "tag": null,
+      "logo": null,
+      "rating": 1455,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782843835
+    },
+    {
+      "id": 9819302,
+      "name": "unknow",
+      "tag": null,
+      "logo": null,
+      "rating": 1454,
+      "games": 3,
+      "wins": 0,
+      "losses": 3,
+      "lastPlayed": 1780145605
+    },
+    {
+      "id": 10164102,
+      "name": "Stormrage",
+      "tag": null,
+      "logo": null,
+      "rating": 1454,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1780597370
+    },
+    {
+      "id": 10182877,
+      "name": "Honduras",
+      "tag": null,
+      "logo": null,
+      "rating": 1454,
+      "games": 3,
+      "wins": 0,
+      "losses": 3,
+      "lastPlayed": 1782780605
+    },
+    {
+      "id": 10182752,
+      "name": "Guatemala",
+      "tag": null,
+      "logo": null,
+      "rating": 1454,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1782858186
+    },
+    {
+      "id": 10182486,
+      "name": "Iceland",
+      "tag": null,
+      "logo": null,
+      "rating": 1452,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782840976
+    },
+    {
+      "id": 10182485,
+      "name": "Team Bangladesh",
+      "tag": null,
+      "logo": null,
+      "rating": 1452,
+      "games": 3,
+      "wins": 0,
+      "losses": 3,
+      "lastPlayed": 1782896741
+    },
+    {
+      "id": 9600141,
+      "name": "Zero Tenacity",
+      "tag": "Z10",
+      "logo": "https://cdn.steamusercontent.com/ugc/23174701605135839/B5A052B86AE5F123031508603154EAD51013C412/",
+      "rating": 1451,
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "lastPlayed": 1780331284
+    },
+    {
+      "id": 7917893,
+      "name": "InterActive Philippines",
+      "tag": null,
+      "logo": null,
+      "rating": 1448,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1782018400
+    },
+    {
+      "id": 7299465,
+      "name": "MODUS",
+      "tag": null,
+      "logo": null,
+      "rating": 1447,
+      "games": 14,
+      "wins": 5,
+      "losses": 9,
+      "lastPlayed": 1782482172
+    },
+    {
+      "id": 9098294,
+      "name": "Carstensz Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1447,
+      "games": 17,
+      "wins": 7,
+      "losses": 10,
+      "lastPlayed": 1782011290
+    },
+    {
+      "id": 10101793,
+      "name": "BALU TEAM",
+      "tag": null,
+      "logo": null,
+      "rating": 1445,
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "lastPlayed": 1780311650
+    },
+    {
+      "id": 10157986,
+      "name": "D Family",
+      "tag": null,
+      "logo": null,
+      "rating": 1443,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1780549149
+    },
+    {
+      "id": 8971308,
+      "name": "x5 Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1442,
+      "games": 6,
+      "wins": 1,
+      "losses": 5,
+      "lastPlayed": 1781632554
+    },
+    {
+      "id": 10102001,
+      "name": "ПАО МОСЭНЕРГО",
+      "tag": null,
+      "logo": null,
+      "rating": 1442,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1780827934
+    },
+    {
+      "id": 2500088,
+      "name": "Slovenia",
+      "tag": null,
+      "logo": null,
+      "rating": 1442,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782755056
+    },
+    {
+      "id": 10186456,
+      "name": "Egypt",
+      "tag": null,
+      "logo": null,
+      "rating": 1442,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782832157
+    },
+    {
+      "id": 2239113,
+      "name": "Team Zambia (ZAM)",
+      "tag": null,
+      "logo": null,
+      "rating": 1441,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782845072
+    },
+    {
+      "id": 9546449,
+      "name": "Yangon Galacticos",
+      "tag": null,
+      "logo": null,
+      "rating": 1440,
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "lastPlayed": 1781927939
+    },
+    {
+      "id": 10182032,
+      "name": "Team Turkmenistan",
+      "tag": null,
+      "logo": null,
+      "rating": 1440,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782759816
+    },
+    {
+      "id": 9256405,
+      "name": "Level UP esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1440,
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "lastPlayed": 1783775274
+    },
+    {
+      "id": 10150413,
+      "name": "Iron Wing",
+      "tag": "IW",
+      "logo": "https://cdn.steamusercontent.com/ugc/16903873521422862552/02513782FE03E7A567B8B8955A0DEF415EF2B624/",
+      "rating": 1439,
+      "games": 24,
+      "wins": 8,
+      "losses": 16,
+      "lastPlayed": 1780151101
+    },
+    {
+      "id": 9866136,
+      "name": "ggboom",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782430845
+    },
+    {
+      "id": 10182769,
+      "name": "Palestine",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782756709
+    },
+    {
+      "id": 10182460,
+      "name": "Team Italy",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782838385
+    },
+    {
+      "id": 10182897,
+      "name": "New Zealand",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782836207
+    },
+    {
+      "id": 10157562,
+      "name": "Grey Track",
+      "tag": null,
+      "logo": null,
+      "rating": 1438,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1781599321
+    },
+    {
+      "id": 9586367,
+      "name": "Tunisia",
+      "tag": null,
+      "logo": null,
+      "rating": 1438,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782757943
+    },
+    {
+      "id": 8261500,
+      "name": "Xtreme Gaming",
+      "tag": "XG",
+      "logo": "https://cdn.steamusercontent.com/ugc/2402194226059610590/E3CF4B6C4B2CFB974A9B415141E4A37317AD4D80/",
+      "rating": 1427,
+      "games": 55,
+      "wins": 22,
+      "losses": 33,
+      "lastPlayed": 1784040961
+    },
+    {
+      "id": 9255039,
+      "name": "enjoy",
+      "tag": "enj",
+      "logo": "https://cdn.steamusercontent.com/ugc/14410915104676115574/85F6E2C9BBB26A11B37E55AF05BE507E94B06863/",
+      "rating": 1426,
+      "games": 18,
+      "wins": 5,
+      "losses": 13,
+      "lastPlayed": 1782464923
+    },
+    {
+      "id": 9885310,
+      "name": "Roar",
+      "tag": null,
+      "logo": null,
+      "rating": 1423,
+      "games": 11,
+      "wins": 3,
+      "losses": 8,
+      "lastPlayed": 1781592010
+    },
+    {
+      "id": 10150434,
+      "name": "DIREBORN",
+      "tag": null,
+      "logo": null,
+      "rating": 1415,
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "lastPlayed": 1781938326
+    },
+    {
+      "id": 55,
+      "name": "_PowerRangers",
+      "tag": "PR",
+      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/55.png",
+      "rating": 1413,
+      "games": 23,
+      "wins": 7,
+      "losses": 16,
+      "lastPlayed": 1783765956
+    },
+    {
+      "id": 10182299,
+      "name": "L1 TEAM",
+      "tag": null,
+      "logo": null,
+      "rating": 1398,
+      "games": 10,
+      "wins": 1,
+      "losses": 9,
+      "lastPlayed": 1783775274
+    },
+    {
+      "id": 10144195,
+      "name": "ex-HEROIC",
+      "tag": null,
+      "logo": null,
+      "rating": 1377,
+      "games": 14,
+      "wins": 2,
+      "losses": 12,
+      "lastPlayed": 1779015601
+    },
+    {
+      "id": 10019843,
+      "name": "Inner Circle x Insanity",
+      "tag": null,
+      "logo": null,
+      "rating": 1364,
+      "games": 22,
+      "wins": 5,
+      "losses": 17,
+      "lastPlayed": 1783862341
+    }
+  ],
+  "recentMatches": [
+    {
+      "match_id": 8900882416,
+      "start_time": 1784301541,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "dire": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8900771154,
+      "start_time": 1784297631,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "dire": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8900623530,
+      "start_time": 1784291941,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8900508749,
+      "start_time": 1784286301,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "dire": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8899420575,
+      "start_time": 1784215740,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8899307453,
+      "start_time": 1784211550,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8899120700,
+      "start_time": 1784204826,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8899028080,
+      "start_time": 1784200005,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8898117600,
+      "start_time": 1784134860,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8898084910,
+      "start_time": 1784133282,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "dire": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8898003442,
+      "start_time": 1784130021,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8897971312,
+      "start_time": 1784128803,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "dire": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8897841991,
+      "start_time": 1784124113,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8897831774,
+      "start_time": 1784123767,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8897696869,
+      "start_time": 1784119160,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8897695379,
+      "start_time": 1784118474,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9467224,
+        "name": "Aurora Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8897588873,
+      "start_time": 1784113637,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8897585705,
+      "start_time": 1784113191,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9467224,
+        "name": "Aurora Gaming"
+      },
+      "dire": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8896731473,
+      "start_time": 1784051160,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8896645659,
+      "start_time": 1784047022,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8896486914,
+      "start_time": 1784040961,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 8261500,
+        "name": "Xtreme Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8896380183,
+      "start_time": 1784037059,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8896267691,
+      "start_time": 1784033340,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 8261500,
+        "name": "Xtreme Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8896234088,
+      "start_time": 1784031420,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8896140998,
+      "start_time": 1784027364,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8261500,
+        "name": "Xtreme Gaming"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8896139222,
+      "start_time": 1784026864,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8893253595,
+      "start_time": 1783863780,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2586976,
+        "name": "OG"
+      },
+      "dire": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8893208737,
+      "start_time": 1783862341,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "dire": {
+        "id": 10019843,
+        "name": "Inner Circle x Insanity"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8893165071,
+      "start_time": 1783861320,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "dire": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8893106015,
+      "start_time": 1783858806,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "dire": {
+        "id": 2586976,
+        "name": "OG"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8893079555,
+      "start_time": 1783857841,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10019843,
+        "name": "Inner Circle x Insanity"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8893070561,
+      "start_time": 1783857481,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8892958964,
+      "start_time": 1783852811,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9828897,
+        "name": "REKONIX"
+      },
+      "dire": {
+        "id": 9691969,
+        "name": "Team Nemesis"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8892914077,
+      "start_time": 1783851300,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8892923329,
+      "start_time": 1783851180,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8892836635,
+      "start_time": 1783847223,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8892835652,
+      "start_time": 1783847102,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9691969,
+        "name": "Team Nemesis"
+      },
+      "dire": {
+        "id": 9828897,
+        "name": "REKONIX"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8892829232,
+      "start_time": 1783846800,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "dire": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8891519142,
+      "start_time": 1783778088,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "dire": {
+        "id": 10182309,
+        "name": "PTime"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891497910,
+      "start_time": 1783777029,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 9467224,
+        "name": "Aurora Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891438996,
+      "start_time": 1783775274,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182299,
+        "name": "L1 TEAM"
+      },
+      "dire": {
+        "id": 9256405,
+        "name": "Level UP esports"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8891371442,
+      "start_time": 1783772700,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9467224,
+        "name": "Aurora Gaming"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891349244,
+      "start_time": 1783771860,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182309,
+        "name": "PTime"
+      },
+      "dire": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8891325877,
+      "start_time": 1783770895,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9256405,
+        "name": "Level UP esports"
+      },
+      "dire": {
+        "id": 10182299,
+        "name": "L1 TEAM"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891240327,
+      "start_time": 1783766700,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "dire": {
+        "id": 8261500,
+        "name": "Xtreme Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891227605,
+      "start_time": 1783766400,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "dire": {
+        "id": 9964962,
+        "name": "GamerLegion"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891217710,
+      "start_time": 1783765956,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 55,
+        "name": "_PowerRangers"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8891145641,
+      "start_time": 1783761964,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 8261500,
+        "name": "Xtreme Gaming"
+      },
+      "dire": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8891108985,
+      "start_time": 1783760455,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9964962,
+        "name": "GamerLegion"
+      },
+      "dire": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8891108843,
+      "start_time": 1783760415,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 55,
+        "name": "_PowerRangers"
+      },
+      "dire": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890301402,
+      "start_time": 1783708841,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "dire": {
+        "id": 10019843,
+        "name": "Inner Circle x Insanity"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8890268632,
+      "start_time": 1783708020,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890270555,
+      "start_time": 1783707672,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "dire": {
+        "id": 2586976,
+        "name": "OG"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890206902,
+      "start_time": 1783705060,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 10019843,
+        "name": "Inner Circle x Insanity"
+      },
+      "dire": {
+        "id": 9895392,
+        "name": "Virtus.pro"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890179830,
+      "start_time": 1783704199,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "dire": {
+        "id": 10150538,
+        "name": "LGD Gaming"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8890162325,
+      "start_time": 1783703283,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 2586976,
+        "name": "OG"
+      },
+      "dire": {
+        "id": 10182357,
+        "name": "1w"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890074597,
+      "start_time": 1783699976,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 9828897,
+        "name": "REKONIX"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8890036748,
+      "start_time": 1783699141,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "dire": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8890008812,
+      "start_time": 1783697672,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 9691969,
+        "name": "Team Nemesis"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8889944251,
+      "start_time": 1783695507,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9828897,
+        "name": "REKONIX"
+      },
+      "dire": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "radiant_win": false
+    }
+  ]
+}
