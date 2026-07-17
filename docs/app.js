@@ -250,6 +250,8 @@ function runCalc() {
     return;
   }
   const p = predictFull(aTeam, bTeam, { format, oddsA, oddsB });
+  lastCalcCtx = { source: "calc", matchId: null, teamA: aTeam.name, teamB: bTeam.name, teamAId: aTeam.id, teamBId: bTeam.id, format, probSeriesA: p.series.a };
+  const logBtn = oddsA && oddsB ? `<button class="logbet primary sm" data-src="calc">📝 Записать ставку</button>` : "";
   const market = p.market
     ? `<div class="kv"><span>Букмекер (без маржи)</span><span>${pct(p.market.impliedA)} / ${pct(p.market.impliedB)}</span></div>`
     : "";
@@ -273,83 +275,7 @@ function runCalc() {
       ${draftNote(p, aTeam.name, bTeam.name) ? `<div style="margin-top:10px">${draftNote(p, aTeam.name, bTeam.name)}</div>` : ""}
       ${(aTeam.timing || bTeam.timing) ? `<div class="timing-block"><div class="tb-title">⏱ Стиль и темп</div>${timingDetail(aTeam)}${timingDetail(bTeam)}</div>` : ""}
       <div style="margin-top:12px">${valueBadge(p)}</div>
-    </div>`;
-}
-
-// ---- Draft tab ----
-function fillDraftTeams() {
-  const sel = document.getElementById("draftA");
-  const selB = document.getElementById("draftB");
-  if (!draftData || !draftData.teams) {
-    document.getElementById("draft-result").innerHTML =
-      `<div class="loading">Драфт-данные не собраны. Запусти: npm run build-draft</div>`;
-    return;
-  }
-  const ids = Object.keys(draftData.teams);
-  const teams = ids
-    .map((id) => ({ id, name: draftData.teams[id].name, rating: (byId.get(id) || {}).rating || 0 }))
-    .filter((t) => draftData.teams[t.id].roster && draftData.teams[t.id].roster.length)
-    .sort((a, b) => b.rating - a.rating);
-  const opts = teams.map((t) => `<option value="${t.id}">${t.name}</option>`).join("");
-  sel.innerHTML = opts;
-  selB.innerHTML = opts;
-  if (teams.length > 1) selB.selectedIndex = 1;
-}
-
-function exposureBar(exposureA, exposureB, nameA, nameB) {
-  const total = exposureA + exposureB || 1;
-  const a = Math.round((exposureA / total) * 100);
-  return `<div class="oddsrow"><span>Уязвимость по драфту (больше = хуже)</span></div>
-    <div class="probbar">
-      <div class="a" style="width:${a}%">${(exposureA * 100).toFixed(0)}</div>
-      <div class="b" style="width:${100 - a}%">${(exposureB * 100).toFixed(0)}</div>
-    </div>`;
-}
-
-function threatBlock(title, threats, oppName) {
-  if (!threats || !threats.length) {
-    return `<div class="threat-group"><div class="threat-head">${title}</div><div class="threat-empty">Явных уязвимостей не найдено.</div></div>`;
-  }
-  const rows = threats.map((t) => {
-    const heroes = t.threats.map((h) => {
-      const counters = h.counters
-        .filter((c) => c.wr <= 0.49)
-        .slice(0, 3)
-        .map((c) => `<span class="counter ${c.byOpp ? "byopp" : ""}">${c.name} ${(c.wr * 100).toFixed(0)}%${c.byOpp ? " ✓играет" : ""}</span>`)
-        .join(" ");
-      return `<div class="threat-hero"><b>${h.heroName}</b> <span class="muted">(вес ${(h.weight * 100).toFixed(0)}%, wr ${(h.wr * 100).toFixed(0)}%)</span><div class="counters">контрят: ${counters || "—"}</div></div>`;
-    }).join("");
-    return `<div class="threat-player"><div class="tp-name">${t.player}</div>${heroes}</div>`;
-  }).join("");
-  return `<div class="threat-group"><div class="threat-head">${title}</div><div class="threat-sub">✓играет = ${oppName} комфортно на этой контре</div>${rows}</div>`;
-}
-
-function runDraftAnalysis() {
-  const out = document.getElementById("draft-result");
-  const dA = draftTeam(document.getElementById("draftA").value);
-  const dB = draftTeam(document.getElementById("draftB").value);
-  if (!dA || !dB || dA.id === dB.id) {
-    out.innerHTML = `<div class="loading">Выбери две разные команды.</div>`;
-    return;
-  }
-  const an = analyzeMatchup(dA, dB);
-  const favored = an.deltaPerGameA > 0 ? dA.name : dB.name;
-  const shift = Math.abs(an.deltaPerGameA * 100).toFixed(1);
-  const verdict = Math.abs(an.deltaPerGameA) < 0.005
-    ? `<div class="badge novalue">Пулы примерно равны — драфт не даёт перевеса</div>`
-    : `<div class="badge value">🎲 Драфт в пользу ${favored}: +${shift}% к шансу за игру</div>`;
-
-  out.innerHTML = `
-    <div class="result-block">
-      <div class="match-teams">
-        <div class="team"><div><div class="team-name">${dA.name}</div><div class="team-rating">уязвимость ${(dA.vulnerability * 100).toFixed(0)}</div></div></div>
-        <span class="vs-mid">VS</span>
-        <div class="team right"><div><div class="team-name">${dB.name}</div><div class="team-rating">уязвимость ${(dB.vulnerability * 100).toFixed(0)}</div></div></div>
-      </div>
-      ${exposureBar(an.exposureA, an.exposureB, dA.name, dB.name)}
-      <div style="margin:10px 0">${verdict}</div>
-      ${threatBlock(`Кого может наказать ${dB.name}`, an.threatsA, dB.name)}
-      ${threatBlock(`Кого может наказать ${dA.name}`, an.threatsB, dA.name)}
+      ${logBtn ? `<div style="margin-top:10px">${logBtn}</div>` : ""}
     </div>`;
 }
 
@@ -626,7 +552,8 @@ function valueBlock(pA, nameA, nameB, oddsA, oddsB) {
     : `<div class="badge small">Лёгкий перевес: ${best.side} (EV +${(best.ev * 100).toFixed(1)}%), но ниже порога 5%</div>`;
   return `
     <div class="kv"><span>Кэфы → честная вер-ть (без вига)</span><span>${fair ? pct(fair.a) + " / " + pct(fair.b) : "—"}</span></div>
-    <div style="margin:8px 0">${rec}</div>`;
+    <div style="margin:8px 0">${rec}</div>
+    <div style="margin:8px 0"><button class="logbet primary sm" data-src="live">📝 Записать ставку</button></div>`;
 }
 
 function runLiveAnalysis() {
@@ -663,6 +590,7 @@ function runLiveAnalysis() {
   };
   const res = analyzeDraft(live.a, live.b, ctx);
   const p = res.perGameA;
+  lastLiveCtx = { source: "live", matchId: liveLoadedId || null, teamA: nameA, teamB: nameB, teamAId: teamAId || null, teamBId: teamBId || null, format, probSeriesA: res.seriesA };
 
   const bullets = res.explanation.bullets
     .map((x) => `<div class="rz-bullet"><span class="rz-icon">${x.icon}</span><span>${x.text}</span></div>`)
@@ -702,6 +630,107 @@ function runLiveAnalysis() {
     </div>`;
 }
 
+// ---- Bet journal (local, for future ROI) ----
+const BET_KEY = "dm_bets_v1";
+let lastLiveCtx = null; // { source, matchId, teamA, teamB, teamAId, teamBId, format, probSeriesA }
+let lastCalcCtx = null;
+
+function loadBets() {
+  try { return JSON.parse(localStorage.getItem(BET_KEY)) || []; } catch { return []; }
+}
+function saveBets(arr) { localStorage.setItem(BET_KEY, JSON.stringify(arr)); }
+
+function makeBet(ctx, oddsA, oddsB) {
+  const oA = Number(oddsA), oB = Number(oddsB);
+  if (!ctx || !(oA > 1) || !(oB > 1)) return null;
+  const pA = ctx.probSeriesA, pB = 1 - pA;
+  const evA = pA * oA - 1, evB = pB * oB - 1;
+  const pickA = evA >= evB;
+  return {
+    id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+    ts: new Date().toISOString(),
+    source: ctx.source,
+    matchId: ctx.matchId || null,
+    teamA: ctx.teamA, teamB: ctx.teamB,
+    teamAId: ctx.teamAId || null, teamBId: ctx.teamBId || null,
+    format: ctx.format,
+    probSeriesA: Number(pA.toFixed(4)),
+    oddsA: oA, oddsB: oB,
+    pick: pickA ? "A" : "B",
+    pickTeam: pickA ? ctx.teamA : ctx.teamB,
+    oddsPick: pickA ? oA : oB,
+    ev: Number((pickA ? evA : evB).toFixed(4)),
+    result: null, // 'win' | 'loss' — filled offline by npm run roi
+  };
+}
+
+function logBet(ctx, oddsA, oddsB) {
+  const bet = makeBet(ctx, oddsA, oddsB);
+  if (!bet) { alert("Впиши корректные кэфы (оба > 1) перед записью."); return; }
+  const arr = loadBets();
+  arr.unshift(bet);
+  saveBets(arr);
+  renderJournal();
+  const box = document.querySelector(".journal-box");
+  if (box) box.open = true;
+}
+
+function renderJournal() {
+  const list = document.getElementById("journal-list");
+  const countEl = document.getElementById("journalCount");
+  const arr = loadBets();
+  if (countEl) countEl.textContent = arr.length;
+  if (!list) return;
+  if (!arr.length) { list.innerHTML = `<div class="threat-empty">Пусто. Записанные ставки появятся тут.</div>`; return; }
+  list.innerHTML = arr.map((b) => {
+    const res = b.result === "win" ? `<span class="jr-win">✓ выигрыш</span>` : b.result === "loss" ? `<span class="jr-loss">✗ проигрыш</span>` : `<span class="jr-open">ожидает</span>`;
+    const d = new Date(b.ts).toLocaleString("ru-RU", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
+    return `<div class="journal-item">
+      <div class="ji-top"><b>${b.pickTeam}</b> @ ${b.oddsPick} <span class="muted">(EV +${(b.ev * 100).toFixed(1)}%)</span> ${res}</div>
+      <div class="ji-sub muted">${b.teamA} vs ${b.teamB} · ${b.format.toUpperCase()} · ${d}${b.matchId ? " · #" + b.matchId : ""}</div>
+      <button class="ji-del" data-id="${b.id}">×</button>
+    </div>`;
+  }).join("");
+  list.querySelectorAll(".ji-del").forEach((btn) =>
+    btn.addEventListener("click", () => { saveBets(loadBets().filter((x) => x.id !== btn.dataset.id)); renderJournal(); })
+  );
+}
+
+function exportBets() {
+  const blob = new Blob([JSON.stringify(loadBets(), null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "dota-money-bets.json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importBets(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const incoming = JSON.parse(reader.result);
+      if (!Array.isArray(incoming)) throw new Error("не массив");
+      const byId = new Map(loadBets().map((b) => [b.id, b]));
+      for (const b of incoming) if (b && b.id) byId.set(b.id, b);
+      saveBets([...byId.values()].sort((a, b) => (a.ts < b.ts ? 1 : -1)));
+      renderJournal();
+    } catch (e) { alert("Не удалось импортировать JSON: " + e.message); }
+  };
+  reader.readAsText(file);
+}
+
+// Delegated handler for "Записать ставку" buttons in either tab.
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".logbet");
+  if (!btn) return;
+  if (btn.dataset.src === "live") {
+    logBet(lastLiveCtx, document.getElementById("liveOddsA").value, document.getElementById("liveOddsB").value);
+  } else {
+    logBet(lastCalcCtx, document.getElementById("oddsA").value, document.getElementById("oddsB").value);
+  }
+});
+
 // ---- Init ----
 async function init() {
   try {
@@ -710,10 +739,16 @@ async function init() {
     renderMatches();
     renderRatings();
     fillCalcTeams();
-    fillDraftTeams();
     wireLiveTab();
+    renderJournal();
     document.getElementById("calcBtn").addEventListener("click", runCalc);
-    document.getElementById("draftBtn").addEventListener("click", runDraftAnalysis);
+    document.getElementById("journalExport").addEventListener("click", exportBets);
+    document.getElementById("journalClear").addEventListener("click", () => {
+      if (confirm("Очистить весь журнал ставок?")) { saveBets([]); renderJournal(); }
+    });
+    document.getElementById("journalImport").addEventListener("change", (e) => {
+      if (e.target.files && e.target.files[0]) importBets(e.target.files[0]);
+    });
   } catch (e) {
     document.getElementById("meta").textContent = "Ошибка загрузки данных. Запусти npm run build-data.";
     document.getElementById("matches-list").innerHTML = `<div class="loading">Нет данных: ${e.message}</div>`;

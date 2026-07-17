@@ -10,6 +10,7 @@
     "build-meta": "node src/build_meta.mjs",
     "backtest": "node src/backtest.mjs",
     "train": "node src/train_model.mjs",
+    "roi": "node src/roi.mjs",
     "fetch-upcoming": "node src/fetch_upcoming.mjs",
     "start": "node server.mjs",
     "dev": "node server.mjs"

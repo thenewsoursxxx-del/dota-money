@@ -20,7 +20,6 @@
     <button class="tab active" data-tab="matches">Матчи</button>
     <button class="tab" data-tab="calc">Калькулятор</button>
     <button class="tab" data-tab="live">Live-драфт</button>
-    <button class="tab" data-tab="draft">Драфт</button>
     <button class="tab" data-tab="ratings">Рейтинг</button>
   </nav>
 
@@ -136,23 +135,17 @@
           <button id="liveClear" class="ghost">Очистить</button>
         </div>
         <div id="live-result"></div>
-      </div>
-    </section>
 
-    <section id="tab-draft" class="tab-panel">
-      <div class="panel-hint">Анализ пулов героев и контр-драфта. Показывает, чьих игроков легче «читать» и наказывать пиком — с учётом того, играет ли соперник нужную контру.</div>
-      <div class="calc">
-        <div class="calc-row">
-          <label>Команда A
-            <select id="draftA"></select>
-          </label>
-          <span class="vs">VS</span>
-          <label>Команда B
-            <select id="draftB"></select>
-          </label>
-        </div>
-        <button id="draftBtn" class="primary">Анализ драфта</button>
-        <div id="draft-result"></div>
+        <details class="journal-box">
+          <summary>📒 Журнал ставок · <span id="journalCount">0</span> · для будущего ROI</summary>
+          <div class="journal-hint">Жми «Записать ставку» в результате (Live или Калькулятор), когда реально ставишь. Кэф фиксируется на момент записи. Потом посчитаем ROI по факту через <code>npm run roi</code>.</div>
+          <div class="journal-actions">
+            <button id="journalExport" class="ghost sm">⬇ Экспорт JSON</button>
+            <label class="ghost sm journal-import">⬆ Импорт<input id="journalImport" type="file" accept="application/json" hidden /></label>
+            <button id="journalClear" class="ghost sm">🗑 Очистить</button>
+          </div>
+          <div id="journal-list" class="journal-list"></div>
+        </details>
       </div>
     </section>
 
@@ -163,7 +156,7 @@
   </main>
 
   <footer class="app-footer">
-    v3 · данные: OpenDota · Elo + драфт-интеллект · <span id="foot-meta"></span>
+    v3 · данные: OpenDota · ML-модель + драфт-интеллект · <span id="foot-meta"></span>
   </footer>
 
   <script type="module" src="app.js"></script>
