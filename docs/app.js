@@ -342,7 +342,7 @@ function runDraftAnalysis() {
 }
 
 // ---- Live draft tab ----
-const live = { a: [], b: [], assignA: {}, assignB: {} };
+const live = { a: [], b: [], assignA: {}, assignB: {}, nameA: null, nameB: null };
 
 function fillLiveTeams() {
   const opts = `<option value="">— без команды —</option>` +
@@ -382,6 +382,7 @@ function renderLivePicks(side) {
 
   wrap.querySelectorAll(".pc-x").forEach((btn) =>
     btn.addEventListener("click", () => {
+      stopLive();
       const id = Number(btn.dataset.hero);
       live[side] = live[side].filter((x) => x !== id);
       delete (side === "a" ? live.assignA : live.assignB)[id];
@@ -407,6 +408,7 @@ function renderHeroDrop(side, query) {
   drop.innerHTML = matches.map((h) => `<button class="hero-opt" data-side="${side}" data-hero="${h.id}">${h.name}</button>`).join("");
   drop.querySelectorAll(".hero-opt").forEach((btn) =>
     btn.addEventListener("click", () => {
+      stopLive();
       const id = Number(btn.dataset.hero);
       if (live[side].length >= 5 || live[side].includes(id)) return;
       live[side].push(id);
@@ -416,6 +418,133 @@ function renderHeroDrop(side, query) {
       renderLivePicks(side);
     })
   );
+}
+
+// ---- Auto-live via OpenDota /live (no key, CORS-friendly) ----
+let liveGames = [];
+let liveLoadedId = null;
+let liveTimer = null;
+
+function popcount(n) { let c = 0; n = n >>> 0; while (n) { c += n & 1; n >>>= 1; } return c; }
+// building_state bitmask: radiant towers = bits 0-10, dire towers = bits 16-26 (set bit = standing).
+function towersDown(state) {
+  const s = Number(state) >>> 0;
+  return { radiant: 11 - popcount(s & 0x7ff), dire: 11 - popcount((s >>> 16) & 0x7ff) };
+}
+function liveSetStatus(msg, cls = "") {
+  const el = document.getElementById("liveStatus");
+  if (el) { el.textContent = msg; el.className = "live-status" + (cls ? " " + cls : ""); }
+}
+function stopLive() {
+  if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
+  liveLoadedId = null;
+}
+
+async function loadLiveMatches() {
+  const box = document.getElementById("liveMatches");
+  liveSetStatus("Загружаю live-матчи…");
+  let games;
+  try {
+    const r = await fetch("https://api.opendota.com/api/live");
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    games = await r.json();
+  } catch (e) {
+    liveSetStatus("Не удалось загрузить (сеть/CORS): " + e.message, "err");
+    return;
+  }
+  const withHeroes = (g) => Array.isArray(g.players) && g.players.filter((p) => p.hero_id).length >= 6;
+  // Pro (league) games first; fall back to top public games so the feature is usable 24/7.
+  let list = games.filter((g) => g.league_id && withHeroes(g)).sort((a, b) => (b.sort_score || 0) - (a.sort_score || 0));
+  let mode = "pro";
+  if (!list.length) {
+    list = games.filter(withHeroes).sort((a, b) => (b.average_mmr || 0) - (a.average_mmr || 0)).slice(0, 8);
+    mode = "pub";
+  }
+  liveGames = list;
+  if (!list.length) { box.innerHTML = ""; liveSetStatus("Сейчас нет live-игр с драфтом. Попробуй во время матча.", "err"); return; }
+  liveSetStatus(mode === "pro" ? `Про-матчей в эфире: ${list.length}` : `Про-матчей нет — топ-паблики (${list.length}) для теста`, mode === "pro" ? "ok" : "");
+  box.innerHTML = list.map((g, i) => {
+    const nameA = (g.team_name_radiant || "").trim() || (mode === "pub" ? `Radiant · ${g.average_mmr || "?"} MMR` : "Radiant");
+    const nameB = (g.team_name_dire || "").trim() || "Dire";
+    const min = Math.max(0, Math.floor((g.game_time || 0) / 60));
+    const lead = g.radiant_lead || 0;
+    const leadTxt = lead === 0 ? "нетворс ровно" : (lead > 0 ? nameA : nameB) + " +" + Math.abs(lead).toLocaleString("ru-RU");
+    return `<button class="live-match-item" data-idx="${i}">
+      <span class="lm-teams">${nameA} <b>vs</b> ${nameB}</span>
+      <span class="lm-meta">${min}′ · ${g.radiant_score || 0}–${g.dire_score || 0} · ${leadTxt}</span>
+    </button>`;
+  }).join("");
+  box.querySelectorAll(".live-match-item").forEach((btn) =>
+    btn.addEventListener("click", () => applyLiveMatch(liveGames[Number(btn.dataset.idx)]))
+  );
+}
+
+function autoAssign(teamId, sidePlayers) {
+  const out = {};
+  const dt = teamId && byId.has(teamId) ? draftTeam(teamId) : null;
+  if (!dt || !dt.roster) return out;
+  const byAcc = new Map(dt.roster.map((p) => [p.account_id, p]));
+  for (const p of sidePlayers) {
+    if (!p.hero_id) continue;
+    const player = byAcc.get(p.account_id);
+    if (player) out[p.hero_id] = player;
+  }
+  return out;
+}
+
+function applyLiveMatch(g, isRefresh = false) {
+  if (!g) return;
+  liveLoadedId = g.match_id;
+  const idR = g.team_id_radiant ? String(g.team_id_radiant) : "";
+  const idD = g.team_id_dire ? String(g.team_id_dire) : "";
+
+  // Team selects (only if known in dataset → enables Elo + rosters). A = radiant, B = dire.
+  document.getElementById("liveTeamA").value = byId.has(idR) ? idR : "";
+  document.getElementById("liveTeamB").value = byId.has(idD) ? idD : "";
+
+  live.nameA = (g.team_name_radiant || "").trim() || (byId.get(idR) || {}).name || "Radiant";
+  live.nameB = (g.team_name_dire || "").trim() || (byId.get(idD) || {}).name || "Dire";
+  document.getElementById("liveTitleA").textContent = live.nameA + " · Radiant";
+  document.getElementById("liveTitleB").textContent = live.nameB + " · Dire";
+
+  const rad = g.players.filter((p) => p.team === 0);
+  const dire = g.players.filter((p) => p.team === 1);
+  live.a = rad.filter((p) => p.hero_id).map((p) => p.hero_id).slice(0, 5);
+  live.b = dire.filter((p) => p.hero_id).map((p) => p.hero_id).slice(0, 5);
+  live.assignA = autoAssign(idR, rad);
+  live.assignB = autoAssign(idD, dire);
+
+  // Live economy → early-game inputs. radiant_lead = radiant − dire networth.
+  const tw = towersDown(g.building_state);
+  document.getElementById("egNw").value = g.radiant_lead || 0;
+  document.getElementById("egXp").value = "";
+  document.getElementById("egTowersA").value = tw.dire;     // A(radiant) destroyed = dire towers down
+  document.getElementById("egTowersB").value = tw.radiant;
+  document.getElementById("egFb").value = "";
+
+  renderLivePicks("a");
+  renderLivePicks("b");
+  runLiveAnalysis();
+
+  const min = Math.max(0, Math.floor((g.game_time || 0) / 60));
+  liveSetStatus(`${live.nameA} vs ${live.nameB} · ${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
+
+  if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
+  if (document.getElementById("liveAuto").checked) liveTimer = setInterval(refreshLive, 20000);
+}
+
+async function refreshLive() {
+  if (!liveLoadedId) return;
+  let games;
+  try { games = await (await fetch("https://api.opendota.com/api/live")).json(); }
+  catch { return; }
+  const g = games.find((x) => x.match_id === liveLoadedId);
+  if (!g) {
+    if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
+    liveSetStatus("Матч завершён или пропал из эфира — авто-обновление остановлено.", "");
+    return;
+  }
+  applyLiveMatch(g, true);
 }
 
 function wireLiveTab() {
@@ -432,22 +561,27 @@ function wireLiveTab() {
     input.addEventListener("input", () => renderHeroDrop(side, input.value));
     const teamSel = document.getElementById(side === "a" ? "liveTeamA" : "liveTeamB");
     teamSel.addEventListener("change", () => {
-      const dt = teamSel.value ? draftTeam(teamSel.value) : null;
+      stopLive();
       const t = teamSel.value ? byId.get(teamSel.value) : null;
       const title = document.getElementById(side === "a" ? "liveTitleA" : "liveTitleB");
       title.textContent = (t ? t.name : side === "a" ? "Команда A" : "Команда B") + (side === "a" ? " · Radiant" : " · Dire");
-      if (side === "a") live.assignA = {}; else live.assignB = {};
+      if (side === "a") { live.assignA = {}; live.nameA = null; } else { live.assignB = {}; live.nameB = null; }
       renderLivePicks(side);
-      if (teamSel.value && !dt) {
-        // Team has no draft roster data — player assignment unavailable.
-      }
     });
   }
+  document.getElementById("liveLoadBtn").addEventListener("click", loadLiveMatches);
+  document.getElementById("liveAuto").addEventListener("change", (e) => {
+    if (!e.target.checked) { if (liveTimer) { clearInterval(liveTimer); liveTimer = null; } }
+    else if (liveLoadedId) liveTimer = setInterval(refreshLive, 20000);
+  });
   document.getElementById("liveBtn").addEventListener("click", runLiveAnalysis);
   document.getElementById("liveClear").addEventListener("click", () => {
-    live.a = []; live.b = []; live.assignA = {}; live.assignB = {};
+    stopLive();
+    live.a = []; live.b = []; live.assignA = {}; live.assignB = {}; live.nameA = null; live.nameB = null;
     renderLivePicks("a"); renderLivePicks("b");
     document.getElementById("live-result").innerHTML = "";
+    document.getElementById("liveMatches").innerHTML = "";
+    liveSetStatus("");
   });
 }
 
@@ -472,8 +606,8 @@ function runLiveAnalysis() {
   const teamBId = document.getElementById("liveTeamB").value;
   const tA = teamAId ? byId.get(teamAId) : null;
   const tB = teamBId ? byId.get(teamBId) : null;
-  const nameA = tA ? tA.name : "Команда A";
-  const nameB = tB ? tB.name : "Команда B";
+  const nameA = live.nameA || (tA ? tA.name : "Команда A");
+  const nameB = live.nameB || (tB ? tB.name : "Команда B");
   const format = document.getElementById("liveFormat").value;
 
   const eg = {
@@ -502,8 +636,9 @@ function runLiveAnalysis() {
   const eloLine = res.eloProbA != null
     ? `<div class="kv"><span>База по Elo → с драфтом</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
     : `<div class="kv"><span>Прогноз по драфту (без Elo)</span><span>${pct(res.priorProbA)}</span></div>`;
+  const egLabel = liveLoadedId ? "+ экономика игры (live)" : "+ ранняя игра (~10 мин)";
   const earlyLine = res.early
-    ? `<div class="kv hl-row"><span>+ ранняя игра (~10 мин)</span><span><b>${pct(res.priorProbA)} → ${pct(p)}</b></span></div>`
+    ? `<div class="kv hl-row"><span>${egLabel}</span><span><b>${pct(res.priorProbA)} → ${pct(p)}</b></span></div>`
     : "";
 
   out.innerHTML = `
@@ -524,7 +659,9 @@ function runLiveAnalysis() {
       </div>
       <div class="rz-title">Разбор</div>
       <div class="reasoning">${bullets || '<div class="threat-empty">Явных перекосов не найдено — матчап близкий.</div>'}</div>
-      <div class="disclaimer">Прогноз по драфту (потолок ~65%). Точность 80–90%+ будет на след. этапе — по экономике первых 10 минут.</div>
+      <div class="disclaimer">${res.early
+        ? "Учтена экономика игры (нетворс/вышки) — самый сильный сигнал, прогноз близок к реальному состоянию матча."
+        : "Прогноз по драфту (потолок ~65%). Загрузи live-матч или заполни экономику ~10 мин для точности 80–90%."}</div>
     </div>`;
 }
 

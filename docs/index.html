@@ -62,8 +62,14 @@
     </section>
 
     <section id="tab-live" class="tab-panel">
-      <div class="panel-hint">Введи 10 героев по окончании стадии пиков (+ опц. выбери команды и назначь игроков). Движок оценит матчап по мете, синергиям, контрам, кривым силы, лайнам и пулам — и объяснит, кто и почему победит.</div>
+      <div class="panel-hint">Введи 10 героев по окончании стадии пиков (+ опц. выбери команды и назначь игроков). Движок оценит матчап по мете, синергиям, контрам, кривым силы, лайнам и пулам — и объяснит, кто и почему победит. Либо загрузи live-матч — герои, нетворс и вышки подтянутся сами.</div>
       <div class="calc">
+        <div class="live-load">
+          <button id="liveLoadBtn" class="primary sm">🔴 Загрузить live-матч</button>
+          <label class="live-auto"><input type="checkbox" id="liveAuto" checked /> авто-обновление (20с)</label>
+          <span id="liveStatus" class="live-status"></span>
+        </div>
+        <div id="liveMatches" class="live-matches"></div>
         <div class="calc-row">
           <label>Команда A (опц.)
             <select id="liveTeamA"></select>
