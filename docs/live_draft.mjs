@@ -36,12 +36,35 @@ const K_PROB = 1.7; // edge -> probability steepness
 const BLEND = 0.7; // how much draft logit adds on top of Elo logit
 
 // ---------- per-hero lookups ----------
-function heroWR(meta, id) {
+// STRATZ current-patch, role-aware winrate. We pick the position the hero is ACTUALLY
+// played most (max games), so a hero can read strong as a core and weak as a support.
+// Returns { wr, games, pos } or null.
+function stratzHeroWR(stratz, id) {
+  if (!stratz || !stratz.heroes) return null;
+  const h = stratz.heroes[id];
+  if (!h) return null;
+  let best = null;
+  for (const [pos, v] of Object.entries(h.pos || {})) {
+    if (v && v.games && (!best || v.games > best.games)) best = { wr: v.wr, games: v.games, pos: Number(pos) };
+  }
+  if (!best && h.overall && h.overall.wr != null) best = { wr: h.overall.wr, games: h.overall.games, pos: null };
+  return best;
+}
+
+// Hero strength as a winrate. Pro Tier-1 sample (meta.json) is the most relevant but
+// thin; STRATZ high-MMR is huge and reflects the CURRENT patch. Blend the two so the
+// meta term tracks the live patch instead of a stale pro average.
+function heroWR(meta, id, stratz) {
   const h = meta.heroes[id];
-  if (!h) return 0.5;
-  if (h.games >= 6) return shrunkWR(h.games, h.wins);
-  if (h.winrate != null) return h.winrate;
-  return 0.5;
+  let proWR = 0.5, hasPro = false;
+  if (h) {
+    if (h.games >= 6) { proWR = shrunkWR(h.games, h.wins); hasPro = true; }
+    else if (h.winrate != null) { proWR = h.winrate; hasPro = true; }
+  }
+  const s = stratzHeroWR(stratz, id);
+  if (!s) return proWR;
+  if (!hasPro) return s.wr;
+  return 0.55 * proWR + 0.45 * s.wr;
 }
 
 function heroCurve(meta, id) {
@@ -71,8 +94,8 @@ function heroKnow(knowledge, meta, id) {
 }
 
 // ---------- team aggregates ----------
-function teamMeta(meta, ids) {
-  return avg(ids.map((id) => heroWR(meta, id) - 0.5));
+function teamMeta(meta, ids, stratz) {
+  return avg(ids.map((id) => heroWR(meta, id, stratz) - 0.5));
 }
 
 function teamSynergy(meta, ids) {
@@ -178,11 +201,11 @@ function poolFindings(meta, assign, myIds, oppIds) {
 // ---------- core scoring ----------
 // radiant/dire: arrays of hero ids (team A / team B). ctx = { meta, knowledge, assignA, assignB }.
 export function scoreDraft(radiant, dire, ctx) {
-  const { meta, knowledge, assignA = null, assignB = null } = ctx;
+  const { meta, knowledge, assignA = null, assignB = null, stratz = null } = ctx;
   const A = radiant.filter(Boolean);
   const B = dire.filter(Boolean);
 
-  const eMeta = teamMeta(meta, A) - teamMeta(meta, B);
+  const eMeta = teamMeta(meta, A, stratz) - teamMeta(meta, B, stratz);
   const eSyn = teamSynergy(meta, A) - teamSynergy(meta, B);
   const cAB = teamCounter(meta, A, B);
   const cBA = teamCounter(meta, B, A);
@@ -210,6 +233,18 @@ export function scoreDraft(radiant, dire, ctx) {
   const poolA = poolFindings(meta, assignA, A, B);
   const poolB = poolFindings(meta, assignB, B, A);
   const ePool = poolB.penalty - poolA.penalty;
+
+  // Current-patch standouts (STRATZ role-aware): flag drafted heroes that are notably
+  // strong/weak THIS patch, so the read reflects live meta, not a year-old pro average.
+  const patchPick = (ids) =>
+    ids
+      .map((id) => ({ id, s: stratzHeroWR(stratz, id) }))
+      .filter((x) => x.s && x.s.games >= 300)
+      .map((x) => ({ id: x.id, wr: x.s.wr, pos: x.s.pos, edge: x.s.wr - 0.5 }))
+      .sort((a, b) => Math.abs(b.edge) - Math.abs(a.edge))
+      .slice(0, 2)
+      .filter((x) => Math.abs(x.edge) >= 0.03);
+  const patchMeta = stratz ? { a: patchPick(A), b: patchPick(B) } : null;
 
   const rawEdge =
     W.meta * eMeta +
@@ -247,6 +282,7 @@ export function scoreDraft(radiant, dire, ctx) {
     arch: { a: archA, b: archB },
     counters: { aVsB: cAB.hardCounters, bVsA: cBA.hardCounters },
     pool: { a: poolA, b: poolB },
+    patchMeta,
   };
 }
 
@@ -327,6 +363,19 @@ export function explain(score, nameA, nameB, heroName) {
     if (side.d.imbalance > 0.05) {
       b.push({ icon: "💥", text: `У <b>${side.team}</b> ${pct(side.d.frac)} урона — ${side.d.dominant}. Одномерный дамаг легко резать одним типом защиты (BKB/броня/сопротивление).` });
     }
+  }
+
+  // 4b) Current-patch meta read (STRATZ high-MMR, role-aware, last ~2 months).
+  if (score.patchMeta) {
+    const posTxt = (p) => (p ? ` (поз. ${p})` : "");
+    const fmtSide = (arr, team) =>
+      arr
+        .map((x) => `<b>${hn(x.id)}</b>${posTxt(x.pos)} ${x.edge >= 0 ? "силён" : "слаб"} в патче (${pct(x.wr)})`)
+        .join(", ");
+    const parts = [];
+    if (score.patchMeta.a.length) parts.push(`${nameA}: ${fmtSide(score.patchMeta.a, nameA)}`);
+    if (score.patchMeta.b.length) parts.push(`${nameB}: ${fmtSide(score.patchMeta.b, nameB)}`);
+    if (parts.length) b.push({ icon: "📈", text: `Мета патча (Stratz, high-MMR по ролям): ${parts.join("; ")}.` });
   }
 
   // 5) Synergy / composition.

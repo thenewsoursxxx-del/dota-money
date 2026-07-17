@@ -20,6 +20,7 @@ let dataset = null;      // { teams, recentMatches, ... }
 let upcoming = null;     // { matches }
 let draftData = null;    // { heroes, teams: { [id]: {...} } }
 let metaData = null;     // { heroes, synergy, counter }
+let stratzData = null;   // { heroes: { [id]: { overall, pos } } } — current-patch role winrates
 let knowledge = null;    // { heroes: { [name]: {...} } }
 let mlModel = null;      // trained logistic model (docs/data/model.json)
 let heroList = [];       // [{ id, name }] sorted, for the picker
@@ -27,13 +28,14 @@ let byId = new Map();
 let byName = new Map();
 
 async function loadData() {
-  const [ds, up, dr, mt, kn, ml] = await Promise.all([
+  const [ds, up, dr, mt, kn, ml, st] = await Promise.all([
     fetch("data/dataset.json").then((r) => r.json()),
     fetch("data/upcoming.json").then((r) => r.json()).catch(() => ({ matches: [] })),
     fetch("data/draft.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/meta.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/hero_knowledge.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/model.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/stratz.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
   dataset = ds;
   upcoming = up;
@@ -41,6 +43,7 @@ async function loadData() {
   metaData = mt;
   knowledge = kn;
   mlModel = ml;
+  stratzData = st;
   byId = new Map();
   byName = new Map();
   for (const t of dataset.teams) {
@@ -580,6 +583,7 @@ function runLiveAnalysis() {
   };
   const ctx = {
     meta: metaData,
+    stratz: stratzData,
     knowledge: knowledge || { heroes: {} },
     assignA: Object.keys(live.assignA).length ? live.assignA : null,
     assignB: Object.keys(live.assignB).length ? live.assignB : null,
