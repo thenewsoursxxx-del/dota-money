@@ -269,6 +269,17 @@ button.primary.sm { box-shadow: 0 3px 10px rgba(215, 38, 61, 0.3); }
 .live-load { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
 .sm { padding: 8px 12px; font-size: 13px; }
 .live-auto { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; cursor: pointer; }
+
+/* Slider toggle for auto-refresh (on = poll every 20s, off = no polling) */
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.switch-track { position: relative; width: 40px; height: 22px; border-radius: 999px; background: var(--bg-3); border: 1px solid var(--border); transition: background .2s ease, border-color .2s ease; flex: none; }
+.switch-thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #8a94a6; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); transition: transform .2s cubic-bezier(.4, 0, .2, 1), background .2s ease; }
+.switch input:checked + .switch-track { background: linear-gradient(135deg, #1f8f4a, #2ea043); border-color: #3fb950; }
+.switch input:checked + .switch-track .switch-thumb { transform: translateX(18px); background: #fff; }
+.switch input:focus-visible + .switch-track { outline: 2px solid var(--blue); outline-offset: 2px; }
+.switch-label { font-size: 12px; color: var(--muted); }
+.switch input:checked ~ .switch-label { color: var(--text); }
 .live-status { font-size: 12px; color: var(--muted); }
 .live-status.ok { color: #56d364; }
 .live-status.err { color: #f85149; }

@@ -65,7 +65,11 @@
       <div class="calc">
         <div class="live-load">
           <button id="liveLoadBtn" class="primary sm">🔴 Загрузить live-матч</button>
-          <label class="live-auto"><input type="checkbox" id="liveAuto" checked /> авто-обновление (20с)</label>
+          <label class="switch" title="Когда включено — данные live-матча обновляются каждые 20 секунд">
+            <input type="checkbox" id="liveAuto" checked />
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+            <span class="switch-label">авто-обновление (20с)</span>
+          </label>
           <span id="liveStatus" class="live-status"></span>
         </div>
         <div id="liveMatches" class="live-matches"></div>
