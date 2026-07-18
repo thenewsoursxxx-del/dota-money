@@ -41,6 +41,8 @@ jobs:
         if: ${{ env.ODDSPAPI_KEY != '' }}
         run: npm run build-odds
         continue-on-error: true
+        env:
+          ODDS_MAX: "180" # bounded chunk per run → backfills over several runs, stays within free-tier quota
 
       - name: Commit updated data
         run: |
