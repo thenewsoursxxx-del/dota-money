@@ -449,6 +449,49 @@ function autoAssign(teamId, sidePlayers) {
   return out;
 }
 
+// Assign roster players to the drafted heroes WITHOUT a live account→hero mapping, by
+// maximizing total signature-pool weight (best-case comfort). Any player who still lands
+// on a non-signature hero is genuinely "off-pool" → that's the pool-lock signal.
+// ≤5×5, so brute force over permutations is trivial and exact.
+function autoAssignByPool(teamId, heroIds) {
+  const out = {};
+  const dt = teamId && byId.has(String(teamId)) ? draftTeam(teamId) : null;
+  if (!dt || !dt.roster || !dt.roster.length) return out;
+  const players = dt.roster.slice(0, 5);
+  const heroes = heroIds.filter(Boolean).slice(0, 5);
+  if (!heroes.length) return out;
+  const weight = (p, h) => {
+    const s = (p.signature || []).find((x) => x.id === h);
+    return s ? s.weight : 0;
+  };
+  const idx = players.map((_, i) => i);
+  let best = null, bestScore = -1;
+  const permute = (arr, k) => {
+    if (k === arr.length) {
+      let score = 0;
+      for (let hi = 0; hi < heroes.length; hi++) {
+        const pi = arr[hi];
+        if (pi != null && players[pi]) score += weight(players[pi], heroes[hi]);
+      }
+      if (score > bestScore) { bestScore = score; best = arr.slice(); }
+      return;
+    }
+    for (let i = k; i < arr.length; i++) {
+      [arr[k], arr[i]] = [arr[i], arr[k]];
+      permute(arr, k + 1);
+      [arr[k], arr[i]] = [arr[i], arr[k]];
+    }
+  };
+  permute(idx, 0);
+  if (best) {
+    for (let hi = 0; hi < heroes.length; hi++) {
+      const pi = best[hi];
+      if (pi != null && players[pi]) out[heroes[hi]] = players[pi];
+    }
+  }
+  return out;
+}
+
 function applyLiveMatch(g, isRefresh = false) {
   if (!g) return;
   liveLoadedId = g.match_id;
@@ -552,6 +595,36 @@ function confBadge(conf) {
   return `<div class="badge ${cls}">Уверенность: ${conf.label} (${(conf.value * 100).toFixed(0)}%)</div>`;
 }
 
+// Human factor: who's on their signature hero vs forced off comfort (pool-lock), and whose
+// signatures the opponent countered. Needs a roster + player→hero assignment.
+function poolLockBlock(pool, nameA, nameB) {
+  if (!pool) return "";
+  const pct = (x) => (x != null ? Math.round(x * 100) + "%" : "");
+  const sideRow = (side, team, opp) => {
+    if (!side || (!side.findings.length && !side.comfort.length)) return "";
+    const locks = side.findings
+      .map((f) => {
+        let t = `<b>${f.player}</b> — вне пула на <b>${f.hero}</b>`;
+        if (f.signature) t += ` (коронка — ${f.signature})`;
+        if (f.counteredSig && f.counteredSig.length) t += `; ${opp} контрят его ${f.counteredSig.join(", ")}`;
+        return `<div class="pl-item pl-lock">🔒 ${t}</div>`;
+      })
+      .join("");
+    const comf = side.comfort
+      .map((c) => `<div class="pl-item pl-ok">✅ <b>${c.player}</b> на своём <b>${c.hero}</b>${c.wr != null ? ` (${pct(c.wr)} WR)` : ""}</div>`)
+      .join("");
+    return `<div class="pl-side"><div class="pl-team">${team}</div>${locks}${comf}</div>`;
+  };
+  const a = sideRow(pool.a, nameA, nameB);
+  const b = sideRow(pool.b, nameB, nameA);
+  if (!a && !b) return "";
+  const lockCount = (pool.a.findings.length || 0) + (pool.b.findings.length || 0);
+  const hint = lockCount
+    ? "🔒 = игрока увели с коронных героев (человеческий фактор — минус к силе)."
+    : "Оба состава — на комфортных героях.";
+  return `<div class="pool-lock"><div class="rz-title">Человеческий фактор · пул-лок</div>${a}${b}<div class="pl-hint">${hint}</div></div>`;
+}
+
 // Compare our series probability to bookmaker odds → value / EV / Kelly.
 function valueBlock(pA, nameA, nameB, oddsA, oddsB) {
   const oA = Number(oddsA), oB = Number(oddsB);
@@ -597,12 +670,17 @@ function runLiveAnalysis() {
     towersB: document.getElementById("egTowersB").value,
     firstBlood: document.getElementById("egFb").value,
   };
+  // Player→hero assignment: manual overrides (dropdowns / live match) first, else infer
+  // the most comfortable assignment from each roster's signature pools so pool-lock works
+  // even for a hand-built draft.
+  const assignA = Object.keys(live.assignA).length ? live.assignA : autoAssignByPool(teamAId, live.a);
+  const assignB = Object.keys(live.assignB).length ? live.assignB : autoAssignByPool(teamBId, live.b);
   const ctx = {
     meta: metaData,
     stratz: stratzData,
     knowledge: knowledge || { heroes: {} },
-    assignA: Object.keys(live.assignA).length ? live.assignA : null,
-    assignB: Object.keys(live.assignB).length ? live.assignB : null,
+    assignA: Object.keys(assignA).length ? assignA : null,
+    assignB: Object.keys(assignB).length ? assignB : null,
     teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
     baseProbA: mlBaseProb(tA, tB),
     earlyGame: eg,
@@ -642,6 +720,7 @@ function runLiveAnalysis() {
         ${curveBars(res.score.curves.a, nameA + " — кривая силы")}
         ${curveBars(res.score.curves.b, nameB + " — кривая силы")}
       </div>
+      ${poolLockBlock(res.score.pool, nameA, nameB)}
       <div class="rz-title">Разбор</div>
       <div class="reasoning">${bullets || '<div class="threat-empty">Явных перекосов не найдено — матчап близкий.</div>'}</div>
       <div class="disclaimer">${res.early

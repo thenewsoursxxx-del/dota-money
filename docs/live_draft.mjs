@@ -168,15 +168,19 @@ function teamArchetype(knowledge, meta, ids) {
 function poolFindings(meta, assign, myIds, oppIds) {
   const oppSet = new Set(oppIds);
   const findings = [];
+  const comfort = []; // players on a signature hero
   let penalty = 0; // reduces this team's edge
-  if (!assign) return { penalty, findings };
+  if (!assign) return { penalty, findings, comfort };
   for (const id of myIds) {
     const pl = assign[id];
     if (!pl || !pl.signature || !pl.signature.length) continue;
-    const sigIds = pl.signature.map((s) => s.id);
-    const onComfort = sigIds.includes(id);
+    const sig = pl.signature.find((s) => s.id === id);
     const topSig = pl.signature[0];
-    if (!onComfort) {
+    const heroNm = meta.heroes[id] ? meta.heroes[id].name : `Hero ${id}`;
+    if (sig) {
+      // On comfort: playing one of their signature heroes.
+      comfort.push({ player: pl.name, hero: heroNm, weight: sig.weight, wr: sig.wr });
+    } else {
       // Forced off their comfort pool.
       const sev = 0.05 * (0.6 + (pl.predictability || 0));
       penalty += sev;
@@ -188,14 +192,15 @@ function poolFindings(meta, assign, myIds, oppIds) {
       findings.push({
         type: "offpool",
         player: pl.name,
-        hero: meta.heroes[id] ? meta.heroes[id].name : `Hero ${id}`,
+        hero: heroNm,
         signature: topSig ? topSig.name : null,
+        predictability: pl.predictability || 0,
         counteredSig,
         severity: sev,
       });
     }
   }
-  return { penalty, findings };
+  return { penalty, findings, comfort };
 }
 
 // ---------- core scoring ----------
@@ -347,16 +352,7 @@ export function explain(score, nameA, nameB, heroName) {
     b.push({ icon: "🎯", text: `Контра: <b>${hn(c.a)}</b> тащит против <b>${hn(c.b)}</b> (WR ${pct(c.wr)}, ${c.g} игр) — плюс для ${c.by}.` });
   }
 
-  // 3) Pool lock (hands tied) — strongest human-factor bullet.
-  for (const side of [{ p: score.pool.a, team: nameA, opp: nameB }, { p: score.pool.b, team: nameB, opp: nameA }]) {
-    for (const f of side.p.findings) {
-      let t = `У <b>${f.player}</b> (${side.team}) связаны руки: ${f.hero} — вне его сигнатурного пула`;
-      if (f.signature) t += ` (коронка — ${f.signature})`;
-      if (f.counteredSig && f.counteredSig.length) t += `, а ${side.opp} закрыли/контрят его ${f.counteredSig.join(", ")}`;
-      t += ".";
-      b.push({ icon: "🔒", text: t });
-    }
-  }
+  // (Pool-lock / human factor is rendered as its own dedicated block in the UI.)
 
   // 4) Damage balance.
   for (const side of [{ d: score.dmg.a, team: nameA }, { d: score.dmg.b, team: nameB }]) {
