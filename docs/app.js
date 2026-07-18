@@ -378,6 +378,7 @@ function renderHeroDrop(side, query) {
 }
 
 // ---- Auto-live via OpenDota /live (no key, CORS-friendly) ----
+const LIVE_INTERVAL_MS = 120000; // poll every 120s — easy on OpenDota's rate limit (avoids 429)
 let liveGames = [];
 let liveLoadedId = null;
 let liveTimer = null;
@@ -581,7 +582,7 @@ function applyLiveMatch(g, isRefresh = false) {
   liveSetStatus(`${live.nameA} vs ${live.nameB} · ${mapTxt}${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
 
   if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
-  if (document.getElementById("liveAuto").checked) liveTimer = setInterval(refreshLive, 20000);
+  if (document.getElementById("liveAuto").checked) liveTimer = setInterval(refreshLive, LIVE_INTERVAL_MS);
 }
 
 async function refreshLive() {
@@ -615,12 +616,12 @@ async function refreshLive() {
   // No same-series game yet: the next map's draft may just not have started. Keep watching for a
   // few minutes (drafts + breaks take a while), then give up so we don't poll forever after a series.
   liveMissCount++;
-  if (liveMissCount >= 24) { // ~8 min of 20s polls
+  if (liveMissCount >= 5) { // ~10 min of 120s polls
     if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
     liveSetStatus("Серия, похоже, завершена — авто-обновление остановлено. Нажми «Загрузить live-матчи» для нового матча.", "");
     return;
   }
-  liveSetStatus(`Карта завершена. Жду следующую карту серии… (${liveMissCount}, обновление каждые 20с)`, "");
+  liveSetStatus(`Карта завершена. Жду следующую карту серии… (${liveMissCount}, обновление каждые 120с)`, "");
 }
 
 function wireLiveTab() {
@@ -648,7 +649,7 @@ function wireLiveTab() {
   document.getElementById("liveLoadBtn").addEventListener("click", loadLiveMatches);
   document.getElementById("liveAuto").addEventListener("change", (e) => {
     if (!e.target.checked) { if (liveTimer) { clearInterval(liveTimer); liveTimer = null; } }
-    else if (liveLoadedId) liveTimer = setInterval(refreshLive, 20000);
+    else if (liveLoadedId) liveTimer = setInterval(refreshLive, LIVE_INTERVAL_MS);
   });
   document.getElementById("liveBtn").addEventListener("click", runLiveAnalysis);
   document.getElementById("liveClear").addEventListener("click", () => {
