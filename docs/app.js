@@ -605,7 +605,8 @@ function poolLockBlock(pool, nameA, nameB) {
     const locks = side.findings
       .map((f) => {
         let t = `<b>${f.player}</b> — вне пула на <b>${f.hero}</b>`;
-        if (f.signature) t += ` (коронка — ${f.signature})`;
+        const pool = f.signatureTop && f.signatureTop.length ? f.signatureTop : (f.signature ? [f.signature] : []);
+        if (pool.length) t += ` (его герои: ${pool.join(", ")}${f.poolSize > pool.length ? " и др." : ""})`;
         if (f.counteredSig && f.counteredSig.length) t += `; ${opp} контрят его ${f.counteredSig.join(", ")}`;
         return `<div class="pl-item pl-lock">🔒 ${t}</div>`;
       })

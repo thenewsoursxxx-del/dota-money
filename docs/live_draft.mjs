@@ -194,6 +194,8 @@ function poolFindings(meta, assign, myIds, oppIds) {
         player: pl.name,
         hero: heroNm,
         signature: topSig ? topSig.name : null,
+        signatureTop: pl.signature.slice(0, 3).map((s) => s.name), // whole comfort pool is considered, not just #1
+        poolSize: pl.signature.length,
         predictability: pl.predictability || 0,
         counteredSig,
         severity: sev,
