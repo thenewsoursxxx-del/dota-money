@@ -230,9 +230,26 @@ function renderRatings() {
     </div>`).join("");
 }
 
+// OpenDota sometimes has several team_ids for the same org (rebrands/new entries),
+// which shows up as duplicate names in the pickers. Collapse by name, keeping the
+// entry that played most RECENTLY — that's the live org with the current roster
+// (e.g. Nigma's active id vs the stale Miracle-era one). Games breaks ties.
+function dedupeTeams(teams) {
+  const best = new Map();
+  for (const t of teams) {
+    const key = String(t.name || "").trim().toLowerCase();
+    const cur = best.get(key);
+    const better = !cur
+      || (t.lastPlayed || 0) > (cur.lastPlayed || 0)
+      || ((t.lastPlayed || 0) === (cur.lastPlayed || 0) && (t.games || 0) > (cur.games || 0));
+    if (better) best.set(key, t);
+  }
+  return [...best.values()];
+}
+
 // ---- Calculator ----
 function fillCalcTeams() {
-  const teams = dataset.teams.filter((t) => t.games >= 3);
+  const teams = dedupeTeams(dataset.teams.filter((t) => t.games >= 3));
   const opts = teams.map((t) => `<option value="${t.id}">${t.name} (${t.rating})</option>`).join("");
   const a = document.getElementById("teamA");
   const b = document.getElementById("teamB");
@@ -287,8 +304,7 @@ const live = { a: [], b: [], assignA: {}, assignB: {}, nameA: null, nameB: null 
 
 function fillLiveTeams() {
   const opts = `<option value="">— без команды —</option>` +
-    dataset.teams
-      .filter((t) => t.games >= 3)
+    dedupeTeams(dataset.teams.filter((t) => t.games >= 3))
       .sort((a, b) => b.rating - a.rating)
       .map((t) => `<option value="${t.id}">${t.name} (${t.rating})</option>`)
       .join("");

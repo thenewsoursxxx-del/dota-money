@@ -21,6 +21,17 @@ const N_PLAYERS = Number(process.env.PLAYERS || 5);
 const DELAY = Number(process.env.DELAY || 900); // pacing to stay under OpenDota free rate limit
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// The International 2026 line-up (16 teams). These get rosters regardless of Elo rank so the
+// draft/pool tools always work for the tournament that matters. IDs are the canonical
+// OpenDota team_ids in our dataset (the entry with the most games when an org has several).
+//   Aurora, BoomBoys/BetBoom, Falcons, Team Liquid, Tundra(1win roster), Xtreme, Yandex,
+//   Team Spirit, TEAM VISION(PARIVISION), Nigma Galaxy, HULIGANI, Team Resilience, Vici, OG,
+//   GamerLegion, LGD Gaming.
+const TI2026_TEAM_IDS = [
+  9467224, 8255888, 9247354, 2163, 8291895, 8261500, 9823272, 7119388,
+  9572001, 10136357, 10149530, 5017210, 726228, 2586976, 9964962, 10150538,
+];
+
 async function main() {
   const dataset = JSON.parse(await readFile(join(DATA_DIR, "dataset.json"), "utf8"));
 
@@ -46,12 +57,21 @@ async function main() {
   }
   process.stdout.write("\n");
 
-  // Top Tier-1 teams by Elo (need enough games to be meaningful).
+  // Target set = top Tier-1 teams by Elo  ∪  the TI 2026 line-up (always included).
+  const byId = new Map(dataset.teams.map((t) => [t.id, t]));
   const topTeams = dataset.teams.filter((t) => t.games >= 5).slice(0, N_TEAMS);
-  console.log(`3/4 Собираю ростеры и пулы игроков для ${topTeams.length} команд...`);
+  const targetMap = new Map(topTeams.map((t) => [t.id, t]));
+  for (const id of TI2026_TEAM_IDS) {
+    const t = byId.get(id);
+    if (t) targetMap.set(id, t);
+    else console.log(`   ⚠ TI-команда id=${id} не найдена в датасете — пропускаю`);
+  }
+  const targetTeams = [...targetMap.values()];
+  const tiCount = TI2026_TEAM_IDS.filter((id) => targetMap.has(id)).length;
+  console.log(`3/4 Собираю ростеры и пулы игроков для ${targetTeams.length} команд (из них TI-2026: ${tiCount})...`);
 
   const teamsOut = {};
-  for (const t of topTeams) {
+  for (const t of targetTeams) {
     try {
       const [players, teamHeroesRaw] = await Promise.all([getTeamPlayers(t.id), getTeamHeroes(t.id)]);
       await sleep(DELAY);
