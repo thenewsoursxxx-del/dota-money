@@ -11,6 +11,7 @@
     "build-stratz": "node src/build_stratz.mjs",
     "backtest": "node src/backtest.mjs",
     "backtest-draft": "node src/backtest_draft.mjs",
+    "backtest-early": "node src/backtest_early.mjs",
     "train": "node src/train_model.mjs",
     "roi": "node src/roi.mjs",
     "fetch-upcoming": "node src/fetch_upcoming.mjs",
