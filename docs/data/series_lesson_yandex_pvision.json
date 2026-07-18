@@ -1,0 +1,293 @@
+{
+  "generatedAt": "2026-07-18T16:40:56.301Z",
+  "series": "PVISION vs Team Yandex — EWC 2026",
+  "score": "PVISION 1 : 1 Yandex",
+  "matches": [
+    {
+      "matchId": 8902338515,
+      "map": 1,
+      "radiant": "PVISION",
+      "dire": "Team Yandex",
+      "radiantTeamId": "9824702",
+      "direTeamId": "9823272",
+      "winner": "radiant",
+      "winnerName": "PVISION",
+      "durationMin": 31.1,
+      "heroes": {
+        "radiant": [
+          "Tiny",
+          "Underlord",
+          "Ember Spirit",
+          "Dark Willow",
+          "Hoodwink"
+        ],
+        "dire": [
+          "Templar Assassin",
+          "Slardar",
+          "Dark Seer",
+          "Tusk",
+          "Mirana"
+        ],
+        "radiantIds": [
+          19,
+          108,
+          106,
+          119,
+          123
+        ],
+        "direIds": [
+          46,
+          28,
+          55,
+          100,
+          9
+        ]
+      },
+      "players": {
+        "radiant": [
+          {
+            "name": "Satanic",
+            "hero": "Tiny",
+            "nw": 23660
+          },
+          {
+            "name": "strafe instructor",
+            "hero": "Underlord",
+            "nw": 18285
+          },
+          {
+            "name": "Have fun",
+            "hero": "Ember Spirit",
+            "nw": 16952
+          },
+          {
+            "name": "Pele",
+            "hero": "Dark Willow",
+            "nw": 7535
+          },
+          {
+            "name": "Dukalis",
+            "hero": "Hoodwink",
+            "nw": 8323
+          }
+        ],
+        "dire": [
+          {
+            "name": "arima-",
+            "hero": "Templar Assassin",
+            "nw": 15753
+          },
+          {
+            "name": "CHIRA_JUNIOR",
+            "hero": "Slardar",
+            "nw": 11074
+          },
+          {
+            "name": "bangkok",
+            "hero": "Dark Seer",
+            "nw": 17252
+          },
+          {
+            "name": "; ]",
+            "hero": "Tusk",
+            "nw": 4969
+          },
+          {
+            "name": "lostreak chicken",
+            "hero": "Mirana",
+            "nw": 7255
+          }
+        ]
+      },
+      "preGame": {
+        "baseProbRadiant": 0.2034,
+        "draftProbRadiant": 0.3906,
+        "priorProbRadiant": 0.1826,
+        "components": {
+          "meta": -0.0525,
+          "synergy": -0.095,
+          "counter": -0.019,
+          "lane": -0.0697,
+          "timing": -0.0247,
+          "dmg": 0,
+          "lock": 0,
+          "pool": 0.066,
+          "player": -0.0669
+        }
+      },
+      "economy": {
+        "10": {
+          "nwDiff": -1242,
+          "pA": 0.127
+        },
+        "15": {
+          "nwDiff": -1606,
+          "pA": 0.1134
+        },
+        "20": {
+          "nwDiff": 2165,
+          "pA": 0.4556
+        },
+        "25": {
+          "nwDiff": 5531,
+          "pA": 0.8589
+        },
+        "30": {
+          "nwDiff": 11436,
+          "pA": 0.98
+        }
+      },
+      "errors": {
+        "pre": 0.817,
+        "at10": 0.873,
+        "at20": 0.544
+      }
+    },
+    {
+      "matchId": 8902431810,
+      "map": 2,
+      "radiant": "PVISION",
+      "dire": "Team Yandex",
+      "radiantTeamId": "9824702",
+      "direTeamId": "9823272",
+      "winner": "dire",
+      "winnerName": "Team Yandex",
+      "durationMin": 65.8,
+      "heroes": {
+        "radiant": [
+          "Nature's Prophet",
+          "Beastmaster",
+          "Ember Spirit",
+          "Keeper of the Light",
+          "Ogre Magi"
+        ],
+        "dire": [
+          "Shadow Fiend",
+          "Monkey King",
+          "Kunkka",
+          "Enchantress",
+          "Hoodwink"
+        ],
+        "radiantIds": [
+          53,
+          38,
+          106,
+          90,
+          84
+        ],
+        "direIds": [
+          11,
+          114,
+          23,
+          58,
+          123
+        ]
+      },
+      "players": {
+        "radiant": [
+          {
+            "name": "Satanic",
+            "hero": "Nature's Prophet",
+            "nw": 55897
+          },
+          {
+            "name": "strafe instructor",
+            "hero": "Beastmaster",
+            "nw": 40677
+          },
+          {
+            "name": "Have fun",
+            "hero": "Ember Spirit",
+            "nw": 32520
+          },
+          {
+            "name": "Pele",
+            "hero": "Keeper of the Light",
+            "nw": 19508
+          },
+          {
+            "name": "Dukalis",
+            "hero": "Ogre Magi",
+            "nw": 13824
+          }
+        ],
+        "dire": [
+          {
+            "name": "arima-",
+            "hero": "Shadow Fiend",
+            "nw": 48799
+          },
+          {
+            "name": "CHIRA_JUNIOR",
+            "hero": "Monkey King",
+            "nw": 40440
+          },
+          {
+            "name": "bangkok",
+            "hero": "Kunkka",
+            "nw": 43989
+          },
+          {
+            "name": "; ]",
+            "hero": "Enchantress",
+            "nw": 22366
+          },
+          {
+            "name": "lostreak chicken",
+            "hero": "Hoodwink",
+            "nw": 21179
+          }
+        ]
+      },
+      "preGame": {
+        "baseProbRadiant": 0.2034,
+        "draftProbRadiant": 0.5495,
+        "priorProbRadiant": 0.2132,
+        "components": {
+          "meta": 0.0325,
+          "synergy": 0.0327,
+          "counter": 0.0096,
+          "lane": -0.0845,
+          "timing": 0.0173,
+          "dmg": 0.048,
+          "lock": 0.0292,
+          "pool": 0.099,
+          "player": -0.0669
+        }
+      },
+      "economy": {},
+      "errors": {
+        "pre": 0.213,
+        "at10": null,
+        "at20": null
+      }
+    }
+  ],
+  "takeaways": [
+    "Map 1: UPSET — model favored Team Yandex (82%), won PVISION. Pre-error 0.817.",
+    "Map 1 @10′: economy WRONG → Team Yandex (nw -1242, P=13%).",
+    "Map 1 @20′: economy WRONG → Team Yandex (nw +2165, P=46%).",
+    "Map 2: pre-game side correct — Team Yandex 79%, won Team Yandex.",
+    "LEARNED: extreme pre-game prior (~82% Yandex) resisted +2k gold lead — fixed by shrinking prior as gold gap grows.",
+    "LEARNED: draft alone still near-even on map1; upset was live economy + execution, not pre-draft."
+  ],
+  "modelActions": [
+    "Applied early-game prior-shrink + stronger gold weight (live_draft.mjs)",
+    "Patched Elo/form for PVISION+Yandex from both maps into dataset.json",
+    "Appended 2 training rows; retrained model.json (holdout acc 69.6%)",
+    "Refreshed players.json for both rosters"
+  ],
+  "calibration": {
+    "earlyGameFix": "prior shrink + nw coeff 0.32->0.48",
+    "map1At20": {
+      "before": 0.313,
+      "after": 0.456,
+      "nw": 2165
+    },
+    "map1At25": {
+      "before": 0.572,
+      "after": 0.859,
+      "nw": 5531
+    }
+  }
+}

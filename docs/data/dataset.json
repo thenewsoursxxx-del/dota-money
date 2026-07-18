@@ -1,45 +1,8 @@
 {
-  "generatedAt": "2026-07-18T13:19:06.646Z",
+  "generatedAt": "2026-07-18T16:42:20.403Z",
   "tier1LeagueCount": 2680,
-  "matchesUsed": 2192,
+  "matchesUsed": 2194,
   "teams": [
-    {
-      "id": 9823272,
-      "name": "Team Yandex",
-      "tag": null,
-      "logo": null,
-      "rating": 1792,
-      "games": 85,
-      "wins": 58,
-      "losses": 27,
-      "lastPlayed": 1784204826,
-      "timing": {
-        "games": 85,
-        "avgMin": 42,
-        "avgWinMin": 40,
-        "avgLossMin": 47,
-        "short": {
-          "g": 13,
-          "wr": 0.7692307692307693
-        },
-        "mid": {
-          "g": 27,
-          "wr": 0.8148148148148148
-        },
-        "long": {
-          "g": 45,
-          "wr": 0.5777777777777777
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1725,
-        "form10": 0.833,
-        "form45": 0.776,
-        "act": 24,
-        "rust": 2
-      }
-    },
     {
       "id": 8255888,
       "name": "BoomBoys",
@@ -115,6 +78,43 @@
       }
     },
     {
+      "id": 9823272,
+      "name": "Team Yandex",
+      "tag": null,
+      "logo": null,
+      "rating": 1722,
+      "games": 87,
+      "wins": 59,
+      "losses": 28,
+      "lastPlayed": 1784386380,
+      "timing": {
+        "games": 85,
+        "avgMin": 42,
+        "avgWinMin": 40,
+        "avgLossMin": 47,
+        "short": {
+          "g": 13,
+          "wr": 0.7692307692307693
+        },
+        "mid": {
+          "g": 27,
+          "wr": 0.8148148148148148
+        },
+        "long": {
+          "g": 45,
+          "wr": 0.5777777777777777
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1722,
+        "form10": 0.775,
+        "form45": 0.729,
+        "act": 26,
+        "rust": 0
+      }
+    },
+    {
       "id": 10108947,
       "name": "SouthAmericaRejects",
       "tag": null,
@@ -149,43 +149,6 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
-      }
-    },
-    {
-      "id": 9824702,
-      "name": "PVISION",
-      "tag": null,
-      "logo": null,
-      "rating": 1712,
-      "games": 23,
-      "wins": 19,
-      "losses": 4,
-      "lastPlayed": 1784215740,
-      "timing": {
-        "games": 23,
-        "avgMin": 40,
-        "avgWinMin": 37,
-        "avgLossMin": 51,
-        "short": {
-          "g": 4,
-          "wr": 1
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.9
-        },
-        "long": {
-          "g": 9,
-          "wr": 0.6666666666666666
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1672,
-        "form10": 0.767,
-        "form45": 0.794,
-        "act": 12,
-        "rust": 2
       }
     },
     {
@@ -260,6 +223,43 @@
         "form45": 0.707,
         "act": 24,
         "rust": 1
+      }
+    },
+    {
+      "id": 9824702,
+      "name": "PVISION",
+      "tag": null,
+      "logo": null,
+      "rating": 1675,
+      "games": 25,
+      "wins": 20,
+      "losses": 5,
+      "lastPlayed": 1784386380,
+      "timing": {
+        "games": 23,
+        "avgMin": 40,
+        "avgWinMin": 37,
+        "avgLossMin": 51,
+        "short": {
+          "g": 4,
+          "wr": 1
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.9
+        },
+        "long": {
+          "g": 9,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1675,
+        "form10": 0.711,
+        "form45": 0.733,
+        "act": 14,
+        "rust": 0
       }
     },
     {
@@ -9763,6 +9763,34 @@
   ],
   "recentMatches": [
     {
+      "match_id": 8902431810,
+      "start_time": 1784386380,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8902338515,
+      "start_time": 1784382596,
+      "league": "Esports World Cup 2026",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": true
+    },
+    {
       "match_id": 8902173969,
       "start_time": 1784376482,
       "league": "Esports World Cup 2026",
@@ -10571,34 +10599,6 @@
       "dire": {
         "id": 10182357,
         "name": "1w"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8890074597,
-      "start_time": 1783699976,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 7119388,
-        "name": "Team Spirit"
-      },
-      "dire": {
-        "id": 9828897,
-        "name": "REKONIX"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8890036748,
-      "start_time": 1783699141,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9338413,
-        "name": "MOUZ"
-      },
-      "dire": {
-        "id": 9824702,
-        "name": "PVISION"
       },
       "radiant_win": false
     }

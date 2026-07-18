@@ -353,14 +353,22 @@ export function blend(eloProbA, draftProbA) {
 // Stage 2 — early game (~10 min). Economy dominates: net worth / XP leads, towers,
 // first blood. Shifts the pre-game prior toward the observed reality. Research shows
 // accuracy climbs sharply once ~10-min economy is known.
+//
+// Lesson from PVISION vs Yandex (EWC 2026 map 1): an extreme pre-game prior (~80%) was
+// still calling the favorite at +2.1k gold / 20′. When the live economy is clear, we
+// therefore (1) shrink the prior toward 0.5 and (2) weight gold a bit harder so live
+// state can actually overturn a form favorite — that's the whole point of the live layer.
 export function applyEarlyGame(priorProbA, eg) {
   const nwK = (Number(eg.nwDiff) || 0) / 1000; // A minus B, gold
   const xpK = (Number(eg.xpDiff) || 0) / 1000; // A minus B, xp
   const tower = (Number(eg.towersA) || 0) - (Number(eg.towersB) || 0);
   const fb = eg.firstBlood === "a" ? 1 : eg.firstBlood === "b" ? -1 : 0;
-  const econLogit = 0.32 * nwK + 0.22 * xpK + 0.35 * tower + 0.12 * fb;
-  const probA = clamp(sigmoid(logit(priorProbA) + econLogit), 0.02, 0.98);
-  return { probA, econLogit, magnitude: Math.abs(econLogit) };
+  // Shrink stubborn pre-game priors as the gold gap grows (≈ gone by ~15k lead).
+  const priorW = clamp(1 - Math.abs(nwK) / 15, 0.2, 1);
+  const shrunkPrior = 0.5 + priorW * (priorProbA - 0.5);
+  const econLogit = 0.48 * nwK + 0.22 * xpK + 0.35 * tower + 0.12 * fb;
+  const probA = clamp(sigmoid(logit(shrunkPrior) + econLogit), 0.02, 0.98);
+  return { probA, econLogit, magnitude: Math.abs(econLogit), priorW, shrunkPrior };
 }
 
 // Confidence 0..1 + label. Draft-stage is intentionally capped; early-game lifts the cap.

@@ -20,6 +20,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, "..", "docs", "data");
 const DELAY_MS = Number(process.env.DELAY_MS || 1100);
 const MAX = Number(process.env.PLAYERS_MAX || 0);
+// Optional: only rebuild players from these team ids (comma-separated), e.g. after a series.
+const TEAM_IDS = (process.env.PLAYERS_TEAM_IDS || "").split(",").map((s) => s.trim()).filter(Boolean);
 const K = 6; // winrate shrink toward 0.5
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const shrunk = (g, w) => (g > 0 ? (w + K * 0.5) / (g + K) : 0.5);
@@ -54,7 +56,8 @@ async function main() {
   const teams = draft.teams || {};
   // Unique players across all rosters (a player can appear once).
   const seen = new Map(); // account_id -> { name, teams:Set }
-  for (const t of Object.values(teams)) {
+  for (const [tid, t] of Object.entries(teams)) {
+    if (TEAM_IDS.length && !TEAM_IDS.includes(String(tid)) && !TEAM_IDS.includes(String(t.id))) continue;
     for (const p of t.roster || []) {
       if (!p.account_id) continue;
       const cur = seen.get(p.account_id) || { name: p.name, teams: [] };
@@ -66,7 +69,9 @@ async function main() {
   if (MAX > 0) list = list.slice(0, MAX);
   console.log(`Игроков в ростерах: ${seen.size}${MAX ? ` (беру ${list.length})` : ""}. Пейсинг ${DELAY_MS}ms.`);
 
-  const players = {};
+  // Merge into existing file when refreshing a team subset, so we don't wipe other rosters.
+  const prev = TEAM_IDS.length ? await loadJSON(join(DATA_DIR, "players.json"), { players: {} }) : { players: {} };
+  const players = { ...(prev.players || {}) };
   let done = 0, errors = 0;
   for (const [accountId, info] of list) {
     done++;
