@@ -498,9 +498,11 @@ export function analyzeDraft(radiant, dire, ctx) {
   const priorProbA = probA; // after Elo blend, before early game
 
   // Stage 2: fold in early-game state if provided.
+  // Treat numeric 0 as a real signal (nwDiff=0 is a valid live reading); only skip empties.
   let early = null;
   const eg = ctx.earlyGame;
-  const hasEarly = eg && (eg.nwDiff || eg.xpDiff || eg.towersA || eg.towersB || eg.firstBlood);
+  const filled = (v) => v !== "" && v != null && v !== false;
+  const hasEarly = !!(eg && (filled(eg.nwDiff) || filled(eg.xpDiff) || filled(eg.towersA) || filled(eg.towersB) || eg.firstBlood));
   if (hasEarly) {
     early = applyEarlyGame(probA, eg);
     probA = early.probA;

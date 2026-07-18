@@ -176,27 +176,38 @@ function probBar(pa) {
 }
 
 // Prob bar with a caption above it. `emphasize` visually flags the final all-in verdict.
-function probBarLabeled(pa, label, emphasize = false) {
+function probBarLabeled(pa, label, emphasize = false, nameA = "", nameB = "") {
   const a = Math.round(pa * 100);
   const b = 100 - a;
+  const left = nameA ? `${a}% ${nameA}` : `${a}%`;
+  const right = nameB ? `${nameB} ${b}%` : `${b}%`;
   return `<div class="probbar-wrap${emphasize ? " emph" : ""}">
     <div class="probbar-cap">${label}</div>
     <div class="probbar">
-      <div class="a" style="width:${a}%">${a}%</div>
-      <div class="b" style="width:${b}%">${b}%</div>
+      <div class="a" style="width:${a}%">${a >= 12 ? left : a + "%"}</div>
+      <div class="b" style="width:${b}%">${b >= 12 ? right : b + "%"}</div>
     </div>
   </div>`;
 }
 
-// Two stacked bars for the live tab: the raw base (rating+form) and the final all-in verdict
-// (base folded with draft, counters, power curves, human factor and — when loaded — live economy).
-function twoBars(res, finalP) {
+// Two stacked bars for the live tab.
+// IMPORTANT: the BASE bar is pre-match (rating+form) and MUST stay still during the game.
+// The ИТОГ bar is the live verdict — it moves with draft + human factor + live economy.
+function twoBars(res, finalP, nameA = "", nameB = "") {
   const hasBase = res.eloProbA != null;
   const baseP = hasBase ? res.eloProbA : res.draftProbA;
-  const baseLbl = hasBase ? "База: рейтинг + форма команд" : "База: по драфту";
+  const baseLbl = hasBase
+    ? "База (до игры): рейтинг + форма — не меняется в лайве"
+    : "База (до игры): по драфту — не меняется в лайве";
   const factors = ["драфт", "контры", "кривые", "человеческий фактор"];
   if (res.early) factors.push("live-экономика");
-  return probBarLabeled(baseP, baseLbl) + probBarLabeled(finalP, "Итог: " + factors.join(" + "), true);
+  else factors.push("без live-экономики");
+  const itogLbl = res.early
+    ? `ИТОГ СЕЙЧАС: ${factors.join(" + ")} ← смотри сюда`
+    : `Итог пока без live: ${factors.join(" + ")} (загрузи/обнови матч)`;
+  // Итог first — that's the number that should react to gold leads.
+  return probBarLabeled(finalP, itogLbl, true, nameA, nameB)
+    + probBarLabeled(baseP, baseLbl, false, nameA, nameB);
 }
 
 function teamCell(team, right) {
@@ -510,6 +521,20 @@ async function loadLiveMatches() {
   box.querySelectorAll(".live-match-item").forEach((btn) =>
     btn.addEventListener("click", () => applyLiveMatch(liveGames[Number(btn.dataset.idx)]))
   );
+
+  // If we were watching a finished map of a BO3/BO5, jump to the live map of the same series
+  // even when auto-refresh is OFF — otherwise the UI freezes on a stale 74% pre-game read.
+  const stillLive = liveLoadedId && list.some((g) => g.match_id === liveLoadedId);
+  if (liveLoadedId && !stillLive) {
+    const next =
+      (liveSeriesId && list.find((g) => g.series_id === liveSeriesId)) ||
+      (liveSeriesTeams && list.find((g) => g.team_id_radiant && g.team_id_dire &&
+        liveSeriesTeams.has(g.team_id_radiant) && liveSeriesTeams.has(g.team_id_dire)));
+    if (next) {
+      liveSetStatus("Предыдущая карта серии закончилась — переключаюсь на текущую…", "ok");
+      applyLiveMatch(next, true);
+    }
+  }
 }
 
 function autoAssign(teamId, sidePlayers) {
@@ -595,8 +620,9 @@ function applyLiveMatch(g, isRefresh = false) {
   live.assignB = autoAssign(idD, dire);
 
   // Live economy → early-game inputs. radiant_lead = radiant − dire networth.
+  // Use nullish coalescing so a real 0 lead isn't lost; Number() so the engine always gets a number.
   const tw = towersDown(g.building_state);
-  document.getElementById("egNw").value = g.radiant_lead || 0;
+  document.getElementById("egNw").value = g.radiant_lead != null ? Number(g.radiant_lead) : "";
   document.getElementById("egXp").value = "";
   document.getElementById("egTowersA").value = tw.dire;     // A(radiant) destroyed = dire towers down
   document.getElementById("egTowersB").value = tw.radiant;
@@ -771,11 +797,18 @@ function runLiveAnalysis() {
   const nameB = live.nameB || (tB ? tB.name : "Команда B");
   const format = document.getElementById("liveFormat").value;
 
+  // Coerce numerics so applyEarlyGame never sees empty-string-as-0 surprises from the form.
+  const numOrEmpty = (id) => {
+    const v = document.getElementById(id).value;
+    if (v === "" || v == null) return "";
+    const n = Number(v);
+    return Number.isFinite(n) ? n : "";
+  };
   const eg = {
-    nwDiff: document.getElementById("egNw").value,
-    xpDiff: document.getElementById("egXp").value,
-    towersA: document.getElementById("egTowersA").value,
-    towersB: document.getElementById("egTowersB").value,
+    nwDiff: numOrEmpty("egNw"),
+    xpDiff: numOrEmpty("egXp"),
+    towersA: numOrEmpty("egTowersA"),
+    towersB: numOrEmpty("egTowersB"),
     firstBlood: document.getElementById("egFb").value,
   };
   // Player→hero assignment: manual overrides (dropdowns / live match) first, else infer
@@ -820,7 +853,7 @@ function runLiveAnalysis() {
         <span class="vs-mid">VS</span>
         <div class="team right"><div><div class="team-name">${nameB}</div><div class="team-rating">${live.b.length} героев</div></div></div>
       </div>
-      ${twoBars(res, p)}
+      ${twoBars(res, p, nameA, nameB)}
       ${eloLine}
       ${earlyLine}
       <div class="kv"><span>Серия (${format.toUpperCase()})</span><span>${pct(res.seriesA)} / ${pct(1 - res.seriesA)}</span></div>
