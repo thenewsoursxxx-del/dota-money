@@ -43,6 +43,9 @@ npm run build-meta
 #     Положи его в файл .stratz_token (он в .gitignore) или задай $env:STRATZ_TOKEN.
 npm run build-stratz
 
+# 3c. (опц.) Матчапы герой-против-героя из STRATZ (надёжные контры). ~15 сек. Тот же токен.
+npm run build-matchups
+
 # 4. Подтянуть будущие матчи с Liquipedia (Tier-1).
 npm run fetch-upcoming
 
@@ -65,6 +68,15 @@ npm start   # → http://localhost:5173
 
 Токен нигде не коммитится: клиент читает его из env или из gitignored‑файла `.stratz_token`.
 В CI задай секрет репозитория `STRATZ_TOKEN` — воркфлоу `update-meta` обновит `stratz.json` еженедельно.
+
+### Контры из STRATZ (матчапы герой-против-героя)
+
+Наш про-only counter-матрица (`meta.json`) строится по совстречаемости в Tier-1 играх, поэтому
+у большинства пар 0–6 игр — это шум (движок мог «прочитать» контру по 4 играм). `build-matchups`
+тянет `heroStats.matchUp` (bracket `DIVINE_IMMORTAL`) и пишет `docs/data/matchups.json`: винрейт
+героя **против** каждого героя по сотням игр. Движок (`docs/live_draft.mjs → teamCounter`) сначала
+берёт матчап STRATZ (≥30 игр), и только при отсутствии — откатывается на про-матрицу. Так контр-терм
+и «жёсткие контры» в разборе наконец отражают реальность (напр. TA реально слаба против Ember/Hoodwink).
 
 ## Деплой (GitHub Pages)
 

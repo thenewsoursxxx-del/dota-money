@@ -112,18 +112,26 @@ function teamSynergy(meta, ids) {
   return avg(vals);
 }
 
-// Average winrate of `mine` heroes vs `theirs` (directional counter matrix).
-function teamCounter(meta, mine, theirs) {
+// Average winrate of `mine` heroes vs `theirs` (directional counter signal).
+// Prefer STRATZ high-MMR matchups (hundreds of games/pair) over the pro-only co-occurrence
+// matrix (usually 0-6 games/pair = noise). Falls back to the pro matrix when a matchup is missing.
+function teamCounter(meta, matchups, mine, theirs) {
   const vals = [];
   const hardCounters = [];
   for (const a of mine)
     for (const b of theirs) {
-      const e = meta.counter[`${a},${b}`];
-      if (e && e[0] >= 4) {
-        const wr = shrunkWR(e[0], e[1]);
-        vals.push(wr - 0.5);
-        if (wr <= 0.43) hardCounters.push({ a, b, wr, g: e[0] });
+      let wr = null, g = 0, src = null;
+      const mu = matchups && matchups.heroes[a] && matchups.heroes[a].vs[b]; // [games, wins] of a vs b
+      if (mu && mu[0] >= 30) { wr = shrunkWR(mu[0], mu[1]); g = mu[0]; src = "stratz"; }
+      else {
+        const e = meta.counter[`${a},${b}`];
+        if (e && e[0] >= 4) { wr = shrunkWR(e[0], e[1]); g = e[0]; src = "pro"; }
       }
+      if (wr == null) continue;
+      vals.push(wr - 0.5);
+      // Hard counter: robust Stratz sample can trust a tighter bar; thin pro sample needs a harder one.
+      const bar = src === "stratz" ? 0.46 : 0.43;
+      if (wr <= bar) hardCounters.push({ a, b, wr, g, src });
     }
   return { edge: avg(vals), hardCounters };
 }
@@ -212,14 +220,14 @@ function poolFindings(meta, assign, myIds, oppIds) {
 // ---------- core scoring ----------
 // radiant/dire: arrays of hero ids (team A / team B). ctx = { meta, knowledge, assignA, assignB }.
 export function scoreDraft(radiant, dire, ctx) {
-  const { meta, knowledge, assignA = null, assignB = null, stratz = null } = ctx;
+  const { meta, knowledge, assignA = null, assignB = null, stratz = null, matchups = null } = ctx;
   const A = radiant.filter(Boolean);
   const B = dire.filter(Boolean);
 
   const eMeta = teamMeta(meta, A, stratz) - teamMeta(meta, B, stratz);
   const eSyn = teamSynergy(meta, A) - teamSynergy(meta, B);
-  const cAB = teamCounter(meta, A, B);
-  const cBA = teamCounter(meta, B, A);
+  const cAB = teamCounter(meta, matchups, A, B);
+  const cBA = teamCounter(meta, matchups, B, A);
   const eCounter = cAB.edge - cBA.edge;
 
   const curvesA = teamCurves(meta, A);
@@ -350,12 +358,17 @@ export function explain(score, nameA, nameB, heroName) {
     }
   }
 
-  // 2) Hard counters.
-  const hc = [...score.counters.aVsB.map((c) => ({ ...c, by: nameA })), ...score.counters.bVsA.map((c) => ({ ...c, by: nameB }))]
+  // 2) Hard counters. In teamCounter(mine, theirs) a hardCounter is {a: mine-hero, b: theirs-hero,
+  //    wr: a's winrate vs b (LOW)} → a is countered BY b, so the beneficiary owns `b` (= the "theirs"
+  //    side). For aVsB that's team B; for bVsA that's team A. (Fixes an earlier inverted attribution.)
+  const hc = [
+    ...score.counters.aVsB.map((c) => ({ ...c, by: nameB })),
+    ...score.counters.bVsA.map((c) => ({ ...c, by: nameA })),
+  ]
     .sort((x, y) => x.wr - y.wr)
     .slice(0, 3);
   for (const c of hc) {
-    b.push({ icon: "🎯", text: `Контра: <b>${hn(c.a)}</b> тащит против <b>${hn(c.b)}</b> (WR ${pct(c.wr)}, ${c.g} игр) — плюс для ${c.by}.` });
+    b.push({ icon: "🎯", text: `Контра: <b>${hn(c.b)}</b> контрит <b>${hn(c.a)}</b> (${hn(c.a)} берёт лишь ${pct(c.wr)} в матчапе, ${c.g} игр) — плюс для ${c.by}.` });
   }
 
   // (Pool-lock / human factor is rendered as its own dedicated block in the UI.)

@@ -9,6 +9,7 @@
     "build-draft": "node src/build_draft.mjs",
     "build-meta": "node src/build_meta.mjs",
     "build-stratz": "node src/build_stratz.mjs",
+    "build-matchups": "node src/build_matchups.mjs",
     "build-odds": "node src/build_odds.mjs",
     "backtest": "node src/backtest.mjs",
     "backtest-draft": "node src/backtest_draft.mjs",
