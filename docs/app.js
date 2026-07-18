@@ -175,6 +175,30 @@ function probBar(pa) {
   </div>`;
 }
 
+// Prob bar with a caption above it. `emphasize` visually flags the final all-in verdict.
+function probBarLabeled(pa, label, emphasize = false) {
+  const a = Math.round(pa * 100);
+  const b = 100 - a;
+  return `<div class="probbar-wrap${emphasize ? " emph" : ""}">
+    <div class="probbar-cap">${label}</div>
+    <div class="probbar">
+      <div class="a" style="width:${a}%">${a}%</div>
+      <div class="b" style="width:${b}%">${b}%</div>
+    </div>
+  </div>`;
+}
+
+// Two stacked bars for the live tab: the raw base (rating+form) and the final all-in verdict
+// (base folded with draft, counters, power curves, human factor and — when loaded — live economy).
+function twoBars(res, finalP) {
+  const hasBase = res.eloProbA != null;
+  const baseP = hasBase ? res.eloProbA : res.draftProbA;
+  const baseLbl = hasBase ? "База: рейтинг + форма команд" : "База: по драфту";
+  const factors = ["драфт", "контры", "кривые", "человеческий фактор"];
+  if (res.early) factors.push("live-экономика");
+  return probBarLabeled(baseP, baseLbl) + probBarLabeled(finalP, "Итог: " + factors.join(" + "), true);
+}
+
 function teamCell(team, right) {
   const logo = team.logo ? `<img src="${team.logo}" alt="" onerror="this.style.display='none'"/>` : "";
   const inner = `<div><div class="team-name">${team.name}</div><div class="team-rating">Elo ${team.rating} · ${team.games} игр</div></div>`;
@@ -796,7 +820,7 @@ function runLiveAnalysis() {
         <span class="vs-mid">VS</span>
         <div class="team right"><div><div class="team-name">${nameB}</div><div class="team-rating">${live.b.length} героев</div></div></div>
       </div>
-      ${probBar(p)}
+      ${twoBars(res, p)}
       ${eloLine}
       ${earlyLine}
       <div class="kv"><span>Серия (${format.toUpperCase()})</span><span>${pct(res.seriesA)} / ${pct(1 - res.seriesA)}</span></div>

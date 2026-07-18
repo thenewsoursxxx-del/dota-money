@@ -108,6 +108,12 @@ main { padding: 4px 12px; }
 .team-rating { font-size: 11px; color: var(--muted); }
 .vs-mid { font-size: 12px; color: var(--muted); font-weight: 700; padding: 0 4px; }
 
+.probbar-wrap { margin-bottom: 12px; }
+.probbar-cap { font-size: 11px; color: var(--muted); margin-bottom: 4px; font-weight: 600; letter-spacing: .01em; }
+.probbar-wrap.emph .probbar-cap { color: #ffd479; }
+.probbar-wrap.emph .probbar { border-color: rgba(255, 196, 87, 0.55); box-shadow: 0 0 0 1px rgba(255, 196, 87, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.4); height: 42px; font-size: 15px; }
+.probbar-wrap .probbar { margin-bottom: 0; }
+
 .probbar {
   height: 36px;
   border-radius: 12px;
