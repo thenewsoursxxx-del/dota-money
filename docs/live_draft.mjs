@@ -33,7 +33,11 @@ const W = {
 const EDGE_CAP = 0.75; // base cap on total draft edge
 const EDGE_CAP_EXTREME = 1.05; // when strong pool-lock / hard counters present
 const K_PROB = 1.7; // edge -> probability steepness
-const BLEND = 0.7; // how much draft logit adds on top of Elo logit
+// How much the draft logit adds on top of the Elo/ML base. Kept deliberately low: leakage-free
+// backtests show draft-alone is ~coin-flip out-of-sample and a heavy blend only makes predictions
+// MORE extreme without improving accuracy (it compounds with form, which already encodes team
+// quality). So the draft nudges the prior; the real upset-catching signal is the live economy.
+const BLEND = 0.3;
 
 // ---------- per-hero lookups ----------
 // STRATZ current-patch, role-aware winrate. We pick the position the hero is ACTUALLY
