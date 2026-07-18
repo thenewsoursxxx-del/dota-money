@@ -64,6 +64,12 @@ export async function getPlayerHeroes(accountId) {
   return getJSON(`/players/${accountId}/heroes`);
 }
 
+// Player's recent matches (~20): [{ match_id, start_time, hero_id, player_slot, radiant_win,
+// kills, deaths, assists, duration, ... }]. Used for recent form / prime trend / activity.
+export async function getPlayerRecentMatches(accountId) {
+  return getJSON(`/players/${accountId}/recentMatches`);
+}
+
 export async function getTeams() {
   // Returns up to ~1000 teams ordered by their internal rating.
   return getJSON("/teams");

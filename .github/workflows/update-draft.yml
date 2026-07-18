@@ -27,6 +27,10 @@ jobs:
       - name: Build draft intelligence (hero pools & counters)
         run: npm run build-draft
 
+      - name: Build per-player human factor (recent form / prime / on-hero comfort)
+        run: npm run build-players
+        continue-on-error: true
+
       - name: Commit updated draft data
         run: |
           git config user.name "github-actions[bot]"

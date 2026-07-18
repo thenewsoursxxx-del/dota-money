@@ -22,6 +22,7 @@ let draftData = null;    // { heroes, teams: { [id]: {...} } }
 let metaData = null;     // { heroes, synergy, counter }
 let stratzData = null;   // { heroes: { [id]: { overall, pos } } } — current-patch role winrates
 let matchupsData = null; // { heroes: { [id]: { vs: { [id2]: [games, wins] } } } } — Stratz hero-vs-hero
+let playersData = null;  // { players: { [account_id]: { recentWR, trend, games30, heroes } } } — human factor
 let knowledge = null;    // { heroes: { [name]: {...} } }
 let mlModel = null;      // trained logistic model (docs/data/model.json)
 let heroList = [];       // [{ id, name }] sorted, for the picker
@@ -29,7 +30,7 @@ let byId = new Map();
 let byName = new Map();
 
 async function loadData() {
-  const [ds, up, dr, mt, kn, ml, st, mu] = await Promise.all([
+  const [ds, up, dr, mt, kn, ml, st, mu, pl] = await Promise.all([
     fetch("data/dataset.json").then((r) => r.json()),
     fetch("data/upcoming.json").then((r) => r.json()).catch(() => ({ matches: [] })),
     fetch("data/draft.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
@@ -38,6 +39,7 @@ async function loadData() {
     fetch("data/model.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/stratz.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/matchups.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/players.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
   dataset = ds;
   upcoming = up;
@@ -47,6 +49,7 @@ async function loadData() {
   mlModel = ml;
   stratzData = st;
   matchupsData = mu;
+  playersData = pl;
   byId = new Map();
   byName = new Map();
   for (const t of dataset.teams) {
@@ -760,6 +763,7 @@ function runLiveAnalysis() {
     meta: metaData,
     stratz: stratzData,
     matchups: matchupsData,
+    players: playersData,
     knowledge: knowledge || { heroes: {} },
     assignA: Object.keys(assignA).length ? assignA : null,
     assignB: Object.keys(assignB).length ? assignB : null,

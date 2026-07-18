@@ -29,6 +29,7 @@ const W = {
   dmg: 0.6,
   lock: 0.35,
   pool: 1.1,
+  player: 0.8, // individual human factor (recent form / prime / real on-hero comfort)
 };
 const EDGE_CAP = 0.75; // base cap on total draft edge
 const EDGE_CAP_EXTREME = 1.05; // when strong pool-lock / hard counters present
@@ -217,10 +218,39 @@ function poolFindings(meta, assign, myIds, oppIds) {
   return { penalty, findings, comfort };
 }
 
+// ---------- per-player human factor (optional) ----------
+// assign: heroId -> roster player (has account_id). players = docs/data/players.json.
+// Individual current form the TEAM base can't see: recent win rate, "prime" trend, and REAL
+// win rate on the exact hero locked THIS game (not just signature membership). Returns a small
+// A-perspective set of aggregates + per-player findings for the explanation.
+function playerFormSide(assign, players, heroIds) {
+  if (!assign || !players || !players.players) return null;
+  const comfort = [], form = [], prime = [];
+  const findings = [];
+  for (const id of heroIds) {
+    const pl = assign[id];
+    if (!pl || !pl.account_id) continue;
+    const pd = players.players[pl.account_id];
+    if (!pd) continue;
+    if (pd.recentN >= 5) { form.push(pd.recentWR - 0.5); prime.push(pd.trend || 0); }
+    const h = pd.heroes && pd.heroes[id];
+    let onHeroWR = null, games = 0;
+    if (h) { games = h[0]; onHeroWR = shrunkWR(h[0], h[1]); comfort.push(onHeroWR - 0.5); }
+    else { comfort.push(-0.04); } // no recorded games on this hero → mild discomfort
+    findings.push({
+      player: pl.name, heroId: id, games,
+      onHeroWR, recentWR: pd.recentN >= 5 ? pd.recentWR : null,
+      recentN: pd.recentN || 0, trend: pd.trend || 0, games30: pd.games30 || 0,
+    });
+  }
+  if (!findings.length) return null;
+  return { comfort: avg(comfort), form: avg(form), prime: avg(prime), findings };
+}
+
 // ---------- core scoring ----------
 // radiant/dire: arrays of hero ids (team A / team B). ctx = { meta, knowledge, assignA, assignB }.
 export function scoreDraft(radiant, dire, ctx) {
-  const { meta, knowledge, assignA = null, assignB = null, stratz = null, matchups = null } = ctx;
+  const { meta, knowledge, assignA = null, assignB = null, stratz = null, matchups = null, players = null } = ctx;
   const A = radiant.filter(Boolean);
   const B = dire.filter(Boolean);
 
@@ -253,6 +283,13 @@ export function scoreDraft(radiant, dire, ctx) {
   const poolB = poolFindings(meta, assignB, B, A);
   const ePool = poolB.penalty - poolA.penalty;
 
+  // Individual human factor (only when we have a player→hero assignment + players.json).
+  const pfA = playerFormSide(assignA, players, A);
+  const pfB = playerFormSide(assignB, players, B);
+  const ePlayer = pfA && pfB
+    ? clamp(0.7 * (pfA.comfort - pfB.comfort) + 0.4 * (pfA.form - pfB.form) + 0.7 * (pfA.prime - pfB.prime), -0.3, 0.3)
+    : 0;
+
   // Current-patch standouts (STRATZ role-aware): flag drafted heroes that are notably
   // strong/weak THIS patch, so the read reflects live meta, not a year-old pro average.
   const patchPick = (ids) =>
@@ -273,7 +310,8 @@ export function scoreDraft(radiant, dire, ctx) {
     W.timing * eTiming +
     W.dmg * eDmg +
     W.lock * eLock +
-    W.pool * ePool;
+    W.pool * ePool +
+    W.player * ePlayer;
 
   const extreme = cAB.hardCounters.length + cBA.hardCounters.length >= 3 || poolA.findings.length + poolB.findings.length >= 2;
   const cap = extreme ? EDGE_CAP_EXTREME : EDGE_CAP;
@@ -292,9 +330,10 @@ export function scoreDraft(radiant, dire, ctx) {
     components: {
       meta: W.meta * eMeta, synergy: W.synergy * eSyn, counter: W.counter * eCounter,
       lane: W.lane * eLane, timing: W.timing * eTiming, dmg: W.dmg * eDmg,
-      lock: W.lock * eLock, pool: W.pool * ePool,
+      lock: W.lock * eLock, pool: W.pool * ePool, player: W.player * ePlayer,
     },
-    raw: { eMeta, eSyn, eCounter, eEarly, eLate, eLane, eDmg, eLock, ePool },
+    raw: { eMeta, eSyn, eCounter, eEarly, eLate, eLane, eDmg, eLock, ePool, ePlayer },
+    playerForm: { a: pfA, b: pfB },
     curves: { a: curvesA, b: curvesB },
     nw: { a: nwA, b: nwB },
     dmg: { a: dmgA, b: dmgB },
@@ -371,7 +410,30 @@ export function explain(score, nameA, nameB, heroName) {
     b.push({ icon: "🎯", text: `Контра: <b>${hn(c.b)}</b> контрит <b>${hn(c.a)}</b> (${hn(c.a)} берёт лишь ${pct(c.wr)} в матчапе, ${c.g} игр) — плюс для ${c.by}.` });
   }
 
-  // (Pool-lock / human factor is rendered as its own dedicated block in the UI.)
+  // (Pool-lock / signature-based human factor is rendered as its own dedicated block in the UI.)
+
+  // 3b) Individual player form (real data): who's hot/cold right now and who's on a non-comfort hero.
+  if (score.playerForm && score.playerForm.a && score.playerForm.b) {
+    const notes = [];
+    const scan = (pf, team) => {
+      for (const f of pf.findings) {
+        if (f.recentWR != null && f.recentWR >= 0.6 && f.trend >= 0.1)
+          notes.push({ key: 100 * f.recentWR, icon: "🔥", text: `<b>${f.player}</b> (${team}) в форме: ${pct(f.recentWR)} за ${f.recentN} игр, тренд вверх.` });
+        else if (f.recentWR != null && f.recentWR <= 0.4)
+          notes.push({ key: -100 * (1 - f.recentWR), icon: "❄️", text: `<b>${f.player}</b> (${team}) холодный: ${pct(f.recentWR)} за ${f.recentN} игр.` });
+        if (f.onHeroWR != null && f.games >= 20 && f.onHeroWR <= 0.45)
+          notes.push({ key: -80, icon: "🎭", text: `<b>${f.player}</b> (${team}) на <b>${hn(f.heroId)}</b> слаб: ${pct(f.onHeroWR)} за ${f.games} игр.` });
+        else if (f.games > 0 && f.games < 12)
+          notes.push({ key: -60, icon: "🎭", text: `<b>${f.player}</b> (${team}) на <b>${hn(f.heroId)}</b> — редкий герой (${f.games} игр), вне зоны комфорта.` });
+        else if (f.onHeroWR != null && f.games >= 30 && f.onHeroWR >= 0.58)
+          notes.push({ key: 80 * f.onHeroWR, icon: "⭐", text: `<b>${f.player}</b> (${team}) на <b>${hn(f.heroId)}</b> силён: ${pct(f.onHeroWR)} за ${f.games} игр.` });
+      }
+    };
+    scan(score.playerForm.a, nameA);
+    scan(score.playerForm.b, nameB);
+    notes.sort((x, y) => Math.abs(y.key) - Math.abs(x.key));
+    for (const n of notes.slice(0, 4)) b.push({ icon: n.icon, text: n.text });
+  }
 
   // 4) Damage balance.
   for (const side of [{ d: score.dmg.a, team: nameA }, { d: score.dmg.b, team: nameB }]) {
