@@ -14,10 +14,12 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { DOTA_SPORT_ID, participants, fixtures, historicalOdds, settlements } from "./oddspapi.mjs";
+import { DOTA_SPORT_ID, participants, fixtures, historicalOdds, settlements, matchWinnerMarketIds } from "./oddspapi.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, "..", "docs", "data");
+const CACHE_DIR = join(__dirname, "..", "cache");
+const CACHE_FILE = join(CACHE_DIR, "odds_cache.json"); // gitignored; makes the slow job resumable
 
 const FROM = process.env.ODDS_FROM || "2026-01-01";
 const TO = process.env.ODDS_TO || new Date().toISOString().slice(0, 10);
@@ -47,10 +49,15 @@ function dateWindows(from, to) {
   return out;
 }
 
-// Pick the match-winner moneyline market out of a historical-odds `markets` object.
-// Heuristic: the main line carries the HIGHEST stake limit and has exactly 2 outcomes.
-function pickMoneyline(markets) {
+// Pick the full-match winner moneyline market from a historical-odds `markets` object.
+// Deterministic: intersect with the market dictionary's "moneyline @ result" ids
+// (e.g. "Winner (incl. overtime)") — NOT map-handicap / per-map-winner / totals markets.
+// Falls back to the 2-outcome market with the highest stake limit if the dict misses.
+function pickMoneyline(markets, mlIds) {
   if (FORCED_MARKET && markets[FORCED_MARKET]) return FORCED_MARKET;
+  for (const mid of Object.keys(markets || {})) {
+    if (mlIds.has(String(mid)) && Object.keys(markets[mid].outcomes || {}).length === 2) return mid;
+  }
   let best = null, bestLimit = -1;
   for (const [mid, m] of Object.entries(markets || {})) {
     const outs = Object.keys(m.outcomes || {});
@@ -94,6 +101,8 @@ async function main() {
   console.log(`Тяну участников OddsPapi (sportId=${DOTA_SPORT_ID})...`);
   const partMap = await participants(); // { id: name }
   const partName = (id) => partMap[String(id)] || null;
+  const mlIds = await matchWinnerMarketIds();
+  console.log(`Рынков «победитель матча» в справочнике: ${mlIds.size}`);
 
   // 1) Collect Dota fixtures across the date range, keep only both-teams-known games.
   const windows = dateWindows(FROM, TO);
@@ -121,25 +130,44 @@ async function main() {
   }
 
   // 2) Closing Pinnacle line + settled winner per fixture.
-  console.log(`\nТяну закрывающие линии Pinnacle для ${relevant.length} матчей (cooldown 5с/запрос)...`);
-  const records = [];
-  let done = 0;
-  for (const r of relevant) {
+  // Resumable: a gitignored cache maps fixtureId -> record | null (null = checked, no usable odds).
+  // We skip anything already in cache and checkpoint every few matches, so a 2h job can be
+  // interrupted and re-run without losing progress or wasting API calls.
+  await mkdir(CACHE_DIR, { recursive: true });
+  const cache = await loadJSON(CACHE_FILE, {});
+  const MAX = Number(process.env.ODDS_MAX || 0); // cap fetches per run (0 = no cap) to stay within quota
+  let todo = relevant.filter((r) => !(r.fixtureId in cache));
+  if (MAX > 0 && todo.length > MAX) todo = todo.slice(0, MAX);
+  console.log(`\nЗакрывающие линии Pinnacle: всего ${relevant.length}, в кеше ${relevant.length - relevant.filter((r) => !(r.fixtureId in cache)).length}, тянуть в этот заход ${todo.length}${MAX ? ` (лимит ODDS_MAX=${MAX})` : ""}.`);
+
+  const flush = async () => {
+    await writeFile(CACHE_FILE, JSON.stringify(cache), "utf8");
+    await writeHistory(cache, relevant);
+  };
+
+  let done = 0, stopped = false;
+  for (const r of todo) {
     done++;
-    let hist = null, sett = null;
-    try { hist = await historicalOdds(r.fixtureId, "pinnacle"); } catch (e) { console.warn(`  ${r.teamA} vs ${r.teamB}: odds ${e.message}`); continue; }
+    let hist = null;
+    try { hist = await historicalOdds(r.fixtureId, "pinnacle"); }
+    catch (e) {
+      if (e && e.rateLimited) { // quota/rate-limit → stop cleanly, resume next run (don't poison cache)
+        console.warn(`\n⚠️  Похоже, исчерпана квота OddsPapi. Останавливаюсь, прогресс сохранён — просто запусти снова позже (докачает с места остановки).`);
+        stopped = true; break;
+      }
+      console.warn(`  ${r.teamA} vs ${r.teamB}: odds ${e.message}`); cache[r.fixtureId] = null; continue; // genuine per-fixture error
+    }
     const markets = hist && hist.bookmakers && hist.bookmakers.pinnacle && hist.bookmakers.pinnacle.markets;
-    if (!markets) continue;
-    const mid = pickMoneyline(markets);
-    if (!mid) continue;
+    const mid = markets ? pickMoneyline(markets, mlIds) : null;
+    if (!mid) { cache[r.fixtureId] = null; continue; }
     const outs = Object.keys(markets[mid].outcomes).sort((a, b) => Number(a) - Number(b)); // asc: [A, B]
     const priceA = closingPrice((markets[mid].outcomes[outs[0]].players || {})["0"], r.startMs);
     const priceB = closingPrice((markets[mid].outcomes[outs[1]].players || {})["0"], r.startMs);
-    if (!priceA || !priceB) continue;
+    if (!priceA || !priceB) { cache[r.fixtureId] = null; continue; }
 
     let winner = null;
     try {
-      sett = await settlements(r.fixtureId);
+      const sett = await settlements(r.fixtureId);
       const sm = sett && sett.markets && sett.markets[mid];
       if (sm) {
         const rA = ((sm.outcomes[outs[0]] || {}).players || {})["0"];
@@ -147,23 +175,31 @@ async function main() {
         if (rA && rA.result === "WIN") winner = "a";
         else if (rB && rB.result === "WIN") winner = "b";
       }
-    } catch { /* winner stays null → backtest will try to fill from our results */ }
+    } catch { /* winner stays null → backtest skips it */ }
 
-    records.push({
-      fixtureId: r.fixtureId,
-      startTime: r.startTime,
-      event: r.event,
-      teamA: r.teamA, teamB: r.teamB,
-      idA: r.idA, idB: r.idB,
-      oddsA: priceA, oddsB: priceB,
-      marketId: mid,
-      winner, // "a" | "b" | null
-    });
-    if (done % 10 === 0 || done === relevant.length) {
-      console.log(`  [${done}/${relevant.length}] собрано записей: ${records.length}`);
+    cache[r.fixtureId] = {
+      fixtureId: r.fixtureId, startTime: r.startTime, event: r.event,
+      teamA: r.teamA, teamB: r.teamB, idA: r.idA, idB: r.idB,
+      oddsA: priceA, oddsB: priceB, marketId: mid, winner,
+    };
+    if (done % 15 === 0 || done === todo.length) {
+      const n = relevant.filter((x) => cache[x.fixtureId]).length;
+      console.log(`  [${done}/${todo.length}] записей с кэфами: ${n}`);
+      await flush();
     }
   }
+  await flush();
 
+  const finalCount = relevant.filter((r) => cache[r.fixtureId]).length;
+  const remaining = relevant.filter((r) => !(r.fixtureId in cache)).length;
+  console.log(`\n${stopped ? "Пауза" : "Готово"}. Матчей с кэфами: ${finalCount}. Осталось докачать: ${remaining}. Сохранено: docs/data/odds_history.json`);
+
+  // 3) Auto-fill upcoming odds (only where missing) from the collected records.
+  await fillUpcoming(relevant.map((r) => cache[r.fixtureId]).filter(Boolean));
+}
+
+async function writeHistory(cache, relevant) {
+  const records = relevant.map((r) => cache[r.fixtureId]).filter(Boolean);
   records.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
   const out = {
     generatedAt: new Date().toISOString(),
@@ -174,10 +210,6 @@ async function main() {
   };
   await mkdir(DATA_DIR, { recursive: true });
   await writeFile(join(DATA_DIR, "odds_history.json"), JSON.stringify(out), "utf8");
-  console.log(`\nГотово. Матчей с кэфами: ${records.length}. Сохранено: docs/data/odds_history.json`);
-
-  // 3) Auto-fill upcoming odds (only where missing) from the same Pinnacle records by team+date.
-  await fillUpcoming(records);
 }
 
 async function fillUpcoming(records) {

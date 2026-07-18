@@ -29,27 +29,20 @@ export function oddsToken() {
   } catch { return ""; }
 }
 
-// Documented cooldowns (ms). We keep a per-endpoint "next allowed" timestamp and wait it out.
-const COOLDOWN = {
-  "/v4/participants": 1000,
-  "/v4/fixtures": 1000,
-  "/v4/fixture": 1000,
-  "/v4/historical-odds": 5000, // slowest — the real bottleneck
-  "/v4/settlements": 2000,
-  "/v4/tournaments": 1000,
-  _default: 1200,
-};
-const nextAllowed = new Map();
+// The rate limit is effectively GLOBAL per account (interleaving different endpoints still
+// 429s), so we pace ALL requests through a single shared window. Docs say 5s on the heavy
+// endpoint; 6.5s in practice avoids 429s entirely and keeps throughput predictable.
+const GLOBAL_GAP = Number(process.env.ODDSPAPI_GAP_MS || 6500);
+const COOLDOWN = { _default: GLOBAL_GAP };
+let globalNext = 0;
 
-async function paced(path) {
-  const cd = COOLDOWN[path] ?? COOLDOWN._default;
-  const now = Date.now();
-  const wait = (nextAllowed.get(path) || 0) - now;
+async function paced(_path) {
+  const wait = globalNext - Date.now();
   if (wait > 0) await sleep(wait);
-  nextAllowed.set(path, Date.now() + cd);
+  globalNext = Date.now() + GLOBAL_GAP;
 }
 
-export async function api(path, params = {}, { retries = 4, headers = {} } = {}) {
+export async function api(path, params = {}, { retries = 6, headers = {} } = {}) {
   const token = oddsToken();
   if (!token) {
     throw new Error(
@@ -67,10 +60,18 @@ export async function api(path, params = {}, { retries = 4, headers = {} } = {})
     try {
       const res = await fetch(url, { headers });
       if (res.status === 304) return { _notModified: true, _etag: res.headers.get("etag") };
-      if (res.status === 429) { await sleep(2000 * (attempt + 1)); continue; }
-      if (res.status === 401 || res.status === 403) {
+      if (res.status === 429) {
+        // Rate limited: push the global window out so the retry actually clears it.
+        globalNext = Date.now() + GLOBAL_GAP + 1500 * (attempt + 1);
+        continue;
+      }
+      // 4xx (except 429) are deterministic — do NOT waste retries (and cooldowns) on them.
+      if (res.status >= 400 && res.status < 500) {
         const body = await res.text().catch(() => "");
-        throw new Error(`OddsPapi auth ${res.status}: ключ неверный/без доступа. ${body.slice(0, 200)}`);
+        const err = new Error(`OddsPapi HTTP ${res.status} на ${path}: ${body.slice(0, 300)}`);
+        err.status = res.status;
+        err.noRetry = true;
+        throw err;
       }
       if (!res.ok) {
         const body = await res.text().catch(() => "");
@@ -79,10 +80,27 @@ export async function api(path, params = {}, { retries = 4, headers = {} } = {})
       const json = await res.json();
       return { data: json, _etag: res.headers.get("etag") };
     } catch (err) {
+      if (err && err.noRetry) throw err;
       if (attempt === retries) throw err;
       await sleep(1000 * (attempt + 1));
     }
   }
+  const rl = new Error(`OddsPapi: не удалось получить ответ (${path}) — вероятно, исчерпана квота / rate limit.`);
+  rl.rateLimited = true;
+  throw rl;
+}
+
+// Market dictionary → set of marketIds that are the full-match winner (moneyline, whole series).
+let _mlIds = null;
+export async function matchWinnerMarketIds(sportId = DOTA_SPORT_ID) {
+  if (_mlIds) return _mlIds;
+  const list = await api("/v4/markets", { sportId }).then((r) => r.data || []);
+  _mlIds = new Set(
+    list
+      .filter((m) => m.marketType === "moneyline" && m.period === "result" && (m.marketLength === 2 || (m.outcomes || []).length === 2))
+      .map((m) => String(m.marketId))
+  );
+  return _mlIds;
 }
 
 export const participants = (sportId = DOTA_SPORT_ID) =>
@@ -92,7 +110,11 @@ export const fixtures = ({ sportId = DOTA_SPORT_ID, from, to, tournamentId } = {
   api("/v4/fixtures", { sportId, from, to, tournamentId }).then((r) => r.data || []);
 
 export const historicalOdds = (fixtureId, bookmakers = "pinnacle") =>
-  api("/v4/historical-odds", { fixtureId, bookmakers }).then((r) => r.data || null);
+  api("/v4/historical-odds", { fixtureId, bookmakers })
+    .then((r) => r.data || null)
+    .catch((e) => { if (e && e.status === 404) return null; throw e; }); // 404 = no odds priced
 
 export const settlements = (fixtureId) =>
-  api("/v4/settlements", { fixtureId }).then((r) => r.data || null);
+  api("/v4/settlements", { fixtureId })
+    .then((r) => r.data || null)
+    .catch((e) => { if (e && e.status === 404) return null; throw e; });
