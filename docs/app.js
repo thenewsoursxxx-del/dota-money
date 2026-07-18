@@ -382,7 +382,45 @@ let liveGames = [];
 let liveLoadedId = null;
 let liveTimer = null;
 let liveSeriesTeams = null; // Set of the two team_ids → lets us follow the series onto the next map
+let liveSeriesId = null;    // OpenDota series_id → precise link between maps of one BO3/BO5
+let liveAllGames = [];      // last full /live payload → lets us number the maps within a series
 let liveMissCount = 0;      // consecutive refreshes where the series wasn't found → cap the wait
+
+// A /live game is over once OpenDota stamps deactivate_time, or it simply stops updating
+// (~10 min without a fresh snapshot). Both let us drop finished maps from the picker so a
+// stale map 1 doesn't linger next to the live map 2.
+function liveGameEnded(g) {
+  const now = Math.floor(Date.now() / 1000);
+  if (g.deactivate_time && g.deactivate_time > 0) return true;
+  if (g.last_update_time && now - g.last_update_time > 600) return true;
+  return false;
+}
+// Which map of the series this game is (1-based). All maps of one BO3/BO5 share series_id;
+// order them by activate_time (fallback match_id) so map 2 shows "Карта 2" even if map 1 ended.
+function seriesMapNo(g) {
+  if (!g || !g.series_id || !Array.isArray(liveAllGames) || !liveAllGames.length) return null;
+  const sib = liveAllGames
+    .filter((x) => x.series_id === g.series_id)
+    .sort((a, b) => (a.activate_time || a.match_id) - (b.activate_time || b.match_id));
+  if (sib.length < 2) return null; // single game → no meaningful "map N"
+  const i = sib.findIndex((x) => x.match_id === g.match_id);
+  return i >= 0 ? i + 1 : null;
+}
+
+// Lightweight toast + Telegram haptic so actions like "записать ставку" get real feedback.
+let toastTimer = null;
+function toast(msg, kind = "ok") {
+  let el = document.getElementById("toast");
+  if (!el) { el = document.createElement("div"); el.id = "toast"; document.body.appendChild(el); }
+  el.textContent = msg;
+  el.className = "toast " + (kind === "err" ? "toast-err" : "toast-ok") + " show";
+  try {
+    const tg = window.Telegram && window.Telegram.WebApp;
+    if (tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred(kind === "err" ? "error" : "success");
+  } catch { /* not in Telegram */ }
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = "toast " + (kind === "err" ? "toast-err" : "toast-ok"); }, 2800);
+}
 
 function popcount(n) { let c = 0; n = n >>> 0; while (n) { c += n & 1; n >>>= 1; } return c; }
 // building_state bitmask: radiant towers = bits 0-10, dire towers = bits 16-26 (set bit = standing).
@@ -411,12 +449,15 @@ async function loadLiveMatches() {
     liveSetStatus("Не удалось загрузить (сеть/CORS): " + e.message, "err");
     return;
   }
+  liveAllGames = games; // keep the full payload so seriesMapNo() can number maps within a series
   const withHeroes = (g) => Array.isArray(g.players) && g.players.filter((p) => p.hero_id).length >= 6;
+  // Only games still in progress — finished maps (deactivate_time / stale) just cause confusion.
+  const isLive = (g) => withHeroes(g) && !liveGameEnded(g);
   // Pro (league) games first; fall back to top public games so the feature is usable 24/7.
-  let list = games.filter((g) => g.league_id && withHeroes(g)).sort((a, b) => (b.sort_score || 0) - (a.sort_score || 0));
+  let list = games.filter((g) => g.league_id && isLive(g)).sort((a, b) => (b.sort_score || 0) - (a.sort_score || 0));
   let mode = "pro";
   if (!list.length) {
-    list = games.filter(withHeroes).sort((a, b) => (b.average_mmr || 0) - (a.average_mmr || 0)).slice(0, 8);
+    list = games.filter(isLive).sort((a, b) => (b.average_mmr || 0) - (a.average_mmr || 0)).slice(0, 8);
     mode = "pub";
   }
   liveGames = list;
@@ -428,8 +469,10 @@ async function loadLiveMatches() {
     const min = Math.max(0, Math.floor((g.game_time || 0) / 60));
     const lead = g.radiant_lead || 0;
     const leadTxt = lead === 0 ? "нетворс ровно" : (lead > 0 ? nameA : nameB) + " +" + Math.abs(lead).toLocaleString("ru-RU");
+    const mapNo = seriesMapNo(g);
+    const mapTag = mapNo ? `<span class="lm-map">Карта ${mapNo}</span>` : "";
     return `<button class="live-match-item" data-idx="${i}">
-      <span class="lm-teams">${nameA} <b>vs</b> ${nameB}</span>
+      <span class="lm-teams">${nameA} <b>vs</b> ${nameB} ${mapTag}</span>
       <span class="lm-meta">${min}′ · ${g.radiant_score || 0}–${g.dire_score || 0} · ${leadTxt}</span>
     </button>`;
   }).join("");
@@ -498,8 +541,9 @@ function applyLiveMatch(g, isRefresh = false) {
   if (!g) return;
   liveLoadedId = g.match_id;
   liveMissCount = 0;
-  // Remember the two teams so auto-refresh can follow the series to the next map (new match_id).
+  // Remember the two teams + series so auto-refresh can follow the series to the next map (new match_id).
   if (g.team_id_radiant && g.team_id_dire) liveSeriesTeams = new Set([g.team_id_radiant, g.team_id_dire]);
+  liveSeriesId = g.series_id || null;
   const idR = g.team_id_radiant ? String(g.team_id_radiant) : "";
   const idD = g.team_id_dire ? String(g.team_id_dire) : "";
 
@@ -532,7 +576,9 @@ function applyLiveMatch(g, isRefresh = false) {
   runLiveAnalysis();
 
   const min = Math.max(0, Math.floor((g.game_time || 0) / 60));
-  liveSetStatus(`${live.nameA} vs ${live.nameB} · ${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
+  const mapNo = seriesMapNo(g);
+  const mapTxt = mapNo ? `Карта ${mapNo} · ` : "";
+  liveSetStatus(`${live.nameA} vs ${live.nameB} · ${mapTxt}${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
 
   if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
   if (document.getElementById("liveAuto").checked) liveTimer = setInterval(refreshLive, 20000);
@@ -543,16 +589,23 @@ async function refreshLive() {
   let games;
   try { games = await (await fetch("https://api.opendota.com/api/live")).json(); }
   catch { return; }
+  liveAllGames = games; // refresh so seriesMapNo() stays accurate as maps come and go
   const g = games.find((x) => x.match_id === liveLoadedId);
-  if (g) { liveMissCount = 0; applyLiveMatch(g, true); return; }
+  // If the loaded map is still genuinely live, keep tracking it. If OpenDota now reports it as
+  // ended (deactivate_time) fall through to hunt for the next map of the series.
+  if (g && !liveGameEnded(g)) { liveMissCount = 0; applyLiveMatch(g, true); return; }
 
-  // Current map disappeared (game ended). In a BO3/BO5 the next map is a NEW match_id with the
-  // same two teams (sides usually swap), so follow the series automatically instead of freezing.
+  // Current map ended/disappeared. In a BO3/BO5 the next map is a NEW match_id sharing series_id
+  // (sides usually swap), so follow the series automatically instead of freezing. Prefer the exact
+  // series_id link, fall back to the same two teams; never re-latch onto an ended game.
   const withHeroes = (x) => Array.isArray(x.players) && x.players.filter((p) => p.hero_id).length >= 6;
-  const next = liveSeriesTeams
-    ? games.find((x) => x.match_id !== liveLoadedId && x.team_id_radiant && x.team_id_dire &&
-        liveSeriesTeams.has(x.team_id_radiant) && liveSeriesTeams.has(x.team_id_dire) && withHeroes(x))
-    : null;
+  const candidate = (x) => x.match_id !== liveLoadedId && withHeroes(x) && !liveGameEnded(x);
+  const next =
+    (liveSeriesId ? games.find((x) => candidate(x) && x.series_id === liveSeriesId) : null) ||
+    (liveSeriesTeams
+      ? games.find((x) => candidate(x) && x.team_id_radiant && x.team_id_dire &&
+          liveSeriesTeams.has(x.team_id_radiant) && liveSeriesTeams.has(x.team_id_dire))
+      : null);
   if (next) {
     liveMissCount = 0;
     liveSetStatus("Началась следующая карта серии — переключаюсь…", "ok");
@@ -789,13 +842,17 @@ function makeBet(ctx, oddsA, oddsB) {
 
 function logBet(ctx, oddsA, oddsB) {
   const bet = makeBet(ctx, oddsA, oddsB);
-  if (!bet) { alert("Впиши корректные кэфы (оба > 1) перед записью."); return; }
+  if (!bet) { toast("Впиши корректные кэфы (оба > 1) перед записью.", "err"); return; }
   const arr = loadBets();
   arr.unshift(bet);
   saveBets(arr);
+  // Verify it actually persisted (localStorage can be full/blocked, e.g. private mode).
+  const saved = loadBets().some((b) => b.id === bet.id);
   renderJournal();
+  if (!saved) { toast("Не удалось сохранить ставку — проверь память браузера.", "err"); return; }
   const box = document.querySelector(".journal-box");
   if (box) box.open = true;
+  toast(`Ставка записана: ${bet.pickTeam} @ ${bet.oddsPick} (EV +${(bet.ev * 100).toFixed(1)}%)`, "ok");
 }
 
 function renderJournal() {
