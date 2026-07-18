@@ -3,5 +3,6 @@ node_modules/
 *.log
 .env
 .stratz_token
+.oddspapi_token
 train.json
 cache/
