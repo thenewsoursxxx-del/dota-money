@@ -381,6 +381,8 @@ function renderHeroDrop(side, query) {
 let liveGames = [];
 let liveLoadedId = null;
 let liveTimer = null;
+let liveSeriesTeams = null; // Set of the two team_ids → lets us follow the series onto the next map
+let liveMissCount = 0;      // consecutive refreshes where the series wasn't found → cap the wait
 
 function popcount(n) { let c = 0; n = n >>> 0; while (n) { c += n & 1; n >>>= 1; } return c; }
 // building_state bitmask: radiant towers = bits 0-10, dire towers = bits 16-26 (set bit = standing).
@@ -495,6 +497,9 @@ function autoAssignByPool(teamId, heroIds) {
 function applyLiveMatch(g, isRefresh = false) {
   if (!g) return;
   liveLoadedId = g.match_id;
+  liveMissCount = 0;
+  // Remember the two teams so auto-refresh can follow the series to the next map (new match_id).
+  if (g.team_id_radiant && g.team_id_dire) liveSeriesTeams = new Set([g.team_id_radiant, g.team_id_dire]);
   const idR = g.team_id_radiant ? String(g.team_id_radiant) : "";
   const idD = g.team_id_dire ? String(g.team_id_dire) : "";
 
@@ -539,12 +544,30 @@ async function refreshLive() {
   try { games = await (await fetch("https://api.opendota.com/api/live")).json(); }
   catch { return; }
   const g = games.find((x) => x.match_id === liveLoadedId);
-  if (!g) {
-    if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
-    liveSetStatus("Матч завершён или пропал из эфира — авто-обновление остановлено.", "");
+  if (g) { liveMissCount = 0; applyLiveMatch(g, true); return; }
+
+  // Current map disappeared (game ended). In a BO3/BO5 the next map is a NEW match_id with the
+  // same two teams (sides usually swap), so follow the series automatically instead of freezing.
+  const withHeroes = (x) => Array.isArray(x.players) && x.players.filter((p) => p.hero_id).length >= 6;
+  const next = liveSeriesTeams
+    ? games.find((x) => x.match_id !== liveLoadedId && x.team_id_radiant && x.team_id_dire &&
+        liveSeriesTeams.has(x.team_id_radiant) && liveSeriesTeams.has(x.team_id_dire) && withHeroes(x))
+    : null;
+  if (next) {
+    liveMissCount = 0;
+    liveSetStatus("Началась следующая карта серии — переключаюсь…", "ok");
+    applyLiveMatch(next, true);
     return;
   }
-  applyLiveMatch(g, true);
+  // No same-series game yet: the next map's draft may just not have started. Keep watching for a
+  // few minutes (drafts + breaks take a while), then give up so we don't poll forever after a series.
+  liveMissCount++;
+  if (liveMissCount >= 24) { // ~8 min of 20s polls
+    if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
+    liveSetStatus("Серия, похоже, завершена — авто-обновление остановлено. Нажми «Загрузить live-матчи» для нового матча.", "");
+    return;
+  }
+  liveSetStatus(`Карта завершена. Жду следующую карту серии… (${liveMissCount}, обновление каждые 20с)`, "");
 }
 
 function wireLiveTab() {
