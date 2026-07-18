@@ -17,6 +17,7 @@
     "backtest-early": "node src/backtest_early.mjs",
     "backtest-odds": "node src/backtest_odds.mjs",
     "train": "node src/train_model.mjs",
+    "learn-match": "node src/learn_match.mjs",
     "roi": "node src/roi.mjs",
     "fetch-upcoming": "node src/fetch_upcoming.mjs",
     "start": "node server.mjs",

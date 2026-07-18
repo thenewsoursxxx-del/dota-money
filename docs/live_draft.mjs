@@ -344,8 +344,19 @@ export function scoreDraft(radiant, dire, ctx) {
   };
 }
 
-// Blend draft probability with an Elo base rate (both A-perspective, per-game).
+// Blend draft probability with an Elo/ML base rate (both A-perspective, per-game).
+// Lesson from PVISION vs Yandex map 3 (EWC 2026): draftAlone correctly favored PVISION (~60%)
+// but form base (~26%) drowned it to ~28% in the logit blend. When draft and base pick
+// OPPOSITE sides and the draft edge is meaningful, give draft a real voice via a linear
+// mix — otherwise keep the conservative logit blend (draft alone is weak out-of-sample).
 export function blend(eloProbA, draftProbA) {
+  const disagree = (eloProbA - 0.5) * (draftProbA - 0.5) < 0;
+  const draftEdge = Math.abs(draftProbA - 0.5);
+  if (disagree && draftEdge >= 0.08) {
+    // Base still matters, but draft can flip the call when it's clearly opposite.
+    const wDraft = clamp(0.55 + (draftEdge - 0.08) * 1.5, 0.55, 0.75);
+    return clamp((1 - wDraft) * eloProbA + wDraft * draftProbA, 0.02, 0.98);
+  }
   const finalLogit = logit(eloProbA) + BLEND * logit(draftProbA);
   return clamp(sigmoid(finalLogit), 0.02, 0.98);
 }

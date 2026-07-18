@@ -1,6 +1,6 @@
 // DOTA MONEY v1 — fully client-side (static, works on GitHub Pages & as Telegram Mini App).
 
-import { predict, fairImplied, valueForSide } from "./model.mjs";
+import { predict, fairImplied, valueForSide, eloExpected, ELO_K } from "./model.mjs";
 import { analyzeMatchup, applyDraftAdjustment } from "./draft.mjs";
 import { analyzeDraft } from "./live_draft.mjs";
 import { predictML } from "./model_ml.mjs";
@@ -71,10 +71,41 @@ function draftTeam(id) {
   return draftData.teams[String(id)] || null;
 }
 
+// Soft in-session form/Elo for maps already won in this series (dataset.json is static
+// on Pages until the next learn-match). Lesson from PVISION vs Yandex map 3: map 1 win
+// never moved the ~74% Yandex form base, so draft favoring PVISION got drowned.
+function seriesSoftMl(mlA, mlB, winsA, winsB) {
+  const a = { ...mlA };
+  const b = { ...mlB };
+  const alpha = 0.15;
+  const halfK = ELO_K * 0.55;
+  const applyWin = (w, l) => {
+    w.form10 = Math.min(0.95, Math.max(0.05, w.form10 * (1 - alpha) + alpha));
+    w.form45 = Math.min(0.95, Math.max(0.05, w.form45 * (1 - alpha) + alpha));
+    l.form10 = Math.min(0.95, Math.max(0.05, l.form10 * (1 - alpha)));
+    l.form45 = Math.min(0.95, Math.max(0.05, l.form45 * (1 - alpha)));
+    const exp = eloExpected(w.elo, l.elo);
+    w.elo = Math.round(w.elo + halfK * (1 - exp));
+    l.elo = Math.round(l.elo + halfK * (0 - (1 - exp)));
+    w.act = (w.act || 0) + 1;
+    l.act = (l.act || 0) + 1;
+  };
+  for (let i = 0; i < (winsA || 0); i++) applyWin(a, b);
+  for (let i = 0; i < (winsB || 0); i++) applyWin(b, a);
+  return { a, b };
+}
+
 // Trained ML per-game probability (A wins) from the teams' current-form snapshots.
+// Optional seriesWins = { a, b } map wins already banked in this BO3/BO5 (A=radiant).
 // Returns null when the model or a snapshot is missing → callers fall back to raw Elo.
-function mlBaseProb(aTeam, bTeam) {
+function mlBaseProb(aTeam, bTeam, seriesWins = null) {
   if (!mlModel || !aTeam || !bTeam || !aTeam.ml || !bTeam.ml) return null;
+  const wa = seriesWins?.a || 0;
+  const wb = seriesWins?.b || 0;
+  if (wa || wb) {
+    const soft = seriesSoftMl(aTeam.ml, bTeam.ml, wa, wb);
+    return predictML(mlModel, soft.a, soft.b);
+  }
   return predictML(mlModel, aTeam.ml, bTeam.ml);
 }
 
@@ -425,6 +456,7 @@ let liveLoadedId = null;
 let liveTimer = null;
 let liveSeriesTeams = null; // Set of the two team_ids → lets us follow the series onto the next map
 let liveSeriesId = null;    // OpenDota series_id → precise link between maps of one BO3/BO5
+let liveSeriesScore = null; // { a: radiantWins, b: direWins } maps already won this series
 let liveAllGames = [];      // last full /live payload → lets us number the maps within a series
 let liveMissCount = 0;      // consecutive refreshes where the series wasn't found → cap the wait
 
@@ -477,6 +509,7 @@ function liveSetStatus(msg, cls = "") {
 function stopLive() {
   if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
   liveLoadedId = null;
+  liveSeriesScore = null;
 }
 
 async function loadLiveMatches() {
@@ -600,6 +633,12 @@ function applyLiveMatch(g, isRefresh = false) {
   // Remember the two teams + series so auto-refresh can follow the series to the next map (new match_id).
   if (g.team_id_radiant && g.team_id_dire) liveSeriesTeams = new Set([g.team_id_radiant, g.team_id_dire]);
   liveSeriesId = g.series_id || null;
+  // Series score so map 2/3 form base isn't stuck on pre-series snapshots.
+  const rs = Number(g.radiant_series_wins);
+  const ds = Number(g.dire_series_wins);
+  liveSeriesScore = (Number.isFinite(rs) || Number.isFinite(ds))
+    ? { a: Number.isFinite(rs) ? rs : 0, b: Number.isFinite(ds) ? ds : 0 }
+    : null;
   const idR = g.team_id_radiant ? String(g.team_id_radiant) : "";
   const idD = g.team_id_dire ? String(g.team_id_dire) : "";
 
@@ -635,7 +674,8 @@ function applyLiveMatch(g, isRefresh = false) {
   const min = Math.max(0, Math.floor((g.game_time || 0) / 60));
   const mapNo = seriesMapNo(g);
   const mapTxt = mapNo ? `Карта ${mapNo} · ` : "";
-  liveSetStatus(`${live.nameA} vs ${live.nameB} · ${mapTxt}${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
+  const scoreTxt = liveSeriesScore ? `счёт ${liveSeriesScore.a}:${liveSeriesScore.b} · ` : "";
+  liveSetStatus(`${live.nameA} vs ${live.nameB} · ${mapTxt}${scoreTxt}${min}′ · нетворс ${(g.radiant_lead || 0) >= 0 ? "+" : ""}${(g.radiant_lead || 0).toLocaleString("ru-RU")} (Radiant) ${isRefresh ? "· обновлено" : "· загружен"}`, "ok");
 
   if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
   if (document.getElementById("liveAuto").checked) liveTimer = setInterval(refreshLive, LIVE_INTERVAL_MS);
@@ -825,7 +865,7 @@ function runLiveAnalysis() {
     assignA: Object.keys(assignA).length ? assignA : null,
     assignB: Object.keys(assignB).length ? assignB : null,
     teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
-    baseProbA: mlBaseProb(tA, tB),
+    baseProbA: mlBaseProb(tA, tB, liveSeriesScore),
     earlyGame: eg,
     nameA, nameB, heroName, format,
   };
@@ -837,7 +877,10 @@ function runLiveAnalysis() {
     .map((x) => `<div class="rz-bullet"><span class="rz-icon">${x.icon}</span><span>${x.text}</span></div>`)
     .join("");
 
-  const baseLabel = mlModel ? "База (ML-модель) → с драфтом" : "База по Elo → с драфтом";
+  const seriesHint = liveSeriesScore && (liveSeriesScore.a || liveSeriesScore.b)
+    ? ` · учтён счёт ${liveSeriesScore.a}:${liveSeriesScore.b}`
+    : "";
+  const baseLabel = mlModel ? `База (ML-модель${seriesHint}) → с драфтом` : `База по Elo${seriesHint} → с драфтом`;
   const eloLine = res.eloProbA != null
     ? `<div class="kv"><span>${baseLabel}</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
     : `<div class="kv"><span>Прогноз по драфту (без базы)</span><span>${pct(res.priorProbA)}</span></div>`;
