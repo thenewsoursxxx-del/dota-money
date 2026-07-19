@@ -27,21 +27,23 @@ const W = {
   synergy: 0.95,
   counter: 1.35,
   lane: 0.45,
-  timing: 1.2,   // late-weighted power curve (see TIMING_PHASE)
-  fight: 1.05,   // teamfight tools — "нечем драться" is a real loss condition
+  timing: 1.0,   // late-weighted power curve (see TIMING_PHASE)
+  fight: 0.85,   // teamfight tools — "нечем драться" matters; keep below meta/counter
   dmg: 0.65,
-  lock: 0.55,
+  lock: 0.5,
   pool: 1.0,
   player: 0.75,
 };
 // Most pro games reach mid/late; weight the curve accordingly (not a flat early/mid/late avg).
 const TIMING_PHASE = { early: 0.12, mid: 0.28, late: 0.60 };
-const EDGE_CAP = 0.95; // base cap on total draft edge
-const EDGE_CAP_EXTREME = 1.25; // when strong pool-lock / hard counters / fight vacuum present
-const K_PROB = 2.05; // edge -> probability steepness (clearer draft → stronger % swing)
-// Draft voice on top of Elo/ML. Raised after EWC GF lessons: form was drowning near-even
-// drafts, and in current Dota the lineup is a first-class signal — not a 0.3 nudge.
-const BLEND = 0.58;
+const EDGE_CAP = 0.85; // base cap on total draft edge
+const EDGE_CAP_EXTREME = 1.15; // when strong pool-lock / hard counters / fight vacuum present
+const K_PROB = 1.85; // edge -> probability steepness
+// Honest CACHE_ONLY backtest (n≈258, point-in-time meta): Elo alone ~65.5% acc, draft-alone
+// ~51.6%, and BLEND=0.58 *hurt* Elo+draft down to ~54%. So draft structure (late/fight) stays
+// strong inside scoreDraft, but the blend into form must stay a nudge — not a takeover —
+// unless the draft edge is large and opposite the form call.
+const BLEND = 0.38;
 
 // ---------- per-hero lookups ----------
 // STRATZ current-patch, role-aware winrate. We pick the position the hero is ACTUALLY
@@ -389,19 +391,15 @@ export function scoreDraft(radiant, dire, ctx) {
 }
 
 // Blend draft probability with an Elo/ML base rate (both A-perspective, per-game).
-// Default: draft has a strong logit voice (BLEND≈0.58). When draft and form pick opposite
-// sides and draft edge is clear, draft can dominate via a linear mix — form should not
-// erase a real lineup advantage in modern Dota.
+// Near-coin-flip drafts are ignored (noise). Clear opposite draft can pull form, but
+// backtests show letting draft dominate destroys Elo accuracy out-of-sample.
 export function blend(eloProbA, draftProbA) {
-  const disagree = (eloProbA - 0.5) * (draftProbA - 0.5) < 0;
   const draftEdge = Math.abs(draftProbA - 0.5);
-  if (disagree && draftEdge >= 0.06) {
-    const wDraft = clamp(0.62 + (draftEdge - 0.06) * 1.8, 0.62, 0.82);
-    return clamp((1 - wDraft) * eloProbA + wDraft * draftProbA, 0.02, 0.98);
-  }
-  // Even when they agree, let a strong draft sharpen the call past a meek form edge.
-  if (!disagree && draftEdge >= 0.1) {
-    const wDraft = clamp(0.45 + draftEdge, 0.45, 0.7);
+  if (draftEdge < 0.05) return clamp(eloProbA, 0.02, 0.98); // draft ≈ coin flip → trust form
+  const disagree = (eloProbA - 0.5) * (draftProbA - 0.5) < 0;
+  if (disagree && draftEdge >= 0.12) {
+    // Decisive lineup vs form — give draft a real but capped voice (EWC map-3 lesson).
+    const wDraft = clamp(0.48 + (draftEdge - 0.12) * 1.4, 0.48, 0.68);
     return clamp((1 - wDraft) * eloProbA + wDraft * draftProbA, 0.02, 0.98);
   }
   const finalLogit = logit(eloProbA) + BLEND * logit(draftProbA);

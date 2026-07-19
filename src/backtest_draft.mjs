@@ -22,6 +22,7 @@ import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getLeagues, getProMatches, getMatch } from "./opendota.mjs";
+import { stratzQuery, sleep as stratzSleep } from "./stratz.mjs";
 import { scoreDraft, blend } from "../docs/live_draft.mjs";
 import { eloExpected, ELO_START, ELO_K } from "../docs/model.mjs";
 
@@ -33,10 +34,45 @@ const CACHE_FILE = join(CACHE_DIR, "draft_matches.json");
 
 const PAGES = Number(process.env.PAGES || 60);       // proMatches pages to scan for Tier-1 ids
 const MATCHES = Number(process.env.MATCHES || 1200); // how many recent Tier-1 matches to detail
-const DELAY = Number(process.env.DELAY || 900);      // pacing for /matches
+const DELAY = Number(process.env.DELAY || 350);      // pacing (Stratz-friendly; OpenDota fallback slower)
 const WARMUP = Number(process.env.WARMUP || 5);      // min prior Elo games per team before a match counts
 const EVAL_DAYS = Number(process.env.EVAL_DAYS || 150); // only evaluate matches newer than this
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchDraftDetail(matchId) {
+  // Prefer Stratz — OpenDota /matches often resets mid-bulk download.
+  try {
+    const d = await stratzQuery(`{ match(id: ${matchId}) {
+      id didRadiantWin startDateTime
+      players { heroId isRadiant }
+    }}`);
+    const m = d?.match;
+    if (m?.players?.length) {
+      const rad = m.players.filter((p) => p.isRadiant && p.heroId).map((p) => p.heroId);
+      const dire = m.players.filter((p) => !p.isRadiant && p.heroId).map((p) => p.heroId);
+      if (rad.length >= 4 && dire.length >= 4 && typeof m.didRadiantWin === "boolean") {
+        return {
+          start_time: m.startDateTime || null,
+          radiant_win: m.didRadiantWin,
+          rad, dire,
+        };
+      }
+    }
+  } catch { /* fall through */ }
+  try {
+    const d = await getMatch(matchId);
+    if (d && Array.isArray(d.picks_bans) && typeof d.radiant_win === "boolean") {
+      const picks = d.picks_bans.filter((p) => p.is_pick && p.hero_id);
+      return {
+        start_time: d.start_time || null,
+        radiant_win: d.radiant_win,
+        rad: picks.filter((p) => p.team === 0).map((p) => p.hero_id),
+        dire: picks.filter((p) => p.team === 1).map((p) => p.hero_id),
+      };
+    }
+  } catch { /* ignore */ }
+  return null;
+}
 
 const sigmoid = (z) => 1 / (1 + Math.exp(-z));
 const clampP = (p, e = 1e-6) => Math.min(1 - e, Math.max(e, p));
@@ -50,46 +86,73 @@ async function loadCache() {
 
 async function assembleMatches() {
   const cache = await loadCache();
-  console.log(`Кеш: ${Object.keys(cache.matches).length} матчей уже загружено.`);
+  const cachedN = Object.keys(cache.matches).length;
+  console.log(`Кеш: ${cachedN} матчей уже загружено.`);
 
-  console.log(`1/3 Ищу Tier-1 матчи (${PAGES} страниц про-матчей)...`);
-  const leagues = await getLeagues();
-  const TIER1 = new Set(["premium", "professional"]);
-  const premiumIds = new Set(leagues.filter((l) => TIER1.has(l.tier)).map((l) => l.leagueid));
-  const pro = await getProMatches({ pages: PAGES, delayMs: 350 });
-  const tier1 = pro
-    .filter((m) => premiumIds.has(m.leagueid) && m.radiant_team_id && m.dire_team_id && typeof m.radiant_win === "boolean")
-    .sort((a, b) => b.start_time - a.start_time)
-    .slice(0, MATCHES);
-  console.log(`   Tier-1 матчей: ${tier1.length}`);
+  const CACHE_ONLY = process.env.CACHE_ONLY === "1" || process.env.CACHE_ONLY === "true";
+  let tier1 = [];
+
+  if (!CACHE_ONLY) {
+    try {
+      console.log(`1/3 Ищу Tier-1 матчи (${PAGES} страниц про-матчей)...`);
+      const leagues = await getLeagues();
+      const TIER1 = new Set(["premium", "professional"]);
+      const premiumIds = new Set(leagues.filter((l) => TIER1.has(l.tier)).map((l) => l.leagueid));
+      const pro = await getProMatches({ pages: PAGES, delayMs: 350 });
+      tier1 = pro
+        .filter((m) => premiumIds.has(m.leagueid) && m.radiant_team_id && m.dire_team_id && typeof m.radiant_win === "boolean")
+        .sort((a, b) => b.start_time - a.start_time)
+        .slice(0, MATCHES);
+      console.log(`   Tier-1 матчей: ${tier1.length}`);
+    } catch (e) {
+      console.warn(`   OpenDota список недоступен (${e.message || e}). Падаю на кеш.`);
+    }
+  } else {
+    console.log("1/3 CACHE_ONLY=1 — пропускаю OpenDota, только локальный кеш.");
+  }
+
+  if (!tier1.length) {
+    if (!cachedN) throw new Error("Нет кеша драфтов и OpenDota недоступен. Повтори позже.");
+    tier1 = Object.values(cache.matches)
+      .filter((m) => m.rad?.length >= 4 && m.dire?.length >= 4 && typeof m.radiant_win === "boolean")
+      .sort((a, b) => b.start_time - a.start_time)
+      .slice(0, MATCHES)
+      .map((m) => ({
+        match_id: m.match_id,
+        start_time: m.start_time,
+        radiant_team_id: m.radiant_team_id,
+        dire_team_id: m.dire_team_id,
+        radiant_win: m.radiant_win,
+      }));
+    console.log(`   Из кеша: ${tier1.length} матчей с драфтом.`);
+  }
 
   const need = tier1.filter((m) => !cache.matches[m.match_id]);
-  console.log(`2/3 Нужно догрузить деталей: ${need.length} (пейсинг ${DELAY}ms)...`);
+  console.log(`2/3 Нужно догрузить деталей: ${need.length} (Stratz → OpenDota, пейсинг ${DELAY}ms)...`);
   let got = 0, err = 0;
   for (const m of need) {
-    try {
-      const d = await getMatch(m.match_id);
-      if (d && Array.isArray(d.picks_bans) && typeof d.radiant_win === "boolean") {
-        const picks = d.picks_bans.filter((p) => p.is_pick && p.hero_id);
-        const rad = picks.filter((p) => p.team === 0).map((p) => p.hero_id);
-        const dire = picks.filter((p) => p.team === 1).map((p) => p.hero_id);
-        cache.matches[m.match_id] = {
-          match_id: m.match_id,
-          start_time: d.start_time || m.start_time,
-          radiant_team_id: m.radiant_team_id,
-          dire_team_id: m.dire_team_id,
-          radiant_win: d.radiant_win,
-          rad, dire,
-        };
-        got++;
-      }
-    } catch { err++; }
+    const d = await fetchDraftDetail(m.match_id);
+    if (d && d.rad?.length >= 4 && d.dire?.length >= 4) {
+      cache.matches[m.match_id] = {
+        match_id: m.match_id,
+        start_time: d.start_time || m.start_time,
+        radiant_team_id: m.radiant_team_id,
+        dire_team_id: m.dire_team_id,
+        radiant_win: d.radiant_win,
+        rad: d.rad,
+        dire: d.dire,
+      };
+      got++;
+    } else {
+      err++;
+    }
     if ((got + err) % 25 === 0) {
       process.stdout.write(`\r   загружено ${got}, ошибок ${err}`);
       await mkdir(CACHE_DIR, { recursive: true });
       await writeFile(CACHE_FILE, JSON.stringify(cache), "utf8");
     }
     await sleep(DELAY);
+    if ((got + err) % 40 === 0) await stratzSleep(200);
   }
   process.stdout.write("\n");
   await mkdir(CACHE_DIR, { recursive: true });
@@ -159,7 +222,7 @@ function fitLR(Z, y, w, { l2 = 1.0, iters = 500, lr = 0.3 } = {}) {
   return { W, b };
 }
 
-const FEATURES = ["eloLogit", "eMeta", "eSyn", "eCounter", "eLane", "eTiming", "eDmg", "eLock"];
+const FEATURES = ["eloLogit", "eMeta", "eSyn", "eCounter", "eLane", "eTiming", "eFight", "eDmg", "eLock"];
 
 // Build a meta object (same shape as meta.json) from a list of drafted matches, so a
 // backtest can use ONLY past matches (no leakage from the games we're predicting).
@@ -239,7 +302,8 @@ async function main() {
         draftProbA: clean.probA,        // leakage-free draft prob
         draftProbLeaky: leaky.probA,    // for contrast only
         eMeta: r.eMeta, eSyn: r.eSyn, eCounter: r.eCounter, eLane: r.eLane,
-        eTiming: (r.eEarly + r.eLate) / 2, // representative curve/timing signal
+        eTiming: r.eTiming ?? ((r.eEarly + r.eLate) / 2),
+        eFight: r.eFight ?? 0,
         eDmg: r.eDmg, eLock: r.eLock,
       });
     }
@@ -256,7 +320,7 @@ async function main() {
   }
 
   // ---- baselines on full eval set ----
-  const BLEND = 0.7; // must match live_draft.mjs
+  // blend() lives in live_draft.mjs (BLEND≈0.58 + disagree/agree sharpening).
   const preds = {
     "Монетка (0.5)": () => 0.5,
     "Только Elo": (s) => s.eloProb,
