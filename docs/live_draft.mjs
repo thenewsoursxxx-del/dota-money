@@ -1,12 +1,12 @@
-// Live draft intelligence engine (v3) — client-side, pure functions.
+// Live draft intelligence engine (v4) — client-side, pure functions.
 // Given two drafted line-ups (+ optional player assignment) it scores the matchup
-// on the factors research shows actually decide games: meta strength, synergy,
-// counters, power-curve/timing, lane economy, damage balance, lockdown, composition,
-// and player-pool lock. Produces a draft win-probability, a blended prob with Elo,
-// a confidence level, and a commentator-style explanation.
+// on meta, synergy, counters, LATE-biased power curves, teamfight vacuum, lane,
+// damage balance, lockdown, pool-lock, and player form — then blends with Elo/ML.
 //
-// Draft-only prediction is capped (~55-70%) on purpose: peer-reviewed models show
-// draft alone tops out there; high confidence needs early-game economy (next stage).
+// Design bet (current pro Dota): draft decides a huge share of games; most matches
+// reach mid/late, so a "win lanes, lose late" lineup should NOT beat a late/teamfight
+// draft just because early curves look greener. Live economy still overrides once gold
+// is known.
 
 import { eloExpected, seriesWinProb } from "./model.mjs";
 
@@ -20,25 +20,28 @@ const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length :
 const pairKey = (a, b) => (a < b ? `${a},${b}` : `${b},${a}`);
 
 // ---------- weights (edge in logit-ish units, A's perspective) ----------
+// Lane is intentionally weaker than late/teamfight: winning 10′ does not win the game
+// if the other side drafted the actual fight + scale.
 const W = {
   meta: 1.0,
-  synergy: 0.9,
-  counter: 1.3,
-  lane: 0.7,
-  timing: 0.4,
-  dmg: 0.6,
-  lock: 0.35,
-  pool: 1.1,
-  player: 0.8, // individual human factor (recent form / prime / real on-hero comfort)
+  synergy: 0.95,
+  counter: 1.35,
+  lane: 0.45,
+  timing: 1.2,   // late-weighted power curve (see TIMING_PHASE)
+  fight: 1.05,   // teamfight tools — "нечем драться" is a real loss condition
+  dmg: 0.65,
+  lock: 0.55,
+  pool: 1.0,
+  player: 0.75,
 };
-const EDGE_CAP = 0.75; // base cap on total draft edge
-const EDGE_CAP_EXTREME = 1.05; // when strong pool-lock / hard counters present
-const K_PROB = 1.7; // edge -> probability steepness
-// How much the draft logit adds on top of the Elo/ML base. Kept deliberately low: leakage-free
-// backtests show draft-alone is ~coin-flip out-of-sample and a heavy blend only makes predictions
-// MORE extreme without improving accuracy (it compounds with form, which already encodes team
-// quality). So the draft nudges the prior; the real upset-catching signal is the live economy.
-const BLEND = 0.3;
+// Most pro games reach mid/late; weight the curve accordingly (not a flat early/mid/late avg).
+const TIMING_PHASE = { early: 0.12, mid: 0.28, late: 0.60 };
+const EDGE_CAP = 0.95; // base cap on total draft edge
+const EDGE_CAP_EXTREME = 1.25; // when strong pool-lock / hard counters / fight vacuum present
+const K_PROB = 2.05; // edge -> probability steepness (clearer draft → stronger % swing)
+// Draft voice on top of Elo/ML. Raised after EWC GF lessons: form was drowning near-even
+// drafts, and in current Dota the lineup is a first-class signal — not a 0.3 nudge.
+const BLEND = 0.58;
 
 // ---------- per-hero lookups ----------
 // STRATZ current-patch, role-aware winrate. We pick the position the hero is ACTUALLY
@@ -137,13 +140,49 @@ function teamCounter(meta, matchups, mine, theirs) {
   return { edge: avg(vals), hardCounters };
 }
 
-function teamCurves(meta, ids) {
-  const cs = ids.map((id) => heroCurve(meta, id));
+function teamCurves(meta, knowledge, ids) {
+  const cs = ids.map((id) => {
+    const c = heroCurve(meta, id);
+    const k = heroKnow(knowledge, meta, id);
+    // Curated scale tag nudges the empirical duration WR toward the hero's real window.
+    let { early, mid, late } = c;
+    if (k.scale === "late") { late = clamp(late + 0.035, 0.35, 0.72); early = clamp(early - 0.02, 0.28, 0.65); }
+    else if (k.scale === "early") { early = clamp(early + 0.035, 0.35, 0.72); late = clamp(late - 0.02, 0.28, 0.65); }
+    else if (k.scale === "mid") { mid = clamp(mid + 0.02, 0.35, 0.7); }
+    return { early, mid, late };
+  });
   return {
     early: avg(cs.map((c) => c.early)),
     mid: avg(cs.map((c) => c.mid)),
     late: avg(cs.map((c) => c.late)),
   };
+}
+
+// Late-biased timing edge + explicit "lane vs late mismatch" bonus when one side
+// wins early/mid but loses the late window hard (the common throw-draft pattern).
+function timingEdge(curvesA, curvesB) {
+  const dEarly = curvesA.early - curvesB.early;
+  const dMid = curvesA.mid - curvesB.mid;
+  const dLate = curvesA.late - curvesB.late;
+  let e = TIMING_PHASE.early * dEarly + TIMING_PHASE.mid * dMid + TIMING_PHASE.late * dLate;
+  // A wins lanes/mid, B owns late → pull toward B (negative for A), and vice versa.
+  const aEarlyMid = 0.45 * dEarly + 0.55 * dMid;
+  if (aEarlyMid >= 0.04 && dLate <= -0.05) e -= 0.06 + Math.min(0.08, -dLate - 0.05);
+  if (aEarlyMid <= -0.04 && dLate >= 0.05) e += 0.06 + Math.min(0.08, dLate - 0.05);
+  return clamp(e, -0.55, 0.55);
+}
+
+// Teamfight vacuum: if B has real fight tools and A basically doesn't, B wins the draft
+// even when A looks greener on lanes. tf scores are 0–3 per hero → team ~0–15.
+function fightEdge(archA, archB) {
+  let e = clamp((archA.tf - archB.tf) / 9, -0.5, 0.5);
+  const vacA = archA.tf <= 4 && archB.tf >= 8; // A can't fight, B can
+  const vacB = archB.tf <= 4 && archA.tf >= 8;
+  if (vacA) e -= 0.14;
+  if (vacB) e += 0.14;
+  // Soft lockdown support for fights (control without BKB-pierce still matters in mid fights).
+  e += clamp((archA.lock - archB.lock) / 28, -0.08, 0.08);
+  return clamp(e, -0.55, 0.55);
 }
 
 function teamNW10(meta, ids) {
@@ -260,16 +299,15 @@ export function scoreDraft(radiant, dire, ctx) {
   const cBA = teamCounter(meta, matchups, B, A);
   const eCounter = cAB.edge - cBA.edge;
 
-  const curvesA = teamCurves(meta, A);
-  const curvesB = teamCurves(meta, B);
+  const curvesA = teamCurves(meta, knowledge, A);
+  const curvesB = teamCurves(meta, knowledge, B);
   const eEarly = curvesA.early - curvesB.early;
   const eLate = curvesA.late - curvesB.late;
-  // Timing edge: whoever is stronger in more windows, lightly.
-  const eTiming = (eEarly + (curvesA.mid - curvesB.mid) + eLate) / 3;
+  const eTiming = timingEdge(curvesA, curvesB);
 
   const nwA = teamNW10(meta, A);
   const nwB = teamNW10(meta, B);
-  const eLane = nwA != null && nwB != null ? clamp((nwA - nwB) / 6000, -0.4, 0.4) : 0;
+  const eLane = nwA != null && nwB != null ? clamp((nwA - nwB) / 6000, -0.35, 0.35) : 0;
 
   const dmgA = teamDamage(knowledge, meta, A);
   const dmgB = teamDamage(knowledge, meta, B);
@@ -277,7 +315,8 @@ export function scoreDraft(radiant, dire, ctx) {
 
   const archA = teamArchetype(knowledge, meta, A);
   const archB = teamArchetype(knowledge, meta, B);
-  const eLock = clamp((archA.lock - archB.lock) / 12, -0.35, 0.35);
+  const eFight = fightEdge(archA, archB);
+  const eLock = clamp((archA.lock - archB.lock) / 12, -0.4, 0.4);
 
   const poolA = poolFindings(meta, assignA, A, B);
   const poolB = poolFindings(meta, assignB, B, A);
@@ -308,12 +347,17 @@ export function scoreDraft(radiant, dire, ctx) {
     W.counter * eCounter +
     W.lane * eLane +
     W.timing * eTiming +
+    W.fight * eFight +
     W.dmg * eDmg +
     W.lock * eLock +
     W.pool * ePool +
     W.player * ePlayer;
 
-  const extreme = cAB.hardCounters.length + cBA.hardCounters.length >= 3 || poolA.findings.length + poolB.findings.length >= 2;
+  const fightVac = (archA.tf <= 4 && archB.tf >= 8) || (archB.tf <= 4 && archA.tf >= 8);
+  const extreme = cAB.hardCounters.length + cBA.hardCounters.length >= 3
+    || poolA.findings.length + poolB.findings.length >= 2
+    || fightVac
+    || Math.abs(eLate) >= 0.08;
   const cap = extreme ? EDGE_CAP_EXTREME : EDGE_CAP;
   const edge = clamp(rawEdge, -cap, cap);
   const probA = sigmoid(K_PROB * edge);
@@ -329,10 +373,10 @@ export function scoreDraft(radiant, dire, ctx) {
     reliability,
     components: {
       meta: W.meta * eMeta, synergy: W.synergy * eSyn, counter: W.counter * eCounter,
-      lane: W.lane * eLane, timing: W.timing * eTiming, dmg: W.dmg * eDmg,
-      lock: W.lock * eLock, pool: W.pool * ePool, player: W.player * ePlayer,
+      lane: W.lane * eLane, timing: W.timing * eTiming, fight: W.fight * eFight,
+      dmg: W.dmg * eDmg, lock: W.lock * eLock, pool: W.pool * ePool, player: W.player * ePlayer,
     },
-    raw: { eMeta, eSyn, eCounter, eEarly, eLate, eLane, eDmg, eLock, ePool, ePlayer },
+    raw: { eMeta, eSyn, eCounter, eEarly, eLate, eTiming, eFight, eLane, eDmg, eLock, ePool, ePlayer },
     playerForm: { a: pfA, b: pfB },
     curves: { a: curvesA, b: curvesB },
     nw: { a: nwA, b: nwB },
@@ -345,16 +389,19 @@ export function scoreDraft(radiant, dire, ctx) {
 }
 
 // Blend draft probability with an Elo/ML base rate (both A-perspective, per-game).
-// Lesson from PVISION vs Yandex map 3 (EWC 2026): draftAlone correctly favored PVISION (~60%)
-// but form base (~26%) drowned it to ~28% in the logit blend. When draft and base pick
-// OPPOSITE sides and the draft edge is meaningful, give draft a real voice via a linear
-// mix — otherwise keep the conservative logit blend (draft alone is weak out-of-sample).
+// Default: draft has a strong logit voice (BLEND≈0.58). When draft and form pick opposite
+// sides and draft edge is clear, draft can dominate via a linear mix — form should not
+// erase a real lineup advantage in modern Dota.
 export function blend(eloProbA, draftProbA) {
   const disagree = (eloProbA - 0.5) * (draftProbA - 0.5) < 0;
   const draftEdge = Math.abs(draftProbA - 0.5);
-  if (disagree && draftEdge >= 0.08) {
-    // Base still matters, but draft can flip the call when it's clearly opposite.
-    const wDraft = clamp(0.55 + (draftEdge - 0.08) * 1.5, 0.55, 0.75);
+  if (disagree && draftEdge >= 0.06) {
+    const wDraft = clamp(0.62 + (draftEdge - 0.06) * 1.8, 0.62, 0.82);
+    return clamp((1 - wDraft) * eloProbA + wDraft * draftProbA, 0.02, 0.98);
+  }
+  // Even when they agree, let a strong draft sharpen the call past a meek form edge.
+  if (!disagree && draftEdge >= 0.1) {
+    const wDraft = clamp(0.45 + draftEdge, 0.45, 0.7);
     return clamp((1 - wDraft) * eloProbA + wDraft * draftProbA, 0.02, 0.98);
   }
   const finalLogit = logit(eloProbA) + BLEND * logit(draftProbA);
@@ -400,20 +447,36 @@ export function explain(score, nameA, nameB, heroName) {
   const strongSide = favA ? nameA : nameB;
   const hn = heroName || ((id) => `Hero ${id}`);
 
-  // 1) Timing / power curve — the headline the user cares about.
+  // 1) Timing / power curve — late is the default destination in modern pro Dota.
   const ca = score.curves.a, cb = score.curves.b;
   const aLate = ca.late, bLate = cb.late, aEarly = ca.early, bEarly = cb.early;
-  if (Math.abs(aLate - bLate) >= 0.04 || Math.abs(aEarly - bEarly) >= 0.04) {
+  if (Math.abs(aLate - bLate) >= 0.035 || Math.abs(aEarly - bEarly) >= 0.04) {
     const lateTeam = aLate >= bLate ? nameA : nameB;
     const earlyTeam = aEarly >= bEarly ? nameA : nameB;
     if (lateTeam !== earlyTeam) {
       b.push({
         icon: "⏱",
-        text: `Гонка по таймингам: <b>${earlyTeam}</b> сильнее рано (${pct(Math.max(aEarly, bEarly))} в коротких), <b>${lateTeam}</b> — в лейте (${pct(Math.max(aLate, bLate))} в долгих). ${earlyTeam} обязаны ломать темп и закрывать, иначе лейт уплывает.`,
+        text: `Тайминги: <b>${earlyTeam}</b> сильнее на линии/ранней (${pct(Math.max(aEarly, bEarly))}), но <b>${lateTeam}</b> владеет лейтом (${pct(Math.max(aLate, bLate))}). Большинство игр доходит до мид/лейта — без быстрого закрытия фаворит по драфту это <b>${lateTeam}</b>.`,
       });
     } else {
-      b.push({ icon: "⏱", text: `<b>${lateTeam}</b> сильнее и рано, и в лейте по кривым винрейта — контроль темпа за ними.` });
+      b.push({ icon: "⏱", text: `<b>${lateTeam}</b> сильнее по кривой силы и рано, и в лейте — драфт контролирует темп целиком.` });
     }
+  }
+
+  // 1b) Teamfight vacuum — "нечем драться" loses drafts even with greener lanes.
+  const archA0 = score.arch.a, archB0 = score.arch.b;
+  if (Math.abs(archA0.tf - archB0.tf) >= 3) {
+    const fightTeam = archA0.tf >= archB0.tf ? nameA : nameB;
+    const weakTeam = fightTeam === nameA ? nameB : nameA;
+    const tfF = Math.max(archA0.tf, archB0.tf);
+    const tfW = Math.min(archA0.tf, archB0.tf);
+    const vac = tfW <= 4 && tfF >= 8;
+    b.push({
+      icon: "⚔️",
+      text: vac
+        ? `Тимфайт-вакуум: у <b>${weakTeam}</b> почти нечем драться (tf ${tfW}), у <b>${fightTeam}</b> полноценный файт (tf ${tfF}). В мид/лейте это обычно решает игру в пользу ${fightTeam}.`
+        : `Тимфайт-драфт сильнее у <b>${fightTeam}</b> (tf ${tfF} vs ${tfW}) — больше инструментов выиграть командный бой.`,
+    });
   }
 
   // 2) Hard counters. In teamCounter(mine, theirs) a hardCounter is {a: mine-hero, b: theirs-hero,
@@ -480,12 +543,19 @@ export function explain(score, nameA, nameB, heroName) {
     const synTeam = score.raw.eSyn > 0 ? nameA : nameB;
     b.push({ icon: "🧩", text: `Связки лучше собраны у <b>${synTeam}</b> (по винрейту пар в одной команде).` });
   }
-  b.push({ icon: "⚔️", text: `Стиль: <b>${nameA}</b> — ${archA.label} (лок ${archA.lock}), <b>${nameB}</b> — ${archB.label} (лок ${archB.lock}).` });
+  b.push({
+    icon: "🧭",
+    text: `Профиль драфта: <b>${nameA}</b> — ${archA.label} (tf ${archA.tf}, лок ${archA.lock}), <b>${nameB}</b> — ${archB.label} (tf ${archB.tf}, лок ${archB.lock}).`,
+  });
 
-  // 6) Lane economy.
+  // 6) Lane economy — secondary to late/teamfight unless they close fast.
   if (score.nw.a != null && score.nw.b != null && Math.abs(score.nw.a - score.nw.b) > 1500) {
     const laneTeam = score.nw.a > score.nw.b ? nameA : nameB;
-    b.push({ icon: "🌱", text: `Ранняя экономика (сумма нетворса героев к 10-й мин) выше у <b>${laneTeam}</b> — им проще выиграть темп на линиях. Но линия ≠ игра: если состав соперника сильнее в файтах/лейте, преимущество надо конвертировать быстро.` });
+    const other = laneTeam === nameA ? nameB : nameA;
+    b.push({
+      icon: "🌱",
+      text: `Линии лучше у <b>${laneTeam}</b> (NW@10). Это даёт темп, но не автовин: если у ${other} сильнее лейт/тимфайт, преимущество нужно закрыть до того, как игра уйдёт в их окно.`,
+    });
   }
 
   return { bullets: b, strongSide, favA };
