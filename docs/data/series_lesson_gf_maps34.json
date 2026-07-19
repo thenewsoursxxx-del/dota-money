@@ -1,0 +1,364 @@
+{
+  "generatedAt": "2026-07-19T20:51:01.777Z",
+  "maps": [
+    {
+      "map": 3,
+      "matchId": 8904322271,
+      "nameR": "BetBoom Team",
+      "nameD": "PVISION",
+      "winner": "PVISION",
+      "durationMin": 41.2,
+      "heroes": {
+        "radiant": [
+          "Kez",
+          "Earth Spirit",
+          "Beastmaster",
+          "Keeper of the Light",
+          "Winter Wyvern"
+        ],
+        "dire": [
+          "Tiny",
+          "Necrophos",
+          "Puck",
+          "Dark Willow",
+          "Hoodwink"
+        ],
+        "radiantIds": [
+          145,
+          107,
+          38,
+          90,
+          112
+        ],
+        "direIds": [
+          19,
+          36,
+          13,
+          119,
+          123
+        ]
+      },
+      "probs": {
+        "base": 0.39714203612937315,
+        "draftAlone": 0.7631072863296388,
+        "prior": 0.6459984062655538
+      },
+      "components": {
+        "meta": 0.03924508621347539,
+        "synergy": 0.1265919623718004,
+        "counter": 0.06923368002337514,
+        "lane": -0.037425,
+        "timing": 0.030229437147728237,
+        "fight": 0.16244444444444445,
+        "dmg": 0.11700000000000003,
+        "lock": 0.125,
+        "pool": 0,
+        "player": 0
+      },
+      "arch": {
+        "a": {
+          "tf": 11,
+          "push": 5,
+          "pickoff": 10,
+          "lock": 12,
+          "lockPierce": 2,
+          "save": 3,
+          "label": "тимфайт"
+        },
+        "b": {
+          "tf": 10,
+          "push": 4,
+          "pickoff": 11,
+          "lock": 9,
+          "lockPierce": 1,
+          "save": 0,
+          "label": "пикофф"
+        }
+      },
+      "curves": {
+        "a": {
+          "early": 0.6535873015873015,
+          "mid": 0.5849563652065657,
+          "late": 0.4711428599763966
+        },
+        "b": {
+          "early": 0.5357546553975125,
+          "mid": 0.4763638105080868,
+          "late": 0.4950035194940975
+        }
+      },
+      "diagnosis": [
+        "DRAFT_WRONG_SIDE: draftAlone picked the loser",
+        "MISLEADING_COMPONENTS: fight:0.16, synergy:0.13, lock:0.13, dmg:0.12, counter:0.07",
+        "FIGHT_TERM favored BetBoom Team (tf R 11 vs D 10) — check if knowledge.tf overrates paper teamfights"
+      ],
+      "economy": {
+        "5": -351,
+        "10": 134,
+        "15": -1291,
+        "20": -5144,
+        "25": -4370,
+        "30": -6722
+      },
+      "players": {
+        "radiant": [
+          {
+            "name": "Died And Came Back",
+            "hero": "Beastmaster",
+            "nw": 24034,
+            "kda": "5/4/6",
+            "pos": "POSITION_3"
+          },
+          {
+            "name": "Naruto~",
+            "hero": "Kez",
+            "nw": 23018,
+            "kda": "4/5/3",
+            "pos": "POSITION_1"
+          },
+          {
+            "name": "Uncle Danya",
+            "hero": "Earth Spirit",
+            "nw": 19670,
+            "kda": "5/6/2",
+            "pos": "POSITION_2"
+          },
+          {
+            "name": "yo terase mugen tsukuyomi",
+            "hero": "Keeper of the Light",
+            "nw": 10699,
+            "kda": "2/9/6",
+            "pos": "POSITION_4"
+          },
+          {
+            "name": "TOLD MY",
+            "hero": "Winter Wyvern",
+            "nw": 7877,
+            "kda": "0/8/7",
+            "pos": "POSITION_5"
+          }
+        ],
+        "dire": [
+          {
+            "name": "Satanic",
+            "hero": "Tiny",
+            "nw": 34936,
+            "kda": "13/1/8",
+            "pos": "POSITION_1"
+          },
+          {
+            "name": "strafe instructor",
+            "hero": "Necrophos",
+            "nw": 31046,
+            "kda": "4/3/14",
+            "pos": "POSITION_3"
+          },
+          {
+            "name": "Have fun",
+            "hero": "Puck",
+            "nw": 30524,
+            "kda": "10/0/13",
+            "pos": "POSITION_2"
+          },
+          {
+            "name": "Pele",
+            "hero": "Dark Willow",
+            "nw": 13102,
+            "kda": "3/5/13",
+            "pos": "POSITION_4"
+          },
+          {
+            "name": "Dukalis",
+            "hero": "Hoodwink",
+            "nw": 12266,
+            "kda": "2/7/19",
+            "pos": "POSITION_5"
+          }
+        ]
+      }
+    },
+    {
+      "map": 4,
+      "matchId": 8904419709,
+      "nameR": "PVISION",
+      "nameD": "BetBoom Team",
+      "winner": "PVISION",
+      "durationMin": 36.8,
+      "heroes": {
+        "radiant": [
+          "Lifestealer",
+          "Slardar",
+          "Pangolier",
+          "Keeper of the Light",
+          "Hoodwink"
+        ],
+        "dire": [
+          "Kez",
+          "Invoker",
+          "Centaur Warrunner",
+          "Shadow Demon",
+          "Disruptor"
+        ],
+        "radiantIds": [
+          54,
+          28,
+          120,
+          90,
+          123
+        ],
+        "direIds": [
+          145,
+          74,
+          96,
+          79,
+          87
+        ]
+      },
+      "probs": {
+        "base": 0.4635424333767224,
+        "draftAlone": 0.295592293621013,
+        "prior": 0.38317997726165276
+      },
+      "components": {
+        "meta": -0.008905186896292194,
+        "synergy": -0.08723494550348769,
+        "counter": 0.04472871701828074,
+        "lane": 0.02775,
+        "timing": -0.02139779099718033,
+        "fight": -0.35133333333333333,
+        "dmg": 0.05199999999999998,
+        "lock": -0.125,
+        "pool": 0,
+        "player": 0
+      },
+      "arch": {
+        "a": {
+          "tf": 9,
+          "push": 5,
+          "pickoff": 9,
+          "lock": 10,
+          "lockPierce": 0,
+          "save": 1,
+          "label": "тимфайт"
+        },
+        "b": {
+          "tf": 12,
+          "push": 1,
+          "pickoff": 11,
+          "lock": 13,
+          "lockPierce": 3,
+          "save": 2,
+          "label": "тимфайт"
+        }
+      },
+      "curves": {
+        "a": {
+          "early": 0.5527798127798127,
+          "mid": 0.507532563076671,
+          "late": 0.5079319075888706
+        },
+        "b": {
+          "early": 0.5305807656395892,
+          "mid": 0.5673583959899751,
+          "late": 0.5201159799860073
+        }
+      },
+      "diagnosis": [
+        "DRAFT_WRONG_SIDE: draftAlone picked the loser",
+        "MISLEADING_COMPONENTS: fight:-0.35, lock:-0.13, synergy:-0.09, timing:-0.02",
+        "FIGHT_TERM favored BetBoom Team (tf R 9 vs D 12) — check if knowledge.tf overrates paper teamfights"
+      ],
+      "economy": {
+        "5": 885,
+        "10": 1104,
+        "15": 2490,
+        "20": 4969,
+        "25": 7065,
+        "30": 13263
+      },
+      "players": {
+        "radiant": [
+          {
+            "name": "Satanic",
+            "hero": "Lifestealer",
+            "nw": 28492,
+            "kda": "9/2/8",
+            "pos": "POSITION_1"
+          },
+          {
+            "name": "Have fun",
+            "hero": "Pangolier",
+            "nw": 23221,
+            "kda": "6/1/15",
+            "pos": "POSITION_2"
+          },
+          {
+            "name": "strafe instructor",
+            "hero": "Slardar",
+            "nw": 18499,
+            "kda": "4/1/11",
+            "pos": "POSITION_3"
+          },
+          {
+            "name": "Pele",
+            "hero": "Keeper of the Light",
+            "nw": 17941,
+            "kda": "5/0/12",
+            "pos": "POSITION_4"
+          },
+          {
+            "name": "Dukalis",
+            "hero": "Hoodwink",
+            "nw": 11722,
+            "kda": "5/3/14",
+            "pos": "POSITION_5"
+          }
+        ],
+        "dire": [
+          {
+            "name": "Uncle Danya",
+            "hero": "Invoker",
+            "nw": 20264,
+            "kda": "2/5/2",
+            "pos": "POSITION_2"
+          },
+          {
+            "name": "Naruto~",
+            "hero": "Kez",
+            "nw": 19901,
+            "kda": "0/2/2",
+            "pos": "POSITION_1"
+          },
+          {
+            "name": "Died And Came Back",
+            "hero": "Centaur Warrunner",
+            "nw": 17484,
+            "kda": "1/7/3",
+            "pos": "POSITION_3"
+          },
+          {
+            "name": "yo terase mugen tsukuyomi",
+            "hero": "Shadow Demon",
+            "nw": 7713,
+            "kda": "4/7/2",
+            "pos": "POSITION_4"
+          },
+          {
+            "name": "TOLD MY",
+            "hero": "Disruptor",
+            "nw": 6174,
+            "kda": "0/8/2",
+            "pos": "POSITION_5"
+          }
+        ]
+      }
+    }
+  ],
+  "takeaways": [
+    "Teams roughly equal → draft should decide; model favored BB paper fight/lock/synergy while PV stomped both maps.",
+    "Map3: BB Kez/ES/BM/KotL/WW vs PV Tiny/Necro/Puck/DW/Hoodwink. Engine: draftAlone 76% BB (fight+synergy+lock+mag-dmg). Reality: Tiny 13/1 Puck 10/0, gold flipped hard @15. Tiny tf=1 underrated; mag dmg penalty wrong; KotL/ES counters on Tiny did not matter.",
+    "Map4: PV LS/Slardar/Pango/KotL/Hood vs BB Kez/Inv/Centaur/SD/Disruptor. Engine: fight -0.35 (tf 9 vs 12). Reality: LS 9/2 stomp from @5. Paper spell-fight lineup lost to unkillable carry — LS tf was 1.",
+    "Fix shipped: dampen fight/lock when BOTH can fight; bump LS/Tiny tf; soften mag imbalance. Draft map3 76%→~65% BB, map4 30%→~43% PV — closer, not fully flipped (synergy/counter still lean BB on map3)."
+  ],
+  "fixedAt": "2026-07-19T20:52:27.571Z"
+}

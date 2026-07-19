@@ -28,8 +28,8 @@ const W = {
   counter: 1.35,
   lane: 0.45,
   timing: 1.0,   // late-weighted power curve (see TIMING_PHASE)
-  fight: 0.85,   // teamfight tools — "нечем драться" matters; keep below meta/counter
-  dmg: 0.65,
+  fight: 0.75,   // teamfight tools — vacuum matters; paper tf ties do NOT (see fightEdge)
+  dmg: 0.45,     // one-dimensional dmg is real but over-punished mag cores (EWC GF map 3)
   lock: 0.5,
   pool: 1.0,
   player: 0.75,
@@ -174,16 +174,22 @@ function timingEdge(curvesA, curvesB) {
   return clamp(e, -0.55, 0.55);
 }
 
-// Teamfight vacuum: if B has real fight tools and A basically doesn't, B wins the draft
-// even when A looks greener on lanes. tf scores are 0–3 per hero → team ~0–15.
+// Teamfight: vacuum ("нечем драться") is a real draft loss. But when BOTH sides can fight,
+// raw tf/lock sums are paper noise — EWC GF maps 3–4 had BB winning tf 11–10 / 12–9 on
+// sheet while PVISION stomped with Tiny/Lifestealer. Dampen small gaps; keep vacuum loud.
 function fightEdge(archA, archB) {
   let e = clamp((archA.tf - archB.tf) / 9, -0.5, 0.5);
   const vacA = archA.tf <= 4 && archB.tf >= 8; // A can't fight, B can
   const vacB = archB.tf <= 4 && archA.tf >= 8;
   if (vacA) e -= 0.14;
   if (vacB) e += 0.14;
-  // Soft lockdown support for fights (control without BKB-pierce still matters in mid fights).
-  e += clamp((archA.lock - archB.lock) / 28, -0.08, 0.08);
+  const bothFight = !vacA && !vacB && archA.tf >= 8 && archB.tf >= 8;
+  if (bothFight) {
+    e *= 0.3; // 11 vs 10 / 12 vs 9 must not decide the draft
+    e += clamp((archA.lock - archB.lock) / 55, -0.03, 0.03);
+  } else {
+    e += clamp((archA.lock - archB.lock) / 28, -0.08, 0.08);
+  }
   return clamp(e, -0.55, 0.55);
 }
 
@@ -202,7 +208,8 @@ function teamDamage(knowledge, meta, ids) {
   const fracPhys = phys / total;
   const dominant = fracPhys >= 0.5 ? "физический" : "магический";
   const frac = Math.max(fracPhys, 1 - fracPhys);
-  return { fracPhys, dominant, frac, imbalance: Math.max(0, frac - 0.62) };
+  // Only flag truly one-dimensional lineups (was 0.62 — punished normal mag cores too hard).
+  return { fracPhys, dominant, frac, imbalance: Math.max(0, frac - 0.72) };
 }
 
 function teamArchetype(knowledge, meta, ids) {
@@ -318,7 +325,11 @@ export function scoreDraft(radiant, dire, ctx) {
   const archA = teamArchetype(knowledge, meta, A);
   const archB = teamArchetype(knowledge, meta, B);
   const eFight = fightEdge(archA, archB);
-  const eLock = clamp((archA.lock - archB.lock) / 12, -0.4, 0.4);
+  let eLock = clamp((archA.lock - archB.lock) / 12, -0.4, 0.4);
+  // Same lesson as fightEdge: when both drafts can fight, lockdown stacks are not a free win
+  // (BB KotL/ES/WW lock vs Tiny/Puck on GF map 3 — paper lock, actual stomp the other way).
+  const bothCanFight = archA.tf >= 8 && archB.tf >= 8;
+  if (bothCanFight) eLock *= 0.4;
 
   const poolA = poolFindings(meta, assignA, A, B);
   const poolB = poolFindings(meta, assignB, B, A);
