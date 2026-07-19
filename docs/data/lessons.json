@@ -1,6 +1,494 @@
 {
-  "generatedAt": "2026-07-18T19:01:19.209Z",
+  "generatedAt": "2026-07-19T20:22:07.176Z",
   "lessons": [
+    {
+      "matchId": 8903705555,
+      "learnedAt": "2026-07-19T20:22:03.564Z",
+      "seriesHint": null,
+      "radiant": "Vici Gaming",
+      "dire": "Team Yandex",
+      "radiantTeamId": 726228,
+      "direTeamId": 9823272,
+      "winnerSide": "dire",
+      "winnerName": "Team Yandex",
+      "durationMin": 35.4,
+      "heroes": {
+        "radiant": [
+          "Tiny",
+          "Ember Spirit",
+          "Doom",
+          "Mirana",
+          "Undying"
+        ],
+        "dire": [
+          "Kez",
+          "Monkey King",
+          "Axe",
+          "Winter Wyvern",
+          "Nature's Prophet"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.2687,
+        "draftProbA": 0.4673,
+        "priorProbA": 0.2611,
+        "components": {
+          "meta": 0.0143,
+          "synergy": -0.0175,
+          "counter": 0.0541,
+          "lane": -0.0938,
+          "timing": -0.005,
+          "dmg": 0,
+          "lock": -0.0292,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": -1176,
+          "xpDiff": -187,
+          "pA": 0.1749
+        },
+        "10": {
+          "nwDiff": -3173,
+          "xpDiff": -905,
+          "pA": 0.0748
+        },
+        "15": {
+          "nwDiff": -4949,
+          "xpDiff": -3285,
+          "pA": 0.0227
+        },
+        "20": {
+          "nwDiff": -8630,
+          "xpDiff": -7956,
+          "pA": 0.02
+        },
+        "25": {
+          "nwDiff": -10537,
+          "xpDiff": -9851,
+          "pA": 0.02
+        }
+      },
+      "failureModes": [
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: counter:+0.05."
+        }
+      ]
+    },
+    {
+      "matchId": 8903789784,
+      "learnedAt": "2026-07-19T20:22:04.169Z",
+      "seriesHint": null,
+      "radiant": "Vici Gaming",
+      "dire": "Team Yandex",
+      "radiantTeamId": 726228,
+      "direTeamId": 9823272,
+      "winnerSide": "dire",
+      "winnerName": "Team Yandex",
+      "durationMin": 18.7,
+      "heroes": {
+        "radiant": [
+          "Lone Druid",
+          "Earth Spirit",
+          "Largo",
+          "Dark Willow",
+          "Crystal Maiden"
+        ],
+        "dire": [
+          "Tiny",
+          "Earthshaker",
+          "Enigma",
+          "Winter Wyvern",
+          "Hoodwink"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.2175,
+        "draftProbA": 0.5124,
+        "priorProbA": 0.22,
+        "components": {
+          "meta": -0.0038,
+          "synergy": -0.0042,
+          "counter": 0.0287,
+          "lane": -0.0183,
+          "timing": -0.0041,
+          "dmg": 0.06,
+          "lock": -0.0292,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": 207,
+          "xpDiff": -440,
+          "pA": 0.2243
+        },
+        "10": {
+          "nwDiff": -1475,
+          "xpDiff": -2466,
+          "pA": 0.0861
+        },
+        "15": {
+          "nwDiff": -7805,
+          "xpDiff": -8598,
+          "pA": 0.02
+        }
+      },
+      "failureModes": [
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: dmg:+0.06, counter:+0.03."
+        }
+      ]
+    },
+    {
+      "matchId": 8904012666,
+      "learnedAt": "2026-07-19T20:22:04.871Z",
+      "seriesHint": null,
+      "radiant": "BetBoom Team",
+      "dire": "PVISION",
+      "radiantTeamId": 8255888,
+      "direTeamId": 9824702,
+      "winnerSide": "radiant",
+      "winnerName": "BetBoom Team",
+      "durationMin": 48,
+      "heroes": {
+        "radiant": [
+          "Clinkz",
+          "Slardar",
+          "Timbersaw",
+          "Keeper of the Light",
+          "Treant Protector"
+        ],
+        "dire": [
+          "Phantom Lancer",
+          "Beastmaster",
+          "Ember Spirit",
+          "Dark Willow",
+          "Winter Wyvern"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.652,
+        "draftProbA": 0.4648,
+        "priorProbA": 0.6424,
+        "components": {
+          "meta": 0.012,
+          "synergy": -0.029,
+          "counter": -0.0194,
+          "lane": 0.0372,
+          "timing": 0.0039,
+          "dmg": 0,
+          "lock": -0.0875,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": 1032,
+          "xpDiff": 596,
+          "pA": 0.7631
+        },
+        "10": {
+          "nwDiff": 3256,
+          "xpDiff": 3962,
+          "pA": 0.9472
+        },
+        "15": {
+          "nwDiff": 1742,
+          "xpDiff": 2969,
+          "pA": 0.8812
+        },
+        "20": {
+          "nwDiff": 3614,
+          "xpDiff": 3944,
+          "pA": 0.9544
+        },
+        "25": {
+          "nwDiff": 4520,
+          "xpDiff": 9456,
+          "pA": 0.98
+        }
+      },
+      "failureModes": [
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: lock:-0.09, synergy:-0.03."
+        }
+      ]
+    },
+    {
+      "matchId": 8904157676,
+      "learnedAt": "2026-07-19T20:22:05.500Z",
+      "seriesHint": null,
+      "radiant": "PVISION",
+      "dire": "BetBoom Team",
+      "radiantTeamId": 9824702,
+      "direTeamId": 8255888,
+      "winnerSide": "radiant",
+      "winnerName": "PVISION",
+      "durationMin": 62,
+      "heroes": {
+        "radiant": [
+          "Lifestealer",
+          "Centaur Warrunner",
+          "Invoker",
+          "Rubick",
+          "Hoodwink"
+        ],
+        "dire": [
+          "Drow Ranger",
+          "Earth Spirit",
+          "Largo",
+          "Windranger",
+          "Bane"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.211,
+        "draftProbA": 0.4947,
+        "priorProbA": 0.21,
+        "components": {
+          "meta": 0.0022,
+          "synergy": 0.0475,
+          "counter": 0.0273,
+          "lane": -0.088,
+          "timing": -0.0014,
+          "dmg": 0,
+          "lock": 0,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": -974,
+          "xpDiff": -533,
+          "pA": 0.1419
+        },
+        "10": {
+          "nwDiff": -820,
+          "xpDiff": -1131,
+          "pA": 0.133
+        },
+        "15": {
+          "nwDiff": -1916,
+          "xpDiff": -3019,
+          "pA": 0.0631
+        },
+        "20": {
+          "nwDiff": 863,
+          "xpDiff": -1731,
+          "pA": 0.2326
+        },
+        "25": {
+          "nwDiff": -1384,
+          "xpDiff": -4018,
+          "pA": 0.0619
+        }
+      },
+      "failureModes": [
+        {
+          "code": "pregame_upset",
+          "detail": "Pre-game favored dire (79%), won radiant."
+        },
+        {
+          "code": "both_base_and_draft_wrong",
+          "detail": "Neither form nor draft picked the winner pre-game."
+        },
+        {
+          "code": "early_lag_5min",
+          "detail": "@5′ still wrong side (nw -974, P(rad)=14%)."
+        },
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: lane:-0.09."
+        }
+      ]
+    },
+    {
+      "matchId": 8904322271,
+      "learnedAt": "2026-07-19T20:22:06.204Z",
+      "seriesHint": null,
+      "radiant": "BetBoom Team",
+      "dire": "PVISION",
+      "radiantTeamId": 8255888,
+      "direTeamId": 9824702,
+      "winnerSide": "dire",
+      "winnerName": "PVISION",
+      "durationMin": 41.2,
+      "heroes": {
+        "radiant": [
+          "Kez",
+          "Earth Spirit",
+          "Beastmaster",
+          "Keeper of the Light",
+          "Winter Wyvern"
+        ],
+        "dire": [
+          "Tiny",
+          "Necrophos",
+          "Puck",
+          "Dark Willow",
+          "Hoodwink"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.618,
+        "draftProbA": 0.66,
+        "priorProbA": 0.6637,
+        "components": {
+          "meta": 0.0392,
+          "synergy": 0.1199,
+          "counter": 0.0667,
+          "lane": -0.0582,
+          "timing": 0.027,
+          "dmg": 0.108,
+          "lock": 0.0875,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": -351,
+          "xpDiff": 158,
+          "pA": 0.6293
+        },
+        "10": {
+          "nwDiff": 134,
+          "xpDiff": 823,
+          "pA": 0.7148
+        },
+        "15": {
+          "nwDiff": -1291,
+          "xpDiff": -2286,
+          "pA": 0.3763
+        },
+        "20": {
+          "nwDiff": -5144,
+          "xpDiff": -7549,
+          "pA": 0.0243
+        },
+        "25": {
+          "nwDiff": -4370,
+          "xpDiff": -10026,
+          "pA": 0.0212
+        }
+      },
+      "failureModes": [
+        {
+          "code": "pregame_upset",
+          "detail": "Pre-game favored radiant (66%), won dire."
+        },
+        {
+          "code": "both_base_and_draft_wrong",
+          "detail": "Neither form nor draft picked the winner pre-game."
+        },
+        {
+          "code": "early_lag_5min",
+          "detail": "@5′ still wrong side (nw -351, P(rad)=63%)."
+        },
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: synergy:+0.12, dmg:+0.11, lock:+0.09."
+        }
+      ]
+    },
+    {
+      "matchId": 8904419709,
+      "learnedAt": "2026-07-19T20:22:06.816Z",
+      "seriesHint": null,
+      "radiant": "PVISION",
+      "dire": "BetBoom Team",
+      "radiantTeamId": 9824702,
+      "direTeamId": 8255888,
+      "winnerSide": "radiant",
+      "winnerName": "PVISION",
+      "durationMin": 36.8,
+      "heroes": {
+        "radiant": [
+          "Lifestealer",
+          "Slardar",
+          "Pangolier",
+          "Keeper of the Light",
+          "Hoodwink"
+        ],
+        "dire": [
+          "Kez",
+          "Invoker",
+          "Centaur Warrunner",
+          "Shadow Demon",
+          "Disruptor"
+        ]
+      },
+      "pre": {
+        "baseProbA": 0.3819,
+        "draftProbA": 0.4781,
+        "priorProbA": 0.3757,
+        "components": {
+          "meta": -0.0089,
+          "synergy": -0.0826,
+          "counter": 0.0431,
+          "lane": 0.0432,
+          "timing": -0.0066,
+          "dmg": 0.048,
+          "lock": -0.0875,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "economy": {
+        "5": {
+          "nwDiff": 885,
+          "xpDiff": 776,
+          "pA": 0.5297
+        },
+        "10": {
+          "nwDiff": 1104,
+          "xpDiff": 844,
+          "pA": 0.5614
+        },
+        "15": {
+          "nwDiff": 2490,
+          "xpDiff": 2509,
+          "pA": 0.7903
+        },
+        "20": {
+          "nwDiff": 4969,
+          "xpDiff": 7084,
+          "pA": 0.9736
+        },
+        "25": {
+          "nwDiff": 7065,
+          "xpDiff": 15309,
+          "pA": 0.98
+        }
+      },
+      "failureModes": [
+        {
+          "code": "pregame_upset",
+          "detail": "Pre-game favored dire (62%), won radiant."
+        },
+        {
+          "code": "both_base_and_draft_wrong",
+          "detail": "Neither form nor draft picked the winner pre-game."
+        },
+        {
+          "code": "live_economy_caught_upset",
+          "detail": "@10′ live economy correctly flipped to winner (nw +1104)."
+        },
+        {
+          "code": "misleading_draft_components",
+          "detail": "Draft terms that pointed the wrong way: lock:-0.09, synergy:-0.08."
+        }
+      ]
+    },
     {
       "matchId": 8902338515,
       "learnedAt": "2026-07-18T19:01:17.425Z",
@@ -253,20 +741,22 @@
       ]
     }
   ],
-  "count": 3,
+  "count": 9,
   "lastRun": {
-    "at": "2026-07-18T19:01:19.209Z",
+    "at": "2026-07-19T20:22:07.176Z",
     "matchIds": [
-      8902338515,
-      8902431810,
-      8902610619
+      8903705555,
+      8903789784,
+      8904012666,
+      8904157676,
+      8904322271,
+      8904419709
     ],
     "failureCounts": {
-      "pregame_upset": 2,
-      "both_base_and_draft_wrong": 1,
-      "early_lag_5min": 1,
-      "misleading_draft_components": 2,
-      "draft_drowned_by_form": 1,
+      "misleading_draft_components": 6,
+      "pregame_upset": 3,
+      "both_base_and_draft_wrong": 3,
+      "early_lag_5min": 2,
       "live_economy_caught_upset": 1
     }
   }

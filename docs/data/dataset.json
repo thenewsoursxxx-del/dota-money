@@ -1,45 +1,8 @@
 {
-  "generatedAt": "2026-07-18T19:01:19.210Z",
+  "generatedAt": "2026-07-19T20:22:07.177Z",
   "tier1LeagueCount": 2680,
   "matchesUsed": 2194,
   "teams": [
-    {
-      "id": 8255888,
-      "name": "BoomBoys",
-      "tag": null,
-      "logo": null,
-      "rating": 1786,
-      "games": 123,
-      "wins": 81,
-      "losses": 42,
-      "lastPlayed": 1784376482,
-      "timing": {
-        "games": 123,
-        "avgMin": 44,
-        "avgWinMin": 43,
-        "avgLossMin": 48,
-        "short": {
-          "g": 10,
-          "wr": 0.9
-        },
-        "mid": {
-          "g": 42,
-          "wr": 0.6904761904761905
-        },
-        "long": {
-          "g": 71,
-          "wr": 0.6056338028169014
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1725,
-        "form10": 0.833,
-        "form45": 0.707,
-        "act": 24,
-        "rust": 0
-      }
-    },
     {
       "id": 9572001,
       "name": "TEAM VISION",
@@ -75,6 +38,80 @@
         "form45": 0.708,
         "act": 7,
         "rust": 23
+      }
+    },
+    {
+      "id": 9824702,
+      "name": "PVISION",
+      "tag": null,
+      "logo": null,
+      "rating": 1730,
+      "games": 30,
+      "wins": 20,
+      "losses": 5,
+      "lastPlayed": 1784483341,
+      "timing": {
+        "games": 23,
+        "avgMin": 40,
+        "avgWinMin": 37,
+        "avgLossMin": 51,
+        "short": {
+          "g": 4,
+          "wr": 1
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.9
+        },
+        "long": {
+          "g": 9,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1730,
+        "form10": 0.756,
+        "form45": 0.77,
+        "act": 19,
+        "rust": 0
+      }
+    },
+    {
+      "id": 9823272,
+      "name": "Team Yandex",
+      "tag": null,
+      "logo": null,
+      "rating": 1727,
+      "games": 90,
+      "wins": 59,
+      "losses": 28,
+      "lastPlayed": 1784459701,
+      "timing": {
+        "games": 85,
+        "avgMin": 42,
+        "avgWinMin": 40,
+        "avgLossMin": 47,
+        "short": {
+          "g": 13,
+          "wr": 0.7692307692307693
+        },
+        "mid": {
+          "g": 27,
+          "wr": 0.8148148148148148
+        },
+        "long": {
+          "g": 45,
+          "wr": 0.5777777777777777
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1727,
+        "form10": 0.755,
+        "form45": 0.721,
+        "act": 29,
+        "rust": 0
       }
     },
     {
@@ -115,76 +152,39 @@
       }
     },
     {
-      "id": 9823272,
-      "name": "Team Yandex",
-      "tag": null,
+      "id": 8255888,
+      "name": "BetBoom Team",
+      "tag": "BB",
       "logo": null,
-      "rating": 1704,
-      "games": 88,
-      "wins": 59,
-      "losses": 28,
-      "lastPlayed": 1784392320,
+      "rating": 1688,
+      "games": 127,
+      "wins": 81,
+      "losses": 42,
+      "lastPlayed": 1784483341,
       "timing": {
-        "games": 85,
-        "avgMin": 42,
-        "avgWinMin": 40,
-        "avgLossMin": 47,
+        "games": 123,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 48,
         "short": {
-          "g": 13,
-          "wr": 0.7692307692307693
-        },
-        "mid": {
-          "g": 27,
-          "wr": 0.8148148148148148
-        },
-        "long": {
-          "g": 45,
-          "wr": 0.5777777777777777
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1704,
-        "form10": 0.698,
-        "form45": 0.656,
-        "act": 27,
-        "rust": 0
-      }
-    },
-    {
-      "id": 9824702,
-      "name": "PVISION",
-      "tag": null,
-      "logo": null,
-      "rating": 1693,
-      "games": 26,
-      "wins": 20,
-      "losses": 5,
-      "lastPlayed": 1784392320,
-      "timing": {
-        "games": 23,
-        "avgMin": 40,
-        "avgWinMin": 37,
-        "avgLossMin": 51,
-        "short": {
-          "g": 4,
-          "wr": 1
-        },
-        "mid": {
           "g": 10,
           "wr": 0.9
         },
+        "mid": {
+          "g": 42,
+          "wr": 0.6904761904761905
+        },
         "long": {
-          "g": 9,
-          "wr": 0.6666666666666666
+          "g": 71,
+          "wr": 0.6056338028169014
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1693,
-        "form10": 0.74,
-        "form45": 0.76,
-        "act": 15,
+        "elo": 1688,
+        "form10": 0.62,
+        "form45": 0.536,
+        "act": 28,
         "rust": 0
       }
     },
@@ -445,43 +445,6 @@
         "form45": 0.54,
         "act": 20,
         "rust": 3
-      }
-    },
-    {
-      "id": 726228,
-      "name": "Vici Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1640,
-      "games": 97,
-      "wins": 54,
-      "losses": 43,
-      "lastPlayed": 1784376482,
-      "timing": {
-        "games": 97,
-        "avgMin": 44,
-        "avgWinMin": 43,
-        "avgLossMin": 44,
-        "short": {
-          "g": 10,
-          "wr": 0.8
-        },
-        "mid": {
-          "g": 30,
-          "wr": 0.4666666666666667
-        },
-        "long": {
-          "g": 57,
-          "wr": 0.5614035087719298
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1605,
-        "form10": 0.633,
-        "form45": 0.603,
-        "act": 29,
-        "rust": 0
       }
     },
     {
@@ -889,6 +852,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 46
+      }
+    },
+    {
+      "id": 726228,
+      "name": "Vici Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1582,
+      "games": 99,
+      "wins": 54,
+      "losses": 43,
+      "lastPlayed": 1784459701,
+      "timing": {
+        "games": 97,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 44,
+        "short": {
+          "g": 10,
+          "wr": 0.8
+        },
+        "mid": {
+          "g": 30,
+          "wr": 0.4666666666666667
+        },
+        "long": {
+          "g": 57,
+          "wr": 0.5614035087719298
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1582,
+        "form10": 0.513,
+        "form45": 0.489,
+        "act": 31,
+        "rust": 0
       }
     },
     {
@@ -9763,6 +9763,90 @@
   ],
   "recentMatches": [
     {
+      "match_id": 8904419709,
+      "start_time": 1784483341,
+      "league": "learned",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 8255888,
+        "name": "BetBoom Team"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8904322271,
+      "start_time": 1784478900,
+      "league": "learned",
+      "radiant": {
+        "id": 8255888,
+        "name": "BetBoom Team"
+      },
+      "dire": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8904157676,
+      "start_time": 1784473262,
+      "league": "learned",
+      "radiant": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "dire": {
+        "id": 8255888,
+        "name": "BetBoom Team"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8904012666,
+      "start_time": 1784468532,
+      "league": "learned",
+      "radiant": {
+        "id": 8255888,
+        "name": "BetBoom Team"
+      },
+      "dire": {
+        "id": 9824702,
+        "name": "PVISION"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8903789784,
+      "start_time": 1784459701,
+      "league": "learned",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8903705555,
+      "start_time": 1784455780,
+      "league": "learned",
+      "radiant": {
+        "id": 726228,
+        "name": "Vici Gaming"
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
+    {
       "match_id": 8902610619,
       "start_time": 1784392320,
       "league": "learned",
@@ -10517,90 +10601,6 @@
         "name": "BoomBoys"
       },
       "radiant_win": false
-    },
-    {
-      "match_id": 8891108843,
-      "start_time": 1783760415,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 55,
-        "name": "_PowerRangers"
-      },
-      "dire": {
-        "id": 9895247,
-        "name": "Rune Eaters"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8890301402,
-      "start_time": 1783708841,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9895392,
-        "name": "Virtus.pro"
-      },
-      "dire": {
-        "id": 10019843,
-        "name": "Inner Circle x Insanity"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8890268632,
-      "start_time": 1783708020,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10150538,
-        "name": "LGD Gaming"
-      },
-      "dire": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8890270555,
-      "start_time": 1783707672,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10182357,
-        "name": "1w"
-      },
-      "dire": {
-        "id": 2586976,
-        "name": "OG"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8890206902,
-      "start_time": 1783705060,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10019843,
-        "name": "Inner Circle x Insanity"
-      },
-      "dire": {
-        "id": 9895392,
-        "name": "Virtus.pro"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8890179830,
-      "start_time": 1783704199,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "dire": {
-        "id": 10150538,
-        "name": "LGD Gaming"
-      },
-      "radiant_win": true
     }
   ]
 }

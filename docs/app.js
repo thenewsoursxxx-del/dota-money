@@ -1,9 +1,16 @@
 // DOTA MONEY v1 — fully client-side (static, works on GitHub Pages & as Telegram Mini App).
 
-import { predict, fairImplied, valueForSide, eloExpected, ELO_K } from "./model.mjs";
+import { predict, fairImplied, valueForSide, eloExpected, ELO_K, marketAnchorPerGame } from "./model.mjs";
 import { analyzeMatchup, applyDraftAdjustment } from "./draft.mjs";
 import { analyzeDraft } from "./live_draft.mjs";
 import { predictML } from "./model_ml.mjs";
+
+// OpenDota still ships BetBoom as "BoomBoys" — keep search/select aliases in sync with reality.
+const TEAM_ALIASES = {
+  "8255888": ["betboom", "betboom team", "bb team", "bet boom", "boomboys"],
+  "9824702": ["parivision", "pari vision", "pvision", "pv"],
+  "9823272": ["yandex", "team yandex"],
+};
 
 const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
 if (tg) { try { tg.ready(); tg.expand(); } catch (e) {} }
@@ -53,9 +60,12 @@ async function loadData() {
   byId = new Map();
   byName = new Map();
   for (const t of dataset.teams) {
+    // Prefer readable brand names over stale OpenDota labels (BoomBoys → BetBoom Team).
+    if (String(t.id) === "8255888" && /boomboys/i.test(t.name || "")) t.name = "BetBoom Team";
     byId.set(String(t.id), t);
     byName.set(t.name.toLowerCase(), t);
     if (t.tag) byName.set(String(t.tag).toLowerCase(), t);
+    for (const alias of TEAM_ALIASES[String(t.id)] || []) byName.set(alias, t);
   }
   heroList = metaData
     ? Object.entries(metaData.heroes)
@@ -110,13 +120,24 @@ function mlBaseProb(aTeam, bTeam, seriesWins = null) {
 }
 
 // Prediction (ML when available, else Elo), adjusted by draft/hero-pool analysis for both teams.
+// When bookmaker odds are present, soft-anchor the base toward the market so a stale Elo
+// spike (e.g. BoomBoys 1786 vs PVISION 1693 at EWC GF) cannot invert a clear book favorite.
 function predictFull(aTeam, bTeam, opts) {
-  const base = predict(aTeam, bTeam, { ...opts, pGameOverride: mlBaseProb(aTeam, bTeam) });
+  const format = (opts && opts.format) || "bo3";
+  let pGame = mlBaseProb(aTeam, bTeam);
+  let marketNote = null;
+  if (pGame != null && opts?.oddsA && opts?.oddsB) {
+    const anc = marketAnchorPerGame(pGame, opts.oddsA, opts.oddsB, format);
+    if (anc.anchored) marketNote = anc;
+    pGame = anc.p;
+  }
+  const base = predict(aTeam, bTeam, { ...opts, format, pGameOverride: pGame });
+  if (marketNote) base.marketAnchor = marketNote;
   const dA = draftTeam(aTeam.id);
   const dB = draftTeam(bTeam.id);
   if (dA && dB && dA.roster && dA.roster.length && dB.roster && dB.roster.length) {
     const analysis = analyzeMatchup(dA, dB);
-    return applyDraftAdjustment(base, analysis, (opts && opts.format) || "bo3");
+    return applyDraftAdjustment(base, analysis, format);
   }
   return base;
 }
@@ -347,6 +368,9 @@ function runCalc() {
   const market = p.market
     ? `<div class="kv"><span>Букмекер (без маржи)</span><span>${pct(p.market.impliedA)} / ${pct(p.market.impliedB)}</span></div>`
     : "";
+  const anchorRow = p.marketAnchor?.anchored
+    ? `<div class="kv"><span>Якорь букмекера (база подтянута)</span><span>w=${p.marketAnchor.w.toFixed(2)} · mkt ${pct(p.marketAnchor.marketPerGame)}</span></div>`
+    : "";
   const baseName = mlModel ? "ML" : "Elo";
   const draftRow = p.draft
     ? `<div class="kv"><span>За игру: ${baseName} → с драфтом</span><span>${pct(p.draft.basePerGame.a)} → ${pct(p.perGame.a)}</span></div>`
@@ -363,6 +387,7 @@ function runCalc() {
       <div class="kv"><span>Серия (${p.format.toUpperCase()})</span><span>${pct(p.series.a)} / ${pct(p.series.b)}</span></div>
       ${draftRow}
       ${market}
+      ${anchorRow}
       <div class="kv"><span>Надёжность оценки</span><span>${pct(p.reliability)}</span></div>
       ${draftNote(p, aTeam.name, bTeam.name) ? `<div style="margin-top:10px">${draftNote(p, aTeam.name, bTeam.name)}</div>` : ""}
       ${(aTeam.timing || bTeam.timing) ? `<div class="timing-block"><div class="tb-title">⏱ Стиль и темп</div>${timingDetail(aTeam)}${timingDetail(bTeam)}</div>` : ""}
@@ -457,6 +482,7 @@ let liveTimer = null;
 let liveSeriesTeams = null; // Set of the two team_ids → lets us follow the series onto the next map
 let liveSeriesId = null;    // OpenDota series_id → precise link between maps of one BO3/BO5
 let liveSeriesScore = null; // { a: radiantWins, b: direWins } maps already won this series
+let liveSeriesWinsByTeam = null; // Map teamId→wins tracked in-session when OpenDota omits series_wins
 let liveAllGames = [];      // last full /live payload → lets us number the maps within a series
 let liveMissCount = 0;      // consecutive refreshes where the series wasn't found → cap the wait
 
@@ -510,6 +536,7 @@ function stopLive() {
   if (liveTimer) { clearInterval(liveTimer); liveTimer = null; }
   liveLoadedId = null;
   liveSeriesScore = null;
+  liveSeriesWinsByTeam = null;
 }
 
 async function loadLiveMatches() {
@@ -626,6 +653,49 @@ function autoAssignByPool(teamId, heroIds) {
   return out;
 }
 
+function displayTeamName(raw, id) {
+  const t = id != null && byId.get(String(id));
+  if (t?.name) return t.name;
+  const s = (raw || "").trim();
+  if (/boomboys/i.test(s)) return "BetBoom Team";
+  return s || "Team";
+}
+
+function syncSeriesScore(g) {
+  const rs = Number(g.radiant_series_wins);
+  const ds = Number(g.dire_series_wins);
+  if (Number.isFinite(rs) || Number.isFinite(ds)) {
+    liveSeriesScore = { a: Number.isFinite(rs) ? rs : 0, b: Number.isFinite(ds) ? ds : 0 };
+    if (!liveSeriesWinsByTeam) liveSeriesWinsByTeam = new Map();
+    if (g.team_id_radiant) liveSeriesWinsByTeam.set(g.team_id_radiant, liveSeriesScore.a);
+    if (g.team_id_dire) liveSeriesWinsByTeam.set(g.team_id_dire, liveSeriesScore.b);
+    return;
+  }
+  // Fallback: in-session bank when OpenDota omits series_wins (EWC GF symptom — every map
+  // kept the pre-series BoomBoys Elo favorite).
+  if (liveSeriesWinsByTeam && g.team_id_radiant && g.team_id_dire) {
+    liveSeriesScore = {
+      a: liveSeriesWinsByTeam.get(g.team_id_radiant) || 0,
+      b: liveSeriesWinsByTeam.get(g.team_id_dire) || 0,
+    };
+    return;
+  }
+  liveSeriesScore = null;
+}
+
+// When a map disappears, credit a win from the last known gold lead if the next map also
+// lacks series_wins — better than freezing the pre-series Elo favorite for the whole BO5.
+function bankSeriesWinFromEnded(ended) {
+  if (!ended?.team_id_radiant || !ended?.team_id_dire) return;
+  const lead = Number(ended.radiant_lead);
+  if (!Number.isFinite(lead) || Math.abs(lead) < 2500) return;
+  if (!liveSeriesWinsByTeam) liveSeriesWinsByTeam = new Map();
+  const winner = lead > 0 ? ended.team_id_radiant : ended.team_id_dire;
+  const loser = lead > 0 ? ended.team_id_dire : ended.team_id_radiant;
+  liveSeriesWinsByTeam.set(winner, (liveSeriesWinsByTeam.get(winner) || 0) + 1);
+  if (!liveSeriesWinsByTeam.has(loser)) liveSeriesWinsByTeam.set(loser, 0);
+}
+
 function applyLiveMatch(g, isRefresh = false) {
   if (!g) return;
   liveLoadedId = g.match_id;
@@ -633,12 +703,7 @@ function applyLiveMatch(g, isRefresh = false) {
   // Remember the two teams + series so auto-refresh can follow the series to the next map (new match_id).
   if (g.team_id_radiant && g.team_id_dire) liveSeriesTeams = new Set([g.team_id_radiant, g.team_id_dire]);
   liveSeriesId = g.series_id || null;
-  // Series score so map 2/3 form base isn't stuck on pre-series snapshots.
-  const rs = Number(g.radiant_series_wins);
-  const ds = Number(g.dire_series_wins);
-  liveSeriesScore = (Number.isFinite(rs) || Number.isFinite(ds))
-    ? { a: Number.isFinite(rs) ? rs : 0, b: Number.isFinite(ds) ? ds : 0 }
-    : null;
+  syncSeriesScore(g);
   const idR = g.team_id_radiant ? String(g.team_id_radiant) : "";
   const idD = g.team_id_dire ? String(g.team_id_dire) : "";
 
@@ -646,8 +711,8 @@ function applyLiveMatch(g, isRefresh = false) {
   document.getElementById("liveTeamA").value = byId.has(idR) ? idR : "";
   document.getElementById("liveTeamB").value = byId.has(idD) ? idD : "";
 
-  live.nameA = (g.team_name_radiant || "").trim() || (byId.get(idR) || {}).name || "Radiant";
-  live.nameB = (g.team_name_dire || "").trim() || (byId.get(idD) || {}).name || "Dire";
+  live.nameA = displayTeamName(g.team_name_radiant, idR) || "Radiant";
+  live.nameB = displayTeamName(g.team_name_dire, idD) || "Dire";
   document.getElementById("liveTitleA").textContent = live.nameA + " · Radiant";
   document.getElementById("liveTitleB").textContent = live.nameB + " · Dire";
 
@@ -705,6 +770,7 @@ async function refreshLive() {
       : null);
   if (next) {
     liveMissCount = 0;
+    if (g) bankSeriesWinFromEnded(g);
     liveSetStatus("Началась следующая карта серии — переключаюсь…", "ok");
     applyLiveMatch(next, true);
     return;
@@ -856,6 +922,15 @@ function runLiveAnalysis() {
   // even for a hand-built draft.
   const assignA = Object.keys(live.assignA).length ? live.assignA : autoAssignByPool(teamAId, live.a);
   const assignB = Object.keys(live.assignB).length ? live.assignB : autoAssignByPool(teamBId, live.b);
+  let baseP = mlBaseProb(tA, tB, liveSeriesScore);
+  const liveOA = Number(document.getElementById("liveOddsA").value);
+  const liveOB = Number(document.getElementById("liveOddsB").value);
+  let marketHint = "";
+  if (baseP != null && liveOA > 1 && liveOB > 1) {
+    const anc = marketAnchorPerGame(baseP, liveOA, liveOB, format);
+    if (anc.anchored) marketHint = " · якорь букмекера";
+    baseP = anc.p;
+  }
   const ctx = {
     meta: metaData,
     stratz: stratzData,
@@ -865,7 +940,7 @@ function runLiveAnalysis() {
     assignA: Object.keys(assignA).length ? assignA : null,
     assignB: Object.keys(assignB).length ? assignB : null,
     teamsElo: tA && tB ? { a: { rating: tA.rating, games: tA.games }, b: { rating: tB.rating, games: tB.games } } : null,
-    baseProbA: mlBaseProb(tA, tB, liveSeriesScore),
+    baseProbA: baseP,
     earlyGame: eg,
     nameA, nameB, heroName, format,
   };
@@ -880,7 +955,7 @@ function runLiveAnalysis() {
   const seriesHint = liveSeriesScore && (liveSeriesScore.a || liveSeriesScore.b)
     ? ` · учтён счёт ${liveSeriesScore.a}:${liveSeriesScore.b}`
     : "";
-  const baseLabel = mlModel ? `База (ML-модель${seriesHint}) → с драфтом` : `База по Elo${seriesHint} → с драфтом`;
+  const baseLabel = mlModel ? `База (ML-модель${seriesHint}${marketHint}) → с драфтом` : `База по Elo${seriesHint}${marketHint} → с драфтом`;
   const eloLine = res.eloProbA != null
     ? `<div class="kv"><span>${baseLabel}</span><span>${pct(res.eloProbA)} → ${pct(res.priorProbA)}</span></div>`
     : `<div class="kv"><span>Прогноз по драфту (без базы)</span><span>${pct(res.priorProbA)}</span></div>`;

@@ -60,6 +60,38 @@ export function seriesWinProb(p, format = "bo3") {
   }
 }
 
+// Invert seriesWinProb: fair series implied → equivalent per-game p (binary search).
+export function perGameFromSeries(seriesP, format = "bo3") {
+  const target = Math.min(0.98, Math.max(0.02, Number(seriesP) || 0.5));
+  if (format === "bo1" || !format) return target;
+  let lo = 0.02, hi = 0.98;
+  for (let i = 0; i < 40; i++) {
+    const mid = (lo + hi) / 2;
+    if (seriesWinProb(mid, format) < target) lo = mid;
+    else hi = mid;
+  }
+  return (lo + hi) / 2;
+}
+
+// Soft-pull a model per-game probability toward the bookmaker fair series price.
+// Lesson from EWC 2026 GF (PVISION vs BoomBoys/BetBoom): internal Elo had BB ~65%
+// while books had PVISION favorite — without an anchor the UI inverted the market.
+// Only engages when the gap is material; never fully replaces the model.
+export function marketAnchorPerGame(modelPerGame, oddsA, oddsB, format = "bo3") {
+  const fair = fairImplied(oddsA, oddsB);
+  if (!fair || modelPerGame == null) {
+    return { p: modelPerGame, anchored: false };
+  }
+  const marketPerGame = perGameFromSeries(fair.a, format);
+  const gap = Math.abs(modelPerGame - marketPerGame);
+  if (gap < 0.06) {
+    return { p: modelPerGame, anchored: false, marketPerGame, fair };
+  }
+  const w = Math.min(0.6, 0.3 + gap); // 0.3 … 0.6 as disagreement grows
+  const p = (1 - w) * modelPerGame + w * marketPerGame;
+  return { p, anchored: true, marketPerGame, fair, w };
+}
+
 // Remove bookmaker margin (vig) from a pair of decimal odds to get fair implied probs.
 export function fairImplied(oddsA, oddsB) {
   if (!oddsA || !oddsB || oddsA <= 1 || oddsB <= 1) return null;
