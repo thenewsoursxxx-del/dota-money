@@ -1,17 +1,6 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-07-19T13:21:08.408Z",
-  "matches": [
-    {
-      "id": "liq-1784467800-0",
-      "date": "2026-07-19T13:30:00.000Z",
-      "event": "Esports World Cup 2026",
-      "format": "bo5",
-      "teamA": "8255888",
-      "teamB": "9824702",
-      "oddsA": null,
-      "oddsB": null
-    }
-  ]
+  "generatedAt": "2026-07-19T19:09:04.330Z",
+  "matches": []
 }
