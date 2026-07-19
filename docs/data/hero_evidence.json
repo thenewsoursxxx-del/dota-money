@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-07-19T21:20:20.279Z",
+  "heroes": {
+    "13": {
+      "name": "Puck",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 3,
+      "fightAppearances": 3,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 29657,
+      "nwSum": 30524
+    },
+    "19": {
+      "name": "Tiny",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 3,
+      "fightAppearances": 3,
+      "stompWins": 0,
+      "topNwWins": 1,
+      "damageSum": 37460,
+      "nwSum": 34936
+    },
+    "28": {
+      "name": "Slardar",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 1,
+      "fightAppearances": 1,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 13962,
+      "nwSum": 18499
+    },
+    "36": {
+      "name": "Necrophos",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 3,
+      "fightAppearances": 3,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 28914,
+      "nwSum": 31046
+    },
+    "38": {
+      "name": "Beastmaster",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 25172,
+      "nwSum": 24034
+    },
+    "54": {
+      "name": "Lifestealer",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 1,
+      "fightAppearances": 1,
+      "stompWins": 0,
+      "topNwWins": 1,
+      "damageSum": 23519,
+      "nwSum": 28492
+    },
+    "74": {
+      "name": "Invoker",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 19487,
+      "nwSum": 20264
+    },
+    "79": {
+      "name": "Shadow Demon",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 14812,
+      "nwSum": 7713
+    },
+    "87": {
+      "name": "Disruptor",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 9104,
+      "nwSum": 6174
+    },
+    "90": {
+      "name": "Keeper of the Light",
+      "games": 2,
+      "wins": 1,
+      "fightWins": 1,
+      "fightAppearances": 1,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 25247,
+      "nwSum": 28640
+    },
+    "96": {
+      "name": "Centaur Warrunner",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 11718,
+      "nwSum": 17484
+    },
+    "107": {
+      "name": "Earth Spirit",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 17485,
+      "nwSum": 19670
+    },
+    "112": {
+      "name": "Winter Wyvern",
+      "games": 1,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 14450,
+      "nwSum": 7877
+    },
+    "119": {
+      "name": "Dark Willow",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 2,
+      "fightAppearances": 2,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 15338,
+      "nwSum": 13102
+    },
+    "120": {
+      "name": "Pangolier",
+      "games": 1,
+      "wins": 1,
+      "fightWins": 1,
+      "fightAppearances": 1,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 29779,
+      "nwSum": 23221
+    },
+    "123": {
+      "name": "Hoodwink",
+      "games": 2,
+      "wins": 2,
+      "fightWins": 2,
+      "fightAppearances": 2,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 25382,
+      "nwSum": 23988
+    },
+    "145": {
+      "name": "Kez",
+      "games": 2,
+      "wins": 0,
+      "fightWins": 0,
+      "fightAppearances": 0,
+      "stompWins": 0,
+      "topNwWins": 0,
+      "damageSum": 46168,
+      "nwSum": 42919
+    }
+  },
+  "note": "Accumulated from replay parses. fightWins = participated in a won fight cluster on the eventual winning team."
+}

@@ -1,6 +1,7 @@
 // Post-match learning from CURRENT games (not only historical bulk rebuilds).
 // For each match id: reconstruct what the model said, compare to the real winner,
-// write a structured lesson (why we were wrong), update Elo/form + train.json.
+// write a structured lesson (why we were wrong), update Elo/form + train.json,
+// then enrich with REPLAY parse (fights/tip/lanes) via learn_replay.
 //
 // Run:
 //   node src/learn_match.mjs 8902338515 8902431810 8902610619
@@ -9,6 +10,7 @@
 //
 // This is deliberate continuous learning: find failure modes, update team state,
 // and (via lessons.json) drive small engine fixes — without one-match weight thrashing.
+// Replay facts never enter that match's pre-game train row (no leakage).
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -17,11 +19,17 @@ import { stratzQuery, sleep } from "./stratz.mjs";
 import { analyzeDraft, scoreDraft } from "../docs/live_draft.mjs";
 import { predictML } from "../docs/model_ml.mjs";
 import { eloExpected, ELO_K } from "../docs/model.mjs";
+import {
+  learnReplayOne, attachReplayToLesson, accumulateEvidence,
+} from "./learn_replay.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const DATA = join(ROOT, "docs", "data");
 const LESSONS = join(DATA, "lessons.json");
+const EVIDENCE = join(DATA, "hero_evidence.json");
+const CORPUS = join(DATA, "replay_corpus.json");
+const SKIP_REPLAY = process.env.SKIP_REPLAY === "1" || process.env.SKIP_REPLAY === "true";
 
 const ids = process.argv.slice(2).map(Number).filter(Boolean);
 if (!ids.length) {
@@ -109,6 +117,8 @@ async function main() {
   const byId = new Map(dataset.teams.map((t) => [String(t.id), t]));
   const haveRecent = new Set((dataset.recentMatches || []).map((m) => m.match_id));
   const haveLesson = new Set((lessonsDoc.lessons || []).map((l) => l.matchId));
+  let evDoc = await J(EVIDENCE, { generatedAt: null, heroes: {} });
+  let corpus = await J(CORPUS, { generatedAt: null, matches: [], count: 0 });
 
   const newLessons = [];
   for (const mid of ids) {
@@ -207,6 +217,38 @@ async function main() {
       console.log("  → Elo уже обновлялся ранее, не дублирую");
     }
 
+    // Replay parse: fights / tip / lanes vs draft beliefs (post-match only).
+    if (!SKIP_REPLAY) {
+      try {
+        const learned = await learnReplayOne(mid, {
+          meta, stratz: stratzMeta, matchups, knowledge, players, model, dataset,
+        });
+        if (learned.ok) {
+          attachReplayToLesson(lesson, learned);
+          accumulateEvidence(evDoc, learned.replay, meta);
+          const crow = {
+            matchId: mid,
+            learnedAt: new Date().toISOString(),
+            radiant: nameR,
+            dire: nameD,
+            winnerSide: lesson.winnerSide,
+            pre: lesson.pre,
+            replay: lesson.replay,
+          };
+          const ci = corpus.matches.findIndex((x) => x.matchId === mid);
+          if (ci >= 0) corpus.matches[ci] = crow;
+          else corpus.matches.push(crow);
+          console.log(`  → replay: fights ${learned.replay.fights.radiantWins}:${learned.replay.fights.direWins}` +
+            (learned.replay.tip ? ` tip@${learned.replay.tip.minute}′` : "") +
+            (learned.replay.mismatches.length ? ` mismatches=${learned.replay.mismatches.map((x) => x.code).join(",")}` : ""));
+        } else {
+          console.warn("  → replay parse failed:", learned.error);
+        }
+      } catch (e) {
+        console.warn("  → replay parse error:", e.message || e);
+      }
+    }
+
     if (!haveLesson.has(mid)) {
       newLessons.push(lesson);
       haveLesson.add(mid);
@@ -234,16 +276,32 @@ async function main() {
   train.count = train.rows.length;
   train.generatedAt = dataset.generatedAt;
 
+  corpus.matches.sort((a, b) => (a.matchId || 0) - (b.matchId || 0));
+  corpus.generatedAt = new Date().toISOString();
+  corpus.count = corpus.matches.length;
+  evDoc.generatedAt = corpus.generatedAt;
+
   await mkdir(DATA, { recursive: true });
   await writeFile(LESSONS, JSON.stringify(lessonsDoc, null, 2), "utf8");
   await writeFile(join(DATA, "dataset.json"), JSON.stringify(dataset, null, 2), "utf8");
   await writeFile(join(ROOT, "train.json"), JSON.stringify(train), "utf8");
+  if (!SKIP_REPLAY) {
+    await writeFile(EVIDENCE, JSON.stringify(evDoc, null, 2), "utf8");
+    await writeFile(CORPUS, JSON.stringify(corpus, null, 2), "utf8");
+  }
 
   console.log(`\nГотово. Уроков всего: ${lessonsDoc.count}. Новых в этом забеге: ${newLessons.length}.`);
   console.log("failure modes:", JSON.stringify(codes));
+  if (!SKIP_REPLAY) {
+    console.log(`Replay corpus: ${corpus.count} матчей → docs/data/replay_corpus.json`);
+    console.log(`Hero evidence: ${Object.keys(evDoc.heroes || {}).length} героев → docs/data/hero_evidence.json`);
+  }
   console.log("Дальше: npm run train  (+ при необходимости npm run build-players с PLAYERS_TEAM_IDS)");
   if (codes.draft_drowned_by_form) {
     console.log("Сигнал движку: draft_drowned_by_form — blend() уже усиливает драфт при жёстком споре с формой.");
+  }
+  if (codes.paper_fight_overrated || codes.paper_fight_lost) {
+    console.log("Сигнал движку: paper_fight_* — replay показал, что бумажный тимфайт разошёлся с файтами на карте.");
   }
 }
 

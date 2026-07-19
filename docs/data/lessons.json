@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T20:22:07.176Z",
+  "generatedAt": "2026-07-19T21:20:20.635Z",
   "lessons": [
     {
       "matchId": 8903705555,
@@ -398,7 +398,49 @@
           "code": "misleading_draft_components",
           "detail": "Draft terms that pointed the wrong way: synergy:+0.12, dmg:+0.11, lock:+0.09."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 20,
+          "nwDiff": -5144
+        },
+        "fights": {
+          "n": 6,
+          "radiantWins": 1,
+          "direWins": 5,
+          "fightWinnerSide": "dire"
+        },
+        "lanes": {
+          "top": "RADIANT_VICTORY",
+          "mid": "TIE",
+          "bot": "DIRE_VICTORY",
+          "radiantLaneScore": 1
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 0
+            },
+            "20": {
+              "r": 3,
+              "d": 1
+            },
+            "30": {
+              "r": 3,
+              "d": 3
+            }
+          },
+          "winnerObjectivesAt20": 1
+        },
+        "topWinner": {
+          "hero": "Tiny",
+          "nw": 34936,
+          "kda": "13/1/8"
+        },
+        "mismatches": []
+      },
+      "replayLearnedAt": "2026-07-19T21:20:17.975Z"
     },
     {
       "matchId": 8904419709,
@@ -486,8 +528,67 @@
         {
           "code": "misleading_draft_components",
           "detail": "Draft terms that pointed the wrong way: lock:-0.09, synergy:-0.08."
+        },
+        {
+          "code": "paper_fight_lost",
+          "detail": "Draft fight term favored dire (-0.05), but fight clusters went to radiant (3:0)."
+        },
+        {
+          "code": "paper_fight_overrated",
+          "detail": "Draft overrated dire teamfight; winner radiant also won the fights on the map."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 21,
+          "nwDiff": 5212
+        },
+        "fights": {
+          "n": 3,
+          "radiantWins": 3,
+          "direWins": 0,
+          "fightWinnerSide": "radiant"
+        },
+        "lanes": {
+          "top": "DIRE_VICTORY",
+          "mid": "RADIANT_VICTORY",
+          "bot": "TIE",
+          "radiantLaneScore": 1
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 0
+            },
+            "20": {
+              "r": 2,
+              "d": 1
+            },
+            "30": {
+              "r": 5,
+              "d": 2
+            }
+          },
+          "winnerObjectivesAt20": 2
+        },
+        "topWinner": {
+          "hero": "Lifestealer",
+          "nw": 28492,
+          "kda": "9/2/8"
+        },
+        "mismatches": [
+          {
+            "code": "paper_fight_lost",
+            "detail": "Draft fight term favored dire (-0.05), but fight clusters went to radiant (3:0)."
+          },
+          {
+            "code": "paper_fight_overrated",
+            "detail": "Draft overrated dire teamfight; winner radiant also won the fights on the map."
+          }
+        ]
+      },
+      "replayLearnedAt": "2026-07-19T21:20:20.282Z"
     },
     {
       "matchId": 8902338515,
