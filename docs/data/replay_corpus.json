@@ -1,24 +1,284 @@
 {
-  "generatedAt": "2026-07-19T21:20:20.280Z",
+  "generatedAt": "2026-07-19T21:32:17.950Z",
   "matches": [
     {
+      "matchId": 8903705555,
+      "learnedAt": "2026-07-19T21:32:04.559Z",
+      "radiant": "Vici Gaming",
+      "dire": "Team Yandex",
+      "winnerSide": "dire",
+      "pre": {
+        "baseProbA": 0.2004,
+        "draftProbA": 0.517,
+        "priorProbA": 0.2004,
+        "components": {
+          "meta": 0.0143,
+          "synergy": -0.0185,
+          "counter": 0.0561,
+          "lane": -0.0603,
+          "timing": 0.1004,
+          "fight": -0.0386,
+          "dmg": 0,
+          "lock": -0.0167,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "replay": {
+        "tip": {
+          "minute": 13,
+          "nwDiff": -5008
+        },
+        "fights": {
+          "n": 4,
+          "radiantWins": 0,
+          "direWins": 3,
+          "fightWinnerSide": "dire"
+        },
+        "lanes": {
+          "top": "DIRE_VICTORY",
+          "mid": "TIE",
+          "bot": "DIRE_VICTORY",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 1
+            },
+            "20": {
+              "r": 0,
+              "d": 3
+            },
+            "30": {
+              "r": 2,
+              "d": 5
+            }
+          },
+          "winnerObjectivesAt20": 3
+        },
+        "topWinner": {
+          "hero": "Kez",
+          "nw": 26172,
+          "kda": "10/0/10"
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "matchId": 8903789784,
+      "learnedAt": "2026-07-19T21:32:06.578Z",
+      "radiant": "Vici Gaming",
+      "dire": "Team Yandex",
+      "winnerSide": "dire",
+      "pre": {
+        "baseProbA": 0.2004,
+        "draftProbA": 0.3599,
+        "priorProbA": 0.1676,
+        "components": {
+          "meta": -0.0038,
+          "synergy": -0.0044,
+          "counter": 0.0298,
+          "lane": -0.0118,
+          "timing": 0.0864,
+          "fight": -0.4018,
+          "dmg": 0.036,
+          "lock": -0.0417,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "replay": {
+        "tip": {
+          "minute": 13,
+          "nwDiff": -5744
+        },
+        "fights": {
+          "n": 4,
+          "radiantWins": 0,
+          "direWins": 4,
+          "fightWinnerSide": "dire"
+        },
+        "lanes": {
+          "top": "TIE",
+          "mid": "DIRE_VICTORY",
+          "bot": "DIRE_VICTORY",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 1
+            },
+            "20": {
+              "r": 0,
+              "d": 6
+            },
+            "30": {
+              "r": 0,
+              "d": 6
+            }
+          },
+          "winnerObjectivesAt20": 6
+        },
+        "topWinner": {
+          "hero": "Earthshaker",
+          "nw": 11648,
+          "kda": "11/0/11"
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "matchId": 8904012666,
+      "learnedAt": "2026-07-19T21:32:10.200Z",
+      "radiant": "BetBoom Team",
+      "dire": "PVISION",
+      "winnerSide": "radiant",
+      "pre": {
+        "baseProbA": 0.3971,
+        "draftProbA": 0.4512,
+        "priorProbA": 0.3971,
+        "components": {
+          "meta": 0.012,
+          "synergy": -0.0306,
+          "counter": -0.0202,
+          "lane": 0.0239,
+          "timing": 0.0316,
+          "fight": -0.0725,
+          "dmg": 0,
+          "lock": -0.05,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "replay": {
+        "tip": {
+          "minute": 22,
+          "nwDiff": 6056
+        },
+        "fights": {
+          "n": 3,
+          "radiantWins": 1,
+          "direWins": 1,
+          "fightWinnerSide": "draw"
+        },
+        "lanes": {
+          "top": "RADIANT_VICTORY",
+          "mid": "RADIANT_VICTORY",
+          "bot": "RADIANT_VICTORY",
+          "radiantLaneScore": 3
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 1,
+              "d": 0
+            },
+            "20": {
+              "r": 3,
+              "d": 0
+            },
+            "30": {
+              "r": 5,
+              "d": 1
+            }
+          },
+          "winnerObjectivesAt20": 3
+        },
+        "topWinner": {
+          "hero": "Timbersaw",
+          "nw": 39919,
+          "kda": "9/0/5"
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "matchId": 8904157676,
+      "learnedAt": "2026-07-19T21:32:15.761Z",
+      "radiant": "PVISION",
+      "dire": "BetBoom Team",
+      "winnerSide": "radiant",
+      "pre": {
+        "baseProbA": 0.4635,
+        "draftProbA": 0.6822,
+        "priorProbA": 0.5875,
+        "components": {
+          "meta": 0.0022,
+          "synergy": 0.0501,
+          "counter": 0.0283,
+          "lane": -0.0566,
+          "timing": 0.0137,
+          "fight": 0.375,
+          "dmg": 0,
+          "lock": 0,
+          "pool": 0,
+          "player": 0
+        }
+      },
+      "replay": {
+        "tip": {
+          "minute": 34,
+          "nwDiff": 5947
+        },
+        "fights": {
+          "n": 7,
+          "radiantWins": 4,
+          "direWins": 3,
+          "fightWinnerSide": "radiant"
+        },
+        "lanes": {
+          "top": "DIRE_VICTORY",
+          "mid": "TIE",
+          "bot": "TIE",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 0
+            },
+            "20": {
+              "r": 2,
+              "d": 1
+            },
+            "30": {
+              "r": 3,
+              "d": 3
+            }
+          },
+          "winnerObjectivesAt20": 2
+        },
+        "topWinner": {
+          "hero": "Lifestealer",
+          "nw": 48377,
+          "kda": "11/3/13"
+        },
+        "mismatches": []
+      }
+    },
+    {
       "matchId": 8904322271,
-      "learnedAt": "2026-07-19T21:20:17.973Z",
+      "learnedAt": "2026-07-19T21:32:16.658Z",
       "radiant": "BetBoom Team",
       "dire": "PVISION",
       "winnerSide": "dire",
       "pre": {
-        "baseProbA": 0.39714203612937315,
-        "draftProbA": 0.6507401159771209,
-        "priorProbA": 0.529783002596825,
+        "baseProbA": 0.3971,
+        "draftProbA": 0.6507,
+        "priorProbA": 0.5298,
         "components": {
-          "meta": 0.03924508621347539,
-          "synergy": 0.1265919623718004,
-          "counter": 0.06923368002337514,
-          "lane": -0.037425,
-          "timing": 0.030229437147728237,
+          "meta": 0.0392,
+          "synergy": 0.1266,
+          "counter": 0.0692,
+          "lane": -0.0374,
+          "timing": 0.0302,
           "fight": 0.0225,
-          "dmg": 0.03600000000000003,
+          "dmg": 0.036,
           "lock": 0.05,
           "pool": 0,
           "player": 0
@@ -33,100 +293,7 @@
           "n": 6,
           "radiantWins": 1,
           "direWins": 5,
-          "draws": 0,
-          "winRateRadiant": 0.167,
-          "fightWinnerSide": "dire",
-          "samples": [
-            {
-              "t0": 1479,
-              "t1": 1485,
-              "min": 24.6,
-              "killsR": 2,
-              "killsD": 1,
-              "winner": "radiant",
-              "heroesR": [
-                38,
-                107
-              ],
-              "heroesD": [
-                19
-              ]
-            },
-            {
-              "t0": 1616,
-              "t1": 1635,
-              "min": 26.9,
-              "killsR": 0,
-              "killsD": 3,
-              "winner": "dire",
-              "heroesR": [],
-              "heroesD": [
-                19,
-                36
-              ]
-            },
-            {
-              "t0": 1933,
-              "t1": 1954,
-              "min": 32.2,
-              "killsR": 1,
-              "killsD": 3,
-              "winner": "dire",
-              "heroesR": [
-                145
-              ],
-              "heroesD": [
-                19,
-                13
-              ]
-            },
-            {
-              "t0": 2085,
-              "t1": 2108,
-              "min": 34.8,
-              "killsR": 2,
-              "killsD": 3,
-              "winner": "dire",
-              "heroesR": [
-                145,
-                38
-              ],
-              "heroesD": [
-                19,
-                123
-              ]
-            },
-            {
-              "t0": 2282,
-              "t1": 2299,
-              "min": 38,
-              "killsR": 1,
-              "killsD": 5,
-              "winner": "dire",
-              "heroesR": [
-                145
-              ],
-              "heroesD": [
-                13,
-                36,
-                119
-              ]
-            },
-            {
-              "t0": 2461,
-              "t1": 2472,
-              "min": 41,
-              "killsR": 0,
-              "killsD": 5,
-              "winner": "dire",
-              "heroesR": [],
-              "heroesD": [
-                36,
-                119,
-                13
-              ]
-            }
-          ]
+          "fightWinnerSide": "dire"
         },
         "lanes": {
           "top": "RADIANT_VICTORY",
@@ -135,7 +302,6 @@
           "radiantLaneScore": 1
         },
         "objectives": {
-          "towersFallen": 19,
           "byMinute": {
             "10": {
               "r": 0,
@@ -150,52 +316,33 @@
               "d": 3
             }
           },
-          "winnerObjectivesAt20": 1,
-          "loserObjectivesAt20": 3,
-          "durationMin": 41.2,
-          "winnerSide": "dire"
+          "winnerObjectivesAt20": 1
         },
-        "mismatches": [],
         "topWinner": {
-          "heroId": 19,
           "hero": "Tiny",
-          "isRadiant": false,
-          "name": "Satanic",
-          "accountId": 1044002267,
           "nw": 34936,
-          "k": 13,
-          "d": 1,
-          "a": 8,
-          "hd": 37460,
-          "td": 5876,
-          "heal": 0
+          "kda": "13/1/8"
         },
-        "fightCredit": {
-          "13": 3,
-          "19": 3,
-          "36": 3,
-          "119": 2,
-          "123": 1
-        }
+        "mismatches": []
       }
     },
     {
       "matchId": 8904419709,
-      "learnedAt": "2026-07-19T21:20:20.280Z",
+      "learnedAt": "2026-07-19T21:32:17.587Z",
       "radiant": "PVISION",
       "dire": "BetBoom Team",
       "winnerSide": "radiant",
       "pre": {
-        "baseProbA": 0.4635424333767224,
-        "draftProbA": 0.4344459001743011,
-        "priorProbA": 0.4387322718965957,
+        "baseProbA": 0.4635,
+        "draftProbA": 0.4344,
+        "priorProbA": 0.4387,
         "components": {
-          "meta": -0.008905186896292194,
-          "synergy": -0.08723494550348769,
-          "counter": 0.04472871701828074,
-          "lane": 0.02775,
-          "timing": -0.02139779099718033,
-          "fight": -0.047499999999999994,
+          "meta": -0.0089,
+          "synergy": -0.0872,
+          "counter": 0.0447,
+          "lane": 0.0278,
+          "timing": -0.0214,
+          "fight": -0.0475,
           "dmg": 0,
           "lock": -0.05,
           "pool": 0,
@@ -211,53 +358,7 @@
           "n": 3,
           "radiantWins": 3,
           "direWins": 0,
-          "draws": 0,
-          "winRateRadiant": 1,
-          "fightWinnerSide": "radiant",
-          "samples": [
-            {
-              "t0": 322,
-              "t1": 330,
-              "min": 5.4,
-              "killsR": 2,
-              "killsD": 1,
-              "winner": "radiant",
-              "heroesR": [
-                120
-              ],
-              "heroesD": [
-                79
-              ]
-            },
-            {
-              "t0": 1682,
-              "t1": 1704,
-              "min": 28,
-              "killsR": 3,
-              "killsD": 0,
-              "winner": "radiant",
-              "heroesR": [
-                28,
-                123
-              ],
-              "heroesD": []
-            },
-            {
-              "t0": 2177,
-              "t1": 2198,
-              "min": 36.3,
-              "killsR": 4,
-              "killsD": 1,
-              "winner": "radiant",
-              "heroesR": [
-                54,
-                90
-              ],
-              "heroesD": [
-                74
-              ]
-            }
-          ]
+          "fightWinnerSide": "radiant"
         },
         "lanes": {
           "top": "DIRE_VICTORY",
@@ -266,7 +367,6 @@
           "radiantLaneScore": 1
         },
         "objectives": {
-          "towersFallen": 15,
           "byMinute": {
             "10": {
               "r": 0,
@@ -281,10 +381,12 @@
               "d": 2
             }
           },
-          "winnerObjectivesAt20": 2,
-          "loserObjectivesAt20": 1,
-          "durationMin": 36.8,
-          "winnerSide": "radiant"
+          "winnerObjectivesAt20": 2
+        },
+        "topWinner": {
+          "hero": "Lifestealer",
+          "nw": 28492,
+          "kda": "9/2/8"
         },
         "mismatches": [
           {
@@ -295,30 +397,9 @@
             "code": "paper_fight_overrated",
             "detail": "Draft overrated dire teamfight; winner radiant also won the fights on the map."
           }
-        ],
-        "topWinner": {
-          "heroId": 54,
-          "hero": "Lifestealer",
-          "isRadiant": true,
-          "name": "Satanic",
-          "accountId": 1044002267,
-          "nw": 28492,
-          "k": 9,
-          "d": 2,
-          "a": 8,
-          "hd": 23519,
-          "td": 18424,
-          "heal": 1288
-        },
-        "fightCredit": {
-          "28": 1,
-          "54": 1,
-          "90": 1,
-          "120": 1,
-          "123": 1
-        }
+        ]
       }
     }
   ],
-  "count": 2
+  "count": 6
 }

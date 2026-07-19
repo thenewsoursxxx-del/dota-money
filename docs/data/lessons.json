@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-19T21:20:20.635Z",
+  "generatedAt": "2026-07-19T21:32:17.950Z",
   "lessons": [
     {
       "matchId": 8903705555,
-      "learnedAt": "2026-07-19T20:22:03.564Z",
+      "learnedAt": "2026-07-19T21:32:02.842Z",
       "seriesHint": null,
       "radiant": "Vici Gaming",
       "dire": "Team Yandex",
@@ -29,17 +29,18 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.2687,
-        "draftProbA": 0.4673,
-        "priorProbA": 0.2611,
+        "baseProbA": 0.2004,
+        "draftProbA": 0.517,
+        "priorProbA": 0.2004,
         "components": {
           "meta": 0.0143,
-          "synergy": -0.0175,
-          "counter": 0.0541,
-          "lane": -0.0938,
-          "timing": -0.005,
+          "synergy": -0.0185,
+          "counter": 0.0561,
+          "lane": -0.0603,
+          "timing": 0.1004,
+          "fight": -0.0386,
           "dmg": 0,
-          "lock": -0.0292,
+          "lock": -0.0167,
           "pool": 0,
           "player": 0
         }
@@ -48,17 +49,17 @@
         "5": {
           "nwDiff": -1176,
           "xpDiff": -187,
-          "pA": 0.1749
+          "pA": 0.136
         },
         "10": {
           "nwDiff": -3173,
           "xpDiff": -905,
-          "pA": 0.0748
+          "pA": 0.0602
         },
         "15": {
           "nwDiff": -4949,
           "xpDiff": -3285,
-          "pA": 0.0227
+          "pA": 0.02
         },
         "20": {
           "nwDiff": -8630,
@@ -74,13 +75,55 @@
       "failureModes": [
         {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: counter:+0.05."
+          "detail": "Draft terms that pointed the wrong way: timing:+0.10, counter:+0.06."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 13,
+          "nwDiff": -5008
+        },
+        "fights": {
+          "n": 4,
+          "radiantWins": 0,
+          "direWins": 3,
+          "fightWinnerSide": "dire"
+        },
+        "lanes": {
+          "top": "DIRE_VICTORY",
+          "mid": "TIE",
+          "bot": "DIRE_VICTORY",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 1
+            },
+            "20": {
+              "r": 0,
+              "d": 3
+            },
+            "30": {
+              "r": 2,
+              "d": 5
+            }
+          },
+          "winnerObjectivesAt20": 3
+        },
+        "topWinner": {
+          "hero": "Kez",
+          "nw": 26172,
+          "kda": "10/0/10"
+        },
+        "mismatches": []
+      },
+      "replayLearnedAt": "2026-07-19T21:32:04.559Z"
     },
     {
       "matchId": 8903789784,
-      "learnedAt": "2026-07-19T20:22:04.169Z",
+      "learnedAt": "2026-07-19T21:32:05.142Z",
       "seriesHint": null,
       "radiant": "Vici Gaming",
       "dire": "Team Yandex",
@@ -106,17 +149,18 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.2175,
-        "draftProbA": 0.5124,
-        "priorProbA": 0.22,
+        "baseProbA": 0.2004,
+        "draftProbA": 0.3599,
+        "priorProbA": 0.1676,
         "components": {
           "meta": -0.0038,
-          "synergy": -0.0042,
-          "counter": 0.0287,
-          "lane": -0.0183,
-          "timing": -0.0041,
-          "dmg": 0.06,
-          "lock": -0.0292,
+          "synergy": -0.0044,
+          "counter": 0.0298,
+          "lane": -0.0118,
+          "timing": 0.0864,
+          "fight": -0.4018,
+          "dmg": 0.036,
+          "lock": -0.0417,
           "pool": 0,
           "player": 0
         }
@@ -125,12 +169,12 @@
         "5": {
           "nwDiff": 207,
           "xpDiff": -440,
-          "pA": 0.2243
+          "pA": 0.1726
         },
         "10": {
           "nwDiff": -1475,
           "xpDiff": -2466,
-          "pA": 0.0861
+          "pA": 0.0669
         },
         "15": {
           "nwDiff": -7805,
@@ -141,13 +185,55 @@
       "failureModes": [
         {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: dmg:+0.06, counter:+0.03."
+          "detail": "Draft terms that pointed the wrong way: timing:+0.09, dmg:+0.04, counter:+0.03."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 13,
+          "nwDiff": -5744
+        },
+        "fights": {
+          "n": 4,
+          "radiantWins": 0,
+          "direWins": 4,
+          "fightWinnerSide": "dire"
+        },
+        "lanes": {
+          "top": "TIE",
+          "mid": "DIRE_VICTORY",
+          "bot": "DIRE_VICTORY",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 1
+            },
+            "20": {
+              "r": 0,
+              "d": 6
+            },
+            "30": {
+              "r": 0,
+              "d": 6
+            }
+          },
+          "winnerObjectivesAt20": 6
+        },
+        "topWinner": {
+          "hero": "Earthshaker",
+          "nw": 11648,
+          "kda": "11/0/11"
+        },
+        "mismatches": []
+      },
+      "replayLearnedAt": "2026-07-19T21:32:06.577Z"
     },
     {
       "matchId": 8904012666,
-      "learnedAt": "2026-07-19T20:22:04.871Z",
+      "learnedAt": "2026-07-19T21:32:07.175Z",
       "seriesHint": null,
       "radiant": "BetBoom Team",
       "dire": "PVISION",
@@ -173,17 +259,18 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.652,
-        "draftProbA": 0.4648,
-        "priorProbA": 0.6424,
+        "baseProbA": 0.3971,
+        "draftProbA": 0.4512,
+        "priorProbA": 0.3971,
         "components": {
           "meta": 0.012,
-          "synergy": -0.029,
-          "counter": -0.0194,
-          "lane": 0.0372,
-          "timing": 0.0039,
+          "synergy": -0.0306,
+          "counter": -0.0202,
+          "lane": 0.0239,
+          "timing": 0.0316,
+          "fight": -0.0725,
           "dmg": 0,
-          "lock": -0.0875,
+          "lock": -0.05,
           "pool": 0,
           "player": 0
         }
@@ -192,22 +279,22 @@
         "5": {
           "nwDiff": 1032,
           "xpDiff": 596,
-          "pA": 0.7631
+          "pA": 0.5594
         },
         "10": {
           "nwDiff": 3256,
           "xpDiff": 3962,
-          "pA": 0.9472
+          "pA": 0.8918
         },
         "15": {
           "nwDiff": 1742,
           "xpDiff": 2969,
-          "pA": 0.8812
+          "pA": 0.7543
         },
         "20": {
           "nwDiff": 3614,
           "xpDiff": 3944,
-          "pA": 0.9544
+          "pA": 0.9078
         },
         "25": {
           "nwDiff": 4520,
@@ -217,14 +304,68 @@
       },
       "failureModes": [
         {
+          "code": "pregame_upset",
+          "detail": "Pre-game favored dire (60%), won radiant."
+        },
+        {
+          "code": "both_base_and_draft_wrong",
+          "detail": "Neither form nor draft picked the winner pre-game."
+        },
+        {
+          "code": "live_economy_caught_upset",
+          "detail": "@10′ live economy correctly flipped to winner (nw +3256)."
+        },
+        {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: lock:-0.09, synergy:-0.03."
+          "detail": "Draft terms that pointed the wrong way: fight:-0.07, lock:-0.05, synergy:-0.03."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 22,
+          "nwDiff": 6056
+        },
+        "fights": {
+          "n": 3,
+          "radiantWins": 1,
+          "direWins": 1,
+          "fightWinnerSide": "draw"
+        },
+        "lanes": {
+          "top": "RADIANT_VICTORY",
+          "mid": "RADIANT_VICTORY",
+          "bot": "RADIANT_VICTORY",
+          "radiantLaneScore": 3
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 1,
+              "d": 0
+            },
+            "20": {
+              "r": 3,
+              "d": 0
+            },
+            "30": {
+              "r": 5,
+              "d": 1
+            }
+          },
+          "winnerObjectivesAt20": 3
+        },
+        "topWinner": {
+          "hero": "Timbersaw",
+          "nw": 39919,
+          "kda": "9/0/5"
+        },
+        "mismatches": []
+      },
+      "replayLearnedAt": "2026-07-19T21:32:10.200Z"
     },
     {
       "matchId": 8904157676,
-      "learnedAt": "2026-07-19T20:22:05.500Z",
+      "learnedAt": "2026-07-19T21:32:10.811Z",
       "seriesHint": null,
       "radiant": "PVISION",
       "dire": "BetBoom Team",
@@ -250,15 +391,16 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.211,
-        "draftProbA": 0.4947,
-        "priorProbA": 0.21,
+        "baseProbA": 0.4635,
+        "draftProbA": 0.6822,
+        "priorProbA": 0.5875,
         "components": {
           "meta": 0.0022,
-          "synergy": 0.0475,
-          "counter": 0.0273,
-          "lane": -0.088,
-          "timing": -0.0014,
+          "synergy": 0.0501,
+          "counter": 0.0283,
+          "lane": -0.0566,
+          "timing": 0.0137,
+          "fight": 0.375,
           "dmg": 0,
           "lock": 0,
           "pool": 0,
@@ -269,51 +411,89 @@
         "5": {
           "nwDiff": -974,
           "xpDiff": -533,
-          "pA": 0.1419
+          "pA": 0.4367
         },
         "10": {
           "nwDiff": -820,
           "xpDiff": -1131,
-          "pA": 0.133
+          "pA": 0.4235
         },
         "15": {
           "nwDiff": -1916,
           "xpDiff": -3019,
-          "pA": 0.0631
+          "pA": 0.2182
         },
         "20": {
           "nwDiff": 863,
           "xpDiff": -1731,
-          "pA": 0.2326
+          "pA": 0.5906
         },
         "25": {
           "nwDiff": -1384,
           "xpDiff": -4018,
-          "pA": 0.0619
+          "pA": 0.2266
         }
       },
       "failureModes": [
         {
-          "code": "pregame_upset",
-          "detail": "Pre-game favored dire (79%), won radiant."
-        },
-        {
-          "code": "both_base_and_draft_wrong",
-          "detail": "Neither form nor draft picked the winner pre-game."
+          "code": "draft_drowned_by_form",
+          "detail": "Draft alone 68% radiant (correct side) but form base 46% drowned blend to 59%."
         },
         {
           "code": "early_lag_5min",
-          "detail": "@5′ still wrong side (nw -974, P(rad)=14%)."
+          "detail": "@5′ still wrong side (nw -974, P(rad)=44%)."
         },
         {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: lane:-0.09."
+          "detail": "Draft terms that pointed the wrong way: lane:-0.06."
         }
-      ]
+      ],
+      "replay": {
+        "tip": {
+          "minute": 34,
+          "nwDiff": 5947
+        },
+        "fights": {
+          "n": 7,
+          "radiantWins": 4,
+          "direWins": 3,
+          "fightWinnerSide": "radiant"
+        },
+        "lanes": {
+          "top": "DIRE_VICTORY",
+          "mid": "TIE",
+          "bot": "TIE",
+          "radiantLaneScore": 0
+        },
+        "objectives": {
+          "byMinute": {
+            "10": {
+              "r": 0,
+              "d": 0
+            },
+            "20": {
+              "r": 2,
+              "d": 1
+            },
+            "30": {
+              "r": 3,
+              "d": 3
+            }
+          },
+          "winnerObjectivesAt20": 2
+        },
+        "topWinner": {
+          "hero": "Lifestealer",
+          "nw": 48377,
+          "kda": "11/3/13"
+        },
+        "mismatches": []
+      },
+      "replayLearnedAt": "2026-07-19T21:32:15.761Z"
     },
     {
       "matchId": 8904322271,
-      "learnedAt": "2026-07-19T20:22:06.204Z",
+      "learnedAt": "2026-07-19T21:32:16.369Z",
       "seriesHint": null,
       "radiant": "BetBoom Team",
       "dire": "PVISION",
@@ -339,17 +519,18 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.618,
-        "draftProbA": 0.66,
-        "priorProbA": 0.6637,
+        "baseProbA": 0.3971,
+        "draftProbA": 0.6507,
+        "priorProbA": 0.5298,
         "components": {
           "meta": 0.0392,
-          "synergy": 0.1199,
-          "counter": 0.0667,
-          "lane": -0.0582,
-          "timing": 0.027,
-          "dmg": 0.108,
-          "lock": 0.0875,
+          "synergy": 0.1266,
+          "counter": 0.0692,
+          "lane": -0.0374,
+          "timing": 0.0302,
+          "fight": 0.0225,
+          "dmg": 0.036,
+          "lock": 0.05,
           "pool": 0,
           "player": 0
         }
@@ -358,45 +539,37 @@
         "5": {
           "nwDiff": -351,
           "xpDiff": 158,
-          "pA": 0.6293
+          "pA": 0.4957
         },
         "10": {
           "nwDiff": 134,
           "xpDiff": 823,
-          "pA": 0.7148
+          "pA": 0.5899
         },
         "15": {
           "nwDiff": -1291,
           "xpDiff": -2286,
-          "pA": 0.3763
+          "pA": 0.2663
         },
         "20": {
           "nwDiff": -5144,
           "xpDiff": -7549,
-          "pA": 0.0243
+          "pA": 0.02
         },
         "25": {
           "nwDiff": -4370,
           "xpDiff": -10026,
-          "pA": 0.0212
+          "pA": 0.02
         }
       },
       "failureModes": [
         {
           "code": "pregame_upset",
-          "detail": "Pre-game favored radiant (66%), won dire."
-        },
-        {
-          "code": "both_base_and_draft_wrong",
-          "detail": "Neither form nor draft picked the winner pre-game."
-        },
-        {
-          "code": "early_lag_5min",
-          "detail": "@5′ still wrong side (nw -351, P(rad)=63%)."
+          "detail": "Pre-game favored radiant (53%), won dire."
         },
         {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: synergy:+0.12, dmg:+0.11, lock:+0.09."
+          "detail": "Draft terms that pointed the wrong way: synergy:+0.13, counter:+0.07, lock:+0.05."
         }
       ],
       "replay": {
@@ -440,11 +613,11 @@
         },
         "mismatches": []
       },
-      "replayLearnedAt": "2026-07-19T21:20:17.975Z"
+      "replayLearnedAt": "2026-07-19T21:32:16.658Z"
     },
     {
       "matchId": 8904419709,
-      "learnedAt": "2026-07-19T20:22:06.816Z",
+      "learnedAt": "2026-07-19T21:32:17.237Z",
       "seriesHint": null,
       "radiant": "PVISION",
       "dire": "BetBoom Team",
@@ -470,17 +643,18 @@
         ]
       },
       "pre": {
-        "baseProbA": 0.3819,
-        "draftProbA": 0.4781,
-        "priorProbA": 0.3757,
+        "baseProbA": 0.4635,
+        "draftProbA": 0.4344,
+        "priorProbA": 0.4387,
         "components": {
           "meta": -0.0089,
-          "synergy": -0.0826,
-          "counter": 0.0431,
-          "lane": 0.0432,
-          "timing": -0.0066,
-          "dmg": 0.048,
-          "lock": -0.0875,
+          "synergy": -0.0872,
+          "counter": 0.0447,
+          "lane": 0.0278,
+          "timing": -0.0214,
+          "fight": -0.0475,
+          "dmg": 0,
+          "lock": -0.05,
           "pool": 0,
           "player": 0
         }
@@ -489,22 +663,22 @@
         "5": {
           "nwDiff": 885,
           "xpDiff": 776,
-          "pA": 0.5297
+          "pA": 0.59
         },
         "10": {
           "nwDiff": 1104,
           "xpDiff": 844,
-          "pA": 0.5614
+          "pA": 0.6195
         },
         "15": {
           "nwDiff": 2490,
           "xpDiff": 2509,
-          "pA": 0.7903
+          "pA": 0.8238
         },
         "20": {
           "nwDiff": 4969,
           "xpDiff": 7084,
-          "pA": 0.9736
+          "pA": 0.9777
         },
         "25": {
           "nwDiff": 7065,
@@ -515,7 +689,7 @@
       "failureModes": [
         {
           "code": "pregame_upset",
-          "detail": "Pre-game favored dire (62%), won radiant."
+          "detail": "Pre-game favored dire (56%), won radiant."
         },
         {
           "code": "both_base_and_draft_wrong",
@@ -527,7 +701,7 @@
         },
         {
           "code": "misleading_draft_components",
-          "detail": "Draft terms that pointed the wrong way: lock:-0.09, synergy:-0.08."
+          "detail": "Draft terms that pointed the wrong way: synergy:-0.09, lock:-0.05, fight:-0.05."
         },
         {
           "code": "paper_fight_lost",
@@ -588,7 +762,7 @@
           }
         ]
       },
-      "replayLearnedAt": "2026-07-19T21:20:20.282Z"
+      "replayLearnedAt": "2026-07-19T21:32:17.587Z"
     },
     {
       "matchId": 8902338515,
@@ -844,7 +1018,7 @@
   ],
   "count": 9,
   "lastRun": {
-    "at": "2026-07-19T20:22:07.176Z",
+    "at": "2026-07-19T21:32:17.950Z",
     "matchIds": [
       8903705555,
       8903789784,
@@ -853,12 +1027,6 @@
       8904322271,
       8904419709
     ],
-    "failureCounts": {
-      "misleading_draft_components": 6,
-      "pregame_upset": 3,
-      "both_base_and_draft_wrong": 3,
-      "early_lag_5min": 2,
-      "live_economy_caught_upset": 1
-    }
+    "failureCounts": {}
   }
 }
