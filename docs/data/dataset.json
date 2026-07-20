@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-20T14:09:01.913Z",
+  "generatedAt": "2026-07-20T19:46:00.846Z",
   "tier1LeagueCount": 2680,
-  "matchesUsed": 1764,
+  "matchesUsed": 1767,
   "teams": [
     {
       "id": 9824702,
       "name": "PVISION",
-      "tag": "PV",
-      "logo": "https://cdn.steamusercontent.com/ugc/11751543457229798134/1569CC553CB72963C8EC4C3F807EE50DA925BDC2/",
+      "tag": null,
+      "logo": null,
       "rating": 1764,
       "games": 30,
       "wins": 24,
@@ -33,7 +33,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1722,
+        "elo": 1721,
         "form10": 0.7,
         "form45": 0.771,
         "act": 19,
@@ -43,8 +43,8 @@
     {
       "id": 9823272,
       "name": "Team Yandex",
-      "tag": "TY",
-      "logo": "https://cdn.steamusercontent.com/ugc/12970505637628494427/B04C3358F4E815ADFC2F8B1B8BE3AB0CE75C8881/",
+      "tag": null,
+      "logo": null,
       "rating": 1763,
       "games": 49,
       "wins": 33,
@@ -80,8 +80,8 @@
     {
       "id": 9572001,
       "name": "TEAM VISION",
-      "tag": "VSN",
-      "logo": "https://cdn.steamusercontent.com/ugc/10380389074903512947/5D074799695A862D17D4205285315FE20399B28D/",
+      "tag": null,
+      "logo": null,
       "rating": 1734,
       "games": 67,
       "wins": 47,
@@ -107,7 +107,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1645,
+        "elo": 1644,
         "form10": 0.7,
         "form45": 0.708,
         "act": 7,
@@ -117,9 +117,9 @@
     {
       "id": 8255888,
       "name": "BoomBoys",
-      "tag": "BB",
-      "logo": "https://cdn.steamusercontent.com/ugc/9995426432403529725/51E13136D4CCC8C7D8062861541A1D13B8ED87E0/",
-      "rating": 1729,
+      "tag": null,
+      "logo": null,
+      "rating": 1728,
       "games": 98,
       "wins": 67,
       "losses": 31,
@@ -144,7 +144,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1678,
+        "elo": 1677,
         "form10": 0.633,
         "form45": 0.629,
         "act": 26,
@@ -154,7 +154,7 @@
     {
       "id": 10108947,
       "name": "SouthAmericaRejects",
-      "tag": "SAR",
+      "tag": null,
       "logo": null,
       "rating": 1712,
       "games": 71,
@@ -191,8 +191,8 @@
     {
       "id": 9247354,
       "name": "Team Falcons",
-      "tag": "FLCN",
-      "logo": "https://cdn.steamusercontent.com/ugc/2314350571781870059/2B5C9FE9BA0A2DC303A13261444532AA08352843/",
+      "tag": null,
+      "logo": null,
       "rating": 1664,
       "games": 77,
       "wins": 51,
@@ -218,18 +218,18 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1612,
+        "elo": 1611,
         "form10": 0.7,
-        "form45": 0.625,
-        "act": 15,
+        "form45": 0.676,
+        "act": 12,
         "rust": 3
       }
     },
     {
       "id": 10136357,
       "name": "Nigma Galaxy",
-      "tag": "NGX",
-      "logo": "https://cdn.steamusercontent.com/ugc/16959999218725724364/1D334B91A52606CA3E0027832D6F646E2A094391/",
+      "tag": null,
+      "logo": null,
       "rating": 1662,
       "games": 44,
       "wins": 28,
@@ -255,7 +255,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1626,
+        "elo": 1625,
         "form10": 0.633,
         "form45": 0.685,
         "act": 22,
@@ -265,8 +265,8 @@
     {
       "id": 7119388,
       "name": "Team Spirit",
-      "tag": "TSpirit",
-      "logo": "https://cdn.steamusercontent.com/ugc/1839179120711951766/CD7E0885CB527334205CC7885E9C101B7BC17702/",
+      "tag": null,
+      "logo": null,
       "rating": 1659,
       "games": 86,
       "wins": 50,
@@ -302,8 +302,8 @@
     {
       "id": 7554697,
       "name": "Nigma Galaxy",
-      "tag": "NGX",
-      "logo": "https://cdn.steamusercontent.com/ugc/1827894588975105240/421C0D8318D71D5DD31FD08A7933AB622AE26590/",
+      "tag": null,
+      "logo": null,
       "rating": 1658,
       "games": 44,
       "wins": 29,
@@ -329,7 +329,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1575,
+        "elo": 1574,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -339,8 +339,8 @@
     {
       "id": 10150538,
       "name": "LGD Gaming",
-      "tag": "LGD",
-      "logo": "https://cdn.steamusercontent.com/ugc/10055782735581672481/2B2BCEA9CC05286D7164E4548A2EB64CDBC77F31/",
+      "tag": null,
+      "logo": null,
       "rating": 1650,
       "games": 56,
       "wins": 37,
@@ -366,7 +366,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1602,
+        "elo": 1601,
         "form10": 0.433,
         "form45": 0.603,
         "act": 34,
@@ -376,8 +376,8 @@
     {
       "id": 5017210,
       "name": "Team Resilience",
-      "tag": "Resilience",
-      "logo": "https://cdn.steamusercontent.com/ugc/15907413066975203049/68C9F7C15D104837639C65B11E95D0DF81D268F2/",
+      "tag": null,
+      "logo": null,
       "rating": 1645,
       "games": 29,
       "wins": 21,
@@ -407,14 +407,14 @@
         "form10": 0.633,
         "form45": 0.773,
         "act": 6,
-        "rust": 32
+        "rust": 33
       }
     },
     {
       "id": 9467224,
       "name": "Aurora Gaming",
-      "tag": "Aurora",
-      "logo": "https://cdn.steamusercontent.com/ugc/13052583756685508/22B0338D7E09FB2F021E5DB5BBEFFD170D5E5E1A/",
+      "tag": null,
+      "logo": null,
       "rating": 1625,
       "games": 92,
       "wins": 54,
@@ -442,15 +442,15 @@
       "ml": {
         "elo": 1582,
         "form10": 0.567,
-        "form45": 0.587,
-        "act": 18,
+        "form45": 0.575,
+        "act": 15,
         "rust": 5
       }
     },
     {
       "id": 10182748,
       "name": "Team South Africa",
-      "tag": "RSA",
+      "tag": null,
       "logo": null,
       "rating": 1614,
       "games": 8,
@@ -487,8 +487,8 @@
     {
       "id": 726228,
       "name": "Vici Gaming",
-      "tag": "VG",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/726228.png",
+      "tag": null,
+      "logo": null,
       "rating": 1609,
       "games": 83,
       "wins": 46,
@@ -524,9 +524,9 @@
     {
       "id": 10020555,
       "name": "PlayTime",
-      "tag": "PlayTime",
-      "logo": "https://cdn.steamusercontent.com/ugc/11668290585730417471/FB22B7ED74C1C73D4E27C0CBBBF47FC194611231/",
-      "rating": 1598,
+      "tag": null,
+      "logo": null,
+      "rating": 1597,
       "games": 47,
       "wins": 24,
       "losses": 23,
@@ -551,7 +551,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1561,
+        "elo": 1560,
         "form10": 0.5,
         "form45": 0.559,
         "act": 12,
@@ -561,8 +561,8 @@
     {
       "id": 10150633,
       "name": "Pipsqueak + 4",
-      "tag": "PIPS",
-      "logo": "https://cdn.steamusercontent.com/ugc/14365062618861662751/1A5661C7BF9D0F452A87DE5FD3A74E72E55381CF/",
+      "tag": null,
+      "logo": null,
       "rating": 1592,
       "games": 10,
       "wins": 8,
@@ -598,7 +598,7 @@
     {
       "id": 10182693,
       "name": "Lebanon",
-      "tag": "LB",
+      "tag": null,
       "logo": null,
       "rating": 1592,
       "games": 6,
@@ -635,7 +635,7 @@
     {
       "id": 10177742,
       "name": "Great Britain",
-      "tag": "GB",
+      "tag": null,
       "logo": null,
       "rating": 1588,
       "games": 12,
@@ -672,7 +672,7 @@
     {
       "id": 10186491,
       "name": "Cuba",
-      "tag": "CUB",
+      "tag": null,
       "logo": null,
       "rating": 1585,
       "games": 13,
@@ -810,7 +810,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1569,
+        "elo": 1568,
         "form10": 0.708,
         "form45": 0.708,
         "act": 7,
@@ -820,8 +820,8 @@
     {
       "id": 10149530,
       "name": "HULIGANI",
-      "tag": "HU",
-      "logo": "https://cdn.steamusercontent.com/ugc/14844266645370842778/47230D9640A722EAF06548C2EEB813ED4296AE3F/",
+      "tag": null,
+      "logo": null,
       "rating": 1580,
       "games": 21,
       "wins": 13,
@@ -931,8 +931,8 @@
     {
       "id": 36,
       "name": "Natus Vincere",
-      "tag": "NAVI",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/36.png",
+      "tag": null,
+      "logo": null,
       "rating": 1574,
       "games": 58,
       "wins": 33,
@@ -968,9 +968,9 @@
     {
       "id": 10136133,
       "name": "Two Move",
-      "tag": "TM",
-      "logo": "https://cdn.steamusercontent.com/ugc/14832539996629907250/104CC9C96E6BE157DA1A8E63FB26084539394C70/",
-      "rating": 1573,
+      "tag": null,
+      "logo": null,
+      "rating": 1574,
       "games": 7,
       "wins": 6,
       "losses": 1,
@@ -995,7 +995,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1549,
+        "elo": 1550,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1098,8 +1098,8 @@
     {
       "id": 2163,
       "name": "Team Liquid",
-      "tag": "Liquid",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2163.png",
+      "tag": null,
+      "logo": null,
       "rating": 1564,
       "games": 93,
       "wins": 50,
@@ -1125,7 +1125,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1542,
+        "elo": 1541,
         "form10": 0.567,
         "form45": 0.548,
         "act": 16,
@@ -1154,8 +1154,8 @@
     {
       "id": 10182357,
       "name": "1w",
-      "tag": "1w",
-      "logo": "https://cdn.steamusercontent.com/ugc/10678669599334676082/E48827F4A163D4D02F817EA3C32166D5F1D5FC98/",
+      "tag": null,
+      "logo": null,
       "rating": 1564,
       "games": 13,
       "wins": 8,
@@ -1210,8 +1210,8 @@
     {
       "id": 10135834,
       "name": "TEAM GRIND",
-      "tag": "GrindBack",
-      "logo": "https://cdn.steamusercontent.com/ugc/18313019652320109896/09DE0090D6F99C3AF44DA97360CCDAEA1CA7D214/",
+      "tag": null,
+      "logo": null,
       "rating": 1556,
       "games": 25,
       "wins": 15,
@@ -1237,7 +1237,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1544,
+        "elo": 1543,
         "form10": 0.633,
         "form45": 0.614,
         "act": 17,
@@ -1311,7 +1311,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1548,
+        "elo": 1547,
         "form10": 0.567,
         "form45": 0.618,
         "act": 12,
@@ -1319,47 +1319,10 @@
       }
     },
     {
-      "id": 9964962,
-      "name": "GamerLegion",
-      "tag": "GL",
-      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
-      "rating": 1549,
-      "games": 70,
-      "wins": 37,
-      "losses": 33,
-      "lastPlayed": 1783766400,
-      "timing": {
-        "games": 70,
-        "avgMin": 41,
-        "avgWinMin": 34,
-        "avgLossMin": 49,
-        "short": {
-          "g": 15,
-          "wr": 1
-        },
-        "mid": {
-          "g": 18,
-          "wr": 0.5555555555555556
-        },
-        "long": {
-          "g": 37,
-          "wr": 0.32432432432432434
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1525,
-        "form10": 0.367,
-        "form45": 0.568,
-        "act": 17,
-        "rust": 9
-      }
-    },
-    {
       "id": 9303383,
       "name": "L1GA TEAM",
-      "tag": "L1",
-      "logo": "https://cdn.steamusercontent.com/ugc/40063200209690390/20B527165E8E637C83F27A62FFE1AE957CB43018/",
+      "tag": null,
+      "logo": null,
       "rating": 1549,
       "games": 50,
       "wins": 26,
@@ -1395,8 +1358,8 @@
     {
       "id": 10108600,
       "name": "Clown Crew",
-      "tag": "CC",
-      "logo": "https://cdn.steamusercontent.com/ugc/14856932411811605860/B5C4B1FBCE507873D45B8FA28F8A85BCB1AFD830/",
+      "tag": null,
+      "logo": null,
       "rating": 1549,
       "games": 19,
       "wins": 12,
@@ -1430,6 +1393,43 @@
       }
     },
     {
+      "id": 9964962,
+      "name": "GamerLegion",
+      "tag": null,
+      "logo": null,
+      "rating": 1548,
+      "games": 69,
+      "wins": 36,
+      "losses": 33,
+      "lastPlayed": 1783766400,
+      "timing": {
+        "games": 69,
+        "avgMin": 41,
+        "avgWinMin": 34,
+        "avgLossMin": 49,
+        "short": {
+          "g": 15,
+          "wr": 1
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.5555555555555556
+        },
+        "long": {
+          "g": 36,
+          "wr": 0.3055555555555556
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1524,
+        "form10": 0.367,
+        "form45": 0.568,
+        "act": 17,
+        "rust": 9
+      }
+    },
+    {
       "id": 10108781,
       "name": "DarkStorm",
       "tag": null,
@@ -1451,8 +1451,8 @@
     {
       "id": 2586976,
       "name": "OG",
-      "tag": "OG",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2586976.png",
+      "tag": null,
+      "logo": null,
       "rating": 1544,
       "games": 40,
       "wins": 18,
@@ -1488,8 +1488,8 @@
     {
       "id": 8193371,
       "name": "Myanmar",
-      "tag": "MMR",
-      "logo": "https://cdn.steamusercontent.com/ugc/1691626114738399297/4A804C22D3F9C48B0A275095A66F43F34D006385/",
+      "tag": null,
+      "logo": null,
       "rating": 1539,
       "games": 7,
       "wins": 5,
@@ -1519,7 +1519,7 @@
         "form10": 0.625,
         "form45": 0.625,
         "act": 7,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -1557,6 +1557,43 @@
         "form45": 0.591,
         "act": 6,
         "rust": 19
+      }
+    },
+    {
+      "id": 2576071,
+      "name": "Yellow Submarine",
+      "tag": null,
+      "logo": null,
+      "rating": 1536,
+      "games": 20,
+      "wins": 11,
+      "losses": 9,
+      "lastPlayed": 1782667298,
+      "timing": {
+        "games": 19,
+        "avgMin": 49,
+        "avgWinMin": 45,
+        "avgLossMin": 53,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1530,
+        "form10": 0.5,
+        "form45": 0.583,
+        "act": 13,
+        "rust": 22
       }
     },
     {
@@ -1656,8 +1693,8 @@
     {
       "id": 8291895,
       "name": "Tundra Esports",
-      "tag": "Tundra",
-      "logo": "https://cdn.steamusercontent.com/ugc/2031716132171967904/07B168B8063D9B22CDAD53AB421ECAF3D4B2E07E/",
+      "tag": null,
+      "logo": null,
       "rating": 1532,
       "games": 30,
       "wins": 13,
@@ -1707,6 +1744,25 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10201538,
+      "name": "TEAM JENZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1532,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1784571754,
+      "timing": null,
+      "ml": {
+        "elo": 1531,
+        "form10": 0.643,
+        "form45": 0.643,
+        "act": 2,
+        "rust": 0
       }
     },
     {
@@ -1804,43 +1860,6 @@
       }
     },
     {
-      "id": 2576071,
-      "name": "Yellow Submarine",
-      "tag": "YeS",
-      "logo": "https://cdn.steamusercontent.com/ugc/2506900380361558769/01D7A1FC1156B0550B4EF9EA2A3A2AF84D9BF884/",
-      "rating": 1529,
-      "games": 21,
-      "wins": 11,
-      "losses": 10,
-      "lastPlayed": 1782667298,
-      "timing": {
-        "games": 20,
-        "avgMin": 49,
-        "avgWinMin": 45,
-        "avgLossMin": 52,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 6,
-          "wr": 0.8333333333333334
-        },
-        "long": {
-          "g": 13,
-          "wr": 0.3076923076923077
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1528,
-        "form10": 0.5,
-        "form45": 0.583,
-        "act": 13,
-        "rust": 22
-      }
-    },
-    {
       "id": 10164236,
       "name": "PuckChamp",
       "tag": null,
@@ -1860,10 +1879,47 @@
       }
     },
     {
+      "id": 9600141,
+      "name": "Zero Tenacity",
+      "tag": null,
+      "logo": null,
+      "rating": 1526,
+      "games": 38,
+      "wins": 19,
+      "losses": 19,
+      "lastPlayed": 1784560287,
+      "timing": {
+        "games": 38,
+        "avgMin": 40,
+        "avgWinMin": 42,
+        "avgLossMin": 38,
+        "short": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 15,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 19,
+          "wr": 0.631578947368421
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1522,
+        "form10": 0.433,
+        "form45": 0.643,
+        "act": 2,
+        "rust": 0
+      }
+    },
+    {
       "id": 9303484,
       "name": "HEROIC",
-      "tag": "HEROIC",
-      "logo": "https://cdn.steamusercontent.com/ugc/2471984170520125054/B066431AF4D322D300DD5180CEC8F6BA0E85A7F5/",
+      "tag": null,
+      "logo": null,
       "rating": 1526,
       "games": 33,
       "wins": 16,
@@ -1899,8 +1955,8 @@
     {
       "id": 9678463,
       "name": "Estar Backs",
-      "tag": "EB",
-      "logo": "https://cdn.steamusercontent.com/ugc/8546247575522013/0940BE82E218C71369C672C95943445AA450EF45/",
+      "tag": null,
+      "logo": null,
       "rating": 1526,
       "games": 45,
       "wins": 21,
@@ -1936,8 +1992,8 @@
     {
       "id": 9895247,
       "name": "Rune Eaters",
-      "tag": "RE",
-      "logo": "https://cdn.steamusercontent.com/ugc/11845515088670662060/69AF28B666A859915784A1FF3C77F23E29057C3F/",
+      "tag": null,
+      "logo": null,
       "rating": 1519,
       "games": 54,
       "wins": 24,
@@ -2030,8 +2086,8 @@
     {
       "id": 10108655,
       "name": "Amaru Gaming",
-      "tag": "AMG",
-      "logo": "https://cdn.steamusercontent.com/ugc/16655450785419366752/02929B63DBEA6EBE7FF68CBBF7E29A7130183072/",
+      "tag": null,
+      "logo": null,
       "rating": 1517,
       "games": 28,
       "wins": 13,
@@ -2104,8 +2160,8 @@
     {
       "id": 7777322,
       "name": "Oshi hi teo Gaming",
-      "tag": "OG",
-      "logo": "https://cdn.steamusercontent.com/ugc/14050897008803262158/1FD5BAE3F059692AEFC7340136D3FB7D0E756F6D/",
+      "tag": null,
+      "logo": null,
       "rating": 1517,
       "games": 5,
       "wins": 3,
@@ -2210,7 +2266,7 @@
         "form10": 0.5,
         "form45": 0.536,
         "act": 9,
-        "rust": 28
+        "rust": 29
       }
     },
     {
@@ -2311,8 +2367,8 @@
     {
       "id": 9352634,
       "name": "Acatsuki",
-      "tag": "aCat",
-      "logo": "https://cdn.steamusercontent.com/ugc/2532781589097934051/C24F4F764719959A21D7F58688E146F8F982E521/",
+      "tag": null,
+      "logo": null,
       "rating": 1516,
       "games": 1,
       "wins": 1,
@@ -2727,25 +2783,6 @@
       }
     },
     {
-      "id": 9948367,
-      "name": "Team Spirit Academy",
-      "tag": null,
-      "logo": null,
-      "rating": 1515,
-      "games": 3,
-      "wins": 2,
-      "losses": 1,
-      "lastPlayed": 1775828845,
-      "timing": null,
-      "ml": {
-        "elo": 1506,
-        "form10": 0.563,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10096172,
       "name": "Shizageddon",
       "tag": null,
@@ -2899,7 +2936,7 @@
       "id": 10108713,
       "name": "Breeki Cheeki",
       "tag": null,
-      "logo": "https://cdn.steamusercontent.com/ugc/13046866918722230078/08D74D8C858301E567BA96F1BF5BE1BEE7EEE452/",
+      "logo": null,
       "rating": 1512,
       "games": 35,
       "wins": 19,
@@ -3004,6 +3041,43 @@
         "form45": 0.5,
         "act": 8,
         "rust": 19
+      }
+    },
+    {
+      "id": 9895392,
+      "name": "Virtus.pro",
+      "tag": null,
+      "logo": null,
+      "rating": 1511,
+      "games": 60,
+      "wins": 27,
+      "losses": 33,
+      "lastPlayed": 1784037059,
+      "timing": {
+        "games": 60,
+        "avgMin": 44,
+        "avgWinMin": 46,
+        "avgLossMin": 43,
+        "short": {
+          "g": 4,
+          "wr": 0
+        },
+        "mid": {
+          "g": 22,
+          "wr": 0.36363636363636365
+        },
+        "long": {
+          "g": 34,
+          "wr": 0.5588235294117647
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1504,
+        "form10": 0.5,
+        "form45": 0.483,
+        "act": 25,
+        "rust": 6
       }
     },
     {
@@ -3115,43 +3189,6 @@
         "form45": 0.5,
         "act": 12,
         "rust": 19
-      }
-    },
-    {
-      "id": 9895392,
-      "name": "Virtus.pro",
-      "tag": "VP",
-      "logo": "https://cdn.steamusercontent.com/ugc/13061694558372404982/7AC363D410AC6F2F4B016EE7D73B7C266D0113F9/",
-      "rating": 1510,
-      "games": 60,
-      "wins": 27,
-      "losses": 33,
-      "lastPlayed": 1784037059,
-      "timing": {
-        "games": 60,
-        "avgMin": 44,
-        "avgWinMin": 46,
-        "avgLossMin": 43,
-        "short": {
-          "g": 4,
-          "wr": 0
-        },
-        "mid": {
-          "g": 22,
-          "wr": 0.36363636363636365
-        },
-        "long": {
-          "g": 34,
-          "wr": 0.5588235294117647
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1504,
-        "form10": 0.5,
-        "form45": 0.483,
-        "act": 25,
-        "rust": 6
       }
     },
     {
@@ -3564,43 +3601,6 @@
       }
     },
     {
-      "id": 5014799,
-      "name": "Nemiga Gaming",
-      "tag": "Nemiga",
-      "logo": "https://cdn.steamusercontent.com/ugc/1761446291384253796/DDD9E9CE3AC50467578944F685C4BD84ED0285B7/",
-      "rating": 1500,
-      "games": 36,
-      "wins": 19,
-      "losses": 17,
-      "lastPlayed": 1780134650,
-      "timing": {
-        "games": 36,
-        "avgMin": 41,
-        "avgWinMin": 42,
-        "avgLossMin": 39,
-        "short": {
-          "g": 6,
-          "wr": 0.5
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.4
-        },
-        "long": {
-          "g": 20,
-          "wr": 0.6
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1497,
-        "form10": 0.433,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 51
-      }
-    },
-    {
       "id": 10061609,
       "name": "fp anti-mage",
       "tag": null,
@@ -3717,8 +3717,8 @@
     {
       "id": 9351740,
       "name": "Yakutou Brothers",
-      "tag": "YB",
-      "logo": "https://cdn.steamusercontent.com/ugc/14543392377443204174/5F300A650D1FC1059F69071F890E047F600BD79D/",
+      "tag": null,
+      "logo": null,
       "rating": 1499,
       "games": 23,
       "wins": 10,
@@ -3786,7 +3786,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -3805,7 +3805,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3996,43 +3996,6 @@
       }
     },
     {
-      "id": 9600141,
-      "name": "Zero Tenacity",
-      "tag": "Z10",
-      "logo": "https://cdn.steamusercontent.com/ugc/23174701605135839/B5A052B86AE5F123031508603154EAD51013C412/",
-      "rating": 1495,
-      "games": 36,
-      "wins": 17,
-      "losses": 19,
-      "lastPlayed": 1780331284,
-      "timing": {
-        "games": 36,
-        "avgMin": 40,
-        "avgWinMin": 41,
-        "avgLossMin": 38,
-        "short": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "mid": {
-          "g": 15,
-          "wr": 0.3333333333333333
-        },
-        "long": {
-          "g": 17,
-          "wr": 0.5882352941176471
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1491,
-        "form10": 0.3,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 49
-      }
-    },
-    {
       "id": 9799036,
       "name": "TeamDk",
       "tag": null,
@@ -4128,8 +4091,8 @@
     {
       "id": 8254145,
       "name": "Execration",
-      "tag": "XctN",
-      "logo": "https://cdn.steamusercontent.com/ugc/2490004871924581269/9132E5E0903B2A368A00780415D69766292F5893/",
+      "tag": null,
+      "logo": null,
       "rating": 1492,
       "games": 24,
       "wins": 11,
@@ -4221,8 +4184,8 @@
     {
       "id": 9828897,
       "name": "REKONIX",
-      "tag": "RKX",
-      "logo": "https://cdn.steamusercontent.com/ugc/16170413258693955016/5ABDC787F5CF4BBDD603F15933D9F5B0F8EB0D8A/",
+      "tag": null,
+      "logo": null,
       "rating": 1489,
       "games": 68,
       "wins": 34,
@@ -4248,7 +4211,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1475,
+        "elo": 1476,
         "form10": 0.3,
         "form45": 0.38,
         "act": 20,
@@ -4382,7 +4345,7 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -4435,7 +4398,7 @@
       "lastPlayed": 1775729767,
       "timing": null,
       "ml": {
-        "elo": 1493,
+        "elo": 1494,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -4496,7 +4459,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5216,14 +5179,14 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
       "id": 2108395,
       "name": "TNC Predator",
-      "tag": "TNC",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/2108395.png",
+      "tag": null,
+      "logo": null,
       "rating": 1484,
       "games": 1,
       "wins": 0,
@@ -5235,7 +5198,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5254,7 +5217,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5463,7 +5426,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -5655,6 +5618,43 @@
       }
     },
     {
+      "id": 9948367,
+      "name": "Team Spirit Academy",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 5,
+      "wins": 2,
+      "losses": 3,
+      "lastPlayed": 1784571754,
+      "timing": {
+        "games": 5,
+        "avgMin": 48,
+        "avgWinMin": 40,
+        "avgLossMin": 53,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1475,
+        "form10": 0.45,
+        "form45": 0.357,
+        "act": 2,
+        "rust": 0
+      }
+    },
+    {
       "id": 10108885,
       "name": "EEZZ",
       "tag": null,
@@ -5727,7 +5727,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5995,8 +5995,8 @@
     {
       "id": 10081680,
       "name": "GLYPH",
-      "tag": "GLYPH",
-      "logo": "https://cdn.steamusercontent.com/ugc/17521324169419112276/F3F4EBC942578E127594737DB79BF3087A18C1DF/",
+      "tag": null,
+      "logo": null,
       "rating": 1479,
       "games": 47,
       "wins": 21,
@@ -6096,7 +6096,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1484,
+        "elo": 1483,
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
@@ -6405,8 +6405,8 @@
     {
       "id": 9255039,
       "name": "enjoy",
-      "tag": "enj",
-      "logo": "https://cdn.steamusercontent.com/ugc/14410915104676115574/85F6E2C9BBB26A11B37E55AF05BE507E94B06863/",
+      "tag": null,
+      "logo": null,
       "rating": 1470,
       "games": 51,
       "wins": 23,
@@ -6548,14 +6548,14 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 19
+        "rust": 20
       }
     },
     {
       "id": 9872667,
       "name": "Pipsqueak+4",
-      "tag": "PIPS4",
-      "logo": "https://cdn.steamusercontent.com/ugc/14017836316804902173/6D59207DB4CBE46D79B9C5007FCD5802858DB860/",
+      "tag": null,
+      "logo": null,
       "rating": 1469,
       "games": 2,
       "wins": 0,
@@ -6663,6 +6663,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 52
+      }
+    },
+    {
+      "id": 5014799,
+      "name": "Nemiga Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 38,
+      "wins": 19,
+      "losses": 19,
+      "lastPlayed": 1784560287,
+      "timing": {
+        "games": 38,
+        "avgMin": 41,
+        "avgWinMin": 42,
+        "avgLossMin": 40,
+        "short": {
+          "g": 6,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "long": {
+          "g": 22,
+          "wr": 0.5454545454545454
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1466,
+        "form10": 0.367,
+        "form45": 0.357,
+        "act": 2,
+        "rust": 0
       }
     },
     {
@@ -6818,8 +6855,8 @@
     {
       "id": 9338413,
       "name": "MOUZ",
-      "tag": "MOUZ",
-      "logo": "https://cdn.steamusercontent.com/ugc/14936784213521439739/3EA33A8516BDE538B7963F044CD1B7AB4B0BB60D/",
+      "tag": null,
+      "logo": null,
       "rating": 1468,
       "games": 51,
       "wins": 21,
@@ -6845,7 +6882,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1458,
+        "elo": 1459,
         "form10": 0.367,
         "form45": 0.37,
         "act": 18,
@@ -6909,25 +6946,6 @@
       }
     },
     {
-      "id": 10158121,
-      "name": "KRD",
-      "tag": null,
-      "logo": null,
-      "rating": 1467,
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "lastPlayed": 1780163810,
-      "timing": null,
-      "ml": {
-        "elo": 1479,
-        "form10": 0.357,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 51
-      }
-    },
-    {
       "id": 10186683,
       "name": "PARAGUAY",
       "tag": null,
@@ -6981,6 +6999,25 @@
         "form45": 0.5,
         "act": 0,
         "rust": 48
+      }
+    },
+    {
+      "id": 10158121,
+      "name": "KRD",
+      "tag": null,
+      "logo": null,
+      "rating": 1466,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780163810,
+      "timing": null,
+      "ml": {
+        "elo": 1479,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 51
       }
     },
     {
@@ -7054,7 +7091,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -7087,7 +7124,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1477,
+        "elo": 1478,
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
@@ -7097,8 +7134,8 @@
     {
       "id": 9691969,
       "name": "Team Nemesis",
-      "tag": "NMSS",
-      "logo": "https://cdn.steamusercontent.com/ugc/16578975333650734744/040492179D9E0E83DA0559848D88CFC17A1EFCAC/",
+      "tag": null,
+      "logo": null,
       "rating": 1462,
       "games": 47,
       "wins": 26,
@@ -7171,8 +7208,8 @@
     {
       "id": 10150413,
       "name": "Iron Wing",
-      "tag": "IW",
-      "logo": "https://cdn.steamusercontent.com/ugc/16903873521422862552/02513782FE03E7A567B8B8955A0DEF415EF2B624/",
+      "tag": null,
+      "logo": null,
       "rating": 1459,
       "games": 24,
       "wins": 8,
@@ -7227,8 +7264,8 @@
     {
       "id": 8261500,
       "name": "Xtreme Gaming",
-      "tag": "XG",
-      "logo": "https://cdn.steamusercontent.com/ugc/2402194226059610590/E3CF4B6C4B2CFB974A9B415141E4A37317AD4D80/",
+      "tag": null,
+      "logo": null,
       "rating": 1457,
       "games": 67,
       "wins": 28,
@@ -7332,7 +7369,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -7574,7 +7611,44 @@
         "form10": 0.367,
         "form45": 0.375,
         "act": 7,
-        "rust": 33
+        "rust": 34
+      }
+    },
+    {
+      "id": 55,
+      "name": "_PowerRangers",
+      "tag": null,
+      "logo": null,
+      "rating": 1452,
+      "games": 59,
+      "wins": 28,
+      "losses": 31,
+      "lastPlayed": 1783765956,
+      "timing": {
+        "games": 59,
+        "avgMin": 39,
+        "avgWinMin": 37,
+        "avgLossMin": 41,
+        "short": {
+          "g": 10,
+          "wr": 0.7
+        },
+        "mid": {
+          "g": 22,
+          "wr": 0.5454545454545454
+        },
+        "long": {
+          "g": 27,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1437,
+        "form10": 0.233,
+        "form45": 0.34,
+        "act": 20,
+        "rust": 9
       }
     },
     {
@@ -7650,43 +7724,6 @@
         "form45": 0.313,
         "act": 3,
         "rust": 19
-      }
-    },
-    {
-      "id": 55,
-      "name": "_PowerRangers",
-      "tag": "PR",
-      "logo": "https://steamcdn-a.akamaihd.net/apps/dota2/images/team_logos/55.png",
-      "rating": 1451,
-      "games": 59,
-      "wins": 28,
-      "losses": 31,
-      "lastPlayed": 1783765956,
-      "timing": {
-        "games": 59,
-        "avgMin": 39,
-        "avgWinMin": 37,
-        "avgLossMin": 41,
-        "short": {
-          "g": 10,
-          "wr": 0.7
-        },
-        "mid": {
-          "g": 22,
-          "wr": 0.5454545454545454
-        },
-        "long": {
-          "g": 27,
-          "wr": 0.3333333333333333
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1437,
-        "form10": 0.233,
-        "form45": 0.34,
-        "act": 20,
-        "rust": 9
       }
     },
     {
@@ -7904,11 +7941,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1459,
+        "elo": 1460,
         "form10": 0.367,
         "form45": 0.375,
         "act": 7,
-        "rust": 29
+        "rust": 30
       }
     },
     {
@@ -8073,7 +8110,7 @@
       "lastPlayed": 1782845072,
       "timing": null,
       "ml": {
-        "elo": 1450,
+        "elo": 1451,
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
@@ -8115,7 +8152,7 @@
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 46
+        "rust": 47
       }
     },
     {
@@ -8149,7 +8186,7 @@
       "lastPlayed": 1782838385,
       "timing": null,
       "ml": {
-        "elo": 1448,
+        "elo": 1449,
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
@@ -8302,7 +8339,7 @@
         "form10": 0.346,
         "form45": 0.375,
         "act": 7,
-        "rust": 29
+        "rust": 30
       }
     },
     {
@@ -8413,7 +8450,7 @@
         "form10": 0.3,
         "form45": 0.278,
         "act": 4,
-        "rust": 30
+        "rust": 31
       }
     },
     {
@@ -8524,7 +8561,7 @@
         "form10": 0.3,
         "form45": 0.409,
         "act": 6,
-        "rust": 30
+        "rust": 31
       }
     },
     {
@@ -8594,7 +8631,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1439,
+        "elo": 1438,
         "form10": 0.167,
         "form45": 0.5,
         "act": 0,
@@ -8635,7 +8672,7 @@
         "form10": 0.367,
         "form45": 0.35,
         "act": 5,
-        "rust": 34
+        "rust": 35
       }
     },
     {
@@ -8714,6 +8751,62 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8905885788,
+      "start_time": 1784571754,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10201538,
+        "name": "TEAM JENZ"
+      },
+      "dire": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8905741721,
+      "start_time": 1784565449,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "dire": {
+        "id": 10201538,
+        "name": "TEAM JENZ"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8905612460,
+      "start_time": 1784560287,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 5014799,
+        "name": "Nemiga Gaming"
+      },
+      "dire": {
+        "id": 9600141,
+        "name": "Zero Tenacity"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8905490238,
+      "start_time": 1784556023,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9600141,
+        "name": "Zero Tenacity"
+      },
+      "dire": {
+        "id": 5014799,
+        "name": "Nemiga Gaming"
+      },
+      "radiant_win": true
+    },
     {
       "match_id": 8905359313,
       "start_time": 1784550916,
@@ -9495,62 +9588,6 @@
       "dire": {
         "id": 9467224,
         "name": "Aurora Gaming"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8891438996,
-      "start_time": 1783775274,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10182299,
-        "name": "L1 TEAM"
-      },
-      "dire": {
-        "id": 9256405,
-        "name": "Level UP esports"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8891371442,
-      "start_time": 1783772700,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9467224,
-        "name": "Aurora Gaming"
-      },
-      "dire": {
-        "id": 2163,
-        "name": "Team Liquid"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8891349244,
-      "start_time": 1783771860,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10182309,
-        "name": "PTime"
-      },
-      "dire": {
-        "id": 10136357,
-        "name": "Nigma Galaxy "
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8891325877,
-      "start_time": 1783770895,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9256405,
-        "name": "Level UP esports"
-      },
-      "dire": {
-        "id": 10182299,
-        "name": "L1 TEAM"
       },
       "radiant_win": true
     }
