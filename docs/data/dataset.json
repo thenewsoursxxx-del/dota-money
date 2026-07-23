@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-23T02:51:06.122Z",
+  "generatedAt": "2026-07-23T19:20:32.344Z",
   "tier1LeagueCount": 2681,
-  "matchesUsed": 1792,
+  "matchesUsed": 1799,
   "teams": [
     {
       "id": 9824702,
@@ -33,11 +33,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1717,
+        "elo": 1716,
         "form10": 0.7,
         "form45": 0.771,
         "act": 19,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -70,7 +70,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1710,
+        "elo": 1708,
         "form10": 0.7,
         "form45": 0.75,
         "act": 17,
@@ -107,11 +107,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1642,
+        "elo": 1641,
         "form10": 0.7,
         "form45": 0.708,
         "act": 7,
-        "rust": 27
+        "rust": 28
       }
     },
     {
@@ -144,11 +144,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1674,
+        "elo": 1673,
         "form10": 0.633,
         "form45": 0.7,
         "act": 20,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -181,7 +181,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1602,
+        "elo": 1601,
         "form10": 0.833,
         "form45": 0.5,
         "act": 0,
@@ -255,11 +255,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1623,
+        "elo": 1622,
         "form10": 0.633,
         "form45": 0.685,
         "act": 22,
-        "rust": 5
+        "rust": 6
       }
     },
     {
@@ -267,7 +267,7 @@
       "name": "Team Spirit",
       "tag": null,
       "logo": null,
-      "rating": 1659,
+      "rating": 1660,
       "games": 86,
       "wins": 50,
       "losses": 36,
@@ -292,7 +292,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1616,
+        "elo": 1615,
         "form10": 0.567,
         "form45": 0.685,
         "act": 22,
@@ -370,7 +370,7 @@
         "form10": 0.433,
         "form45": 0.638,
         "act": 24,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -407,7 +407,7 @@
         "form10": 0.633,
         "form45": 0.773,
         "act": 6,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -440,7 +440,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1581,
+        "elo": 1580,
         "form10": 0.567,
         "form45": 0.618,
         "act": 12,
@@ -477,11 +477,11 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1595,
+        "elo": 1594,
         "form10": 0.808,
         "form45": 0.808,
         "act": 8,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -514,7 +514,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1576,
+        "elo": 1575,
         "form10": 0.5,
         "form45": 0.569,
         "act": 31,
@@ -555,7 +555,7 @@
         "form10": 0.5,
         "form45": 0.559,
         "act": 12,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -592,7 +592,7 @@
         "form10": 0.7,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -666,7 +666,7 @@
         "form10": 0.633,
         "form45": 0.676,
         "act": 12,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -699,11 +699,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1571,
+        "elo": 1570,
         "form10": 0.633,
         "form45": 0.694,
         "act": 13,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -736,11 +736,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1568,
+        "elo": 1567,
         "form10": 0.633,
         "form45": 0.656,
         "act": 11,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -773,11 +773,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1568,
+        "elo": 1567,
         "form10": 0.708,
         "form45": 0.708,
         "act": 7,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -814,7 +814,7 @@
         "form10": 0.708,
         "form45": 0.708,
         "act": 7,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -847,7 +847,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1559,
+        "elo": 1558,
         "form10": 0.7,
         "form45": 0.605,
         "act": 14,
@@ -888,7 +888,7 @@
         "form10": 0.633,
         "form45": 0.656,
         "act": 11,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -925,7 +925,7 @@
         "form10": 0.708,
         "form45": 0.708,
         "act": 7,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -958,7 +958,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1549,
+        "elo": 1548,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1036,7 +1036,7 @@
         "form10": 0.633,
         "form45": 0.656,
         "act": 11,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -1073,7 +1073,7 @@
         "form10": 0.633,
         "form45": 0.625,
         "act": 15,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -1092,7 +1092,7 @@
         "form10": 0.722,
         "form45": 0.722,
         "act": 4,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -1125,7 +1125,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1541,
+        "elo": 1540,
         "form10": 0.567,
         "form45": 0.548,
         "act": 16,
@@ -1185,7 +1185,7 @@
         "form10": 0.5,
         "form45": 0.583,
         "act": 13,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -1200,7 +1200,7 @@
       "lastPlayed": 1782896676,
       "timing": null,
       "ml": {
-        "elo": 1550,
+        "elo": 1549,
         "form10": 0.722,
         "form45": 0.722,
         "act": 4,
@@ -1241,7 +1241,7 @@
         "form10": 0.633,
         "form45": 0.618,
         "act": 12,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -1274,7 +1274,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1543,
+        "elo": 1542,
         "form10": 0.633,
         "form45": 0.614,
         "act": 17,
@@ -1311,7 +1311,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1537,
+        "elo": 1536,
         "form10": 0.65,
         "form45": 0.5,
         "act": 0,
@@ -1348,11 +1348,48 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1547,
+        "elo": 1546,
         "form10": 0.567,
         "form45": 0.618,
         "act": 12,
         "rust": 22
+      }
+    },
+    {
+      "id": 10201538,
+      "name": "TEAM JENZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1550,
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "lastPlayed": 1784829296,
+      "timing": {
+        "games": 10,
+        "avgMin": 44,
+        "avgWinMin": 41,
+        "avgLossMin": 49,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.8
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1549,
+        "form10": 0.633,
+        "form45": 0.633,
+        "act": 10,
+        "rust": 0
       }
     },
     {
@@ -1398,12 +1435,12 @@
       "tag": null,
       "logo": null,
       "rating": 1548,
-      "games": 69,
-      "wins": 36,
-      "losses": 33,
+      "games": 67,
+      "wins": 35,
+      "losses": 32,
       "lastPlayed": 1783766400,
       "timing": {
-        "games": 69,
+        "games": 67,
         "avgMin": 41,
         "avgWinMin": 34,
         "avgLossMin": 49,
@@ -1416,8 +1453,8 @@
           "wr": 0.5555555555555556
         },
         "long": {
-          "g": 36,
-          "wr": 0.3055555555555556
+          "g": 34,
+          "wr": 0.29411764705882354
         },
         "closesFast": true
       },
@@ -1515,7 +1552,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1531,
+        "elo": 1530,
         "form10": 0.433,
         "form45": 0.596,
         "act": 21,
@@ -1552,11 +1589,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1533,
+        "elo": 1532,
         "form10": 0.625,
         "form45": 0.625,
         "act": 7,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -1597,43 +1634,6 @@
       }
     },
     {
-      "id": 10201538,
-      "name": "TEAM JENZ",
-      "tag": null,
-      "logo": null,
-      "rating": 1537,
-      "games": 7,
-      "wins": 5,
-      "losses": 2,
-      "lastPlayed": 1784763243,
-      "timing": {
-        "games": 7,
-        "avgMin": 42,
-        "avgWinMin": 42,
-        "avgLossMin": 42,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 4,
-          "wr": 0.75
-        },
-        "long": {
-          "g": 2,
-          "wr": null
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1536,
-        "form10": 0.625,
-        "form45": 0.625,
-        "act": 7,
-        "rust": 0
-      }
-    },
-    {
       "id": 2576071,
       "name": "Yellow Submarine",
       "tag": null,
@@ -1667,7 +1667,7 @@
         "form10": 0.5,
         "form45": 0.583,
         "act": 13,
-        "rust": 24
+        "rust": 25
       }
     },
     {
@@ -1704,7 +1704,7 @@
         "form10": 0.567,
         "form45": 0.567,
         "act": 10,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -1719,7 +1719,7 @@
       "lastPlayed": 1780321452,
       "timing": null,
       "ml": {
-        "elo": 1522,
+        "elo": 1521,
         "form10": 0.643,
         "form45": 0.5,
         "act": 0,
@@ -1738,7 +1738,7 @@
       "lastPlayed": 1780835453,
       "timing": null,
       "ml": {
-        "elo": 1523,
+        "elo": 1522,
         "form10": 0.643,
         "form45": 0.5,
         "act": 0,
@@ -1761,7 +1761,7 @@
         "form10": 0.611,
         "form45": 0.611,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -1851,11 +1851,11 @@
       "lastPlayed": 1780163399,
       "timing": null,
       "ml": {
-        "elo": 1520,
+        "elo": 1519,
         "form10": 0.643,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -1952,6 +1952,43 @@
       }
     },
     {
+      "id": 9600141,
+      "name": "Zero Tenacity",
+      "tag": null,
+      "logo": null,
+      "rating": 1528,
+      "games": 44,
+      "wins": 22,
+      "losses": 22,
+      "lastPlayed": 1784798223,
+      "timing": {
+        "games": 44,
+        "avgMin": 40,
+        "avgWinMin": 41,
+        "avgLossMin": 39,
+        "short": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 17,
+          "wr": 0.35294117647058826
+        },
+        "long": {
+          "g": 21,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1528,
+        "form10": 0.633,
+        "form45": 0.633,
+        "act": 10,
+        "rust": 0
+      }
+    },
+    {
       "id": 9303484,
       "name": "HEROIC",
       "tag": null,
@@ -1989,43 +2026,6 @@
       }
     },
     {
-      "id": 9600141,
-      "name": "Zero Tenacity",
-      "tag": null,
-      "logo": null,
-      "rating": 1525,
-      "games": 41,
-      "wins": 20,
-      "losses": 21,
-      "lastPlayed": 1784750820,
-      "timing": {
-        "games": 41,
-        "avgMin": 40,
-        "avgWinMin": 42,
-        "avgLossMin": 39,
-        "short": {
-          "g": 5,
-          "wr": 0.6
-        },
-        "mid": {
-          "g": 15,
-          "wr": 0.3333333333333333
-        },
-        "long": {
-          "g": 21,
-          "wr": 0.5714285714285714
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1525,
-        "form10": 0.567,
-        "form45": 0.625,
-        "act": 7,
-        "rust": 0
-      }
-    },
-    {
       "id": 9678463,
       "name": "Estar Backs",
       "tag": null,
@@ -2059,7 +2059,7 @@
         "form10": 0.5,
         "form45": 0.536,
         "act": 9,
-        "rust": 34
+        "rust": 35
       }
     },
     {
@@ -2115,7 +2115,7 @@
         "form10": 0.633,
         "form45": 0.463,
         "act": 22,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -2190,7 +2190,7 @@
         "form10": 0.433,
         "form45": 0.5,
         "act": 12,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -2227,7 +2227,7 @@
         "form10": 0.55,
         "form45": 0.583,
         "act": 1,
-        "rust": 38
+        "rust": 39
       }
     },
     {
@@ -2279,7 +2279,7 @@
       "lastPlayed": 1777828446,
       "timing": null,
       "ml": {
-        "elo": 1509,
+        "elo": 1508,
         "form10": 0.563,
         "form45": 0.5,
         "act": 0,
@@ -2339,7 +2339,7 @@
         "form10": 0.5,
         "form45": 0.536,
         "act": 9,
-        "rust": 31
+        "rust": 32
       }
     },
     {
@@ -2358,7 +2358,7 @@
         "form10": 0.563,
         "form45": 0.563,
         "act": 3,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -2776,7 +2776,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -2795,7 +2795,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -2814,7 +2814,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -2833,7 +2833,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -2852,7 +2852,7 @@
         "form10": 0.583,
         "form45": 0.583,
         "act": 1,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -2890,7 +2890,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -2927,7 +2927,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -2964,7 +2964,7 @@
         "form10": 0.536,
         "form45": 0.536,
         "act": 9,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -3020,7 +3020,7 @@
         "form10": 0.536,
         "form45": 0.536,
         "act": 9,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -3057,7 +3057,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 8,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -3168,7 +3168,7 @@
         "form10": 0.536,
         "form45": 0.536,
         "act": 9,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -3205,7 +3205,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 12,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -3257,7 +3257,7 @@
       "lastPlayed": 1782829769,
       "timing": null,
       "ml": {
-        "elo": 1509,
+        "elo": 1508,
         "form10": 0.563,
         "form45": 0.563,
         "act": 3,
@@ -3298,7 +3298,7 @@
         "form10": 0.433,
         "form45": 0.528,
         "act": 13,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -3336,43 +3336,6 @@
         "form45": 0.531,
         "act": 11,
         "rust": 22
-      }
-    },
-    {
-      "id": 10164236,
-      "name": "PuckChamp",
-      "tag": null,
-      "logo": null,
-      "rating": 1508,
-      "games": 5,
-      "wins": 3,
-      "losses": 2,
-      "lastPlayed": 1784637446,
-      "timing": {
-        "games": 5,
-        "avgMin": 47,
-        "avgWinMin": 48,
-        "avgLossMin": 47,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 1,
-          "wr": null
-        },
-        "long": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1508,
-        "form10": 0.55,
-        "form45": 0.55,
-        "act": 5,
-        "rust": 2
       }
     },
     {
@@ -3446,7 +3409,7 @@
         "form10": 0.5,
         "form45": 0.531,
         "act": 11,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -3572,11 +3535,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1504,
+        "elo": 1503,
         "form10": 0.567,
         "form45": 0.425,
         "act": 15,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -3614,6 +3577,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 9948367,
+      "name": "Team Spirit Academy",
+      "tag": null,
+      "logo": null,
+      "rating": 1501,
+      "games": 14,
+      "wins": 7,
+      "losses": 7,
+      "lastPlayed": 1784812570,
+      "timing": {
+        "games": 14,
+        "avgMin": 48,
+        "avgWinMin": 45,
+        "avgLossMin": 51,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.5
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1498,
+        "form10": 0.5,
+        "form45": 0.469,
+        "act": 11,
+        "rust": 0
       }
     },
     {
@@ -3688,7 +3688,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3725,7 +3725,7 @@
         "form10": 0.367,
         "form45": 0.409,
         "act": 6,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -3914,7 +3914,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -3933,7 +3933,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -4008,7 +4008,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 8,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -4083,7 +4083,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -4120,7 +4120,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 26
+        "rust": 27
       }
     },
     {
@@ -4157,7 +4157,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -4250,7 +4250,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 10,
-        "rust": 30
+        "rust": 31
       }
     },
     {
@@ -4306,7 +4306,44 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
+      }
+    },
+    {
+      "id": 10164236,
+      "name": "PuckChamp",
+      "tag": null,
+      "logo": null,
+      "rating": 1490,
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "lastPlayed": 1784812570,
+      "timing": {
+        "games": 8,
+        "avgMin": 50,
+        "avgWinMin": 51,
+        "avgLossMin": 48,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.42857142857142855
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1490,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 8,
+        "rust": 0
       }
     },
     {
@@ -4417,7 +4454,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -4454,7 +4491,26 @@
         "form10": 0.458,
         "form45": 0.458,
         "act": 7,
-        "rust": 22
+        "rust": 23
+      }
+    },
+    {
+      "id": 10201970,
+      "name": "KW",
+      "tag": null,
+      "logo": null,
+      "rating": 1487,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1784829296,
+      "timing": null,
+      "ml": {
+        "elo": 1487,
+        "form10": 0.438,
+        "form45": 0.438,
+        "act": 3,
+        "rust": 0
       }
     },
     {
@@ -4473,7 +4529,7 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -4488,11 +4544,11 @@
       "lastPlayed": 1780079606,
       "timing": null,
       "ml": {
-        "elo": 1493,
+        "elo": 1494,
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -4587,7 +4643,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -4644,7 +4700,7 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -4756,7 +4812,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -4814,43 +4870,6 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
-      }
-    },
-    {
-      "id": 9948367,
-      "name": "Team Spirit Academy",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 11,
-      "wins": 5,
-      "losses": 6,
-      "lastPlayed": 1784736771,
-      "timing": {
-        "games": 11,
-        "avgMin": 47,
-        "avgWinMin": 44,
-        "avgLossMin": 49,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 2,
-          "wr": null
-        },
-        "long": {
-          "g": 7,
-          "wr": 0.42857142857142855
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1479,
-        "form10": 0.433,
-        "form45": 0.423,
-        "act": 8,
-        "rust": 0
       }
     },
     {
@@ -5363,7 +5382,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -5382,7 +5401,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -5401,7 +5420,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -5515,7 +5534,7 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5534,7 +5553,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5553,7 +5572,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5572,7 +5591,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5591,7 +5610,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5610,7 +5629,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5666,7 +5685,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5685,7 +5704,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5704,7 +5723,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5719,11 +5738,11 @@
       "lastPlayed": 1781457244,
       "timing": null,
       "ml": {
-        "elo": 1488,
+        "elo": 1489,
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 38
+        "rust": 39
       }
     },
     {
@@ -5742,7 +5761,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -5779,7 +5798,7 @@
         "form10": 0.458,
         "form45": 0.458,
         "act": 7,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -5798,7 +5817,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -5874,7 +5893,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -5931,7 +5950,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -5950,7 +5969,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 45
+        "rust": 46
       }
     },
     {
@@ -6024,7 +6043,7 @@
         "form10": 0.458,
         "form45": 0.458,
         "act": 7,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6061,7 +6080,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6228,7 +6247,7 @@
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
-        "rust": 48
+        "rust": 49
       }
     },
     {
@@ -6284,7 +6303,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 26
+        "rust": 27
       }
     },
     {
@@ -6303,7 +6322,7 @@
         "form10": 0.389,
         "form45": 0.389,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6340,7 +6359,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -6374,11 +6393,11 @@
       "lastPlayed": 1780075553,
       "timing": null,
       "ml": {
-        "elo": 1484,
+        "elo": 1485,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -6435,7 +6454,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 37
+        "rust": 38
       }
     },
     {
@@ -6509,7 +6528,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 26
+        "rust": 27
       }
     },
     {
@@ -6546,7 +6565,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6602,7 +6621,7 @@
         "form10": 0.389,
         "form45": 0.389,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6639,7 +6658,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6676,7 +6695,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6685,12 +6704,12 @@
       "tag": null,
       "logo": null,
       "rating": 1469,
-      "games": 51,
-      "wins": 23,
-      "losses": 28,
+      "games": 49,
+      "wins": 22,
+      "losses": 27,
       "lastPlayed": 1782464923,
       "timing": {
-        "games": 51,
+        "games": 49,
         "avgMin": 41,
         "avgWinMin": 36,
         "avgLossMin": 45,
@@ -6703,8 +6722,8 @@
           "wr": 0.5454545454545454
         },
         "long": {
-          "g": 24,
-          "wr": 0.25
+          "g": 22,
+          "wr": 0.22727272727272727
         },
         "closesFast": true
       },
@@ -6728,7 +6747,7 @@
       "lastPlayed": 1775570667,
       "timing": null,
       "ml": {
-        "elo": 1487,
+        "elo": 1488,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
@@ -6841,11 +6860,11 @@
       "lastPlayed": 1780074891,
       "timing": null,
       "ml": {
-        "elo": 1483,
+        "elo": 1484,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -6879,11 +6898,11 @@
       "lastPlayed": 1780163399,
       "timing": null,
       "ml": {
-        "elo": 1480,
+        "elo": 1481,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -6920,7 +6939,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -6939,7 +6958,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -6972,11 +6991,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1474,
+        "elo": 1475,
         "form10": 0.433,
         "form45": 0.433,
         "act": 10,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -7028,11 +7047,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1459,
+        "elo": 1460,
         "form10": 0.367,
         "form45": 0.37,
         "act": 18,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -7088,7 +7107,7 @@
         "form10": 0.393,
         "form45": 0.393,
         "act": 9,
-        "rust": 21
+        "rust": 22
       }
     },
     {
@@ -7107,7 +7126,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7163,7 +7182,7 @@
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -7200,7 +7219,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7237,7 +7256,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 36
+        "rust": 37
       }
     },
     {
@@ -7274,7 +7293,7 @@
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -7307,7 +7326,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1445,
+        "elo": 1446,
         "form10": 0.233,
         "form45": 0.313,
         "act": 19,
@@ -7381,7 +7400,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1469,
+        "elo": 1470,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -7404,7 +7423,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7441,7 +7460,7 @@
         "form10": 0.367,
         "form45": 0.417,
         "act": 13,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -7478,7 +7497,7 @@
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 48
+        "rust": 49
       }
     },
     {
@@ -7515,7 +7534,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7548,11 +7567,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1463,
+        "elo": 1464,
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7585,11 +7604,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1467,
+        "elo": 1468,
         "form10": 0.375,
         "form45": 0.375,
         "act": 7,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -7641,11 +7660,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1462,
+        "elo": 1463,
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7660,7 +7679,7 @@
       "lastPlayed": 1780145605,
       "timing": null,
       "ml": {
-        "elo": 1470,
+        "elo": 1471,
         "form10": 0.313,
         "form45": 0.5,
         "act": 0,
@@ -7683,7 +7702,7 @@
         "form10": 0.313,
         "form45": 0.313,
         "act": 3,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -7720,7 +7739,7 @@
         "form10": 0.375,
         "form45": 0.375,
         "act": 7,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7813,7 +7832,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7865,7 +7884,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1438,
+        "elo": 1439,
         "form10": 0.233,
         "form45": 0.34,
         "act": 20,
@@ -7902,7 +7921,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1477,
+        "elo": 1478,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -7939,7 +7958,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1475,
+        "elo": 1476,
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
@@ -7980,7 +7999,7 @@
         "form10": 0.393,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -8013,11 +8032,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1460,
+        "elo": 1461,
         "form10": 0.367,
         "form45": 0.375,
         "act": 7,
-        "rust": 32
+        "rust": 33
       }
     },
     {
@@ -8073,7 +8092,7 @@
         "form10": 0.318,
         "form45": 0.35,
         "act": 5,
-        "rust": 36
+        "rust": 37
       }
     },
     {
@@ -8111,7 +8130,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -8130,7 +8149,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -8168,7 +8187,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -8205,7 +8224,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 6,
-        "rust": 34
+        "rust": 35
       }
     },
     {
@@ -8224,7 +8243,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -8243,7 +8262,7 @@
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 49
+        "rust": 50
       }
     },
     {
@@ -8262,7 +8281,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -8281,7 +8300,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -8296,11 +8315,11 @@
       "lastPlayed": 1782836207,
       "timing": null,
       "ml": {
-        "elo": 1449,
+        "elo": 1450,
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -8315,11 +8334,11 @@
       "lastPlayed": 1782757943,
       "timing": null,
       "ml": {
-        "elo": 1449,
+        "elo": 1450,
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -8397,25 +8416,6 @@
       }
     },
     {
-      "id": 9360651,
-      "name": "Dandelions",
-      "tag": null,
-      "logo": null,
-      "rating": 1433,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1784708127,
-      "timing": null,
-      "ml": {
-        "elo": 1435,
-        "form10": 0.278,
-        "form45": 0.278,
-        "act": 4,
-        "rust": 1
-      }
-    },
-    {
       "id": 7917893,
       "name": "InterActive Philippines",
       "tag": null,
@@ -8449,7 +8449,44 @@
         "form10": 0.346,
         "form45": 0.375,
         "act": 7,
-        "rust": 32
+        "rust": 33
+      }
+    },
+    {
+      "id": 9360651,
+      "name": "Dandelions",
+      "tag": null,
+      "logo": null,
+      "rating": 1430,
+      "games": 7,
+      "wins": 1,
+      "losses": 6,
+      "lastPlayed": 1784798223,
+      "timing": {
+        "games": 7,
+        "avgMin": 36,
+        "avgWinMin": 39,
+        "avgLossMin": 36,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 3,
+          "wr": 0
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1432,
+        "form10": 0.292,
+        "form45": 0.292,
+        "act": 7,
+        "rust": 0
       }
     },
     {
@@ -8523,7 +8560,7 @@
         "form10": 0.3,
         "form45": 0.278,
         "act": 4,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -8556,11 +8593,11 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1440,
+        "elo": 1441,
         "form10": 0.227,
         "form45": 0.278,
         "act": 4,
-        "rust": 27
+        "rust": 28
       }
     },
     {
@@ -8597,7 +8634,7 @@
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -8634,7 +8671,7 @@
         "form10": 0.3,
         "form45": 0.409,
         "act": 6,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -8741,11 +8778,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1407,
+        "elo": 1408,
         "form10": 0.3,
         "form45": 0.3,
         "act": 10,
-        "rust": 1
+        "rust": 2
       }
     },
     {
@@ -8782,7 +8819,7 @@
         "form10": 0.367,
         "form45": 0.35,
         "act": 5,
-        "rust": 37
+        "rust": 38
       }
     },
     {
@@ -8815,7 +8852,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1379,
+        "elo": 1380,
         "form10": 0.167,
         "form45": 0.175,
         "act": 15,
@@ -8852,7 +8889,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1438,
+        "elo": 1439,
         "form10": 0.167,
         "form45": 0.5,
         "act": 0,
@@ -8861,6 +8898,132 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8910216725,
+      "start_time": 1784829296,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10201970,
+        "name": "KW"
+      },
+      "dire": {
+        "id": 10201538,
+        "name": "TEAM JENZ"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8910104556,
+      "start_time": 1784824414,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10201970,
+        "name": "KW"
+      },
+      "dire": {
+        "id": 10201538,
+        "name": "TEAM JENZ"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8909904190,
+      "start_time": 1784818304,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10201538,
+        "name": "TEAM JENZ"
+      },
+      "dire": {
+        "id": 10201970,
+        "name": "KW"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8909780227,
+      "start_time": 1784812570,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "dire": {
+        "id": 10164236,
+        "name": "PuckChamp"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8909658828,
+      "start_time": 1784807209,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "dire": {
+        "id": 10164236,
+        "name": "PuckChamp"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8909554256,
+      "start_time": 1784801929,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10164236,
+        "name": "PuckChamp"
+      },
+      "dire": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8909498494,
+      "start_time": 1784798223,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9360651,
+        "name": "Dandelions"
+      },
+      "dire": {
+        "id": 9600141,
+        "name": "Zero Tenacity"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8909443684,
+      "start_time": 1784794224,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9360651,
+        "name": "Dandelions"
+      },
+      "dire": {
+        "id": 9600141,
+        "name": "Zero Tenacity"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8909388284,
+      "start_time": 1784790124,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9600141,
+        "name": "Zero Tenacity"
+      },
+      "dire": {
+        "id": 9360651,
+        "name": "Dandelions"
+      },
+      "radiant_win": true
+    },
     {
       "match_id": 8909115244,
       "start_time": 1784763243,
@@ -9572,132 +9735,6 @@
       "dire": {
         "id": 726228,
         "name": "Vici Gaming"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8899420575,
-      "start_time": 1784215740,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9824702,
-        "name": "PVISION"
-      },
-      "dire": {
-        "id": 9895247,
-        "name": "Rune Eaters"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8899307453,
-      "start_time": 1784211550,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 9895247,
-        "name": "Rune Eaters"
-      },
-      "dire": {
-        "id": 9824702,
-        "name": "PVISION"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8899120700,
-      "start_time": 1784204826,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 7119388,
-        "name": "Team Spirit"
-      },
-      "dire": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8899028080,
-      "start_time": 1784200005,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 7119388,
-        "name": "Team Spirit"
-      },
-      "dire": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8898117600,
-      "start_time": 1784134860,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 8255888,
-        "name": "BoomBoys"
-      },
-      "dire": {
-        "id": 10150538,
-        "name": "LGD Gaming"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8898084910,
-      "start_time": 1784133282,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10182357,
-        "name": "1w"
-      },
-      "dire": {
-        "id": 726228,
-        "name": "Vici Gaming"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8898003442,
-      "start_time": 1784130021,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 8255888,
-        "name": "BoomBoys"
-      },
-      "dire": {
-        "id": 10150538,
-        "name": "LGD Gaming"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8897971312,
-      "start_time": 1784128803,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 10182357,
-        "name": "1w"
-      },
-      "dire": {
-        "id": 726228,
-        "name": "Vici Gaming"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8897841991,
-      "start_time": 1784124113,
-      "league": "Esports World Cup 2026",
-      "radiant": {
-        "id": 726228,
-        "name": "Vici Gaming"
-      },
-      "dire": {
-        "id": 10182357,
-        "name": "1w"
       },
       "radiant_win": false
     }
