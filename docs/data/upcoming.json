@@ -1,15 +1,25 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-08-02T13:24:06.404Z",
+  "generatedAt": "2026-08-02T19:12:06.523Z",
   "matches": [
     {
-      "id": "liq-1785693600-0",
-      "date": "2026-08-02T18:00:00.000Z",
+      "id": "liq-1785697200-1",
+      "date": "2026-08-02T19:00:00.000Z",
       "event": "1win Essence 2",
-      "format": "bo2",
+      "format": "bo3",
       "teamA": "2163",
       "teamB": "10150538",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1786006800-0",
+      "date": "2026-08-06T09:00:00.000Z",
+      "event": "EPL Masters 1",
+      "format": "bo3",
+      "teamA": "9256405",
+      "teamB": "10163973",
       "oddsA": null,
       "oddsB": null
     }
