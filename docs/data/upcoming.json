@@ -1,15 +1,55 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-08-10T13:11:06.637Z",
+  "generatedAt": "2026-08-10T18:59:03.239Z",
   "matches": [
     {
-      "id": "liq-1786384800-0",
-      "date": "2026-08-10T18:00:00.000Z",
+      "id": "liq-1786387800-0",
+      "date": "2026-08-10T18:50:00.000Z",
       "event": "EPL Masters 1",
       "format": "bo3",
       "teamA": "10207961",
       "teamB": "36",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1786586400-1",
+      "date": "2026-08-13T02:00:00.000Z",
+      "event": "The International 2026 Group Stage",
+      "format": "bo3",
+      "teamA": "9247354",
+      "teamB": "10150538",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1786586400-2",
+      "date": "2026-08-13T02:00:00.000Z",
+      "event": "The International 2026 Group Stage",
+      "format": "bo3",
+      "teamA": "9572001",
+      "teamB": "10207984",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1786597200-3",
+      "date": "2026-08-13T05:00:00.000Z",
+      "event": "The International 2026 Group Stage",
+      "format": "bo3",
+      "teamA": "2163",
+      "teamB": "726228",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1786597200-4",
+      "date": "2026-08-13T05:00:00.000Z",
+      "event": "The International 2026 Group Stage",
+      "format": "bo3",
+      "teamA": "9823272",
+      "teamB": "10149530",
       "oddsA": null,
       "oddsB": null
     }
