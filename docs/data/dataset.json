@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-12T07:27:01.258Z",
-  "tier1LeagueCount": 2682,
-  "matchesUsed": 1948,
+  "generatedAt": "2026-08-12T13:12:03.054Z",
+  "tier1LeagueCount": 2681,
+  "matchesUsed": 1951,
   "teams": [
     {
       "id": 9823272,
@@ -70,7 +70,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1683,
+        "elo": 1682,
         "form10": 0.7,
         "form45": 0.771,
         "act": 19,
@@ -148,7 +148,7 @@
         "form10": 0.633,
         "form45": 0.635,
         "act": 32,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -222,7 +222,7 @@
         "form10": 0.567,
         "form45": 0.672,
         "act": 27,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -329,7 +329,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1597,
+        "elo": 1596,
         "form10": 0.567,
         "form45": 0.625,
         "act": 15,
@@ -485,6 +485,43 @@
       }
     },
     {
+      "id": 9256405,
+      "name": "Level UP esports",
+      "tag": "LevelUP",
+      "logo": "https://cdn.steamusercontent.com/ugc/11124972020884745329/AB3238A17EE9950F7532A26B1EAAFCF2086FB37A/",
+      "rating": 1615,
+      "games": 40,
+      "wins": 24,
+      "losses": 16,
+      "lastPlayed": 1786534496,
+      "timing": {
+        "games": 40,
+        "avgMin": 41,
+        "avgWinMin": 44,
+        "avgLossMin": 36,
+        "short": {
+          "g": 7,
+          "wr": 0.2857142857142857
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 23,
+          "wr": 0.7391304347826086
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1604,
+        "form10": 0.567,
+        "form45": 0.589,
+        "act": 40,
+        "rust": 0
+      }
+    },
+    {
       "id": 10182748,
       "name": "Team South Africa",
       "tag": "RSA",
@@ -518,7 +555,7 @@
         "form10": 0.808,
         "form45": 0.808,
         "act": 8,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -556,43 +593,6 @@
         "form45": 0.675,
         "act": 15,
         "rust": 7
-      }
-    },
-    {
-      "id": 9256405,
-      "name": "Level UP esports",
-      "tag": "LevelUP",
-      "logo": "https://cdn.steamusercontent.com/ugc/11124972020884745329/AB3238A17EE9950F7532A26B1EAAFCF2086FB37A/",
-      "rating": 1604,
-      "games": 37,
-      "wins": 22,
-      "losses": 15,
-      "lastPlayed": 1786442248,
-      "timing": {
-        "games": 37,
-        "avgMin": 40,
-        "avgWinMin": 43,
-        "avgLossMin": 35,
-        "short": {
-          "g": 7,
-          "wr": 0.2857142857142857
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.5
-        },
-        "long": {
-          "g": 20,
-          "wr": 0.75
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1592,
-        "form10": 0.567,
-        "form45": 0.583,
-        "act": 37,
-        "rust": 1
       }
     },
     {
@@ -666,7 +666,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -777,7 +777,7 @@
         "form10": 0.633,
         "form45": 0.676,
         "act": 12,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -962,7 +962,7 @@
         "form10": 0.633,
         "form45": 0.656,
         "act": 11,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -1034,8 +1034,8 @@
       "ml": {
         "elo": 1549,
         "form10": 0.7,
-        "form45": 0.563,
-        "act": 3,
+        "form45": 0.583,
+        "act": 1,
         "rust": 45
       }
     },
@@ -1106,7 +1106,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1542,
+        "elo": 1541,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1147,7 +1147,7 @@
         "form10": 0.567,
         "form45": 0.614,
         "act": 30,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -1221,7 +1221,7 @@
         "form10": 0.633,
         "form45": 0.656,
         "act": 11,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -1353,43 +1353,6 @@
         "form45": 0.722,
         "act": 4,
         "rust": 42
-      }
-    },
-    {
-      "id": 9895247,
-      "name": "Rune Eaters",
-      "tag": "RE",
-      "logo": "https://cdn.steamusercontent.com/ugc/11845515088670662060/69AF28B666A859915784A1FF3C77F23E29057C3F/",
-      "rating": 1556,
-      "games": 64,
-      "wins": 30,
-      "losses": 34,
-      "lastPlayed": 1786480401,
-      "timing": {
-        "games": 64,
-        "avgMin": 42,
-        "avgWinMin": 42,
-        "avgLossMin": 42,
-        "short": {
-          "g": 5,
-          "wr": 0.6
-        },
-        "mid": {
-          "g": 27,
-          "wr": 0.4444444444444444
-        },
-        "long": {
-          "g": 32,
-          "wr": 0.46875
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1551,
-        "form10": 0.567,
-        "form45": 0.547,
-        "act": 27,
-        "rust": 0
       }
     },
     {
@@ -1538,6 +1501,43 @@
         "form45": 0.58,
         "act": 20,
         "rust": 16
+      }
+    },
+    {
+      "id": 9895247,
+      "name": "Rune Eaters",
+      "tag": "RE",
+      "logo": "https://cdn.steamusercontent.com/ugc/11845515088670662060/69AF28B666A859915784A1FF3C77F23E29057C3F/",
+      "rating": 1545,
+      "games": 67,
+      "wins": 31,
+      "losses": 36,
+      "lastPlayed": 1786534496,
+      "timing": {
+        "games": 67,
+        "avgMin": 42,
+        "avgWinMin": 42,
+        "avgLossMin": 42,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 27,
+          "wr": 0.4444444444444444
+        },
+        "long": {
+          "g": 35,
+          "wr": 0.45714285714285713
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1539,
+        "form10": 0.5,
+        "form45": 0.529,
+        "act": 30,
+        "rust": 0
       }
     },
     {
@@ -1796,7 +1796,7 @@
         "form10": 0.567,
         "form45": 0.567,
         "act": 10,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -1853,7 +1853,7 @@
         "form10": 0.611,
         "form45": 0.611,
         "act": 4,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -2468,7 +2468,7 @@
         "form10": 0.567,
         "form45": 0.531,
         "act": 11,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -2904,7 +2904,7 @@
         "form10": 0.583,
         "form45": 0.583,
         "act": 1,
-        "rust": 43
+        "rust": 44
       }
     },
     {
@@ -2978,7 +2978,7 @@
         "form10": 0.536,
         "form45": 0.536,
         "act": 9,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -3052,7 +3052,7 @@
         "form10": 0.536,
         "form45": 0.536,
         "act": 9,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -3089,7 +3089,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 8,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -3256,7 +3256,7 @@
         "form10": 0.433,
         "form45": 0.528,
         "act": 13,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -3328,8 +3328,8 @@
       "ml": {
         "elo": 1503,
         "form10": 0.5,
-        "form45": 0.452,
-        "act": 16,
+        "form45": 0.447,
+        "act": 14,
         "rust": 29
       }
     },
@@ -3909,7 +3909,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 8,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -4057,7 +4057,7 @@
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
-        "rust": 46
+        "rust": 47
       }
     },
     {
@@ -4202,7 +4202,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1488,
+        "elo": 1489,
         "form10": 0.433,
         "form45": 0.433,
         "act": 10,
@@ -4262,7 +4262,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -4336,7 +4336,7 @@
         "form10": 0.458,
         "form45": 0.458,
         "act": 7,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -5434,7 +5434,7 @@
         "form10": 0.458,
         "form45": 0.458,
         "act": 7,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -5734,7 +5734,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -6101,7 +6101,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1475,
+        "elo": 1476,
         "form10": 0.433,
         "form45": 0.417,
         "act": 13,
@@ -6161,7 +6161,7 @@
         "form10": 0.389,
         "form45": 0.389,
         "act": 4,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -6176,7 +6176,7 @@
       "lastPlayed": 1786109421,
       "timing": null,
       "ml": {
-        "elo": 1473,
+        "elo": 1474,
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
@@ -6236,7 +6236,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 46
+        "rust": 47
       }
     },
     {
@@ -6591,7 +6591,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 43
+        "rust": 44
       }
     },
     {
@@ -6628,7 +6628,7 @@
         "form10": 0.433,
         "form45": 0.433,
         "act": 10,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -6665,7 +6665,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -6721,7 +6721,7 @@
         "form10": 0.393,
         "form45": 0.393,
         "act": 9,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -6759,7 +6759,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -6870,7 +6870,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -7052,7 +7052,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1478,
+        "elo": 1479,
         "form10": 0.393,
         "form45": 0.5,
         "act": 0,
@@ -7089,7 +7089,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1469,
+        "elo": 1470,
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
@@ -7112,7 +7112,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -7275,7 +7275,7 @@
       "lastPlayed": 1782828678,
       "timing": null,
       "ml": {
-        "elo": 1468,
+        "elo": 1469,
         "form10": 0.313,
         "form45": 0.313,
         "act": 3,
@@ -7428,7 +7428,7 @@
         "form10": 0.313,
         "form45": 0.313,
         "act": 3,
-        "rust": 43
+        "rust": 44
       }
     },
     {
@@ -7465,7 +7465,7 @@
         "form10": 0.375,
         "form45": 0.375,
         "act": 7,
-        "rust": 42
+        "rust": 43
       }
     },
     {
@@ -7887,7 +7887,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1468,
+        "elo": 1469,
         "form10": 0.346,
         "form45": 0.5,
         "act": 0,
@@ -8230,7 +8230,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 54
+        "rust": 55
       }
     },
     {
@@ -8415,7 +8415,7 @@
         "form10": 0.367,
         "form45": 0.361,
         "act": 13,
-        "rust": 17
+        "rust": 18
       }
     },
     {
@@ -8526,7 +8526,7 @@
         "form10": 0.227,
         "form45": 0.5,
         "act": 0,
-        "rust": 47
+        "rust": 48
       }
     },
     {
@@ -8596,7 +8596,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1446,
+        "elo": 1447,
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
@@ -8781,7 +8781,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1446,
+        "elo": 1447,
         "form10": 0.167,
         "form45": 0.5,
         "act": 0,
@@ -8827,6 +8827,48 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8941817475,
+      "start_time": 1786534496,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9256405,
+        "name": "Level UP esports"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8941733752,
+      "start_time": 1786530030,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9256405,
+        "name": "Level UP esports"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8941656460,
+      "start_time": 1786525481,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9895247,
+        "name": "Rune Eaters"
+      },
+      "dire": {
+        "id": 9256405,
+        "name": "Level UP esports"
+      },
+      "radiant_win": true
+    },
     {
       "match_id": 8941092540,
       "start_time": 1786480401,
@@ -9624,48 +9666,6 @@
         "name": "Team Liquid"
       },
       "radiant_win": false
-    },
-    {
-      "match_id": 8930736914,
-      "start_time": 1785941722,
-      "league": "The Games of the Future 2026",
-      "radiant": {
-        "id": 10208034,
-        "name": "Yakult Brothers"
-      },
-      "dire": {
-        "id": 10207983,
-        "name": "PlayTime"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8930664368,
-      "start_time": 1785939546,
-      "league": "1win Essence II",
-      "radiant": {
-        "id": 2163,
-        "name": "Team Liquid"
-      },
-      "dire": {
-        "id": 10182357,
-        "name": "1w"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8930615242,
-      "start_time": 1785937507,
-      "league": "The Games of the Future 2026",
-      "radiant": {
-        "id": 10207983,
-        "name": "PlayTime"
-      },
-      "dire": {
-        "id": 10208034,
-        "name": "Yakult Brothers"
-      },
-      "radiant_win": true
     }
   ]
 }
