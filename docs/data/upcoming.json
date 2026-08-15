@@ -1,34 +1,34 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-08-15T06:40:05.979Z",
+  "generatedAt": "2026-08-15T12:39:02.331Z",
   "matches": [
     {
-      "id": "liq-1786773600-0",
-      "date": "2026-08-15T06:00:00.000Z",
+      "id": "liq-1786794300-0",
+      "date": "2026-08-15T11:45:00.000Z",
       "event": "The International 2026 Group Stage",
       "format": "bo3",
       "teamA": "10150413",
-      "teamB": "2163",
+      "teamB": "9823272",
       "oddsA": null,
       "oddsB": null
     },
     {
-      "id": "liq-1786774200-1",
-      "date": "2026-08-15T06:10:00.000Z",
+      "id": "liq-1786794600-1",
+      "date": "2026-08-15T11:50:00.000Z",
       "event": "The International 2026 Group Stage",
       "format": "bo3",
-      "teamA": "8255888",
+      "teamA": "2163",
       "teamB": "9467224",
       "oddsA": null,
       "oddsB": null
     },
     {
-      "id": "liq-1786774800-2",
-      "date": "2026-08-15T06:20:00.000Z",
+      "id": "liq-1786798800-2",
+      "date": "2026-08-15T13:00:00.000Z",
       "event": "The International 2026 Group Stage",
       "format": "bo3",
-      "teamA": "9572001",
+      "teamA": "10136357",
       "teamB": "7119388",
       "oddsA": null,
       "oddsB": null
