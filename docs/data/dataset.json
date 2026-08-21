@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-08-21T06:50:05.985Z",
+  "generatedAt": "2026-08-21T12:51:06.930Z",
   "tier1LeagueCount": 2686,
-  "matchesUsed": 3557,
+  "matchesUsed": 3560,
   "teams": [
     {
       "id": 9572001,
       "name": "TEAM VISION",
       "tag": null,
       "logo": null,
-      "rating": 1850,
-      "games": 150,
-      "wins": 97,
-      "losses": 53,
-      "lastPlayed": 1787216747,
+      "rating": 1839,
+      "games": 152,
+      "wins": 98,
+      "losses": 54,
+      "lastPlayed": 1787312111,
       "timing": {
-        "games": 150,
-        "avgMin": 42,
+        "games": 152,
+        "avgMin": 41,
         "avgWinMin": 40,
         "avgLossMin": 44,
         "short": {
-          "g": 25,
-          "wr": 0.8
+          "g": 26,
+          "wr": 0.7692307692307693
         },
         "mid": {
           "g": 42,
           "wr": 0.8095238095238095
         },
         "long": {
-          "g": 83,
-          "wr": 0.5180722891566265
+          "g": 84,
+          "wr": 0.5238095238095238
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1708,
+        "elo": 1700,
         "form10": 0.7,
-        "form45": 0.694,
-        "act": 13,
-        "rust": 1
+        "form45": 0.675,
+        "act": 15,
+        "rust": 0
       }
     },
     {
@@ -107,11 +107,48 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1669,
+        "elo": 1668,
         "form10": 0.633,
         "form45": 0.671,
         "act": 36,
         "rust": 1
+      }
+    },
+    {
+      "id": 2163,
+      "name": "Team Liquid",
+      "tag": null,
+      "logo": null,
+      "rating": 1754,
+      "games": 225,
+      "wins": 136,
+      "losses": 89,
+      "lastPlayed": 1787302363,
+      "timing": {
+        "games": 225,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 44,
+        "short": {
+          "g": 30,
+          "wr": 0.8
+        },
+        "mid": {
+          "g": 88,
+          "wr": 0.6590909090909091
+        },
+        "long": {
+          "g": 107,
+          "wr": 0.5046728971962616
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1664,
+        "form10": 0.567,
+        "form45": 0.609,
+        "act": 50,
+        "rust": 0
       }
     },
     {
@@ -144,7 +181,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1589,
+        "elo": 1588,
         "form10": 0.833,
         "form45": 0.5,
         "act": 0,
@@ -152,77 +189,40 @@
       }
     },
     {
-      "id": 2163,
-      "name": "Team Liquid",
-      "tag": null,
-      "logo": null,
-      "rating": 1743,
-      "games": 222,
-      "wins": 134,
-      "losses": 88,
-      "lastPlayed": 1787226963,
-      "timing": {
-        "games": 222,
-        "avgMin": 42,
-        "avgWinMin": 41,
-        "avgLossMin": 44,
-        "short": {
-          "g": 30,
-          "wr": 0.8
-        },
-        "mid": {
-          "g": 87,
-          "wr": 0.6551724137931034
-        },
-        "long": {
-          "g": 105,
-          "wr": 0.5047619047619047
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1652,
-        "form10": 0.5,
-        "form45": 0.613,
-        "act": 48,
-        "rust": 1
-      }
-    },
-    {
       "id": 7119388,
       "name": "Team Spirit",
       "tag": null,
       "logo": null,
-      "rating": 1736,
-      "games": 182,
-      "wins": 104,
-      "losses": 78,
-      "lastPlayed": 1787199123,
+      "rating": 1747,
+      "games": 184,
+      "wins": 105,
+      "losses": 79,
+      "lastPlayed": 1787312111,
       "timing": {
-        "games": 182,
+        "games": 184,
         "avgMin": 43,
         "avgWinMin": 43,
         "avgLossMin": 43,
         "short": {
-          "g": 13,
-          "wr": 0.6153846153846154
+          "g": 14,
+          "wr": 0.6428571428571429
         },
         "mid": {
           "g": 60,
           "wr": 0.5333333333333333
         },
         "long": {
-          "g": 109,
-          "wr": 0.5871559633027523
+          "g": 110,
+          "wr": 0.5818181818181818
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1644,
+        "elo": 1650,
         "form10": 0.5,
-        "form45": 0.625,
-        "act": 31,
-        "rust": 1
+        "form45": 0.618,
+        "act": 33,
+        "rust": 0
       }
     },
     {
@@ -294,8 +294,8 @@
       "ml": {
         "elo": 1639,
         "form10": 0.767,
-        "form45": 0.592,
-        "act": 33,
+        "form45": 0.581,
+        "act": 32,
         "rust": 1
       }
     },
@@ -331,46 +331,9 @@
       "ml": {
         "elo": 1613,
         "form10": 0.567,
-        "form45": 0.598,
-        "act": 56,
+        "form45": 0.602,
+        "act": 54,
         "rust": 0
-      }
-    },
-    {
-      "id": 9247354,
-      "name": "Team Falcons",
-      "tag": null,
-      "logo": null,
-      "rating": 1698,
-      "games": 186,
-      "wins": 111,
-      "losses": 75,
-      "lastPlayed": 1787241894,
-      "timing": {
-        "games": 186,
-        "avgMin": 45,
-        "avgWinMin": 45,
-        "avgLossMin": 43,
-        "short": {
-          "g": 13,
-          "wr": 0.3076923076923077
-        },
-        "mid": {
-          "g": 51,
-          "wr": 0.5882352941176471
-        },
-        "long": {
-          "g": 122,
-          "wr": 0.6311475409836066
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1609,
-        "form10": 0.567,
-        "form45": 0.625,
-        "act": 47,
-        "rust": 1
       }
     },
     {
@@ -411,6 +374,43 @@
       }
     },
     {
+      "id": 9247354,
+      "name": "Team Falcons",
+      "tag": null,
+      "logo": null,
+      "rating": 1686,
+      "games": 189,
+      "wins": 112,
+      "losses": 77,
+      "lastPlayed": 1787302363,
+      "timing": {
+        "games": 189,
+        "avgMin": 45,
+        "avgWinMin": 45,
+        "avgLossMin": 43,
+        "short": {
+          "g": 13,
+          "wr": 0.3076923076923077
+        },
+        "mid": {
+          "g": 52,
+          "wr": 0.5769230769230769
+        },
+        "long": {
+          "g": 124,
+          "wr": 0.6290322580645161
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1597,
+        "form10": 0.5,
+        "form45": 0.613,
+        "act": 48,
+        "rust": 0
+      }
+    },
+    {
       "id": 9467224,
       "name": "Aurora Gaming",
       "tag": null,
@@ -442,8 +442,8 @@
       "ml": {
         "elo": 1584,
         "form10": 0.5,
-        "form45": 0.565,
-        "act": 26,
+        "form45": 0.55,
+        "act": 25,
         "rust": 5
       }
     },
@@ -703,7 +703,7 @@
         "form10": 0.808,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -773,7 +773,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1595,
+        "elo": 1594,
         "form10": 0.767,
         "form45": 0.675,
         "act": 15,
@@ -886,8 +886,8 @@
       "ml": {
         "elo": 1564,
         "form10": 0.433,
-        "form45": 0.552,
-        "act": 43,
+        "form45": 0.564,
+        "act": 42,
         "rust": 9
       }
     },
@@ -999,7 +999,7 @@
         "form10": 0.567,
         "form45": 0.614,
         "act": 30,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -1069,7 +1069,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1543,
+        "elo": 1542,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1184,7 +1184,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -1217,7 +1217,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1556,
+        "elo": 1555,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -1369,7 +1369,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -1402,7 +1402,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1551,
+        "elo": 1550,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1415,26 +1415,26 @@
       "tag": null,
       "logo": null,
       "rating": 1577,
-      "games": 86,
-      "wins": 49,
-      "losses": 37,
+      "games": 84,
+      "wins": 48,
+      "losses": 36,
       "lastPlayed": 1777399803,
       "timing": {
-        "games": 86,
+        "games": 84,
         "avgMin": 41,
-        "avgWinMin": 42,
+        "avgWinMin": 43,
         "avgLossMin": 39,
         "short": {
-          "g": 7,
-          "wr": 0.5714285714285714
+          "g": 6,
+          "wr": 0.5
         },
         "mid": {
           "g": 37,
           "wr": 0.43243243243243246
         },
         "long": {
-          "g": 42,
-          "wr": 0.6904761904761905
+          "g": 41,
+          "wr": 0.7073170731707317
         },
         "closesFast": false
       },
@@ -1480,7 +1480,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -1515,8 +1515,8 @@
       "ml": {
         "elo": 1542,
         "form10": 0.5,
-        "form45": 0.529,
-        "act": 30,
+        "form45": 0.53,
+        "act": 28,
         "rust": 9
       }
     },
@@ -1648,7 +1648,7 @@
         "form10": 0.722,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -1811,7 +1811,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1537,
+        "elo": 1536,
         "form10": 0.567,
         "form45": 0.5,
         "act": 0,
@@ -1887,8 +1887,8 @@
       "ml": {
         "elo": 1525,
         "form10": 0.567,
-        "form45": 0.47,
-        "act": 28,
+        "form45": 0.5,
+        "act": 26,
         "rust": 11
       }
     },
@@ -2072,8 +2072,8 @@
       "ml": {
         "elo": 1491,
         "form10": 0.433,
-        "form45": 0.365,
-        "act": 32,
+        "form45": 0.329,
+        "act": 30,
         "rust": 5
       }
     },
@@ -2312,7 +2312,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1526,
+        "elo": 1525,
         "form10": 0.625,
         "form45": 0.5,
         "act": 0,
@@ -2538,7 +2538,7 @@
         "form10": 0.567,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -2669,7 +2669,7 @@
         "form10": 0.611,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -2759,7 +2759,7 @@
       "lastPlayed": 1775924732,
       "timing": null,
       "ml": {
-        "elo": 1509,
+        "elo": 1508,
         "form10": 0.643,
         "form45": 0.5,
         "act": 0,
@@ -3324,7 +3324,7 @@
         "form10": 0.567,
         "form45": 0.531,
         "act": 11,
-        "rust": 17
+        "rust": 18
       }
     },
     {
@@ -3931,7 +3931,7 @@
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -4194,7 +4194,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -4343,7 +4343,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -4380,7 +4380,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -4547,7 +4547,7 @@
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -4667,26 +4667,26 @@
       "tag": null,
       "logo": null,
       "rating": 1507,
-      "games": 77,
-      "wins": 36,
-      "losses": 41,
+      "games": 75,
+      "wins": 35,
+      "losses": 40,
       "lastPlayed": 1786130337,
       "timing": {
-        "games": 77,
+        "games": 75,
         "avgMin": 41,
-        "avgWinMin": 43,
+        "avgWinMin": 42,
         "avgLossMin": 40,
         "short": {
-          "g": 9,
-          "wr": 0.4444444444444444
+          "g": 8,
+          "wr": 0.5
         },
         "mid": {
           "g": 25,
           "wr": 0.4
         },
         "long": {
-          "g": 43,
-          "wr": 0.5116279069767442
+          "g": 42,
+          "wr": 0.5
         },
         "closesFast": false
       },
@@ -4695,7 +4695,7 @@
         "form10": 0.5,
         "form45": 0.483,
         "act": 25,
-        "rust": 13
+        "rust": 14
       }
     },
     {
@@ -5137,7 +5137,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1505,
+        "elo": 1504,
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
@@ -5287,8 +5287,8 @@
       "ml": {
         "elo": 1492,
         "form10": 0.433,
-        "form45": 0.433,
-        "act": 10,
+        "form45": 0.464,
+        "act": 9,
         "rust": 41
       }
     },
@@ -6376,7 +6376,7 @@
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -6488,7 +6488,7 @@
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -6921,7 +6921,7 @@
         "form10": 0.433,
         "form45": 0.417,
         "act": 13,
-        "rust": 12
+        "rust": 13
       }
     },
     {
@@ -8362,7 +8362,7 @@
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -8377,7 +8377,7 @@
       "lastPlayed": 1782838134,
       "timing": null,
       "ml": {
-        "elo": 1489,
+        "elo": 1490,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -8890,7 +8890,7 @@
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -9390,8 +9390,8 @@
       "ml": {
         "elo": 1437,
         "form10": 0.367,
-        "form45": 0.362,
-        "act": 24,
+        "form45": 0.352,
+        "act": 22,
         "rust": 6
       }
     },
@@ -9578,7 +9578,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -9616,7 +9616,7 @@
         "form10": 0.389,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -9800,7 +9800,7 @@
       "lastPlayed": 1775945392,
       "timing": null,
       "ml": {
-        "elo": 1490,
+        "elo": 1491,
         "form10": 0.389,
         "form45": 0.5,
         "act": 0,
@@ -10250,7 +10250,7 @@
       "lastPlayed": 1780048544,
       "timing": null,
       "ml": {
-        "elo": 1489,
+        "elo": 1490,
         "form10": 0.389,
         "form45": 0.5,
         "act": 0,
@@ -10386,7 +10386,7 @@
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -10423,7 +10423,7 @@
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -10460,7 +10460,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 18
+        "rust": 19
       }
     },
     {
@@ -10573,7 +10573,7 @@
         "form10": 0.393,
         "form45": 0.5,
         "act": 0,
-        "rust": 50
+        "rust": 51
       }
     },
     {
@@ -10648,7 +10648,7 @@
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -10759,7 +10759,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -11015,7 +11015,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1490,
+        "elo": 1491,
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
@@ -11075,7 +11075,7 @@
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -11373,7 +11373,7 @@
         "form10": 0.313,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -11410,7 +11410,7 @@
         "form10": 0.375,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -11891,11 +11891,11 @@
       "lastPlayed": 1782759816,
       "timing": null,
       "ml": {
-        "elo": 1461,
+        "elo": 1462,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -12022,7 +12022,7 @@
       "lastPlayed": 1782838385,
       "timing": null,
       "ml": {
-        "elo": 1460,
+        "elo": 1461,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
@@ -12189,7 +12189,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1463,
+        "elo": 1464,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -12583,7 +12583,7 @@
         "form10": 0.367,
         "form45": 0.361,
         "act": 13,
-        "rust": 26
+        "rust": 27
       }
     },
     {
@@ -12768,7 +12768,7 @@
         "form10": 0.233,
         "form45": 0.431,
         "act": 24,
-        "rust": 12
+        "rust": 13
       }
     },
     {
@@ -12877,8 +12877,8 @@
       "ml": {
         "elo": 1431,
         "form10": 0.233,
-        "form45": 0.233,
-        "act": 10,
+        "form45": 0.25,
+        "act": 9,
         "rust": 41
       }
     },
@@ -12953,7 +12953,7 @@
         "form10": 0.227,
         "form45": 0.5,
         "act": 0,
-        "rust": 56
+        "rust": 57
       }
     },
     {
@@ -13171,7 +13171,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1403,
+        "elo": 1404,
         "form10": 0.167,
         "form45": 0.167,
         "act": 10,
@@ -13254,6 +13254,76 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8957272720,
+      "start_time": 1787312111,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 9572001,
+        "name": "TEAM VISION"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8957180942,
+      "start_time": 1787307607,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 9572001,
+        "name": "TEAM VISION"
+      },
+      "dire": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8957086928,
+      "start_time": 1787302363,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8957013760,
+      "start_time": 1787298340,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8956943534,
+      "start_time": 1787292976,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 9247354,
+        "name": "Team Falcons"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8956877335,
       "start_time": 1787287281,
@@ -14023,76 +14093,6 @@
         "name": "OG"
       },
       "radiant_win": false
-    },
-    {
-      "match_id": 8946260898,
-      "start_time": 1786767834,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "dire": {
-        "id": 5017210,
-        "name": "Team Resilience"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8946228708,
-      "start_time": 1786765003,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 9247354,
-        "name": "Team Falcons"
-      },
-      "dire": {
-        "id": 9964962,
-        "name": "GamerLegion"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8946228107,
-      "start_time": 1786764957,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 9823272,
-        "name": "Team Yandex"
-      },
-      "dire": {
-        "id": 5017210,
-        "name": "Team Resilience"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8946231092,
-      "start_time": 1786764955,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 10150538,
-        "name": "LGD Gaming"
-      },
-      "dire": {
-        "id": 8261500,
-        "name": "Xtreme Gaming"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8946227017,
-      "start_time": 1786764831,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 10149530,
-        "name": "HULIGANI"
-      },
-      "dire": {
-        "id": 2586976,
-        "name": "OG"
-      },
-      "radiant_win": true
     }
   ]
 }
