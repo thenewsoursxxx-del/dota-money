@@ -1,7 +1,7 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-08-21T18:38:34.610Z",
+  "generatedAt": "2026-08-22T01:17:08.181Z",
   "matches": [
     {
       "id": "liq-1787364000-0",
@@ -10,6 +10,26 @@
       "format": "bo3",
       "teamA": "7119388",
       "teamB": "2163",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1787374800-1",
+      "date": "2026-08-22T05:00:00.000Z",
+      "event": "The International 2026 Main Event",
+      "format": "bo3",
+      "teamA": "10136357",
+      "teamB": "8255888",
+      "oddsA": null,
+      "oddsB": null
+    },
+    {
+      "id": "liq-1787385600-2",
+      "date": "2026-08-22T08:00:00.000Z",
+      "event": "The International 2026 Main Event",
+      "format": "bo3",
+      "teamA": "9572001",
+      "teamB": "9823272",
       "oddsA": null,
       "oddsB": null
     }

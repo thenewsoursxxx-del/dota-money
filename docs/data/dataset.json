@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T18:38:33.130Z",
+  "generatedAt": "2026-08-22T01:17:06.781Z",
   "tier1LeagueCount": 2686,
   "matchesUsed": 2042,
   "teams": [
@@ -33,11 +33,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1699,
+        "elo": 1698,
         "form10": 0.7,
         "form45": 0.69,
         "act": 16,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -70,7 +70,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1669,
+        "elo": 1668,
         "form10": 0.7,
         "form45": 0.75,
         "act": 17,
@@ -82,13 +82,13 @@
       "name": "Team Yandex",
       "tag": null,
       "logo": null,
-      "rating": 1725,
-      "games": 70,
-      "wins": 45,
+      "rating": 1739,
+      "games": 71,
+      "wins": 46,
       "losses": 25,
-      "lastPlayed": 1787328610,
+      "lastPlayed": 1787333216,
       "timing": {
-        "games": 70,
+        "games": 71,
         "avgMin": 43,
         "avgWinMin": 41,
         "avgLossMin": 47,
@@ -101,16 +101,16 @@
           "wr": 0.6086956521739131
         },
         "long": {
-          "g": 36,
-          "wr": 0.5833333333333334
+          "g": 37,
+          "wr": 0.5945945945945946
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1656,
-        "form10": 0.567,
-        "form45": 0.663,
-        "act": 38,
+        "elo": 1671,
+        "form10": 0.633,
+        "form45": 0.679,
+        "act": 37,
         "rust": 0
       }
     },
@@ -148,7 +148,7 @@
         "form10": 0.567,
         "form45": 0.62,
         "act": 49,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -181,7 +181,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1575,
+        "elo": 1574,
         "form10": 0.833,
         "form45": 0.5,
         "act": 0,
@@ -259,7 +259,7 @@
         "form10": 0.5,
         "form45": 0.608,
         "act": 32,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -267,16 +267,16 @@
       "name": "Nigma Galaxy",
       "tag": null,
       "logo": null,
-      "rating": 1682,
-      "games": 67,
+      "rating": 1668,
+      "games": 68,
       "wins": 40,
-      "losses": 27,
-      "lastPlayed": 1787328610,
+      "losses": 28,
+      "lastPlayed": 1787333216,
       "timing": {
-        "games": 67,
+        "games": 68,
         "avgMin": 44,
         "avgWinMin": 44,
-        "avgLossMin": 42,
+        "avgLossMin": 43,
         "short": {
           "g": 9,
           "wr": 0.6666666666666666
@@ -286,16 +286,16 @@
           "wr": 0.5238095238095238
         },
         "long": {
-          "g": 37,
-          "wr": 0.6216216216216216
+          "g": 38,
+          "wr": 0.6052631578947368
         },
         "closesFast": false
       },
       "ml": {
-        "elo": 1631,
-        "form10": 0.7,
-        "form45": 0.566,
-        "act": 33,
+        "elo": 1616,
+        "form10": 0.633,
+        "form45": 0.551,
+        "act": 34,
         "rust": 0
       }
     },
@@ -370,7 +370,7 @@
         "form10": 0.5,
         "form45": 0.613,
         "act": 48,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -479,8 +479,8 @@
       "ml": {
         "elo": 1583,
         "form10": 0.567,
-        "form45": 0.574,
-        "act": 29,
+        "form45": 0.561,
+        "act": 28,
         "rust": 16
       }
     },
@@ -514,11 +514,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1562,
+        "elo": 1561,
         "form10": 0.567,
         "form45": 0.5,
         "act": 16,
-        "rust": 5
+        "rust": 6
       }
     },
     {
@@ -625,7 +625,7 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1560,
+        "elo": 1559,
         "form10": 0.773,
         "form45": 0.5,
         "act": 0,
@@ -738,9 +738,9 @@
       "ml": {
         "elo": 1538,
         "form10": 0.5,
-        "form45": 0.463,
-        "act": 35,
-        "rust": 5
+        "form45": 0.449,
+        "act": 34,
+        "rust": 6
       }
     },
     {
@@ -958,7 +958,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1552,
+        "elo": 1551,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -1143,7 +1143,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1563,
+        "elo": 1562,
         "form10": 0.567,
         "form45": 0.614,
         "act": 30,
@@ -1278,7 +1278,7 @@
         "form10": 0.722,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -1311,7 +1311,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1529,
+        "elo": 1528,
         "form10": 0.65,
         "form45": 0.5,
         "act": 0,
@@ -1389,7 +1389,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 59
+        "rust": 60
       }
     },
     {
@@ -1463,7 +1463,7 @@
         "form10": 0.5,
         "form45": 0.53,
         "act": 28,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -1537,7 +1537,7 @@
         "form10": 0.625,
         "form45": 0.625,
         "act": 7,
-        "rust": 18
+        "rust": 19
       }
     },
     {
@@ -1574,7 +1574,7 @@
         "form10": 0.625,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -1611,7 +1611,7 @@
         "form10": 0.591,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -1619,7 +1619,7 @@
       "name": "Yellow Submarine",
       "tag": null,
       "logo": null,
-      "rating": 1535,
+      "rating": 1534,
       "games": 26,
       "wins": 14,
       "losses": 12,
@@ -1779,7 +1779,7 @@
         "form10": 0.567,
         "form45": 0.525,
         "act": 15,
-        "rust": 16
+        "rust": 17
       }
     },
     {
@@ -1910,7 +1910,7 @@
         "form10": 0.577,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -2021,7 +2021,7 @@
         "form10": 0.567,
         "form45": 0.5,
         "act": 26,
-        "rust": 11
+        "rust": 12
       }
     },
     {
@@ -2058,7 +2058,7 @@
         "form10": 0.577,
         "form45": 0.577,
         "act": 8,
-        "rust": 18
+        "rust": 19
       }
     },
     {
@@ -2095,7 +2095,7 @@
         "form10": 0.5,
         "form45": 0.559,
         "act": 12,
-        "rust": 16
+        "rust": 17
       }
     },
     {
@@ -2103,7 +2103,7 @@
       "name": "Mentality Monsters",
       "tag": null,
       "logo": null,
-      "rating": 1519,
+      "rating": 1518,
       "games": 19,
       "wins": 11,
       "losses": 8,
@@ -2277,7 +2277,7 @@
       "lastPlayed": 1779024589,
       "timing": null,
       "ml": {
-        "elo": 1508,
+        "elo": 1507,
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
@@ -2716,7 +2716,7 @@
         "form10": 0.583,
         "form45": 0.583,
         "act": 1,
-        "rust": 2
+        "rust": 3
       }
     },
     {
@@ -2957,7 +2957,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3124,7 +3124,7 @@
         "form10": 0.433,
         "form45": 0.329,
         "act": 30,
-        "rust": 5
+        "rust": 6
       }
     },
     {
@@ -3161,7 +3161,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3196,8 +3196,8 @@
       "ml": {
         "elo": 1502,
         "form10": 0.5,
-        "form45": 0.441,
-        "act": 12,
+        "form45": 0.469,
+        "act": 11,
         "rust": 38
       }
     },
@@ -3346,7 +3346,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3420,7 +3420,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -4004,6 +4004,25 @@
       }
     },
     {
+      "id": 10027376,
+      "name": "NEW GROWTH",
+      "tag": null,
+      "logo": null,
+      "rating": 1488,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780164124,
+      "timing": null,
+      "ml": {
+        "elo": 1493,
+        "form10": 0.438,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182793,
       "name": "Switzerland",
       "tag": null,
@@ -4041,22 +4060,40 @@
       }
     },
     {
-      "id": 10027376,
-      "name": "NEW GROWTH",
+      "id": 10149530,
+      "name": "HULIGANI",
       "tag": null,
       "logo": null,
       "rating": 1487,
-      "games": 3,
-      "wins": 1,
-      "losses": 2,
-      "lastPlayed": 1780164124,
-      "timing": null,
+      "games": 31,
+      "wins": 15,
+      "losses": 16,
+      "lastPlayed": 1786769610,
+      "timing": {
+        "games": 31,
+        "avgMin": 47,
+        "avgWinMin": 50,
+        "avgLossMin": 45,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "long": {
+          "g": 25,
+          "wr": 0.56
+        },
+        "closesFast": false
+      },
       "ml": {
-        "elo": 1493,
-        "form10": 0.438,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
+        "elo": 1459,
+        "form10": 0.3,
+        "form45": 0.3,
+        "act": 10,
+        "rust": 7
       }
     },
     {
@@ -4163,47 +4200,10 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1455,
+        "elo": 1456,
         "form10": 0.3,
-        "form45": 0.397,
-        "act": 34,
-        "rust": 6
-      }
-    },
-    {
-      "id": 10149530,
-      "name": "HULIGANI",
-      "tag": null,
-      "logo": null,
-      "rating": 1486,
-      "games": 31,
-      "wins": 15,
-      "losses": 16,
-      "lastPlayed": 1786769610,
-      "timing": {
-        "games": 31,
-        "avgMin": 47,
-        "avgWinMin": 50,
-        "avgLossMin": 45,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 5,
-          "wr": 0.2
-        },
-        "long": {
-          "g": 25,
-          "wr": 0.56
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1459,
-        "form10": 0.3,
-        "form45": 0.3,
-        "act": 10,
+        "form45": 0.392,
+        "act": 32,
         "rust": 7
       }
     },
@@ -4373,7 +4373,7 @@
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -4411,7 +4411,7 @@
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -4448,7 +4448,7 @@
         "form10": 0.3,
         "form45": 0.346,
         "act": 8,
-        "rust": 40
+        "rust": 41
       }
     },
     {
@@ -5338,7 +5338,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 2
+        "rust": 3
       }
     },
     {
@@ -5487,7 +5487,7 @@
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -5561,7 +5561,7 @@
         "form10": 0.433,
         "form45": 0.583,
         "act": 1,
-        "rust": 20
+        "rust": 21
       }
     },
     {
@@ -5617,7 +5617,7 @@
         "form10": 0.45,
         "form45": 0.45,
         "act": 5,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -5674,43 +5674,6 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
-      }
-    },
-    {
-      "id": 8254145,
-      "name": "Execration",
-      "tag": null,
-      "logo": null,
-      "rating": 1478,
-      "games": 26,
-      "wins": 12,
-      "losses": 14,
-      "lastPlayed": 1785569031,
-      "timing": {
-        "games": 26,
-        "avgMin": 41,
-        "avgWinMin": 38,
-        "avgLossMin": 44,
-        "short": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.6
-        },
-        "long": {
-          "g": 13,
-          "wr": 0.3076923076923077
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1484,
-        "form10": 0.367,
-        "form45": 0.438,
-        "act": 3,
-        "rust": 20
       }
     },
     {
@@ -5858,7 +5821,44 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 19
+        "rust": 20
+      }
+    },
+    {
+      "id": 8254145,
+      "name": "Execration",
+      "tag": null,
+      "logo": null,
+      "rating": 1474,
+      "games": 25,
+      "wins": 11,
+      "losses": 14,
+      "lastPlayed": 1785569031,
+      "timing": {
+        "games": 25,
+        "avgMin": 42,
+        "avgWinMin": 39,
+        "avgLossMin": 44,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.6
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.3076923076923077
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1483,
+        "form10": 0.367,
+        "form45": 0.438,
+        "act": 3,
+        "rust": 21
       }
     },
     {
@@ -5914,7 +5914,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 13
+        "rust": 14
       }
     },
     {
@@ -5985,7 +5985,7 @@
       "lastPlayed": 1786109421,
       "timing": null,
       "ml": {
-        "elo": 1475,
+        "elo": 1476,
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
@@ -5997,7 +5997,7 @@
       "name": "Amaru Gaming",
       "tag": null,
       "logo": null,
-      "rating": 1472,
+      "rating": 1471,
       "games": 40,
       "wins": 17,
       "losses": 23,
@@ -6212,7 +6212,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -6249,7 +6249,7 @@
         "form10": 0.433,
         "form45": 0.433,
         "act": 10,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -6674,7 +6674,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1480,
+        "elo": 1481,
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
@@ -6864,7 +6864,7 @@
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 59
+        "rust": 60
       }
     },
     {
@@ -6897,7 +6897,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1477,
+        "elo": 1478,
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
@@ -7199,7 +7199,7 @@
         "form10": 0.313,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -7236,7 +7236,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 20
+        "rust": 21
       }
     },
     {
@@ -7273,7 +7273,7 @@
         "form10": 0.233,
         "form45": 0.269,
         "act": 8,
-        "rust": 40
+        "rust": 41
       }
     },
     {
@@ -7603,7 +7603,7 @@
       "lastPlayed": 1782755056,
       "timing": null,
       "ml": {
-        "elo": 1462,
+        "elo": 1463,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
@@ -7668,25 +7668,6 @@
       }
     },
     {
-      "id": 10157986,
-      "name": "D Family",
-      "tag": null,
-      "logo": null,
-      "rating": 1440,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1780549149,
-      "timing": null,
-      "ml": {
-        "elo": 1469,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10182032,
       "name": "Team Turkmenistan",
       "tag": null,
@@ -7703,6 +7684,25 @@
         "form45": 0.5,
         "act": 0,
         "rust": 53
+      }
+    },
+    {
+      "id": 10157986,
+      "name": "D Family",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1780549149,
+      "timing": null,
+      "ml": {
+        "elo": 1469,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -7774,7 +7774,7 @@
       "lastPlayed": 1782836207,
       "timing": null,
       "ml": {
-        "elo": 1460,
+        "elo": 1461,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
@@ -7815,7 +7815,7 @@
         "form10": 0.3,
         "form45": 0.411,
         "act": 23,
-        "rust": 22
+        "rust": 23
       }
     },
     {
@@ -7861,19 +7861,19 @@
       "name": "Carstensz Esports",
       "tag": null,
       "logo": null,
-      "rating": 1432,
-      "games": 24,
+      "rating": 1437,
+      "games": 23,
       "wins": 9,
-      "losses": 15,
+      "losses": 14,
       "lastPlayed": 1782011290,
       "timing": {
-        "games": 24,
-        "avgMin": 41,
+        "games": 23,
+        "avgMin": 42,
         "avgWinMin": 46,
-        "avgLossMin": 39,
+        "avgLossMin": 40,
         "short": {
-          "g": 3,
-          "wr": 0
+          "g": 2,
+          "wr": null
         },
         "mid": {
           "g": 10,
@@ -7886,7 +7886,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1465,
+        "elo": 1467,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -7927,7 +7927,7 @@
         "form10": 0.367,
         "form45": 0.352,
         "act": 22,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -7960,7 +7960,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1478,
+        "elo": 1479,
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
@@ -8042,6 +8042,43 @@
       }
     },
     {
+      "id": 9546449,
+      "name": "Yangon Galacticos",
+      "tag": null,
+      "logo": null,
+      "rating": 1428,
+      "games": 9,
+      "wins": 2,
+      "losses": 7,
+      "lastPlayed": 1781927939,
+      "timing": {
+        "games": 9,
+        "avgMin": 44,
+        "avgWinMin": 29,
+        "avgLossMin": 48,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 5,
+          "wr": 0
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1463,
+        "form10": 0.321,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182412,
       "name": "Aion",
       "tag": null,
@@ -8075,44 +8112,7 @@
         "form10": 0.367,
         "form45": 0.324,
         "act": 12,
-        "rust": 27
-      }
-    },
-    {
-      "id": 9546449,
-      "name": "Yangon Galacticos",
-      "tag": null,
-      "logo": null,
-      "rating": 1427,
-      "games": 9,
-      "wins": 2,
-      "losses": 7,
-      "lastPlayed": 1781927939,
-      "timing": {
-        "games": 9,
-        "avgMin": 44,
-        "avgWinMin": 29,
-        "avgLossMin": 48,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "long": {
-          "g": 5,
-          "wr": 0
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1462,
-        "form10": 0.321,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
+        "rust": 28
       }
     },
     {
@@ -8297,7 +8297,7 @@
         "form10": 0.3,
         "form45": 0.3,
         "act": 10,
-        "rust": 28
+        "rust": 29
       }
     },
     {
@@ -8334,7 +8334,7 @@
         "form10": 0.233,
         "form45": 0.269,
         "act": 8,
-        "rust": 41
+        "rust": 42
       }
     },
     {
@@ -8480,8 +8480,8 @@
       "ml": {
         "elo": 1403,
         "form10": 0.167,
-        "form45": 0.179,
-        "act": 9,
+        "form45": 0.192,
+        "act": 8,
         "rust": 40
       }
     },
@@ -8524,6 +8524,20 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8957890399,
+      "start_time": 1787333216,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "dire": {
+        "id": 9823272,
+        "name": "Team Yandex"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8957749452,
       "start_time": 1787328610,
@@ -9347,20 +9361,6 @@
       "dire": {
         "id": 10150413,
         "name": "Iron Wing"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8946303764,
-      "start_time": 1786771584,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 726228,
-        "name": "Vici Gaming"
-      },
-      "dire": {
-        "id": 10136357,
-        "name": "Nigma Galaxy "
       },
       "radiant_win": false
     }
