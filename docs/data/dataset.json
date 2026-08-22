@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-08-22T01:17:06.781Z",
+  "generatedAt": "2026-08-22T06:42:06.365Z",
   "tier1LeagueCount": 2686,
-  "matchesUsed": 2042,
+  "matchesUsed": 2337,
   "teams": [
     {
       "id": 9572001,
       "name": "TEAM VISION",
       "tag": null,
       "logo": null,
-      "rating": 1791,
-      "games": 74,
-      "wins": 50,
-      "losses": 24,
+      "rating": 1809,
+      "games": 94,
+      "wins": 68,
+      "losses": 26,
       "lastPlayed": 1787315667,
       "timing": {
-        "games": 74,
-        "avgMin": 42,
-        "avgWinMin": 40,
+        "games": 94,
+        "avgMin": 41,
+        "avgWinMin": 39,
         "avgLossMin": 45,
         "short": {
-          "g": 12,
-          "wr": 0.8333333333333334
+          "g": 17,
+          "wr": 0.8823529411764706
         },
         "mid": {
-          "g": 21,
-          "wr": 0.9523809523809523
+          "g": 28,
+          "wr": 0.9285714285714286
         },
         "long": {
-          "g": 41,
-          "wr": 0.4878048780487805
+          "g": 49,
+          "wr": 0.5510204081632653
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1698,
+        "elo": 1704,
         "form10": 0.7,
         "form45": 0.69,
         "act": 16,
@@ -45,7 +45,7 @@
       "name": "PVISION",
       "tag": null,
       "logo": null,
-      "rating": 1761,
+      "rating": 1767,
       "games": 30,
       "wins": 24,
       "losses": 6,
@@ -70,11 +70,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1668,
+        "elo": 1670,
         "form10": 0.7,
         "form45": 0.75,
         "act": 17,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -82,73 +82,73 @@
       "name": "Team Yandex",
       "tag": null,
       "logo": null,
-      "rating": 1739,
-      "games": 71,
-      "wins": 46,
-      "losses": 25,
+      "rating": 1747,
+      "games": 83,
+      "wins": 51,
+      "losses": 32,
       "lastPlayed": 1787333216,
       "timing": {
-        "games": 71,
+        "games": 83,
         "avgMin": 43,
         "avgWinMin": 41,
-        "avgLossMin": 47,
+        "avgLossMin": 45,
         "short": {
-          "g": 11,
-          "wr": 0.9090909090909091
+          "g": 13,
+          "wr": 0.7692307692307693
         },
         "mid": {
-          "g": 23,
-          "wr": 0.6086956521739131
+          "g": 27,
+          "wr": 0.5925925925925926
         },
         "long": {
-          "g": 37,
-          "wr": 0.5945945945945946
+          "g": 43,
+          "wr": 0.5813953488372093
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1671,
+        "elo": 1673,
         "form10": 0.633,
         "form45": 0.679,
         "act": 37,
-        "rust": 0
+        "rust": 1
       }
     },
     {
-      "id": 2163,
-      "name": "Team Liquid",
+      "id": 7119388,
+      "name": "Team Spirit",
       "tag": null,
       "logo": null,
-      "rating": 1712,
-      "games": 120,
-      "wins": 69,
-      "losses": 51,
-      "lastPlayed": 1787302363,
+      "rating": 1733,
+      "games": 113,
+      "wins": 65,
+      "losses": 48,
+      "lastPlayed": 1787369791,
       "timing": {
-        "games": 120,
-        "avgMin": 43,
-        "avgWinMin": 42,
-        "avgLossMin": 44,
+        "games": 113,
+        "avgMin": 45,
+        "avgWinMin": 44,
+        "avgLossMin": 45,
         "short": {
-          "g": 15,
-          "wr": 0.6666666666666666
+          "g": 7,
+          "wr": 0.7142857142857143
         },
         "mid": {
-          "g": 44,
-          "wr": 0.6590909090909091
+          "g": 30,
+          "wr": 0.5666666666666667
         },
         "long": {
-          "g": 61,
-          "wr": 0.4918032786885246
+          "g": 76,
+          "wr": 0.5657894736842105
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1653,
-        "form10": 0.567,
-        "form45": 0.62,
-        "act": 49,
-        "rust": 1
+        "elo": 1661,
+        "form10": 0.633,
+        "form45": 0.628,
+        "act": 34,
+        "rust": 0
       }
     },
     {
@@ -156,7 +156,7 @@
       "name": "SouthAmericaRejects",
       "tag": null,
       "logo": null,
-      "rating": 1696,
+      "rating": 1714,
       "games": 71,
       "wins": 46,
       "losses": 25,
@@ -181,7 +181,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1574,
+        "elo": 1580,
         "form10": 0.833,
         "form45": 0.5,
         "act": 0,
@@ -193,73 +193,147 @@
       "name": "Natus Vincere",
       "tag": null,
       "logo": null,
-      "rating": 1695,
-      "games": 67,
-      "wins": 42,
-      "losses": 25,
+      "rating": 1702,
+      "games": 72,
+      "wins": 44,
+      "losses": 28,
       "lastPlayed": 1786549230,
       "timing": {
-        "games": 67,
+        "games": 72,
         "avgMin": 40,
         "avgWinMin": 40,
-        "avgLossMin": 41,
+        "avgLossMin": 40,
         "short": {
-          "g": 5,
-          "wr": 0.8
+          "g": 6,
+          "wr": 0.6666666666666666
         },
         "mid": {
-          "g": 29,
-          "wr": 0.5862068965517241
+          "g": 31,
+          "wr": 0.6129032258064516
         },
         "long": {
-          "g": 33,
-          "wr": 0.6363636363636364
+          "g": 35,
+          "wr": 0.6
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1657,
+        "elo": 1659,
         "form10": 0.767,
         "form45": 0.821,
         "act": 9,
-        "rust": 9
+        "rust": 10
       }
     },
     {
-      "id": 7119388,
-      "name": "Team Spirit",
+      "id": 8255888,
+      "name": "BoomBoys",
       "tag": null,
       "logo": null,
-      "rating": 1690,
-      "games": 99,
-      "wins": 59,
-      "losses": 40,
-      "lastPlayed": 1787315667,
+      "rating": 1689,
+      "games": 135,
+      "wins": 87,
+      "losses": 48,
+      "lastPlayed": 1787374948,
       "timing": {
-        "games": 99,
+        "games": 135,
         "avgMin": 44,
-        "avgWinMin": 44,
-        "avgLossMin": 45,
+        "avgWinMin": 43,
+        "avgLossMin": 47,
         "short": {
-          "g": 7,
-          "wr": 0.7142857142857143
+          "g": 10,
+          "wr": 0.8
         },
         "mid": {
-          "g": 28,
-          "wr": 0.6071428571428571
+          "g": 46,
+          "wr": 0.6304347826086957
         },
         "long": {
-          "g": 64,
-          "wr": 0.578125
+          "g": 79,
+          "wr": 0.6329113924050633
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1625,
-        "form10": 0.5,
+        "elo": 1622,
+        "form10": 0.567,
         "form45": 0.608,
-        "act": 32,
-        "rust": 1
+        "act": 55,
+        "rust": 0
+      }
+    },
+    {
+      "id": 2163,
+      "name": "Team Liquid",
+      "tag": null,
+      "logo": null,
+      "rating": 1688,
+      "games": 130,
+      "wins": 73,
+      "losses": 57,
+      "lastPlayed": 1787369791,
+      "timing": {
+        "games": 130,
+        "avgMin": 43,
+        "avgWinMin": 42,
+        "avgLossMin": 44,
+        "short": {
+          "g": 15,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 47,
+          "wr": 0.6382978723404256
+        },
+        "long": {
+          "g": 68,
+          "wr": 0.4852941176470588
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1622,
+        "form10": 0.433,
+        "form45": 0.598,
+        "act": 51,
+        "rust": 0
+      }
+    },
+    {
+      "id": 7554697,
+      "name": "Nigma Galaxy",
+      "tag": null,
+      "logo": null,
+      "rating": 1664,
+      "games": 52,
+      "wins": 34,
+      "losses": 18,
+      "lastPlayed": 1777650919,
+      "timing": {
+        "games": 52,
+        "avgMin": 40,
+        "avgWinMin": 39,
+        "avgLossMin": 41,
+        "short": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 22,
+          "wr": 0.6363636363636364
+        },
+        "long": {
+          "g": 24,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1559,
+        "form10": 0.633,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -267,13 +341,13 @@
       "name": "Nigma Galaxy",
       "tag": null,
       "logo": null,
-      "rating": 1668,
-      "games": 68,
+      "rating": 1660,
+      "games": 69,
       "wins": 40,
-      "losses": 28,
-      "lastPlayed": 1787333216,
+      "losses": 29,
+      "lastPlayed": 1787374948,
       "timing": {
-        "games": 68,
+        "games": 69,
         "avgMin": 44,
         "avgWinMin": 44,
         "avgLossMin": 43,
@@ -282,8 +356,8 @@
           "wr": 0.6666666666666666
         },
         "mid": {
-          "g": 21,
-          "wr": 0.5238095238095238
+          "g": 22,
+          "wr": 0.5
         },
         "long": {
           "g": 38,
@@ -292,48 +366,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1616,
-        "form10": 0.633,
-        "form45": 0.551,
-        "act": 34,
-        "rust": 0
-      }
-    },
-    {
-      "id": 8255888,
-      "name": "BoomBoys",
-      "tag": null,
-      "logo": null,
-      "rating": 1663,
-      "games": 133,
-      "wins": 86,
-      "losses": 47,
-      "lastPlayed": 1787287281,
-      "timing": {
-        "games": 133,
-        "avgMin": 44,
-        "avgWinMin": 43,
-        "avgLossMin": 46,
-        "short": {
-          "g": 10,
-          "wr": 0.8
-        },
-        "mid": {
-          "g": 45,
-          "wr": 0.6222222222222222
-        },
-        "long": {
-          "g": 78,
-          "wr": 0.6410256410256411
-        },
-        "closesFast": true
-      },
-      "ml": {
         "elo": 1602,
         "form10": 0.567,
-        "form45": 0.602,
-        "act": 54,
-        "rust": 1
+        "form45": 0.537,
+        "act": 35,
+        "rust": 0
       }
     },
     {
@@ -341,23 +378,23 @@
       "name": "Team Falcons",
       "tag": null,
       "logo": null,
-      "rating": 1644,
-      "games": 115,
+      "rating": 1653,
+      "games": 117,
       "wins": 73,
-      "losses": 42,
+      "losses": 44,
       "lastPlayed": 1787302363,
       "timing": {
-        "games": 115,
+        "games": 117,
         "avgMin": 46,
         "avgWinMin": 47,
-        "avgLossMin": 46,
+        "avgLossMin": 45,
         "short": {
           "g": 7,
           "wr": 0.42857142857142855
         },
         "mid": {
-          "g": 28,
-          "wr": 0.6428571428571429
+          "g": 30,
+          "wr": 0.6
         },
         "long": {
           "g": 80,
@@ -366,7 +403,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1586,
+        "elo": 1589,
         "form10": 0.5,
         "form45": 0.613,
         "act": 48,
@@ -374,76 +411,76 @@
       }
     },
     {
-      "id": 7554697,
-      "name": "Nigma Galaxy",
-      "tag": null,
-      "logo": null,
-      "rating": 1639,
-      "games": 26,
-      "wins": 19,
-      "losses": 7,
-      "lastPlayed": 1777650919,
-      "timing": {
-        "games": 26,
-        "avgMin": 37,
-        "avgWinMin": 36,
-        "avgLossMin": 41,
-        "short": {
-          "g": 4,
-          "wr": 1
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.75
-        },
-        "long": {
-          "g": 10,
-          "wr": 0.6
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1551,
-        "form10": 0.633,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 9467224,
       "name": "Aurora Gaming",
       "tag": null,
       "logo": null,
-      "rating": 1633,
-      "games": 106,
-      "wins": 61,
-      "losses": 45,
+      "rating": 1641,
+      "games": 117,
+      "wins": 66,
+      "losses": 51,
       "lastPlayed": 1786854606,
       "timing": {
-        "games": 106,
+        "games": 117,
         "avgMin": 44,
-        "avgWinMin": 43,
-        "avgLossMin": 46,
+        "avgWinMin": 44,
+        "avgLossMin": 45,
+        "short": {
+          "g": 9,
+          "wr": 0.5555555555555556
+        },
+        "mid": {
+          "g": 38,
+          "wr": 0.5526315789473685
+        },
+        "long": {
+          "g": 70,
+          "wr": 0.5714285714285714
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1575,
+        "form10": 0.5,
+        "form45": 0.534,
+        "act": 24,
+        "rust": 6
+      }
+    },
+    {
+      "id": 5017210,
+      "name": "Team Resilience",
+      "tag": null,
+      "logo": null,
+      "rating": 1640,
+      "games": 45,
+      "wins": 29,
+      "losses": 16,
+      "lastPlayed": 1786863004,
+      "timing": {
+        "games": 45,
+        "avgMin": 41,
+        "avgWinMin": 41,
+        "avgLossMin": 42,
         "short": {
           "g": 7,
           "wr": 0.5714285714285714
         },
         "mid": {
-          "g": 34,
-          "wr": 0.5882352941176471
+          "g": 15,
+          "wr": 0.7333333333333333
         },
         "long": {
-          "g": 65,
-          "wr": 0.5692307692307692
+          "g": 23,
+          "wr": 0.6086956521739131
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1573,
-        "form10": 0.5,
-        "form45": 0.534,
-        "act": 24,
+        "elo": 1567,
+        "form10": 0.567,
+        "form45": 0.5,
+        "act": 16,
         "rust": 6
       }
     },
@@ -452,7 +489,7 @@
       "name": "1w",
       "tag": null,
       "logo": null,
-      "rating": 1628,
+      "rating": 1634,
       "games": 30,
       "wins": 18,
       "losses": 12,
@@ -477,48 +514,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1583,
+        "elo": 1585,
         "form10": 0.567,
         "form45": 0.561,
         "act": 28,
-        "rust": 16
-      }
-    },
-    {
-      "id": 5017210,
-      "name": "Team Resilience",
-      "tag": null,
-      "logo": null,
-      "rating": 1621,
-      "games": 41,
-      "wins": 25,
-      "losses": 16,
-      "lastPlayed": 1786863004,
-      "timing": {
-        "games": 41,
-        "avgMin": 42,
-        "avgWinMin": 42,
-        "avgLossMin": 42,
-        "short": {
-          "g": 5,
-          "wr": 0.4
-        },
-        "mid": {
-          "g": 13,
-          "wr": 0.6923076923076923
-        },
-        "long": {
-          "g": 23,
-          "wr": 0.6086956521739131
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1561,
-        "form10": 0.567,
-        "form45": 0.5,
-        "act": 16,
-        "rust": 6
+        "rust": 17
       }
     },
     {
@@ -563,7 +563,7 @@
       "name": "PlayTime",
       "tag": null,
       "logo": null,
-      "rating": 1609,
+      "rating": 1610,
       "games": 15,
       "wins": 11,
       "losses": 4,
@@ -592,7 +592,118 @@
         "form10": 0.767,
         "form45": 0.675,
         "act": 15,
-        "rust": 16
+        "rust": 17
+      }
+    },
+    {
+      "id": 10020555,
+      "name": "PlayTime",
+      "tag": null,
+      "logo": null,
+      "rating": 1602,
+      "games": 49,
+      "wins": 24,
+      "losses": 25,
+      "lastPlayed": 1781902332,
+      "timing": {
+        "games": 49,
+        "avgMin": 45,
+        "avgWinMin": 43,
+        "avgLossMin": 48,
+        "short": {
+          "g": 6,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 17,
+          "wr": 0.6470588235294118
+        },
+        "long": {
+          "g": 26,
+          "wr": 0.4230769230769231
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1548,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10150538,
+      "name": "LGD Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1598,
+      "games": 78,
+      "wins": 46,
+      "losses": 32,
+      "lastPlayed": 1786875866,
+      "timing": {
+        "games": 78,
+        "avgMin": 47,
+        "avgWinMin": 48,
+        "avgLossMin": 45,
+        "short": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "mid": {
+          "g": 28,
+          "wr": 0.5714285714285714
+        },
+        "long": {
+          "g": 43,
+          "wr": 0.6046511627906976
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1541,
+        "form10": 0.5,
+        "form45": 0.449,
+        "act": 34,
+        "rust": 6
+      }
+    },
+    {
+      "id": 10150633,
+      "name": "Pipsqueak + 4",
+      "tag": null,
+      "logo": null,
+      "rating": 1592,
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "lastPlayed": 1780418546,
+      "timing": {
+        "games": 10,
+        "avgMin": 46,
+        "avgWinMin": 44,
+        "avgLossMin": 54,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 1
+        },
+        "long": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1546,
+        "form10": 0.7,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -629,118 +740,7 @@
         "form10": 0.773,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
-      }
-    },
-    {
-      "id": 10020555,
-      "name": "PlayTime",
-      "tag": null,
-      "logo": null,
-      "rating": 1591,
-      "games": 39,
-      "wins": 20,
-      "losses": 19,
-      "lastPlayed": 1781902332,
-      "timing": {
-        "games": 39,
-        "avgMin": 45,
-        "avgWinMin": 42,
-        "avgLossMin": 48,
-        "short": {
-          "g": 6,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.6666666666666666
-        },
-        "long": {
-          "g": 21,
-          "wr": 0.47619047619047616
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1544,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10150633,
-      "name": "Pipsqueak + 4",
-      "tag": null,
-      "logo": null,
-      "rating": 1590,
-      "games": 10,
-      "wins": 8,
-      "losses": 2,
-      "lastPlayed": 1780418546,
-      "timing": {
-        "games": 10,
-        "avgMin": 46,
-        "avgWinMin": 44,
-        "avgLossMin": 54,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 1
-        },
-        "long": {
-          "g": 6,
-          "wr": 0.6666666666666666
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1545,
-        "form10": 0.7,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10150538,
-      "name": "LGD Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1589,
-      "games": 78,
-      "wins": 46,
-      "losses": 32,
-      "lastPlayed": 1786875866,
-      "timing": {
-        "games": 78,
-        "avgMin": 47,
-        "avgWinMin": 48,
-        "avgLossMin": 45,
-        "short": {
-          "g": 7,
-          "wr": 0.5714285714285714
-        },
-        "mid": {
-          "g": 28,
-          "wr": 0.5714285714285714
-        },
-        "long": {
-          "g": 43,
-          "wr": 0.6046511627906976
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1538,
-        "form10": 0.5,
-        "form45": 0.449,
-        "act": 34,
-        "rust": 6
+        "rust": 52
       }
     },
     {
@@ -818,6 +818,43 @@
       }
     },
     {
+      "id": 10150413,
+      "name": "Iron Wing",
+      "tag": null,
+      "logo": null,
+      "rating": 1582,
+      "games": 45,
+      "wins": 19,
+      "losses": 26,
+      "lastPlayed": 1787287281,
+      "timing": {
+        "games": 45,
+        "avgMin": 47,
+        "avgWinMin": 45,
+        "avgLossMin": 48,
+        "short": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.5833333333333334
+        },
+        "long": {
+          "g": 30,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1547,
+        "form10": 0.5,
+        "form45": 0.519,
+        "act": 21,
+        "rust": 1
+      }
+    },
+    {
       "id": 10182492,
       "name": "Kyrgyzstan",
       "tag": null,
@@ -851,7 +888,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -925,7 +962,44 @@
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
+      }
+    },
+    {
+      "id": 9256405,
+      "name": "Level UP esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1580,
+      "games": 43,
+      "wins": 24,
+      "losses": 19,
+      "lastPlayed": 1786549230,
+      "timing": {
+        "games": 43,
+        "avgMin": 40,
+        "avgWinMin": 44,
+        "avgLossMin": 35,
+        "short": {
+          "g": 8,
+          "wr": 0.25
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.4166666666666667
+        },
+        "long": {
+          "g": 23,
+          "wr": 0.7391304347826086
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1560,
+        "form10": 0.433,
+        "form45": 0.576,
+        "act": 41,
+        "rust": 10
       }
     },
     {
@@ -966,6 +1040,43 @@
       }
     },
     {
+      "id": 10136133,
+      "name": "Two Move",
+      "tag": null,
+      "logo": null,
+      "rating": 1578,
+      "games": 7,
+      "wins": 6,
+      "losses": 1,
+      "lastPlayed": 1780396611,
+      "timing": {
+        "games": 7,
+        "avgMin": 51,
+        "avgWinMin": 48,
+        "avgLossMin": 69,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.8571428571428571
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1539,
+        "form10": 0.708,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182496,
       "name": "Team Finland",
       "tag": null,
@@ -999,118 +1110,7 @@
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
-      }
-    },
-    {
-      "id": 9256405,
-      "name": "Level UP esports",
-      "tag": null,
-      "logo": null,
-      "rating": 1576,
-      "games": 43,
-      "wins": 24,
-      "losses": 19,
-      "lastPlayed": 1786549230,
-      "timing": {
-        "games": 43,
-        "avgMin": 40,
-        "avgWinMin": 44,
-        "avgLossMin": 35,
-        "short": {
-          "g": 8,
-          "wr": 0.25
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.4166666666666667
-        },
-        "long": {
-          "g": 23,
-          "wr": 0.7391304347826086
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1559,
-        "form10": 0.433,
-        "form45": 0.576,
-        "act": 41,
-        "rust": 9
-      }
-    },
-    {
-      "id": 10136133,
-      "name": "Two Move",
-      "tag": null,
-      "logo": null,
-      "rating": 1575,
-      "games": 7,
-      "wins": 6,
-      "losses": 1,
-      "lastPlayed": 1780396611,
-      "timing": {
-        "games": 7,
-        "avgMin": 51,
-        "avgWinMin": 48,
-        "avgLossMin": 69,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 0,
-          "wr": null
-        },
-        "long": {
-          "g": 7,
-          "wr": 0.8571428571428571
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1538,
-        "form10": 0.708,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10150413,
-      "name": "Iron Wing",
-      "tag": null,
-      "logo": null,
-      "rating": 1574,
-      "games": 45,
-      "wins": 19,
-      "losses": 26,
-      "lastPlayed": 1787287281,
-      "timing": {
-        "games": 45,
-        "avgMin": 47,
-        "avgWinMin": 45,
-        "avgLossMin": 48,
-        "short": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.5833333333333334
-        },
-        "long": {
-          "g": 30,
-          "wr": 0.3333333333333333
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1544,
-        "form10": 0.5,
-        "form45": 0.519,
-        "act": 21,
-        "rust": 1
+        "rust": 52
       }
     },
     {
@@ -1118,32 +1118,32 @@
       "name": "Zero Tenacity",
       "tag": null,
       "logo": null,
-      "rating": 1573,
-      "games": 64,
-      "wins": 34,
-      "losses": 30,
+      "rating": 1577,
+      "games": 73,
+      "wins": 38,
+      "losses": 35,
       "lastPlayed": 1786480401,
       "timing": {
-        "games": 64,
-        "avgMin": 41,
-        "avgWinMin": 41,
-        "avgLossMin": 41,
+        "games": 73,
+        "avgMin": 40,
+        "avgWinMin": 40,
+        "avgLossMin": 40,
         "short": {
-          "g": 7,
-          "wr": 0.7142857142857143
+          "g": 8,
+          "wr": 0.625
         },
         "mid": {
-          "g": 25,
-          "wr": 0.48
+          "g": 29,
+          "wr": 0.4827586206896552
         },
         "long": {
-          "g": 32,
-          "wr": 0.53125
+          "g": 36,
+          "wr": 0.5277777777777778
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1562,
+        "elo": 1564,
         "form10": 0.567,
         "form45": 0.614,
         "act": 30,
@@ -1221,7 +1221,7 @@
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -1255,8 +1255,45 @@
       "lastPlayed": 1777833725,
       "timing": null,
       "ml": {
-        "elo": 1526,
+        "elo": 1525,
         "form10": 0.722,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10135834,
+      "name": "TEAM GRIND",
+      "tag": null,
+      "logo": null,
+      "rating": 1561,
+      "games": 25,
+      "wins": 15,
+      "losses": 10,
+      "lastPlayed": 1782214039,
+      "timing": {
+        "games": 25,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 42,
+        "short": {
+          "g": 4,
+          "wr": 0.75
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.375
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.6923076923076923
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1535,
+        "form10": 0.633,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -1279,6 +1316,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 52
+      }
+    },
+    {
+      "id": 8291895,
+      "name": "Tundra Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1557,
+      "games": 39,
+      "wins": 20,
+      "losses": 19,
+      "lastPlayed": 1779105538,
+      "timing": {
+        "games": 39,
+        "avgMin": 45,
+        "avgWinMin": 44,
+        "avgLossMin": 45,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 14,
+          "wr": 0.35714285714285715
+        },
+        "long": {
+          "g": 22,
+          "wr": 0.5454545454545454
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1520,
+        "form10": 0.567,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -1352,41 +1426,78 @@
         "form10": 0.567,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
-      "id": 10135834,
-      "name": "TEAM GRIND",
+      "id": 9303383,
+      "name": "L1GA TEAM",
       "tag": null,
       "logo": null,
-      "rating": 1551,
-      "games": 25,
-      "wins": 15,
-      "losses": 10,
-      "lastPlayed": 1782214039,
+      "rating": 1550,
+      "games": 61,
+      "wins": 33,
+      "losses": 28,
+      "lastPlayed": 1777399803,
       "timing": {
-        "games": 25,
-        "avgMin": 42,
-        "avgWinMin": 41,
-        "avgLossMin": 42,
+        "games": 61,
+        "avgMin": 41,
+        "avgWinMin": 43,
+        "avgLossMin": 39,
         "short": {
           "g": 4,
           "wr": 0.75
         },
         "mid": {
-          "g": 8,
-          "wr": 0.375
+          "g": 27,
+          "wr": 0.3333333333333333
         },
         "long": {
-          "g": 13,
-          "wr": 0.6923076923076923
+          "g": 30,
+          "wr": 0.7
         },
-        "closesFast": true
+        "closesFast": false
       },
       "ml": {
-        "elo": 1532,
+        "elo": 1518,
         "form10": 0.633,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108600,
+      "name": "Clown Crew",
+      "tag": null,
+      "logo": null,
+      "rating": 1549,
+      "games": 19,
+      "wins": 12,
+      "losses": 7,
+      "lastPlayed": 1776194638,
+      "timing": {
+        "games": 19,
+        "avgMin": 41,
+        "avgWinMin": 42,
+        "avgLossMin": 40,
+        "short": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.7
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1516,
+        "form10": 0.567,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -1397,7 +1508,7 @@
       "name": "Syntax",
       "tag": null,
       "logo": null,
-      "rating": 1547,
+      "rating": 1549,
       "games": 20,
       "wins": 12,
       "losses": 8,
@@ -1426,7 +1537,7 @@
         "form10": 0.5,
         "form45": 0.58,
         "act": 20,
-        "rust": 25
+        "rust": 26
       }
     },
     {
@@ -1434,32 +1545,32 @@
       "name": "Rune Eaters",
       "tag": null,
       "logo": null,
-      "rating": 1543,
-      "games": 66,
-      "wins": 30,
-      "losses": 36,
+      "rating": 1547,
+      "games": 72,
+      "wins": 32,
+      "losses": 40,
       "lastPlayed": 1786534496,
       "timing": {
-        "games": 66,
+        "games": 72,
         "avgMin": 42,
         "avgWinMin": 42,
-        "avgLossMin": 42,
+        "avgLossMin": 41,
         "short": {
-          "g": 5,
-          "wr": 0.6
+          "g": 7,
+          "wr": 0.42857142857142855
         },
         "mid": {
-          "g": 26,
-          "wr": 0.4230769230769231
+          "g": 29,
+          "wr": 0.4482758620689655
         },
         "long": {
-          "g": 35,
-          "wr": 0.45714285714285713
+          "g": 36,
+          "wr": 0.4444444444444444
         },
-        "closesFast": true
+        "closesFast": false
       },
       "ml": {
-        "elo": 1535,
+        "elo": 1537,
         "form10": 0.5,
         "form45": 0.53,
         "act": 28,
@@ -1467,37 +1578,56 @@
       }
     },
     {
-      "id": 9303383,
-      "name": "L1GA TEAM",
+      "id": 2576071,
+      "name": "Yellow Submarine",
       "tag": null,
       "logo": null,
-      "rating": 1541,
-      "games": 35,
-      "wins": 20,
-      "losses": 15,
-      "lastPlayed": 1777399803,
+      "rating": 1545,
+      "games": 37,
+      "wins": 21,
+      "losses": 16,
+      "lastPlayed": 1786466055,
       "timing": {
-        "games": 35,
-        "avgMin": 41,
+        "games": 36,
+        "avgMin": 45,
         "avgWinMin": 41,
-        "avgLossMin": 41,
+        "avgLossMin": 50,
         "short": {
           "g": 2,
           "wr": null
         },
         "mid": {
           "g": 14,
-          "wr": 0.35714285714285715
+          "wr": 0.7142857142857143
         },
         "long": {
-          "g": 19,
-          "wr": 0.6842105263157895
+          "g": 20,
+          "wr": 0.4
         },
         "closesFast": true
       },
       "ml": {
+        "elo": 1523,
+        "form10": 0.433,
+        "form45": 0.464,
+        "act": 9,
+        "rust": 11
+      }
+    },
+    {
+      "id": 10108781,
+      "name": "DarkStorm",
+      "tag": null,
+      "logo": null,
+      "rating": 1545,
+      "games": 3,
+      "wins": 3,
+      "losses": 0,
+      "lastPlayed": 1775770190,
+      "timing": null,
+      "ml": {
         "elo": 1515,
-        "form10": 0.633,
+        "form10": 0.688,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -1615,40 +1745,77 @@
       }
     },
     {
-      "id": 2576071,
-      "name": "Yellow Submarine",
+      "id": 10101464,
+      "name": "Mideng dreamer",
       "tag": null,
       "logo": null,
-      "rating": 1534,
-      "games": 26,
-      "wins": 14,
-      "losses": 12,
-      "lastPlayed": 1786466055,
+      "rating": 1536,
+      "games": 9,
+      "wins": 6,
+      "losses": 3,
+      "lastPlayed": 1775984800,
       "timing": {
-        "games": 25,
-        "avgMin": 46,
-        "avgWinMin": 44,
-        "avgLossMin": 48,
+        "games": 9,
+        "avgMin": 36,
+        "avgWinMin": 34,
+        "avgLossMin": 40,
         "short": {
-          "g": 1,
+          "g": 2,
           "wr": null
         },
         "mid": {
-          "g": 10,
-          "wr": 0.6
+          "g": 4,
+          "wr": 0.75
         },
         "long": {
-          "g": 14,
-          "wr": 0.42857142857142855
+          "g": 3,
+          "wr": 0.6666666666666666
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1520,
+        "elo": 1511,
+        "form10": 0.607,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9303484,
+      "name": "HEROIC",
+      "tag": null,
+      "logo": null,
+      "rating": 1536,
+      "games": 33,
+      "wins": 16,
+      "losses": 17,
+      "lastPlayed": 1777022964,
+      "timing": {
+        "games": 33,
+        "avgMin": 42,
+        "avgWinMin": 41,
+        "avgLossMin": 43,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 14,
+          "wr": 0.6428571428571429
+        },
+        "long": {
+          "g": 16,
+          "wr": 0.375
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1511,
         "form10": 0.433,
-        "form45": 0.464,
-        "act": 9,
-        "rust": 10
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -1686,6 +1853,25 @@
         "form45": 0.5,
         "act": 0,
         "rust": 51
+      }
+    },
+    {
+      "id": 9839631,
+      "name": "Wrecking Crew",
+      "tag": null,
+      "logo": null,
+      "rating": 1533,
+      "games": 4,
+      "wins": 3,
+      "losses": 1,
+      "lastPlayed": 1777833725,
+      "timing": null,
+      "ml": {
+        "elo": 1513,
+        "form10": 0.611,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -1783,19 +1969,56 @@
       }
     },
     {
-      "id": 9839631,
-      "name": "Wrecking Crew",
+      "id": 55,
+      "name": "_PowerRangers",
       "tag": null,
       "logo": null,
-      "rating": 1532,
-      "games": 4,
-      "wins": 3,
-      "losses": 1,
-      "lastPlayed": 1777833725,
+      "rating": 1531,
+      "games": 88,
+      "wins": 45,
+      "losses": 43,
+      "lastPlayed": 1786359731,
+      "timing": {
+        "games": 88,
+        "avgMin": 38,
+        "avgWinMin": 37,
+        "avgLossMin": 40,
+        "short": {
+          "g": 18,
+          "wr": 0.7222222222222222
+        },
+        "mid": {
+          "g": 33,
+          "wr": 0.5757575757575758
+        },
+        "long": {
+          "g": 37,
+          "wr": 0.35135135135135137
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1519,
+        "form10": 0.567,
+        "form45": 0.5,
+        "act": 26,
+        "rust": 12
+      }
+    },
+    {
+      "id": 10114405,
+      "name": "Not",
+      "tag": null,
+      "logo": null,
+      "rating": 1531,
+      "games": 2,
+      "wins": 2,
+      "losses": 0,
+      "lastPlayed": 1775941410,
       "timing": null,
       "ml": {
-        "elo": 1513,
-        "form10": 0.611,
+        "elo": 1510,
+        "form10": 0.643,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -1840,43 +2063,6 @@
       }
     },
     {
-      "id": 9303484,
-      "name": "HEROIC",
-      "tag": null,
-      "logo": null,
-      "rating": 1530,
-      "games": 29,
-      "wins": 16,
-      "losses": 13,
-      "lastPlayed": 1777022964,
-      "timing": {
-        "games": 29,
-        "avgMin": 42,
-        "avgWinMin": 41,
-        "avgLossMin": 43,
-        "short": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 13,
-          "wr": 0.6923076923076923
-        },
-        "long": {
-          "g": 13,
-          "wr": 0.46153846153846156
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1509,
-        "form10": 0.433,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10186547,
       "name": "Team Thailand",
       "tag": null,
@@ -1906,7 +2092,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1520,
+        "elo": 1519,
         "form10": 0.577,
         "form45": 0.5,
         "act": 0,
@@ -1914,114 +2100,40 @@
       }
     },
     {
-      "id": 10108600,
-      "name": "Clown Crew",
+      "id": 9678463,
+      "name": "Estar Backs",
       "tag": null,
       "logo": null,
-      "rating": 1529,
-      "games": 14,
-      "wins": 8,
-      "losses": 6,
-      "lastPlayed": 1776194638,
+      "rating": 1527,
+      "games": 45,
+      "wins": 21,
+      "losses": 24,
+      "lastPlayed": 1781800291,
       "timing": {
-        "games": 14,
-        "avgMin": 39,
+        "games": 45,
+        "avgMin": 40,
         "avgWinMin": 39,
-        "avgLossMin": 39,
+        "avgLossMin": 41,
         "short": {
-          "g": 2,
-          "wr": null
+          "g": 6,
+          "wr": 0.3333333333333333
         },
         "mid": {
-          "g": 6,
+          "g": 16,
           "wr": 0.5
         },
         "long": {
-          "g": 6,
-          "wr": 0.6666666666666666
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1510,
-        "form10": 0.567,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 8291895,
-      "name": "Tundra Esports",
-      "tag": null,
-      "logo": null,
-      "rating": 1528,
-      "games": 30,
-      "wins": 13,
-      "losses": 17,
-      "lastPlayed": 1779105538,
-      "timing": {
-        "games": 30,
-        "avgMin": 46,
-        "avgWinMin": 47,
-        "avgLossMin": 45,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.25
-        },
-        "long": {
-          "g": 17,
-          "wr": 0.5294117647058824
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1511,
-        "form10": 0.567,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 55,
-      "name": "_PowerRangers",
-      "tag": null,
-      "logo": null,
-      "rating": 1524,
-      "games": 75,
-      "wins": 38,
-      "losses": 37,
-      "lastPlayed": 1786359731,
-      "timing": {
-        "games": 75,
-        "avgMin": 39,
-        "avgWinMin": 37,
-        "avgLossMin": 40,
-        "short": {
-          "g": 15,
-          "wr": 0.7333333333333333
-        },
-        "mid": {
-          "g": 28,
-          "wr": 0.5357142857142857
-        },
-        "long": {
-          "g": 32,
-          "wr": 0.375
+          "g": 23,
+          "wr": 0.4782608695652174
         },
         "closesFast": true
       },
       "ml": {
         "elo": 1517,
-        "form10": 0.567,
+        "form10": 0.5,
         "form45": 0.5,
-        "act": 26,
-        "rust": 12
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -2103,7 +2215,7 @@
       "name": "Mentality Monsters",
       "tag": null,
       "logo": null,
-      "rating": 1518,
+      "rating": 1519,
       "games": 19,
       "wins": 11,
       "losses": 8,
@@ -2136,37 +2248,113 @@
       }
     },
     {
-      "id": 9678463,
-      "name": "Estar Backs",
+      "id": 1798457,
+      "name": "Hokori",
+      "tag": null,
+      "logo": null,
+      "rating": 1518,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775768554,
+      "timing": null,
+      "ml": {
+        "elo": 1506,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9455993,
+      "name": "повер ренджерс",
       "tag": null,
       "logo": null,
       "rating": 1517,
-      "games": 45,
-      "wins": 21,
-      "losses": 24,
-      "lastPlayed": 1781800291,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1775316192,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.563,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9964962,
+      "name": "GamerLegion",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 98,
+      "wins": 50,
+      "losses": 48,
+      "lastPlayed": 1786863431,
       "timing": {
-        "games": 45,
-        "avgMin": 40,
-        "avgWinMin": 39,
-        "avgLossMin": 41,
+        "games": 98,
+        "avgMin": 41,
+        "avgWinMin": 35,
+        "avgLossMin": 48,
         "short": {
-          "g": 6,
-          "wr": 0.3333333333333333
+          "g": 19,
+          "wr": 1
         },
         "mid": {
-          "g": 16,
-          "wr": 0.5
+          "g": 30,
+          "wr": 0.4666666666666667
         },
         "long": {
-          "g": 23,
-          "wr": 0.4782608695652174
+          "g": 49,
+          "wr": 0.3469387755102041
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1514,
-        "form10": 0.5,
+        "elo": 1485,
+        "form10": 0.433,
+        "form45": 0.329,
+        "act": 30,
+        "rust": 6
+      }
+    },
+    {
+      "id": 9752855,
+      "name": "Prime Time",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775662744,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8526911,
+      "name": "El otro equipo me la chupa",
+      "tag": null,
+      "logo": null,
+      "rating": 1517,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775687979,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -2285,62 +2473,6 @@
       }
     },
     {
-      "id": 10096172,
-      "name": "Shizageddon",
-      "tag": null,
-      "logo": null,
-      "rating": 1517,
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "lastPlayed": 1780048544,
-      "timing": null,
-      "ml": {
-        "elo": 1508,
-        "form10": 0.583,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10047709,
-      "name": "Ilbirs Esports",
-      "tag": null,
-      "logo": null,
-      "rating": 1517,
-      "games": 26,
-      "wins": 15,
-      "losses": 11,
-      "lastPlayed": 1786368387,
-      "timing": {
-        "games": 26,
-        "avgMin": 42,
-        "avgWinMin": 44,
-        "avgLossMin": 39,
-        "short": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 7,
-          "wr": 0.42857142857142855
-        },
-        "long": {
-          "g": 16,
-          "wr": 0.6875
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1512,
-        "form10": 0.433,
-        "form45": 0.583,
-        "act": 25,
-        "rust": 11
-      }
-    },
-    {
       "id": 9517326,
       "name": "Egypt",
       "tag": null,
@@ -2356,7 +2488,7 @@
         "form10": 0.563,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -2397,15 +2529,243 @@
       }
     },
     {
-      "id": 10101464,
-      "name": "Mideng dreamer",
+      "id": 10101462,
+      "name": "Big",
       "tag": null,
       "logo": null,
       "rating": 1516,
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1775984800,
+      "lastPlayed": 1774841707,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10067679,
+      "name": "Ruina",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775156497,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9063293,
+      "name": "recruitFOREVER",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775493731,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9273043,
+      "name": "Dark Horses",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775654713,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10040864,
+      "name": "Team Stels",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775656764,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9476603,
+      "name": "OnlyGuapos",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775682400,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9352634,
+      "name": "Acatsuki",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775683695,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9855673,
+      "name": "EHOME SA",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775684913,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10067887,
+      "name": "Gator Legs",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775826083,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9657799,
+      "name": "Whoa-Sirus",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775855070,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9805701,
+      "name": "BIZCOCHOS KARIM",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775855357,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10082589,
+      "name": "LAVA SPORTS",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775855416,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10060935,
+      "name": "xd",
+      "tag": null,
+      "logo": null,
+      "rating": 1516,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775924732,
       "timing": null,
       "ml": {
         "elo": 1505,
@@ -2511,25 +2871,6 @@
       }
     },
     {
-      "id": 10102110,
-      "name": "Satan666",
-      "tag": null,
-      "logo": null,
-      "rating": 1516,
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "lastPlayed": 1780027703,
-      "timing": null,
-      "ml": {
-        "elo": 1508,
-        "form10": 0.583,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 9449429,
       "name": "Team Ganjubas Reborn",
       "tag": null,
@@ -2606,19 +2947,37 @@
       }
     },
     {
-      "id": 8337978,
-      "name": "Sad BoyS",
+      "id": 10150610,
+      "name": "Flame Esports",
       "tag": null,
       "logo": null,
       "rating": 1516,
-      "games": 1,
-      "wins": 1,
-      "losses": 0,
-      "lastPlayed": 1780074891,
-      "timing": null,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1780327325,
+      "timing": {
+        "games": 9,
+        "avgMin": 38,
+        "avgWinMin": 32,
+        "avgLossMin": 45,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "closesFast": true
+      },
       "ml": {
-        "elo": 1508,
-        "form10": 0.583,
+        "elo": 1507,
+        "form10": 0.536,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -2720,15 +3079,34 @@
       }
     },
     {
-      "id": 9895695,
-      "name": "ToLight",
+      "id": 10061609,
+      "name": "fp anti-mage",
+      "tag": null,
+      "logo": null,
+      "rating": 1515,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1777823237,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.563,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 2599202,
+      "name": "XR",
       "tag": null,
       "logo": null,
       "rating": 1515,
       "games": 1,
       "wins": 1,
       "losses": 0,
-      "lastPlayed": 1776492689,
+      "lastPlayed": 1775318757,
       "timing": null,
       "ml": {
         "elo": 1505,
@@ -2739,40 +3117,116 @@
       }
     },
     {
-      "id": 10150610,
-      "name": "Flame Esports",
+      "id": 9316703,
+      "name": "1换1",
       "tag": null,
       "logo": null,
       "rating": 1515,
-      "games": 9,
-      "wins": 5,
-      "losses": 4,
-      "lastPlayed": 1780327325,
-      "timing": {
-        "games": 9,
-        "avgMin": 38,
-        "avgWinMin": 32,
-        "avgLossMin": 45,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "long": {
-          "g": 4,
-          "wr": 0.25
-        },
-        "closesFast": true
-      },
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775639281,
+      "timing": null,
       "ml": {
-        "elo": 1507,
-        "form10": 0.536,
+        "elo": 1505,
+        "form10": 0.583,
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10109812,
+      "name": "SoNNeikO clan",
+      "tag": null,
+      "logo": null,
+      "rating": 1515,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1775931268,
+      "timing": null,
+      "ml": {
+        "elo": 1505,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10096172,
+      "name": "Shizageddon",
+      "tag": null,
+      "logo": null,
+      "rating": 1515,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780048544,
+      "timing": null,
+      "ml": {
+        "elo": 1508,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8337978,
+      "name": "Sad BoyS",
+      "tag": null,
+      "logo": null,
+      "rating": 1515,
+      "games": 1,
+      "wins": 1,
+      "losses": 0,
+      "lastPlayed": 1780074891,
+      "timing": null,
+      "ml": {
+        "elo": 1508,
+        "form10": 0.583,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10047709,
+      "name": "Ilbirs Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1514,
+      "games": 27,
+      "wins": 15,
+      "losses": 12,
+      "lastPlayed": 1786368387,
+      "timing": {
+        "games": 27,
+        "avgMin": 42,
+        "avgWinMin": 44,
+        "avgLossMin": 40,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.42857142857142855
+        },
+        "long": {
+          "g": 17,
+          "wr": 0.6470588235294118
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1511,
+        "form10": 0.433,
+        "form45": 0.583,
+        "act": 25,
+        "rust": 12
       }
     },
     {
@@ -2846,7 +3300,100 @@
         "form10": 0.5,
         "form45": 0.477,
         "act": 17,
-        "rust": 16
+        "rust": 17
+      }
+    },
+    {
+      "id": 9895392,
+      "name": "Virtus.pro",
+      "tag": null,
+      "logo": null,
+      "rating": 1513,
+      "games": 72,
+      "wins": 32,
+      "losses": 40,
+      "lastPlayed": 1784037059,
+      "timing": {
+        "games": 72,
+        "avgMin": 43,
+        "avgWinMin": 44,
+        "avgLossMin": 42,
+        "short": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "mid": {
+          "g": 28,
+          "wr": 0.35714285714285715
+        },
+        "long": {
+          "g": 38,
+          "wr": 0.5526315789473685
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1504,
+        "form10": 0.5,
+        "form45": 0.469,
+        "act": 11,
+        "rust": 39
+      }
+    },
+    {
+      "id": 9886393,
+      "name": "NAVI Junior",
+      "tag": null,
+      "logo": null,
+      "rating": 1512,
+      "games": 3,
+      "wins": 2,
+      "losses": 1,
+      "lastPlayed": 1775829363,
+      "timing": null,
+      "ml": {
+        "elo": 1504,
+        "form10": 0.563,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108713,
+      "name": "Breeki Cheeki",
+      "tag": null,
+      "logo": null,
+      "rating": 1512,
+      "games": 35,
+      "wins": 19,
+      "losses": 16,
+      "lastPlayed": 1777309510,
+      "timing": {
+        "games": 35,
+        "avgMin": 37,
+        "avgWinMin": 38,
+        "avgLossMin": 37,
+        "short": {
+          "g": 9,
+          "wr": 0.4444444444444444
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.75
+        },
+        "long": {
+          "g": 14,
+          "wr": 0.42857142857142855
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1503,
+        "form10": 0.367,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -2879,7 +3426,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1508,
+        "elo": 1507,
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
@@ -2921,6 +3468,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 51
+      }
+    },
+    {
+      "id": 726228,
+      "name": "Vici Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1511,
+      "games": 123,
+      "wins": 64,
+      "losses": 59,
+      "lastPlayed": 1786850291,
+      "timing": {
+        "games": 123,
+        "avgMin": 43,
+        "avgWinMin": 44,
+        "avgLossMin": 43,
+        "short": {
+          "g": 13,
+          "wr": 0.6153846153846154
+        },
+        "mid": {
+          "g": 42,
+          "wr": 0.4523809523809524
+        },
+        "long": {
+          "g": 68,
+          "wr": 0.5441176470588235
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1472,
+        "form10": 0.367,
+        "form45": 0.447,
+        "act": 52,
+        "rust": 6
       }
     },
     {
@@ -2994,7 +3578,7 @@
         "form10": 0.536,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -3031,7 +3615,44 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
+      }
+    },
+    {
+      "id": 9351740,
+      "name": "Yakult Brothers",
+      "tag": null,
+      "logo": null,
+      "rating": 1510,
+      "games": 30,
+      "wins": 14,
+      "losses": 16,
+      "lastPlayed": 1781781307,
+      "timing": {
+        "games": 30,
+        "avgMin": 44,
+        "avgWinMin": 43,
+        "avgLossMin": 45,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 17,
+          "wr": 0.4117647058823529
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1505,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -3050,7 +3671,7 @@
         "form10": 0.563,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -3091,43 +3712,6 @@
       }
     },
     {
-      "id": 9964962,
-      "name": "GamerLegion",
-      "tag": null,
-      "logo": null,
-      "rating": 1508,
-      "games": 77,
-      "wins": 37,
-      "losses": 40,
-      "lastPlayed": 1786863431,
-      "timing": {
-        "games": 77,
-        "avgMin": 41,
-        "avgWinMin": 34,
-        "avgLossMin": 47,
-        "short": {
-          "g": 17,
-          "wr": 1
-        },
-        "mid": {
-          "g": 23,
-          "wr": 0.34782608695652173
-        },
-        "long": {
-          "g": 37,
-          "wr": 0.32432432432432434
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1482,
-        "form10": 0.433,
-        "form45": 0.329,
-        "act": 30,
-        "rust": 6
-      }
-    },
-    {
       "id": 10182654,
       "name": "LATVIA",
       "tag": null,
@@ -3165,80 +3749,6 @@
       }
     },
     {
-      "id": 9895392,
-      "name": "Virtus.pro",
-      "tag": null,
-      "logo": null,
-      "rating": 1507,
-      "games": 60,
-      "wins": 27,
-      "losses": 33,
-      "lastPlayed": 1784037059,
-      "timing": {
-        "games": 60,
-        "avgMin": 44,
-        "avgWinMin": 46,
-        "avgLossMin": 43,
-        "short": {
-          "g": 4,
-          "wr": 0
-        },
-        "mid": {
-          "g": 22,
-          "wr": 0.36363636363636365
-        },
-        "long": {
-          "g": 34,
-          "wr": 0.5588235294117647
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1502,
-        "form10": 0.5,
-        "form45": 0.469,
-        "act": 11,
-        "rust": 38
-      }
-    },
-    {
-      "id": 9351740,
-      "name": "Yakult Brothers",
-      "tag": null,
-      "logo": null,
-      "rating": 1507,
-      "games": 21,
-      "wins": 10,
-      "losses": 11,
-      "lastPlayed": 1781781307,
-      "timing": {
-        "games": 21,
-        "avgMin": 47,
-        "avgWinMin": 44,
-        "avgLossMin": 49,
-        "short": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "mid": {
-          "g": 5,
-          "wr": 0.6
-        },
-        "long": {
-          "g": 13,
-          "wr": 0.38461538461538464
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1504,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10182773,
       "name": "Team Romania",
       "tag": null,
@@ -3272,7 +3782,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3309,7 +3819,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 51
+        "rust": 52
       }
     },
     {
@@ -3350,43 +3860,6 @@
       }
     },
     {
-      "id": 726228,
-      "name": "Vici Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1504,
-      "games": 118,
-      "wins": 61,
-      "losses": 57,
-      "lastPlayed": 1786850291,
-      "timing": {
-        "games": 118,
-        "avgMin": 43,
-        "avgWinMin": 44,
-        "avgLossMin": 43,
-        "short": {
-          "g": 13,
-          "wr": 0.6153846153846154
-        },
-        "mid": {
-          "g": 40,
-          "wr": 0.425
-        },
-        "long": {
-          "g": 65,
-          "wr": 0.5538461538461539
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1470,
-        "form10": 0.367,
-        "form45": 0.447,
-        "act": 52,
-        "rust": 6
-      }
-    },
-    {
       "id": 10182755,
       "name": "Team Iran",
       "tag": null,
@@ -3416,7 +3889,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1503,
+        "elo": 1502,
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
@@ -3428,7 +3901,7 @@
       "name": "Nemiga Gaming",
       "tag": null,
       "logo": null,
-      "rating": 1500,
+      "rating": 1503,
       "games": 61,
       "wins": 31,
       "losses": 30,
@@ -3461,15 +3934,90 @@
       }
     },
     {
-      "id": 10061609,
-      "name": "fp anti-mage",
+      "id": 10040801,
+      "name": "Leto",
       "tag": null,
       "logo": null,
-      "rating": 1500,
+      "rating": 1502,
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1777823237,
+      "lastPlayed": 1775829363,
+      "timing": null,
+      "ml": {
+        "elo": 1501,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10150267,
+      "name": "Hokori",
+      "tag": null,
+      "logo": null,
+      "rating": 1502,
+      "games": 20,
+      "wins": 10,
+      "losses": 10,
+      "lastPlayed": 1781716429,
+      "timing": {
+        "games": 20,
+        "avgMin": 42,
+        "avgWinMin": 44,
+        "avgLossMin": 41,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.6666666666666666
+        },
+        "long": {
+          "g": 12,
+          "wr": 0.5
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1499,
+        "form10": 0.367,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9081369,
+      "name": "Infamous Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1501,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1775688635,
+      "timing": null,
+      "ml": {
+        "elo": 1500,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108942,
+      "name": "Eoka",
+      "tag": null,
+      "logo": null,
+      "rating": 1501,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1775854594,
       "timing": null,
       "ml": {
         "elo": 1500,
@@ -3489,6 +4037,25 @@
       "wins": 1,
       "losses": 1,
       "lastPlayed": 1777824836,
+      "timing": null,
+      "ml": {
+        "elo": 1500,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108233,
+      "name": "ShIShUlI",
+      "tag": null,
+      "logo": null,
+      "rating": 1500,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1780048323,
       "timing": null,
       "ml": {
         "elo": 1500,
@@ -3536,15 +4103,15 @@
       }
     },
     {
-      "id": 10001733,
-      "name": "Hive",
+      "id": 10108268,
+      "name": "kijeyka",
       "tag": null,
       "logo": null,
-      "rating": 1500,
+      "rating": 1499,
       "games": 2,
       "wins": 1,
       "losses": 1,
-      "lastPlayed": 1780056131,
+      "lastPlayed": 1775662744,
       "timing": null,
       "ml": {
         "elo": 1500,
@@ -3612,44 +4179,6 @@
       }
     },
     {
-      "id": 9766265,
-      "name": "Team Lipstick",
-      "tag": null,
-      "logo": null,
-      "rating": 1499,
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "lastPlayed": 1780048544,
-      "timing": null,
-      "ml": {
-        "elo": 1500,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10108233,
-      "name": "ShIShUlI",
-      "tag": null,
-      "logo": null,
-      "rating": 1499,
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "lastPlayed": 1780048323,
-      "timing": null,
-      "ml": {
-        "elo": 1500,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 9781592,
       "name": "Golden Retrievers",
       "tag": null,
@@ -3661,26 +4190,7 @@
       "lastPlayed": 1780051878,
       "timing": null,
       "ml": {
-        "elo": 1500,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9640559,
-      "name": "Chincha Players",
-      "tag": null,
-      "logo": null,
-      "rating": 1499,
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "lastPlayed": 1780079606,
-      "timing": null,
-      "ml": {
-        "elo": 1500,
+        "elo": 1499,
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
@@ -3704,6 +4214,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10163973,
+      "name": "RE ARISE",
+      "tag": null,
+      "logo": null,
+      "rating": 1499,
+      "games": 16,
+      "wins": 7,
+      "losses": 9,
+      "lastPlayed": 1786025124,
+      "timing": {
+        "games": 16,
+        "avgMin": 40,
+        "avgWinMin": 38,
+        "avgLossMin": 42,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.2857142857142857
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.42857142857142855
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1500,
+        "form10": 0.5,
+        "form45": 0.531,
+        "act": 11,
+        "rust": 16
       }
     },
     {
@@ -3736,7 +4283,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1499,
+        "elo": 1498,
         "form10": 0.464,
         "form45": 0.5,
         "act": 0,
@@ -3781,40 +4328,115 @@
       }
     },
     {
-      "id": 10163973,
-      "name": "RE ARISE",
+      "id": 10108685,
+      "name": "WinteR Squadron",
       "tag": null,
       "logo": null,
       "rating": 1498,
-      "games": 16,
-      "wins": 7,
-      "losses": 9,
-      "lastPlayed": 1786025124,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1775640547,
+      "timing": null,
+      "ml": {
+        "elo": 1499,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10055004,
+      "name": "Kitsune Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1498,
+      "games": 2,
+      "wins": 1,
+      "losses": 1,
+      "lastPlayed": 1775660333,
+      "timing": null,
+      "ml": {
+        "elo": 1499,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9828897,
+      "name": "REKONIX",
+      "tag": null,
+      "logo": null,
+      "rating": 1497,
+      "games": 74,
+      "wins": 38,
+      "losses": 36,
+      "lastPlayed": 1783852811,
       "timing": {
-        "games": 16,
-        "avgMin": 40,
-        "avgWinMin": 38,
-        "avgLossMin": 42,
+        "games": 74,
+        "avgMin": 42,
+        "avgWinMin": 42,
+        "avgLossMin": 41,
         "short": {
-          "g": 2,
-          "wr": null
+          "g": 7,
+          "wr": 0.5714285714285714
         },
         "mid": {
-          "g": 7,
-          "wr": 0.2857142857142857
+          "g": 27,
+          "wr": 0.5185185185185185
         },
         "long": {
-          "g": 7,
-          "wr": 0.42857142857142855
+          "g": 40,
+          "wr": 0.5
         },
-        "closesFast": true
+        "closesFast": false
       },
       "ml": {
-        "elo": 1500,
-        "form10": 0.5,
-        "form45": 0.531,
-        "act": 11,
-        "rust": 15
+        "elo": 1484,
+        "form10": 0.3,
+        "form45": 0.346,
+        "act": 8,
+        "rust": 41
+      }
+    },
+    {
+      "id": 2586976,
+      "name": "OG",
+      "tag": null,
+      "logo": null,
+      "rating": 1497,
+      "games": 64,
+      "wins": 27,
+      "losses": 37,
+      "lastPlayed": 1786790443,
+      "timing": {
+        "games": 64,
+        "avgMin": 45,
+        "avgWinMin": 47,
+        "avgLossMin": 44,
+        "short": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "mid": {
+          "g": 21,
+          "wr": 0.38095238095238093
+        },
+        "long": {
+          "g": 39,
+          "wr": 0.46153846153846156
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1459,
+        "form10": 0.3,
+        "form45": 0.392,
+        "act": 32,
+        "rust": 7
       }
     },
     {
@@ -3859,7 +4481,7 @@
       "name": "The House Esports",
       "tag": null,
       "logo": null,
-      "rating": 1496,
+      "rating": 1497,
       "games": 2,
       "wins": 1,
       "losses": 1,
@@ -3874,37 +4496,37 @@
       }
     },
     {
-      "id": 10150267,
-      "name": "Hokori",
+      "id": 9799036,
+      "name": "TeamDk",
       "tag": null,
       "logo": null,
-      "rating": 1496,
-      "games": 20,
-      "wins": 10,
-      "losses": 10,
-      "lastPlayed": 1781716429,
+      "rating": 1495,
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "lastPlayed": 1780424891,
       "timing": {
-        "games": 20,
-        "avgMin": 42,
-        "avgWinMin": 44,
-        "avgLossMin": 41,
+        "games": 9,
+        "avgMin": 34,
+        "avgWinMin": 34,
+        "avgLossMin": 33,
         "short": {
-          "g": 2,
-          "wr": null
+          "g": 3,
+          "wr": 0.3333333333333333
         },
         "mid": {
-          "g": 6,
-          "wr": 0.6666666666666666
+          "g": 4,
+          "wr": 0.75
         },
         "long": {
-          "g": 12,
-          "wr": 0.5
+          "g": 2,
+          "wr": null
         },
         "closesFast": false
       },
       "ml": {
-        "elo": 1497,
-        "form10": 0.367,
+        "elo": 1498,
+        "form10": 0.536,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -3930,11 +4552,85 @@
       }
     },
     {
+      "id": 9894442,
+      "name": "Cloud Dawning",
+      "tag": null,
+      "logo": null,
+      "rating": 1493,
+      "games": 23,
+      "wins": 11,
+      "losses": 12,
+      "lastPlayed": 1777698876,
+      "timing": {
+        "games": 23,
+        "avgMin": 40,
+        "avgWinMin": 38,
+        "avgLossMin": 42,
+        "short": {
+          "g": 6,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 13,
+          "wr": 0.46153846153846156
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1498,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10081680,
+      "name": "GLYPH",
+      "tag": null,
+      "logo": null,
+      "rating": 1493,
+      "games": 55,
+      "wins": 27,
+      "losses": 28,
+      "lastPlayed": 1782115744,
+      "timing": {
+        "games": 55,
+        "avgMin": 41,
+        "avgWinMin": 41,
+        "avgLossMin": 42,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 18,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 32,
+          "wr": 0.46875
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1491,
+        "form10": 0.433,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182309,
       "name": "PTime",
       "tag": null,
       "logo": null,
-      "rating": 1491,
+      "rating": 1493,
       "games": 10,
       "wins": 4,
       "losses": 6,
@@ -3959,45 +4655,119 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1489,
+        "elo": 1490,
         "form10": 0.433,
         "form45": 0.423,
         "act": 8,
-        "rust": 41
+        "rust": 42
       }
     },
     {
-      "id": 9799036,
-      "name": "TeamDk",
+      "id": 10053545,
+      "name": "EARTH GAMING",
       "tag": null,
       "logo": null,
-      "rating": 1490,
-      "games": 9,
-      "wins": 5,
+      "rating": 1492,
+      "games": 8,
+      "wins": 4,
       "losses": 4,
-      "lastPlayed": 1780424891,
+      "lastPlayed": 1775946702,
       "timing": {
-        "games": 9,
-        "avgMin": 34,
-        "avgWinMin": 34,
-        "avgLossMin": 33,
+        "games": 8,
+        "avgMin": 37,
+        "avgWinMin": 37,
+        "avgLossMin": 37,
         "short": {
           "g": 3,
-          "wr": 0.3333333333333333
+          "wr": 0.6666666666666666
         },
         "mid": {
-          "g": 4,
-          "wr": 0.75
+          "g": 3,
+          "wr": 0.3333333333333333
         },
         "long": {
           "g": 2,
           "wr": null
         },
-        "closesFast": false
+        "closesFast": true
       },
       "ml": {
         "elo": 1497,
-        "form10": 0.536,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10149530,
+      "name": "HULIGANI",
+      "tag": null,
+      "logo": null,
+      "rating": 1492,
+      "games": 31,
+      "wins": 15,
+      "losses": 16,
+      "lastPlayed": 1786769610,
+      "timing": {
+        "games": 31,
+        "avgMin": 47,
+        "avgWinMin": 50,
+        "avgLossMin": 45,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.2
+        },
+        "long": {
+          "g": 25,
+          "wr": 0.56
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1461,
+        "form10": 0.3,
+        "form45": 0.3,
+        "act": 10,
+        "rust": 7
+      }
+    },
+    {
+      "id": 10007878,
+      "name": "Team Refuser",
+      "tag": null,
+      "logo": null,
+      "rating": 1490,
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "lastPlayed": 1781698511,
+      "timing": {
+        "games": 12,
+        "avgMin": 48,
+        "avgWinMin": 51,
+        "avgLossMin": 46,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 8,
+          "wr": 0.5
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1498,
+        "form10": 0.5,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -4008,14 +4778,14 @@
       "name": "NEW GROWTH",
       "tag": null,
       "logo": null,
-      "rating": 1488,
+      "rating": 1490,
       "games": 3,
       "wins": 1,
       "losses": 2,
       "lastPlayed": 1780164124,
       "timing": null,
       "ml": {
-        "elo": 1493,
+        "elo": 1494,
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
@@ -4060,40 +4830,22 @@
       }
     },
     {
-      "id": 10149530,
-      "name": "HULIGANI",
+      "id": 9545342,
+      "name": "KINGS",
       "tag": null,
       "logo": null,
       "rating": 1487,
-      "games": 31,
-      "wins": 15,
-      "losses": 16,
-      "lastPlayed": 1786769610,
-      "timing": {
-        "games": 31,
-        "avgMin": 47,
-        "avgWinMin": 50,
-        "avgLossMin": 45,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 5,
-          "wr": 0.2
-        },
-        "long": {
-          "g": 25,
-          "wr": 0.56
-        },
-        "closesFast": false
-      },
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775635523,
+      "timing": null,
       "ml": {
-        "elo": 1459,
-        "form10": 0.3,
-        "form45": 0.3,
-        "act": 10,
-        "rust": 7
+        "elo": 1496,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -4134,77 +4886,40 @@
       }
     },
     {
-      "id": 10108713,
-      "name": "Breeki Cheeki",
+      "id": 9948367,
+      "name": "Team Spirit Academy",
       "tag": null,
       "logo": null,
       "rating": 1486,
-      "games": 30,
-      "wins": 14,
-      "losses": 16,
-      "lastPlayed": 1777309510,
+      "games": 17,
+      "wins": 8,
+      "losses": 9,
+      "lastPlayed": 1784910553,
       "timing": {
-        "games": 30,
-        "avgMin": 37,
-        "avgWinMin": 37,
-        "avgLossMin": 37,
+        "games": 17,
+        "avgMin": 47,
+        "avgWinMin": 44,
+        "avgLossMin": 50,
         "short": {
-          "g": 7,
-          "wr": 0.2857142857142857
+          "g": 2,
+          "wr": null
         },
         "mid": {
-          "g": 11,
-          "wr": 0.7272727272727273
+          "g": 3,
+          "wr": 0.6666666666666666
         },
         "long": {
           "g": 12,
-          "wr": 0.3333333333333333
+          "wr": 0.4166666666666667
         },
-        "closesFast": false
+        "closesFast": true
       },
       "ml": {
-        "elo": 1495,
-        "form10": 0.367,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 2586976,
-      "name": "OG",
-      "tag": null,
-      "logo": null,
-      "rating": 1486,
-      "games": 62,
-      "wins": 25,
-      "losses": 37,
-      "lastPlayed": 1786790443,
-      "timing": {
-        "games": 62,
-        "avgMin": 45,
-        "avgWinMin": 48,
-        "avgLossMin": 44,
-        "short": {
-          "g": 4,
-          "wr": 0.25
-        },
-        "mid": {
-          "g": 20,
-          "wr": 0.35
-        },
-        "long": {
-          "g": 38,
-          "wr": 0.4473684210526316
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1456,
-        "form10": 0.3,
-        "form45": 0.392,
-        "act": 32,
-        "rust": 7
+        "elo": 1487,
+        "form10": 0.5,
+        "form45": 0.447,
+        "act": 14,
+        "rust": 29
       }
     },
     {
@@ -4212,7 +4927,7 @@
       "name": "Yangon Galacticos",
       "tag": null,
       "logo": null,
-      "rating": 1485,
+      "rating": 1486,
       "games": 1,
       "wins": 0,
       "losses": 1,
@@ -4220,6 +4935,138 @@
       "timing": null,
       "ml": {
         "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10041696,
+      "name": "sifr00",
+      "tag": null,
+      "logo": null,
+      "rating": 1486,
+      "games": 5,
+      "wins": 2,
+      "losses": 3,
+      "lastPlayed": 1780407968,
+      "timing": {
+        "games": 5,
+        "avgMin": 27,
+        "avgWinMin": 32,
+        "avgLossMin": 24,
+        "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 2,
+          "wr": null
+        },
+        "long": {
+          "g": 0,
+          "wr": null
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1493,
+        "form10": 0.45,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9640559,
+      "name": "Chincha Players",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780079606,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.438,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108787,
+      "name": "BTS Army",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775685440,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9455153,
+      "name": "Gensokyo",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775826147,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9041543,
+      "name": "KaiserNet",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775857140,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10134538,
+      "name": "Low cortisol",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1777817417,
+      "timing": null,
+      "ml": {
+        "elo": 1494,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -4236,25 +5083,6 @@
       "wins": 0,
       "losses": 1,
       "lastPlayed": 1780033999,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 6765751,
-      "name": "Belial Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1485,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780075553,
       "timing": null,
       "ml": {
         "elo": 1492,
@@ -4297,43 +5125,6 @@
       "ml": {
         "elo": 1492,
         "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10041696,
-      "name": "sifr00",
-      "tag": null,
-      "logo": null,
-      "rating": 1485,
-      "games": 5,
-      "wins": 2,
-      "losses": 3,
-      "lastPlayed": 1780407968,
-      "timing": {
-        "games": 5,
-        "avgMin": 27,
-        "avgWinMin": 32,
-        "avgLossMin": 24,
-        "short": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 2,
-          "wr": null
-        },
-        "long": {
-          "g": 0,
-          "wr": null
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1492,
-        "form10": 0.45,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -4388,11 +5179,11 @@
       "lastPlayed": 1782833409,
       "timing": null,
       "ml": {
-        "elo": 1490,
+        "elo": 1491,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -4415,52 +5206,34 @@
       }
     },
     {
-      "id": 9828897,
-      "name": "REKONIX",
+      "id": 9895695,
+      "name": "ToLight",
       "tag": null,
       "logo": null,
       "rating": 1484,
-      "games": 67,
-      "wins": 34,
-      "losses": 33,
-      "lastPlayed": 1783852811,
-      "timing": {
-        "games": 67,
-        "avgMin": 42,
-        "avgWinMin": 43,
-        "avgLossMin": 41,
-        "short": {
-          "g": 5,
-          "wr": 0.4
-        },
-        "mid": {
-          "g": 26,
-          "wr": 0.5384615384615384
-        },
-        "long": {
-          "g": 36,
-          "wr": 0.5
-        },
-        "closesFast": false
-      },
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1776492689,
+      "timing": null,
       "ml": {
-        "elo": 1480,
-        "form10": 0.3,
-        "form45": 0.346,
-        "act": 8,
-        "rust": 41
+        "elo": 1496,
+        "form10": 0.438,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
-      "id": 10101574,
-      "name": "Alis Ventorus",
+      "id": 10101606,
+      "name": "BIG",
       "tag": null,
       "logo": null,
       "rating": 1484,
       "games": 1,
       "wins": 0,
       "losses": 1,
-      "lastPlayed": 1776162353,
+      "lastPlayed": 1774928507,
       "timing": null,
       "ml": {
         "elo": 1495,
@@ -4471,37 +5244,304 @@
       }
     },
     {
-      "id": 10007878,
-      "name": "Team Refuser",
+      "id": 9780969,
+      "name": "МИНЕТЧИЦЫ",
       "tag": null,
       "logo": null,
       "rating": 1484,
-      "games": 12,
-      "wins": 5,
-      "losses": 7,
-      "lastPlayed": 1781698511,
-      "timing": {
-        "games": 12,
-        "avgMin": 48,
-        "avgWinMin": 51,
-        "avgLossMin": 46,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 4,
-          "wr": 0.25
-        },
-        "long": {
-          "g": 8,
-          "wr": 0.5
-        },
-        "closesFast": false
-      },
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775156497,
+      "timing": null,
       "ml": {
-        "elo": 1496,
-        "form10": 0.5,
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9032628,
+      "name": "Смешарики",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775493731,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108677,
+      "name": "BigChickenEight",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775628815,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10102110,
+      "name": "Satan666",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1780027703,
+      "timing": null,
+      "ml": {
+        "elo": 1498,
+        "form10": 0.438,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9916928,
+      "name": "Sunny Girls",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775655528,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 4461223,
+      "name": "Captains",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775657302,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 5168070,
+      "name": "Well",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775682298,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9572187,
+      "name": "Phoenix E-Sports",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775682400,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 5002734,
+      "name": "Aukka Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775682521,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10020357,
+      "name": "InmortalClass",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775684913,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9760182,
+      "name": "Anypedia Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775826083,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10060617,
+      "name": "Team Levantic",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1775920001,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.438,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8890220,
+      "name": "Guerreros ZZZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775855070,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9964542,
+      "name": "FIC EMPIRE",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775855357,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 7554144,
+      "name": "Icefly",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775855416,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9677738,
+      "name": "Крутецкая Круть",
+      "tag": null,
+      "logo": null,
+      "rating": 1484,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775924732,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -4555,25 +5595,6 @@
       "wins": 0,
       "losses": 1,
       "lastPlayed": 1777817370,
-      "timing": null,
-      "ml": {
-        "elo": 1494,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10134538,
-      "name": "Low cortisol",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1777817417,
       "timing": null,
       "ml": {
         "elo": 1494,
@@ -4736,25 +5757,6 @@
       }
     },
     {
-      "id": 10144217,
-      "name": "Asia Spirit",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780027703,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 2108395,
       "name": "TNC Predator",
       "tag": null,
@@ -4831,25 +5833,6 @@
       }
     },
     {
-      "id": 8376366,
-      "name": "RAINBOW TIGERS",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780045371,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 9866162,
       "name": "Sky Forge",
       "tag": null,
@@ -4907,44 +5890,6 @@
       }
     },
     {
-      "id": 10143624,
-      "name": "Zolak Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780050224,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 8419968,
-      "name": "Korkino Lions",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780051377,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 9965097,
       "name": "谢钦州代表队",
       "tag": null,
@@ -4954,25 +5899,6 @@
       "wins": 0,
       "losses": 1,
       "lastPlayed": 1780063537,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10040639,
-      "name": "Ember Enjoyers",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780071274,
       "timing": null,
       "ml": {
         "elo": 1492,
@@ -5040,25 +5966,6 @@
       }
     },
     {
-      "id": 10158067,
-      "name": "Team Cangreburger",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780074575,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 8571354,
       "name": "Anvorguesa",
       "tag": null,
@@ -5068,25 +5975,6 @@
       "wins": 0,
       "losses": 1,
       "lastPlayed": 1780074795,
-      "timing": null,
-      "ml": {
-        "elo": 1492,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 10095819,
-      "name": "Lunatic`s",
-      "tag": null,
-      "logo": null,
-      "rating": 1484,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1780074891,
       "timing": null,
       "ml": {
         "elo": 1492,
@@ -5263,7 +6151,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -5319,7 +6207,7 @@
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5342,6 +6230,118 @@
       }
     },
     {
+      "id": 9255039,
+      "name": "enjoy",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 65,
+      "wins": 30,
+      "losses": 35,
+      "lastPlayed": 1785588214,
+      "timing": {
+        "games": 65,
+        "avgMin": 42,
+        "avgWinMin": 38,
+        "avgLossMin": 45,
+        "short": {
+          "g": 5,
+          "wr": 1
+        },
+        "mid": {
+          "g": 27,
+          "wr": 0.5185185185185185
+        },
+        "long": {
+          "g": 33,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1491,
+        "form10": 0.433,
+        "form45": 0.583,
+        "act": 1,
+        "rust": 21
+      }
+    },
+    {
+      "id": 8254145,
+      "name": "Execration",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 31,
+      "wins": 14,
+      "losses": 17,
+      "lastPlayed": 1785569031,
+      "timing": {
+        "games": 31,
+        "avgMin": 41,
+        "avgWinMin": 38,
+        "avgLossMin": 43,
+        "short": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 11,
+          "wr": 0.6363636363636364
+        },
+        "long": {
+          "g": 16,
+          "wr": 0.3125
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1486,
+        "form10": 0.367,
+        "form45": 0.438,
+        "act": 3,
+        "rust": 21
+      }
+    },
+    {
+      "id": 10108885,
+      "name": "EEZZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1775801140,
+      "timing": null,
+      "ml": {
+        "elo": 1495,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10101574,
+      "name": "Alis Ventorus",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1776162353,
+      "timing": null,
+      "ml": {
+        "elo": 1494,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 9486230,
       "name": "command",
       "tag": null,
@@ -5361,6 +6361,44 @@
       }
     },
     {
+      "id": 8419968,
+      "name": "Korkino Lions",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780051377,
+      "timing": null,
+      "ml": {
+        "elo": 1492,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10158067,
+      "name": "Team Cangreburger",
+      "tag": null,
+      "logo": null,
+      "rating": 1483,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780074575,
+      "timing": null,
+      "ml": {
+        "elo": 1492,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 9433599,
       "name": "322",
       "tag": null,
@@ -5373,6 +6411,137 @@
       "timing": null,
       "ml": {
         "elo": 1491,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108166,
+      "name": "Mideng dreamer",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 19,
+      "wins": 9,
+      "losses": 10,
+      "lastPlayed": 1777632220,
+      "timing": {
+        "games": 19,
+        "avgMin": 33,
+        "avgWinMin": 34,
+        "avgLossMin": 31,
+        "short": {
+          "g": 8,
+          "wr": 0.375
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1494,
+        "form10": 0.5,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108655,
+      "name": "Amaru Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 41,
+      "wins": 18,
+      "losses": 23,
+      "lastPlayed": 1786216392,
+      "timing": {
+        "games": 41,
+        "avgMin": 40,
+        "avgWinMin": 40,
+        "avgLossMin": 39,
+        "short": {
+          "g": 12,
+          "wr": 0.4166666666666667
+        },
+        "mid": {
+          "g": 13,
+          "wr": 0.46153846153846156
+        },
+        "long": {
+          "g": 16,
+          "wr": 0.4375
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1480,
+        "form10": 0.433,
+        "form45": 0.417,
+        "act": 13,
+        "rust": 13
+      }
+    },
+    {
+      "id": 10115321,
+      "name": "Yakult Brothers.XiongChuMo",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1776406140,
+      "timing": null,
+      "ml": {
+        "elo": 1494,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10144217,
+      "name": "Asia Spirit",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780027703,
+      "timing": null,
+      "ml": {
+        "elo": 1492,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8376366,
+      "name": "RAINBOW TIGERS",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780045371,
+      "timing": null,
+      "ml": {
+        "elo": 1492,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -5413,7 +6582,7 @@
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -5483,7 +6652,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1488,
+        "elo": 1489,
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
@@ -5491,104 +6660,11 @@
       }
     },
     {
-      "id": 9894442,
-      "name": "Cloud Dawning",
-      "tag": null,
-      "logo": null,
-      "rating": 1481,
-      "games": 12,
-      "wins": 5,
-      "losses": 7,
-      "lastPlayed": 1777698876,
-      "timing": {
-        "games": 12,
-        "avgMin": 43,
-        "avgWinMin": 44,
-        "avgLossMin": 42,
-        "short": {
-          "g": 4,
-          "wr": 0.25
-        },
-        "mid": {
-          "g": 0,
-          "wr": null
-        },
-        "long": {
-          "g": 8,
-          "wr": 0.5
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1494,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9255039,
-      "name": "enjoy",
-      "tag": null,
-      "logo": null,
-      "rating": 1481,
-      "games": 49,
-      "wins": 23,
-      "losses": 26,
-      "lastPlayed": 1785588214,
-      "timing": {
-        "games": 49,
-        "avgMin": 41,
-        "avgWinMin": 36,
-        "avgLossMin": 45,
-        "short": {
-          "g": 5,
-          "wr": 1
-        },
-        "mid": {
-          "g": 21,
-          "wr": 0.5714285714285714
-        },
-        "long": {
-          "g": 23,
-          "wr": 0.2608695652173913
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1490,
-        "form10": 0.433,
-        "form45": 0.583,
-        "act": 1,
-        "rust": 21
-      }
-    },
-    {
-      "id": 10115321,
-      "name": "Yakult Brothers.XiongChuMo",
-      "tag": null,
-      "logo": null,
-      "rating": 1481,
-      "games": 1,
-      "wins": 0,
-      "losses": 1,
-      "lastPlayed": 1776406140,
-      "timing": null,
-      "ml": {
-        "elo": 1494,
-        "form10": 0.417,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10207960,
       "name": "Execration",
       "tag": null,
       "logo": null,
-      "rating": 1481,
+      "rating": 1482,
       "games": 5,
       "wins": 2,
       "losses": 3,
@@ -5621,37 +6697,56 @@
       }
     },
     {
-      "id": 10108166,
-      "name": "Mideng dreamer",
+      "id": 10143624,
+      "name": "Zolak Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1481,
+      "games": 1,
+      "wins": 0,
+      "losses": 1,
+      "lastPlayed": 1780050224,
+      "timing": null,
+      "ml": {
+        "elo": 1491,
+        "form10": 0.417,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10101293,
+      "name": "GreenTeaWatch",
       "tag": null,
       "logo": null,
       "rating": 1480,
-      "games": 17,
-      "wins": 8,
-      "losses": 9,
-      "lastPlayed": 1777632220,
+      "games": 7,
+      "wins": 3,
+      "losses": 4,
+      "lastPlayed": 1774943723,
       "timing": {
-        "games": 17,
-        "avgMin": 33,
-        "avgWinMin": 34,
-        "avgLossMin": 32,
+        "games": 7,
+        "avgMin": 40,
+        "avgWinMin": 41,
+        "avgLossMin": 39,
         "short": {
-          "g": 7,
-          "wr": 0.42857142857142855
+          "g": 1,
+          "wr": null
         },
         "mid": {
-          "g": 6,
-          "wr": 0.5
+          "g": 3,
+          "wr": 0
         },
         "long": {
-          "g": 4,
-          "wr": 0.5
+          "g": 3,
+          "wr": 0.6666666666666666
         },
         "closesFast": false
       },
       "ml": {
-        "elo": 1493,
-        "form10": 0.5,
+        "elo": 1494,
+        "form10": 0.458,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -5677,85 +6772,11 @@
       }
     },
     {
-      "id": 9948367,
-      "name": "Team Spirit Academy",
-      "tag": null,
-      "logo": null,
-      "rating": 1478,
-      "games": 14,
-      "wins": 6,
-      "losses": 8,
-      "lastPlayed": 1784910553,
-      "timing": {
-        "games": 14,
-        "avgMin": 48,
-        "avgWinMin": 45,
-        "avgLossMin": 50,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "long": {
-          "g": 10,
-          "wr": 0.4
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1484,
-        "form10": 0.5,
-        "form45": 0.447,
-        "act": 14,
-        "rust": 28
-      }
-    },
-    {
-      "id": 10081680,
-      "name": "GLYPH",
-      "tag": null,
-      "logo": null,
-      "rating": 1477,
-      "games": 40,
-      "wins": 18,
-      "losses": 22,
-      "lastPlayed": 1782115744,
-      "timing": {
-        "games": 40,
-        "avgMin": 40,
-        "avgWinMin": 41,
-        "avgLossMin": 40,
-        "short": {
-          "g": 5,
-          "wr": 0.6
-        },
-        "mid": {
-          "g": 12,
-          "wr": 0.4166666666666667
-        },
-        "long": {
-          "g": 23,
-          "wr": 0.43478260869565216
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1486,
-        "form10": 0.433,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10144722,
       "name": "IGNITE",
       "tag": null,
       "logo": null,
-      "rating": 1477,
+      "rating": 1479,
       "games": 9,
       "wins": 4,
       "losses": 5,
@@ -5780,8 +6801,64 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1487,
+        "elo": 1488,
         "form10": 0.464,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 7119077,
+      "name": "Hokori",
+      "tag": null,
+      "logo": null,
+      "rating": 1477,
+      "games": 8,
+      "wins": 3,
+      "losses": 5,
+      "lastPlayed": 1776118691,
+      "timing": {
+        "games": 8,
+        "avgMin": 41,
+        "avgWinMin": 39,
+        "avgLossMin": 42,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1492,
+        "form10": 0.423,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10001733,
+      "name": "Hive",
+      "tag": null,
+      "logo": null,
+      "rating": 1475,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1780056131,
+      "timing": null,
+      "ml": {
+        "elo": 1492,
+        "form10": 0.389,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -5825,40 +6902,78 @@
       }
     },
     {
-      "id": 8254145,
-      "name": "Execration",
+      "id": 10212329,
+      "name": "Team Synapse",
       "tag": null,
       "logo": null,
       "rating": 1474,
-      "games": 25,
-      "wins": 11,
-      "losses": 14,
-      "lastPlayed": 1785569031,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1786185048,
+      "timing": null,
+      "ml": {
+        "elo": 1477,
+        "form10": 0.357,
+        "form45": 0.357,
+        "act": 2,
+        "rust": 14
+      }
+    },
+    {
+      "id": 10186431,
+      "name": "Algeria",
+      "tag": null,
+      "logo": null,
+      "rating": 1473,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1782851934,
+      "timing": null,
+      "ml": {
+        "elo": 1483,
+        "form10": 0.389,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 52
+      }
+    },
+    {
+      "id": 10040639,
+      "name": "Ember Enjoyers",
+      "tag": null,
+      "logo": null,
+      "rating": 1472,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1780071274,
       "timing": {
-        "games": 25,
-        "avgMin": 42,
-        "avgWinMin": 39,
-        "avgLossMin": 44,
+        "games": 6,
+        "avgMin": 39,
+        "avgWinMin": 30,
+        "avgLossMin": 43,
         "short": {
           "g": 2,
           "wr": null
         },
         "mid": {
-          "g": 10,
-          "wr": 0.6
+          "g": 1,
+          "wr": null
         },
         "long": {
-          "g": 13,
-          "wr": 0.3076923076923077
+          "g": 3,
+          "wr": 0.3333333333333333
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1483,
-        "form10": 0.367,
-        "form45": 0.438,
-        "act": 3,
-        "rust": 21
+        "elo": 1488,
+        "form10": 0.409,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -5866,7 +6981,7 @@
       "name": "The Bug",
       "tag": null,
       "logo": null,
-      "rating": 1474,
+      "rating": 1472,
       "games": 6,
       "wins": 2,
       "losses": 4,
@@ -5891,62 +7006,6 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1483,
-        "form10": 0.409,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 56
-      }
-    },
-    {
-      "id": 10212329,
-      "name": "Team Synapse",
-      "tag": null,
-      "logo": null,
-      "rating": 1474,
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "lastPlayed": 1786185048,
-      "timing": null,
-      "ml": {
-        "elo": 1476,
-        "form10": 0.357,
-        "form45": 0.357,
-        "act": 2,
-        "rust": 14
-      }
-    },
-    {
-      "id": 10164198,
-      "name": "Team Bald",
-      "tag": null,
-      "logo": null,
-      "rating": 1473,
-      "games": 6,
-      "wins": 2,
-      "losses": 4,
-      "lastPlayed": 1782496758,
-      "timing": {
-        "games": 6,
-        "avgMin": 40,
-        "avgWinMin": 43,
-        "avgLossMin": 39,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0
-        },
-        "long": {
-          "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "closesFast": false
-      },
-      "ml": {
         "elo": 1482,
         "form10": 0.409,
         "form45": 0.5,
@@ -5955,78 +7014,98 @@
       }
     },
     {
-      "id": 10186431,
-      "name": "Algeria",
-      "tag": null,
-      "logo": null,
-      "rating": 1473,
-      "games": 4,
-      "wins": 1,
-      "losses": 3,
-      "lastPlayed": 1782851934,
-      "timing": null,
-      "ml": {
-        "elo": 1483,
-        "form10": 0.389,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 52
-      }
-    },
-    {
       "id": 10213108,
       "name": "Team Syntax",
       "tag": null,
       "logo": null,
-      "rating": 1473,
+      "rating": 1472,
       "games": 2,
       "wins": 0,
       "losses": 2,
       "lastPlayed": 1786109421,
       "timing": null,
       "ml": {
-        "elo": 1476,
+        "elo": 1475,
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 14
+        "rust": 15
       }
     },
     {
-      "id": 10108655,
-      "name": "Amaru Gaming",
+      "id": 6765751,
+      "name": "Belial Gaming",
       "tag": null,
       "logo": null,
       "rating": 1471,
-      "games": 40,
-      "wins": 17,
-      "losses": 23,
-      "lastPlayed": 1786216392,
-      "timing": {
-        "games": 40,
-        "avgMin": 39,
-        "avgWinMin": 39,
-        "avgLossMin": 39,
-        "short": {
-          "g": 12,
-          "wr": 0.4166666666666667
-        },
-        "mid": {
-          "g": 13,
-          "wr": 0.46153846153846156
-        },
-        "long": {
-          "g": 15,
-          "wr": 0.4
-        },
-        "closesFast": true
-      },
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780075553,
+      "timing": null,
       "ml": {
-        "elo": 1477,
-        "form10": 0.433,
-        "form45": 0.417,
-        "act": 13,
-        "rust": 13
+        "elo": 1488,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9866035,
+      "name": "The Bros",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1775945392,
+      "timing": null,
+      "ml": {
+        "elo": 1491,
+        "form10": 0.389,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108944,
+      "name": "Team Freedom",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1775770190,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9886092,
+      "name": "Rising Rage",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1781550700,
+      "timing": null,
+      "ml": {
+        "elo": 1484,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -6067,6 +7146,43 @@
       }
     },
     {
+      "id": 10001885,
+      "name": "No Hoodwink",
+      "tag": null,
+      "logo": null,
+      "rating": 1471,
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "lastPlayed": 1786098441,
+      "timing": {
+        "games": 10,
+        "avgMin": 40,
+        "avgWinMin": 39,
+        "avgLossMin": 41,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1473,
+        "form10": 0.433,
+        "form45": 0.433,
+        "act": 10,
+        "rust": 15
+      }
+    },
+    {
       "id": 10208009,
       "name": "L1GA TEAM",
       "tag": null,
@@ -6100,26 +7216,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 20
-      }
-    },
-    {
-      "id": 9886092,
-      "name": "Rising Rage",
-      "tag": null,
-      "logo": null,
-      "rating": 1470,
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "lastPlayed": 1781550700,
-      "timing": null,
-      "ml": {
-        "elo": 1483,
-        "form10": 0.357,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
+        "rust": 21
       }
     },
     {
@@ -6138,7 +7235,7 @@
         "form10": 0.389,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -6175,7 +7272,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -6216,40 +7313,135 @@
       }
     },
     {
-      "id": 10001885,
-      "name": "No Hoodwink",
+      "id": 9026338,
+      "name": "TUNDRA PRIME",
       "tag": null,
       "logo": null,
-      "rating": 1470,
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "lastPlayed": 1786098441,
+      "rating": 1469,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1775931268,
       "timing": {
-        "games": 10,
-        "avgMin": 40,
-        "avgWinMin": 39,
-        "avgLossMin": 41,
+        "games": 6,
+        "avgMin": 31,
+        "avgWinMin": 36,
+        "avgLossMin": 29,
         "short": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
           "g": 2,
           "wr": null
         },
-        "mid": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "long": {
-          "g": 4,
-          "wr": 0.25
-        },
-        "closesFast": true
+        "closesFast": false
       },
       "ml": {
-        "elo": 1472,
-        "form10": 0.433,
-        "form45": 0.433,
-        "act": 10,
-        "rust": 15
+        "elo": 1490,
+        "form10": 0.409,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9865903,
+      "name": "Veroja Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1775095079,
+      "timing": null,
+      "ml": {
+        "elo": 1491,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108712,
+      "name": "golybci",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1775826523,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10034245,
+      "name": "Legion",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1775826463,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9658086,
+      "name": "thebug",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1775941410,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.389,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10095819,
+      "name": "Lunatic`s",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780074891,
+      "timing": null,
+      "ml": {
+        "elo": 1487,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -6291,6 +7483,43 @@
       }
     },
     {
+      "id": 10164198,
+      "name": "Team Bald",
+      "tag": null,
+      "logo": null,
+      "rating": 1469,
+      "games": 6,
+      "wins": 2,
+      "losses": 4,
+      "lastPlayed": 1782496758,
+      "timing": {
+        "games": 6,
+        "avgMin": 40,
+        "avgWinMin": 43,
+        "avgLossMin": 39,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1481,
+        "form10": 0.409,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 57
+      }
+    },
+    {
       "id": 10182482,
       "name": "Team Tajikistan",
       "tag": null,
@@ -6324,7 +7553,7 @@
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -6421,6 +7650,44 @@
       }
     },
     {
+      "id": 9917087,
+      "name": "KukuysV3",
+      "tag": null,
+      "logo": null,
+      "rating": 1468,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1775729767,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.389,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10108719,
+      "name": "KVARTAL95",
+      "tag": null,
+      "logo": null,
+      "rating": 1468,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1775832371,
+      "timing": null,
+      "ml": {
+        "elo": 1490,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182458,
       "name": "Team Syria",
       "tag": null,
@@ -6436,7 +7703,7 @@
         "form10": 0.389,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -6477,18 +7744,93 @@
       }
     },
     {
-      "id": 9444076,
-      "name": "NGNB",
+      "id": 9691969,
+      "name": "Team Nemesis",
+      "tag": null,
+      "logo": null,
+      "rating": 1467,
+      "games": 52,
+      "wins": 29,
+      "losses": 23,
+      "lastPlayed": 1783852811,
+      "timing": {
+        "games": 52,
+        "avgMin": 44,
+        "avgWinMin": 44,
+        "avgLossMin": 44,
+        "short": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "mid": {
+          "g": 12,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 34,
+          "wr": 0.5294117647058824
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1459,
+        "form10": 0.233,
+        "form45": 0.269,
+        "act": 8,
+        "rust": 41
+      }
+    },
+    {
+      "id": 9823250,
+      "name": "...",
       "tag": null,
       "logo": null,
       "rating": 1467,
       "games": 2,
       "wins": 0,
       "losses": 2,
-      "lastPlayed": 1777010892,
+      "lastPlayed": 1775498528,
       "timing": null,
       "ml": {
-        "elo": 1488,
+        "elo": 1490,
+        "form10": 0.357,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9766265,
+      "name": "Team Lipstick",
+      "tag": null,
+      "logo": null,
+      "rating": 1467,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1780048544,
+      "timing": null,
+      "ml": {
+        "elo": 1489,
+        "form10": 0.389,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10158121,
+      "name": "KRD",
+      "tag": null,
+      "logo": null,
+      "rating": 1467,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1780163810,
+      "timing": null,
+      "ml": {
+        "elo": 1484,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
@@ -6548,7 +7890,7 @@
         "form10": 0.423,
         "form45": 0.423,
         "act": 8,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -6581,7 +7923,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1482,
+        "elo": 1483,
         "form10": 0.409,
         "form45": 0.5,
         "act": 0,
@@ -6626,30 +7968,11 @@
       }
     },
     {
-      "id": 10158121,
-      "name": "KRD",
-      "tag": null,
-      "logo": null,
-      "rating": 1465,
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "lastPlayed": 1780163810,
-      "timing": null,
-      "ml": {
-        "elo": 1484,
-        "form10": 0.357,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10008067,
       "name": "Game Master",
       "tag": null,
       "logo": null,
-      "rating": 1464,
+      "rating": 1465,
       "games": 6,
       "wins": 2,
       "losses": 4,
@@ -6682,30 +8005,11 @@
       }
     },
     {
-      "id": 10207521,
-      "name": "KW",
-      "tag": null,
-      "logo": null,
-      "rating": 1463,
-      "games": 2,
-      "wins": 0,
-      "losses": 2,
-      "lastPlayed": 1785255819,
-      "timing": null,
-      "ml": {
-        "elo": 1470,
-        "form10": 0.357,
-        "form45": 0.357,
-        "act": 2,
-        "rust": 24
-      }
-    },
-    {
       "id": 7872957,
       "name": "K.O.",
       "tag": null,
       "logo": null,
-      "rating": 1461,
+      "rating": 1464,
       "games": 9,
       "wins": 3,
       "losses": 6,
@@ -6730,7 +8034,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1480,
+        "elo": 1481,
         "form10": 0.393,
         "form45": 0.5,
         "act": 0,
@@ -6738,133 +8042,96 @@
       }
     },
     {
-      "id": 7119077,
-      "name": "Hokori",
+      "id": 2885851,
+      "name": "GIOR DOTA",
       "tag": null,
       "logo": null,
-      "rating": 1458,
-      "games": 7,
-      "wins": 2,
-      "losses": 5,
-      "lastPlayed": 1776118691,
+      "rating": 1463,
+      "games": 12,
+      "wins": 5,
+      "losses": 7,
+      "lastPlayed": 1780164838,
       "timing": {
-        "games": 7,
-        "avgMin": 43,
-        "avgWinMin": 45,
-        "avgLossMin": 42,
+        "games": 12,
+        "avgMin": 34,
+        "avgWinMin": 33,
+        "avgLossMin": 35,
         "short": {
-          "g": 1,
-          "wr": null
+          "g": 4,
+          "wr": 0.5
         },
         "mid": {
-          "g": 1,
-          "wr": null
-        },
-        "long": {
           "g": 5,
           "wr": 0.4
         },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1486,
-        "form10": 0.375,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9600331,
-      "name": "Zetta Games",
-      "tag": null,
-      "logo": null,
-      "rating": 1458,
-      "games": 6,
-      "wins": 2,
-      "losses": 4,
-      "lastPlayed": 1780429570,
-      "timing": {
-        "games": 6,
-        "avgMin": 38,
-        "avgWinMin": 42,
-        "avgLossMin": 37,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0
-        },
         "long": {
           "g": 3,
-          "wr": 0.6666666666666666
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1481,
-        "form10": 0.409,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 8795230,
-      "name": "Panama",
-      "tag": null,
-      "logo": null,
-      "rating": 1458,
-      "games": 5,
-      "wins": 1,
-      "losses": 4,
-      "lastPlayed": 1782857034,
-      "timing": null,
-      "ml": {
-        "elo": 1473,
-        "form10": 0.35,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 52
-      }
-    },
-    {
-      "id": 9872558,
-      "name": "VP.Prodigy",
-      "tag": null,
-      "logo": null,
-      "rating": 1457,
-      "games": 5,
-      "wins": 1,
-      "losses": 4,
-      "lastPlayed": 1782206656,
-      "timing": {
-        "games": 5,
-        "avgMin": 39,
-        "avgWinMin": 37,
-        "avgLossMin": 40,
-        "short": {
-          "g": 0,
-          "wr": null
-        },
-        "mid": {
-          "g": 2,
-          "wr": null
-        },
-        "long": {
-          "g": 3,
-          "wr": 0
+          "wr": 0.3333333333333333
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1472,
-        "form10": 0.35,
+        "elo": 1483,
+        "form10": 0.433,
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10207521,
+      "name": "KW",
+      "tag": null,
+      "logo": null,
+      "rating": 1463,
+      "games": 2,
+      "wins": 0,
+      "losses": 2,
+      "lastPlayed": 1785255819,
+      "timing": null,
+      "ml": {
+        "elo": 1470,
+        "form10": 0.357,
+        "form45": 0.357,
+        "act": 2,
+        "rust": 25
+      }
+    },
+    {
+      "id": 9338413,
+      "name": "MOUZ",
+      "tag": null,
+      "logo": null,
+      "rating": 1458,
+      "games": 72,
+      "wins": 27,
+      "losses": 45,
+      "lastPlayed": 1786457408,
+      "timing": {
+        "games": 72,
+        "avgMin": 42,
+        "avgWinMin": 40,
+        "avgLossMin": 44,
+        "short": {
+          "g": 9,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 20,
+          "wr": 0.6
+        },
+        "long": {
+          "g": 43,
+          "wr": 0.27906976744186046
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1451,
+        "form10": 0.367,
+        "form45": 0.339,
+        "act": 26,
+        "rust": 11
       }
     },
     {
@@ -6872,7 +8139,7 @@
       "name": "Stormrage",
       "tag": null,
       "logo": null,
-      "rating": 1457,
+      "rating": 1458,
       "games": 5,
       "wins": 1,
       "losses": 4,
@@ -6899,6 +8166,62 @@
       "ml": {
         "elo": 1478,
         "form10": 0.35,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8795230,
+      "name": "Panama",
+      "tag": null,
+      "logo": null,
+      "rating": 1458,
+      "games": 5,
+      "wins": 1,
+      "losses": 4,
+      "lastPlayed": 1782857034,
+      "timing": null,
+      "ml": {
+        "elo": 1473,
+        "form10": 0.35,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 52
+      }
+    },
+    {
+      "id": 9872667,
+      "name": "Pipsqueak+4",
+      "tag": null,
+      "logo": null,
+      "rating": 1457,
+      "games": 11,
+      "wins": 4,
+      "losses": 7,
+      "lastPlayed": 1775570667,
+      "timing": {
+        "games": 11,
+        "avgMin": 41,
+        "avgWinMin": 36,
+        "avgLossMin": 43,
+        "short": {
+          "g": 0,
+          "wr": null
+        },
+        "mid": {
+          "g": 7,
+          "wr": 0.5714285714285714
+        },
+        "long": {
+          "g": 4,
+          "wr": 0
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1486,
+        "form10": 0.433,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -6971,11 +8294,48 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1471,
+        "elo": 1472,
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
+      }
+    },
+    {
+      "id": 10150568,
+      "name": "Lindorfitos",
+      "tag": null,
+      "logo": null,
+      "rating": 1455,
+      "games": 7,
+      "wins": 2,
+      "losses": 5,
+      "lastPlayed": 1781708042,
+      "timing": {
+        "games": 7,
+        "avgMin": 34,
+        "avgWinMin": 31,
+        "avgLossMin": 35,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 1,
+          "wr": null
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1475,
+        "form10": 0.375,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
       }
     },
     {
@@ -6994,7 +8354,7 @@
         "form10": 0.313,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -7031,7 +8391,7 @@
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -7054,43 +8414,6 @@
       }
     },
     {
-      "id": 10150568,
-      "name": "Lindorfitos",
-      "tag": null,
-      "logo": null,
-      "rating": 1454,
-      "games": 7,
-      "wins": 2,
-      "losses": 5,
-      "lastPlayed": 1781708042,
-      "timing": {
-        "games": 7,
-        "avgMin": 34,
-        "avgWinMin": 31,
-        "avgLossMin": 35,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "long": {
-          "g": 1,
-          "wr": null
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1474,
-        "form10": 0.375,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10182877,
       "name": "Honduras",
       "tag": null,
@@ -7102,7 +8425,7 @@
       "lastPlayed": 1782780605,
       "timing": null,
       "ml": {
-        "elo": 1470,
+        "elo": 1471,
         "form10": 0.313,
         "form45": 0.5,
         "act": 0,
@@ -7180,7 +8503,7 @@
         "form10": 0.35,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
@@ -7240,218 +8563,33 @@
       }
     },
     {
-      "id": 9691969,
-      "name": "Team Nemesis",
+      "id": 9098294,
+      "name": "Carstensz Esports",
       "tag": null,
       "logo": null,
       "rating": 1451,
-      "games": 44,
-      "wins": 23,
-      "losses": 21,
-      "lastPlayed": 1783852811,
+      "games": 27,
+      "wins": 12,
+      "losses": 15,
+      "lastPlayed": 1782011290,
       "timing": {
-        "games": 44,
-        "avgMin": 44,
-        "avgWinMin": 43,
-        "avgLossMin": 44,
+        "games": 27,
+        "avgMin": 41,
+        "avgWinMin": 45,
+        "avgLossMin": 39,
         "short": {
-          "g": 6,
-          "wr": 0.8333333333333334
-        },
-        "mid": {
-          "g": 11,
-          "wr": 0.45454545454545453
-        },
-        "long": {
-          "g": 27,
-          "wr": 0.48148148148148145
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1454,
-        "form10": 0.233,
-        "form45": 0.269,
-        "act": 8,
-        "rust": 41
-      }
-    },
-    {
-      "id": 9338413,
-      "name": "MOUZ",
-      "tag": null,
-      "logo": null,
-      "rating": 1451,
-      "games": 58,
-      "wins": 22,
-      "losses": 36,
-      "lastPlayed": 1786457408,
-      "timing": {
-        "games": 58,
-        "avgMin": 42,
-        "avgWinMin": 40,
-        "avgLossMin": 44,
-        "short": {
-          "g": 8,
-          "wr": 0.375
-        },
-        "mid": {
-          "g": 15,
-          "wr": 0.6
-        },
-        "long": {
-          "g": 35,
-          "wr": 0.2857142857142857
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1449,
-        "form10": 0.367,
-        "form45": 0.339,
-        "act": 26,
-        "rust": 10
-      }
-    },
-    {
-      "id": 9315393,
-      "name": "The goal of all life is death",
-      "tag": null,
-      "logo": null,
-      "rating": 1451,
-      "games": 7,
-      "wins": 2,
-      "losses": 5,
-      "lastPlayed": 1777186209,
-      "timing": {
-        "games": 7,
-        "avgMin": 33,
-        "avgWinMin": 46,
-        "avgLossMin": 28,
-        "short": {
-          "g": 4,
-          "wr": 0
-        },
-        "mid": {
-          "g": 2,
-          "wr": null
-        },
-        "long": {
-          "g": 1,
-          "wr": null
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1483,
-        "form10": 0.375,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9885928,
-      "name": "Thriving",
-      "tag": null,
-      "logo": null,
-      "rating": 1445,
-      "games": 5,
-      "wins": 1,
-      "losses": 4,
-      "lastPlayed": 1777194589,
-      "timing": {
-        "games": 5,
-        "avgMin": 40,
-        "avgWinMin": 41,
-        "avgLossMin": 40,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 0,
-          "wr": null
-        },
-        "long": {
           "g": 4,
           "wr": 0.25
         },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1480,
-        "form10": 0.35,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 7917893,
-      "name": "InterActive Philippines",
-      "tag": null,
-      "logo": null,
-      "rating": 1445,
-      "games": 7,
-      "wins": 2,
-      "losses": 5,
-      "lastPlayed": 1782018400,
-      "timing": {
-        "games": 7,
-        "avgMin": 49,
-        "avgWinMin": 58,
-        "avgLossMin": 46,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
         "mid": {
-          "g": 2,
-          "wr": null
+          "g": 10,
+          "wr": 0.3
         },
         "long": {
-          "g": 4,
-          "wr": 0.5
+          "g": 13,
+          "wr": 0.6153846153846154
         },
         "closesFast": false
-      },
-      "ml": {
-        "elo": 1469,
-        "form10": 0.375,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9886289,
-      "name": "Cloud Rising",
-      "tag": null,
-      "logo": null,
-      "rating": 1444,
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "lastPlayed": 1781681547,
-      "timing": {
-        "games": 10,
-        "avgMin": 40,
-        "avgWinMin": 35,
-        "avgLossMin": 43,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "long": {
-          "g": 5,
-          "wr": 0.2
-        },
-        "closesFast": true
       },
       "ml": {
         "elo": 1471,
@@ -7462,11 +8600,159 @@
       }
     },
     {
+      "id": 8680909,
+      "name": "ALIS VENTORUS",
+      "tag": null,
+      "logo": null,
+      "rating": 1451,
+      "games": 23,
+      "wins": 10,
+      "losses": 13,
+      "lastPlayed": 1777213299,
+      "timing": {
+        "games": 23,
+        "avgMin": 34,
+        "avgWinMin": 38,
+        "avgLossMin": 31,
+        "short": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "mid": {
+          "g": 11,
+          "wr": 0.36363636363636365
+        },
+        "long": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1481,
+        "form10": 0.433,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9315393,
+      "name": "The goal of all life is death",
+      "tag": null,
+      "logo": null,
+      "rating": 1447,
+      "games": 11,
+      "wins": 4,
+      "losses": 7,
+      "lastPlayed": 1777186209,
+      "timing": {
+        "games": 11,
+        "avgMin": 34,
+        "avgWinMin": 43,
+        "avgLossMin": 28,
+        "short": {
+          "g": 5,
+          "wr": 0
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 3,
+          "wr": 1
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1481,
+        "form10": 0.367,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9600331,
+      "name": "Zetta Games",
+      "tag": null,
+      "logo": null,
+      "rating": 1446,
+      "games": 9,
+      "wins": 3,
+      "losses": 6,
+      "lastPlayed": 1780429570,
+      "timing": {
+        "games": 9,
+        "avgMin": 37,
+        "avgWinMin": 37,
+        "avgLossMin": 37,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.6666666666666666
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1477,
+        "form10": 0.393,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 8261500,
+      "name": "Xtreme Gaming",
+      "tag": null,
+      "logo": null,
+      "rating": 1445,
+      "games": 96,
+      "wins": 44,
+      "losses": 52,
+      "lastPlayed": 1786790337,
+      "timing": {
+        "games": 96,
+        "avgMin": 45,
+        "avgWinMin": 46,
+        "avgLossMin": 44,
+        "short": {
+          "g": 9,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 28,
+          "wr": 0.4642857142857143
+        },
+        "long": {
+          "g": 59,
+          "wr": 0.4745762711864407
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1430,
+        "form10": 0.367,
+        "form45": 0.352,
+        "act": 22,
+        "rust": 7
+      }
+    },
+    {
       "id": 10201970,
       "name": "KW",
       "tag": null,
       "logo": null,
-      "rating": 1443,
+      "rating": 1444,
       "games": 15,
       "wins": 6,
       "losses": 9,
@@ -7491,48 +8777,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1456,
+        "elo": 1457,
         "form10": 0.367,
         "form45": 0.425,
         "act": 15,
-        "rust": 26
-      }
-    },
-    {
-      "id": 10101793,
-      "name": "BALU TEAM",
-      "tag": null,
-      "logo": null,
-      "rating": 1442,
-      "games": 8,
-      "wins": 2,
-      "losses": 6,
-      "lastPlayed": 1780311650,
-      "timing": {
-        "games": 8,
-        "avgMin": 34,
-        "avgWinMin": 33,
-        "avgLossMin": 35,
-        "short": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 2,
-          "wr": null
-        },
-        "long": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1471,
-        "form10": 0.346,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
+        "rust": 27
       }
     },
     {
@@ -7565,7 +8814,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1467,
+        "elo": 1468,
         "form10": 0.318,
         "form45": 0.5,
         "act": 0,
@@ -7592,6 +8841,25 @@
       }
     },
     {
+      "id": 10157562,
+      "name": "Grey Track",
+      "tag": null,
+      "logo": null,
+      "rating": 1442,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1781599321,
+      "timing": null,
+      "ml": {
+        "elo": 1466,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 2500088,
       "name": "Slovenia",
       "tag": null,
@@ -7607,7 +8875,7 @@
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -7626,23 +8894,78 @@
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 52
+        "rust": 53
       }
     },
     {
-      "id": 10157562,
-      "name": "Grey Track",
+      "id": 9886289,
+      "name": "Cloud Rising",
       "tag": null,
       "logo": null,
       "rating": 1441,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1781599321,
-      "timing": null,
+      "games": 21,
+      "wins": 8,
+      "losses": 13,
+      "lastPlayed": 1781681547,
+      "timing": {
+        "games": 21,
+        "avgMin": 37,
+        "avgWinMin": 34,
+        "avgLossMin": 39,
+        "short": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "mid": {
+          "g": 10,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "closesFast": true
+      },
       "ml": {
-        "elo": 1466,
-        "form10": 0.278,
+        "elo": 1470,
+        "form10": 0.367,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9973656,
+      "name": "Red Hot Chili Pibble",
+      "tag": null,
+      "logo": null,
+      "rating": 1441,
+      "games": 38,
+      "wins": 13,
+      "losses": 25,
+      "lastPlayed": 1781811392,
+      "timing": {
+        "games": 38,
+        "avgMin": 35,
+        "avgWinMin": 36,
+        "avgLossMin": 34,
+        "short": {
+          "g": 13,
+          "wr": 0.46153846153846156
+        },
+        "mid": {
+          "g": 15,
+          "wr": 0.2
+        },
+        "long": {
+          "g": 10,
+          "wr": 0.4
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1482,
+        "form10": 0.5,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -7687,106 +9010,11 @@
       }
     },
     {
-      "id": 10157986,
-      "name": "D Family",
-      "tag": null,
-      "logo": null,
-      "rating": 1439,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1780549149,
-      "timing": null,
-      "ml": {
-        "elo": 1469,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9866136,
-      "name": "ggboom",
-      "tag": null,
-      "logo": null,
-      "rating": 1439,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1782430845,
-      "timing": null,
-      "ml": {
-        "elo": 1462,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 57
-      }
-    },
-    {
-      "id": 10182769,
-      "name": "Palestine",
-      "tag": null,
-      "logo": null,
-      "rating": 1439,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1782756709,
-      "timing": null,
-      "ml": {
-        "elo": 1461,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 53
-      }
-    },
-    {
-      "id": 10182460,
-      "name": "Team Italy",
-      "tag": null,
-      "logo": null,
-      "rating": 1439,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1782838385,
-      "timing": null,
-      "ml": {
-        "elo": 1461,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 52
-      }
-    },
-    {
-      "id": 10182897,
-      "name": "New Zealand",
-      "tag": null,
-      "logo": null,
-      "rating": 1439,
-      "games": 4,
-      "wins": 0,
-      "losses": 4,
-      "lastPlayed": 1782836207,
-      "timing": null,
-      "ml": {
-        "elo": 1461,
-        "form10": 0.278,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 52
-      }
-    },
-    {
       "id": 10164236,
       "name": "PuckChamp",
       "tag": null,
       "logo": null,
-      "rating": 1439,
+      "rating": 1440,
       "games": 23,
       "wins": 9,
       "losses": 14,
@@ -7811,11 +9039,87 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1451,
+        "elo": 1452,
         "form10": 0.3,
         "form45": 0.411,
         "act": 23,
         "rust": 23
+      }
+    },
+    {
+      "id": 10157986,
+      "name": "D Family",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1780549149,
+      "timing": null,
+      "ml": {
+        "elo": 1469,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 10182769,
+      "name": "Palestine",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782756709,
+      "timing": null,
+      "ml": {
+        "elo": 1461,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 54
+      }
+    },
+    {
+      "id": 10182460,
+      "name": "Team Italy",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782838385,
+      "timing": null,
+      "ml": {
+        "elo": 1461,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 53
+      }
+    },
+    {
+      "id": 10182897,
+      "name": "New Zealand",
+      "tag": null,
+      "logo": null,
+      "rating": 1439,
+      "games": 4,
+      "wins": 0,
+      "losses": 4,
+      "lastPlayed": 1782836207,
+      "timing": null,
+      "ml": {
+        "elo": 1461,
+        "form10": 0.278,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 53
       }
     },
     {
@@ -7830,11 +9134,11 @@
       "lastPlayed": 1782757943,
       "timing": null,
       "ml": {
-        "elo": 1460,
+        "elo": 1461,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
-        "rust": 53
+        "rust": 54
       }
     },
     {
@@ -7853,226 +9157,78 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 20
+        "rust": 21
       }
     },
     {
-      "id": 9098294,
-      "name": "Carstensz Esports",
-      "tag": null,
-      "logo": null,
-      "rating": 1437,
-      "games": 23,
-      "wins": 9,
-      "losses": 14,
-      "lastPlayed": 1782011290,
-      "timing": {
-        "games": 23,
-        "avgMin": 42,
-        "avgWinMin": 46,
-        "avgLossMin": 40,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.3
-        },
-        "long": {
-          "g": 11,
-          "wr": 0.5454545454545454
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1467,
-        "form10": 0.367,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 8261500,
-      "name": "Xtreme Gaming",
-      "tag": null,
-      "logo": null,
-      "rating": 1432,
-      "games": 78,
-      "wins": 31,
-      "losses": 47,
-      "lastPlayed": 1786790337,
-      "timing": {
-        "games": 78,
-        "avgMin": 47,
-        "avgWinMin": 49,
-        "avgLossMin": 45,
-        "short": {
-          "g": 6,
-          "wr": 0.16666666666666666
-        },
-        "mid": {
-          "g": 21,
-          "wr": 0.38095238095238093
-        },
-        "long": {
-          "g": 51,
-          "wr": 0.43137254901960786
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1426,
-        "form10": 0.367,
-        "form45": 0.352,
-        "act": 22,
-        "rust": 7
-      }
-    },
-    {
-      "id": 9973656,
-      "name": "Red Hot Chili Pibble",
+      "id": 10101793,
+      "name": "BALU TEAM",
       "tag": null,
       "logo": null,
       "rating": 1431,
-      "games": 38,
-      "wins": 13,
-      "losses": 25,
-      "lastPlayed": 1781811392,
+      "games": 13,
+      "wins": 4,
+      "losses": 9,
+      "lastPlayed": 1780311650,
       "timing": {
-        "games": 38,
-        "avgMin": 35,
-        "avgWinMin": 36,
-        "avgLossMin": 34,
-        "short": {
-          "g": 13,
-          "wr": 0.46153846153846156
-        },
-        "mid": {
-          "g": 15,
-          "wr": 0.2
-        },
-        "long": {
-          "g": 10,
-          "wr": 0.4
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1479,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 8680909,
-      "name": "ALIS VENTORUS",
-      "tag": null,
-      "logo": null,
-      "rating": 1429,
-      "games": 21,
-      "wins": 8,
-      "losses": 13,
-      "lastPlayed": 1777213299,
-      "timing": {
-        "games": 21,
-        "avgMin": 35,
-        "avgWinMin": 42,
-        "avgLossMin": 31,
-        "short": {
-          "g": 5,
-          "wr": 0
-        },
-        "mid": {
-          "g": 10,
-          "wr": 0.3
-        },
-        "long": {
-          "g": 6,
-          "wr": 0.8333333333333334
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1474,
-        "form10": 0.433,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 2885851,
-      "name": "GIOR DOTA",
-      "tag": null,
-      "logo": null,
-      "rating": 1428,
-      "games": 7,
-      "wins": 1,
-      "losses": 6,
-      "lastPlayed": 1780164838,
-      "timing": {
-        "games": 7,
-        "avgMin": 39,
-        "avgWinMin": 52,
-        "avgLossMin": 37,
-        "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
-          "wr": 0
-        },
-        "long": {
-          "g": 3,
-          "wr": 0.3333333333333333
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1471,
-        "form10": 0.292,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
-      "id": 9546449,
-      "name": "Yangon Galacticos",
-      "tag": null,
-      "logo": null,
-      "rating": 1428,
-      "games": 9,
-      "wins": 2,
-      "losses": 7,
-      "lastPlayed": 1781927939,
-      "timing": {
-        "games": 9,
-        "avgMin": 44,
+        "games": 13,
+        "avgMin": 31,
         "avgWinMin": 29,
-        "avgLossMin": 48,
+        "avgLossMin": 32,
         "short": {
-          "g": 1,
-          "wr": null
-        },
-        "mid": {
-          "g": 3,
+          "g": 6,
           "wr": 0.3333333333333333
         },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
         "long": {
-          "g": 5,
-          "wr": 0
+          "g": 3,
+          "wr": 0.3333333333333333
         },
         "closesFast": true
       },
       "ml": {
-        "elo": 1463,
-        "form10": 0.321,
+        "elo": 1468,
+        "form10": 0.367,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 7917893,
+      "name": "InterActive Philippines",
+      "tag": null,
+      "logo": null,
+      "rating": 1431,
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "lastPlayed": 1782018400,
+      "timing": {
+        "games": 8,
+        "avgMin": 47,
+        "avgWinMin": 58,
+        "avgLossMin": 44,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1464,
+        "form10": 0.346,
         "form45": 0.5,
         "act": 0,
         "rust": 60
@@ -8116,11 +9272,85 @@
       }
     },
     {
+      "id": 9444076,
+      "name": "NGNB",
+      "tag": null,
+      "logo": null,
+      "rating": 1427,
+      "games": 9,
+      "wins": 2,
+      "losses": 7,
+      "lastPlayed": 1777010892,
+      "timing": {
+        "games": 9,
+        "avgMin": 36,
+        "avgWinMin": 42,
+        "avgLossMin": 34,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 4,
+          "wr": 0.25
+        },
+        "long": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1476,
+        "form10": 0.321,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9928636,
+      "name": "Team Lynx",
+      "tag": null,
+      "logo": null,
+      "rating": 1424,
+      "games": 58,
+      "wins": 24,
+      "losses": 34,
+      "lastPlayed": 1785017205,
+      "timing": {
+        "games": 57,
+        "avgMin": 40,
+        "avgWinMin": 36,
+        "avgLossMin": 42,
+        "short": {
+          "g": 13,
+          "wr": 0.46153846153846156
+        },
+        "mid": {
+          "g": 20,
+          "wr": 0.4
+        },
+        "long": {
+          "g": 24,
+          "wr": 0.375
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1449,
+        "form10": 0.367,
+        "form45": 0.361,
+        "act": 13,
+        "rust": 27
+      }
+    },
+    {
       "id": 7299465,
       "name": "MODUS",
       "tag": null,
       "logo": null,
-      "rating": 1419,
+      "rating": 1424,
       "games": 40,
       "wins": 16,
       "losses": 24,
@@ -8145,48 +9375,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1458,
+        "elo": 1460,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
-        "rust": 56
-      }
-    },
-    {
-      "id": 9928636,
-      "name": "Team Lynx",
-      "tag": null,
-      "logo": null,
-      "rating": 1419,
-      "games": 52,
-      "wins": 20,
-      "losses": 32,
-      "lastPlayed": 1785017205,
-      "timing": {
-        "games": 52,
-        "avgMin": 40,
-        "avgWinMin": 38,
-        "avgLossMin": 42,
-        "short": {
-          "g": 9,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 20,
-          "wr": 0.4
-        },
-        "long": {
-          "g": 23,
-          "wr": 0.391304347826087
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1448,
-        "form10": 0.367,
-        "form45": 0.361,
-        "act": 13,
-        "rust": 27
+        "rust": 57
       }
     },
     {
@@ -8194,7 +9387,7 @@
       "name": "TEAM JENZ",
       "tag": null,
       "logo": null,
-      "rating": 1418,
+      "rating": 1420,
       "games": 24,
       "wins": 10,
       "losses": 14,
@@ -8219,7 +9412,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1424,
+        "elo": 1425,
         "form10": 0.233,
         "form45": 0.431,
         "act": 24,
@@ -8231,7 +9424,7 @@
       "name": "DIREBORN",
       "tag": null,
       "logo": null,
-      "rating": 1413,
+      "rating": 1416,
       "games": 10,
       "wins": 2,
       "losses": 8,
@@ -8256,7 +9449,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1451,
+        "elo": 1452,
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
@@ -8301,11 +9494,159 @@
       }
     },
     {
+      "id": 9866136,
+      "name": "ggboom",
+      "tag": null,
+      "logo": null,
+      "rating": 1412,
+      "games": 6,
+      "wins": 0,
+      "losses": 6,
+      "lastPlayed": 1782430845,
+      "timing": {
+        "games": 6,
+        "avgMin": 44,
+        "avgWinMin": null,
+        "avgLossMin": 44,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 0,
+          "wr": null
+        },
+        "long": {
+          "g": 5,
+          "wr": 0
+        },
+        "closesFast": null
+      },
+      "ml": {
+        "elo": 1454,
+        "form10": 0.227,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 57
+      }
+    },
+    {
+      "id": 8965331,
+      "name": "Chandogs",
+      "tag": null,
+      "logo": null,
+      "rating": 1410,
+      "games": 14,
+      "wins": 4,
+      "losses": 10,
+      "lastPlayed": 1780438735,
+      "timing": {
+        "games": 14,
+        "avgMin": 38,
+        "avgWinMin": 47,
+        "avgLossMin": 34,
+        "short": {
+          "g": 3,
+          "wr": 0
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.16666666666666666
+        },
+        "long": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1463,
+        "form10": 0.3,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9885928,
+      "name": "Thriving",
+      "tag": null,
+      "logo": null,
+      "rating": 1408,
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "lastPlayed": 1777194589,
+      "timing": {
+        "games": 10,
+        "avgMin": 39,
+        "avgWinMin": 45,
+        "avgLossMin": 37,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 1,
+          "wr": null
+        },
+        "long": {
+          "g": 7,
+          "wr": 0.2857142857142857
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1468,
+        "form10": 0.3,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
+      "id": 9546449,
+      "name": "Yangon Galacticos",
+      "tag": null,
+      "logo": null,
+      "rating": 1407,
+      "games": 11,
+      "wins": 2,
+      "losses": 9,
+      "lastPlayed": 1781927939,
+      "timing": {
+        "games": 11,
+        "avgMin": 45,
+        "avgWinMin": 29,
+        "avgLossMin": 48,
+        "short": {
+          "g": 1,
+          "wr": null
+        },
+        "mid": {
+          "g": 3,
+          "wr": 0.3333333333333333
+        },
+        "long": {
+          "g": 7,
+          "wr": 0
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1456,
+        "form10": 0.3,
+        "form45": 0.5,
+        "act": 0,
+        "rust": 60
+      }
+    },
+    {
       "id": 10182299,
       "name": "L1 TEAM",
       "tag": null,
       "logo": null,
-      "rating": 1404,
+      "rating": 1406,
       "games": 10,
       "wins": 1,
       "losses": 9,
@@ -8330,7 +9671,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1429,
+        "elo": 1430,
         "form10": 0.233,
         "form45": 0.269,
         "act": 8,
@@ -8338,36 +9679,36 @@
       }
     },
     {
-      "id": 8965331,
-      "name": "Chandogs",
+      "id": 9872558,
+      "name": "VP.Prodigy",
       "tag": null,
       "logo": null,
-      "rating": 1398,
-      "games": 11,
-      "wins": 2,
-      "losses": 9,
-      "lastPlayed": 1780438735,
+      "rating": 1403,
+      "games": 21,
+      "wins": 6,
+      "losses": 15,
+      "lastPlayed": 1782206656,
       "timing": {
-        "games": 11,
-        "avgMin": 36,
-        "avgWinMin": 52,
-        "avgLossMin": 33,
+        "games": 21,
+        "avgMin": 38,
+        "avgWinMin": 41,
+        "avgLossMin": 36,
         "short": {
-          "g": 3,
-          "wr": 0
+          "g": 4,
+          "wr": 0.5
         },
         "mid": {
-          "g": 5,
-          "wr": 0
+          "g": 9,
+          "wr": 0.1111111111111111
         },
         "long": {
-          "g": 3,
-          "wr": 0.6666666666666666
+          "g": 8,
+          "wr": 0.375
         },
         "closesFast": false
       },
       "ml": {
-        "elo": 1459,
+        "elo": 1455,
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
@@ -8379,7 +9720,7 @@
       "name": "ex-HEROIC",
       "tag": null,
       "logo": null,
-      "rating": 1398,
+      "rating": 1401,
       "games": 14,
       "wins": 2,
       "losses": 12,
@@ -8404,7 +9745,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1453,
+        "elo": 1454,
         "form10": 0.167,
         "form45": 0.5,
         "act": 0,
@@ -8416,29 +9757,29 @@
       "name": "Roar",
       "tag": null,
       "logo": null,
-      "rating": 1388,
-      "games": 44,
-      "wins": 17,
-      "losses": 27,
+      "rating": 1389,
+      "games": 50,
+      "wins": 19,
+      "losses": 31,
       "lastPlayed": 1781592010,
       "timing": {
-        "games": 44,
+        "games": 50,
         "avgMin": 39,
         "avgWinMin": 39,
-        "avgLossMin": 40,
+        "avgLossMin": 39,
         "short": {
           "g": 13,
           "wr": 0.46153846153846156
         },
         "mid": {
-          "g": 10,
-          "wr": 0.3
+          "g": 15,
+          "wr": 0.26666666666666666
         },
         "long": {
-          "g": 21,
-          "wr": 0.38095238095238093
+          "g": 22,
+          "wr": 0.4090909090909091
         },
-        "closesFast": true
+        "closesFast": false
       },
       "ml": {
         "elo": 1449,
@@ -8453,19 +9794,19 @@
       "name": "Inner Circle x Insanity",
       "tag": null,
       "logo": null,
-      "rating": 1363,
-      "games": 22,
-      "wins": 5,
+      "rating": 1372,
+      "games": 23,
+      "wins": 6,
       "losses": 17,
       "lastPlayed": 1783862341,
       "timing": {
-        "games": 22,
-        "avgMin": 44,
-        "avgWinMin": 59,
+        "games": 23,
+        "avgMin": 43,
+        "avgWinMin": 52,
         "avgLossMin": 40,
         "short": {
-          "g": 2,
-          "wr": null
+          "g": 3,
+          "wr": 0.3333333333333333
         },
         "mid": {
           "g": 8,
@@ -8478,11 +9819,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1403,
+        "elo": 1406,
         "form10": 0.167,
         "form45": 0.192,
         "act": 8,
-        "rust": 40
+        "rust": 41
       }
     },
     {
@@ -8490,32 +9831,32 @@
       "name": "Ivory",
       "tag": null,
       "logo": null,
-      "rating": 1349,
-      "games": 21,
-      "wins": 5,
-      "losses": 16,
+      "rating": 1355,
+      "games": 25,
+      "wins": 7,
+      "losses": 18,
       "lastPlayed": 1776850755,
       "timing": {
-        "games": 21,
-        "avgMin": 33,
-        "avgWinMin": 42,
-        "avgLossMin": 31,
+        "games": 25,
+        "avgMin": 35,
+        "avgWinMin": 44,
+        "avgLossMin": 32,
         "short": {
           "g": 7,
           "wr": 0
         },
         "mid": {
-          "g": 7,
-          "wr": 0.14285714285714285
+          "g": 8,
+          "wr": 0.125
         },
         "long": {
-          "g": 7,
-          "wr": 0.5714285714285714
+          "g": 10,
+          "wr": 0.6
         },
         "closesFast": false
       },
       "ml": {
-        "elo": 1446,
+        "elo": 1448,
         "form10": 0.167,
         "form45": 0.5,
         "act": 0,
@@ -8524,6 +9865,48 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8958607830,
+      "start_time": 1787374948,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 8255888,
+        "name": "BoomBoys"
+      },
+      "dire": {
+        "id": 10136357,
+        "name": "Nigma Galaxy "
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8958538533,
+      "start_time": 1787369791,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "dire": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8958478716,
+      "start_time": 1787364744,
+      "league": "The International 2026",
+      "radiant": {
+        "id": 2163,
+        "name": "Team Liquid"
+      },
+      "dire": {
+        "id": 7119388,
+        "name": "Team Spirit"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8957890399,
       "start_time": 1787333216,
@@ -9321,48 +10704,6 @@
         "name": "Vici Gaming"
       },
       "radiant_win": true
-    },
-    {
-      "match_id": 8946351114,
-      "start_time": 1786774766,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 7119388,
-        "name": "Team Spirit"
-      },
-      "dire": {
-        "id": 9572001,
-        "name": "TEAM VISION"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8946343023,
-      "start_time": 1786774196,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 8255888,
-        "name": "BoomBoys"
-      },
-      "dire": {
-        "id": 9467224,
-        "name": "Aurora Gaming"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8946337070,
-      "start_time": 1786773738,
-      "league": "The International 2026",
-      "radiant": {
-        "id": 2163,
-        "name": "Team Liquid"
-      },
-      "dire": {
-        "id": 10150413,
-        "name": "Iron Wing"
-      },
-      "radiant_win": false
     }
   ]
 }
