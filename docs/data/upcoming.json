@@ -1,6 +1,17 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-08-28T10:04:06.319Z",
-  "matches": []
+  "generatedAt": "2026-08-28T21:48:07.852Z",
+  "matches": [
+    {
+      "id": "liq-1788022800-0",
+      "date": "2026-08-29T17:00:00.000Z",
+      "event": "BLAST SLAM 8 Europe",
+      "format": "bo3",
+      "teamA": "10150633",
+      "teamB": "9256405",
+      "oddsA": null,
+      "oddsB": null
+    }
+  ]
 }
