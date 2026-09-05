@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-05T14:46:10.370Z",
+  "generatedAt": "2026-09-05T20:03:05.962Z",
   "tier1LeagueCount": 2697,
-  "matchesUsed": 3612,
+  "matchesUsed": 3613,
   "teams": [
     {
       "id": 7119388,
@@ -70,7 +70,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1683,
+        "elo": 1682,
         "form10": 0.5,
         "form45": 0.638,
         "act": 24,
@@ -107,7 +107,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1655,
+        "elo": 1654,
         "form10": 0.7,
         "form45": 0.5,
         "act": 0,
@@ -144,7 +144,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1675,
+        "elo": 1674,
         "form10": 0.833,
         "form45": 0.861,
         "act": 13,
@@ -222,7 +222,7 @@
         "form10": 0.5,
         "form45": 0.516,
         "act": 27,
-        "rust": 13
+        "rust": 14
       }
     },
     {
@@ -259,7 +259,7 @@
         "form10": 0.433,
         "form45": 0.607,
         "act": 37,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -292,7 +292,7 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1693,
+        "elo": 1692,
         "form10": 0.833,
         "form45": 0.891,
         "act": 18,
@@ -407,7 +407,7 @@
         "form10": 0.5,
         "form45": 0.484,
         "act": 27,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -477,11 +477,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1573,
+        "elo": 1572,
         "form10": 0.5,
         "form45": 0.5,
         "act": 14,
-        "rust": 20
+        "rust": 21
       }
     },
     {
@@ -773,10 +773,10 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1592,
+        "elo": 1591,
         "form10": 0.567,
-        "form45": 0.63,
-        "act": 45,
+        "form45": 0.635,
+        "act": 43,
         "rust": 1
       }
     },
@@ -888,7 +888,7 @@
         "form10": 0.5,
         "form45": 0.519,
         "act": 21,
-        "rust": 15
+        "rust": 16
       }
     },
     {
@@ -921,7 +921,7 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1519,
+        "elo": 1518,
         "form10": 0.792,
         "form45": 0.5,
         "act": 0,
@@ -958,7 +958,7 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1553,
+        "elo": 1552,
         "form10": 0.773,
         "form45": 0.5,
         "act": 0,
@@ -1069,7 +1069,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1551,
+        "elo": 1550,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -1291,7 +1291,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1546,
+        "elo": 1545,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -2035,8 +2035,8 @@
       "ml": {
         "elo": 1525,
         "form10": 0.433,
-        "form45": 0.527,
-        "act": 32,
+        "form45": 0.529,
+        "act": 30,
         "rust": 1
       }
     },
@@ -2316,7 +2316,7 @@
         "form10": 0.433,
         "form45": 0.389,
         "act": 22,
-        "rust": 20
+        "rust": 21
       }
     },
     {
@@ -2521,43 +2521,6 @@
         "form45": 0.5,
         "act": 18,
         "rust": 6
-      }
-    },
-    {
-      "id": 10225542,
-      "name": "DYNASTY",
-      "tag": null,
-      "logo": null,
-      "rating": 1538,
-      "games": 18,
-      "wins": 11,
-      "losses": 7,
-      "lastPlayed": 1788455459,
-      "timing": {
-        "games": 18,
-        "avgMin": 39,
-        "avgWinMin": 39,
-        "avgLossMin": 39,
-        "short": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "mid": {
-          "g": 6,
-          "wr": 0.8333333333333334
-        },
-        "long": {
-          "g": 8,
-          "wr": 0.5
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1535,
-        "form10": 0.567,
-        "form45": 0.587,
-        "act": 18,
-        "rust": 2
       }
     },
     {
@@ -2946,7 +2909,7 @@
       "lastPlayed": 1780163399,
       "timing": null,
       "ml": {
-        "elo": 1514,
+        "elo": 1513,
         "form10": 0.643,
         "form45": 0.5,
         "act": 0,
@@ -2984,7 +2947,7 @@
       "lastPlayed": 1788039579,
       "timing": null,
       "ml": {
-        "elo": 1530,
+        "elo": 1529,
         "form10": 0.643,
         "form45": 0.643,
         "act": 2,
@@ -3118,7 +3081,7 @@
         "form10": 0.367,
         "form45": 0.438,
         "act": 35,
-        "rust": 20
+        "rust": 21
       }
     },
     {
@@ -3419,6 +3382,43 @@
       }
     },
     {
+      "id": 10225542,
+      "name": "DYNASTY",
+      "tag": null,
+      "logo": null,
+      "rating": 1518,
+      "games": 19,
+      "wins": 11,
+      "losses": 8,
+      "lastPlayed": 1788631556,
+      "timing": {
+        "games": 19,
+        "avgMin": 40,
+        "avgWinMin": 39,
+        "avgLossMin": 41,
+        "short": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "mid": {
+          "g": 6,
+          "wr": 0.8333333333333334
+        },
+        "long": {
+          "g": 9,
+          "wr": 0.4444444444444444
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1516,
+        "form10": 0.5,
+        "form45": 0.563,
+        "act": 19,
+        "rust": 0
+      }
+    },
+    {
       "id": 8494848,
       "name": "Winter Bear",
       "tag": null,
@@ -3622,7 +3622,7 @@
         "form10": 0.563,
         "form45": 0.563,
         "act": 3,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -5132,7 +5132,7 @@
         "form10": 0.55,
         "form45": 0.55,
         "act": 5,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -7315,7 +7315,7 @@
       "lastPlayed": 1777817370,
       "timing": null,
       "ml": {
-        "elo": 1494,
+        "elo": 1495,
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
@@ -7485,7 +7485,7 @@
       "lastPlayed": 1780079606,
       "timing": null,
       "ml": {
-        "elo": 1495,
+        "elo": 1496,
         "form10": 0.438,
         "form45": 0.5,
         "act": 0,
@@ -7692,7 +7692,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1491,
+        "elo": 1492,
         "form10": 0.458,
         "form45": 0.5,
         "act": 0,
@@ -7753,7 +7753,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 11
+        "rust": 12
       }
     },
     {
@@ -9915,7 +9915,44 @@
         "form10": 0.438,
         "form45": 0.438,
         "act": 3,
-        "rust": 7
+        "rust": 8
+      }
+    },
+    {
+      "id": 9948367,
+      "name": "Team Spirit Academy",
+      "tag": null,
+      "logo": null,
+      "rating": 1482,
+      "games": 56,
+      "wins": 22,
+      "losses": 34,
+      "lastPlayed": 1788631556,
+      "timing": {
+        "games": 56,
+        "avgMin": 41,
+        "avgWinMin": 42,
+        "avgLossMin": 40,
+        "short": {
+          "g": 12,
+          "wr": 0.3333333333333333
+        },
+        "mid": {
+          "g": 14,
+          "wr": 0.35714285714285715
+        },
+        "long": {
+          "g": 30,
+          "wr": 0.43333333333333335
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1492,
+        "form10": 0.433,
+        "form45": 0.485,
+        "act": 29,
+        "rust": 0
       }
     },
     {
@@ -10211,11 +10248,11 @@
       "lastPlayed": 1787987343,
       "timing": null,
       "ml": {
-        "elo": 1481,
+        "elo": 1482,
         "form10": 0.438,
         "form45": 0.438,
         "act": 3,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -11333,7 +11370,7 @@
       "lastPlayed": 1780163399,
       "timing": null,
       "ml": {
-        "elo": 1486,
+        "elo": 1487,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
@@ -11860,7 +11897,7 @@
         "form10": 0.389,
         "form45": 0.389,
         "act": 4,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -11897,7 +11934,7 @@
         "form10": 0.5,
         "form45": 0.55,
         "act": 5,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -11953,7 +11990,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -12029,43 +12066,6 @@
         "form45": 0.357,
         "act": 2,
         "rust": 39
-      }
-    },
-    {
-      "id": 9948367,
-      "name": "Team Spirit Academy",
-      "tag": null,
-      "logo": null,
-      "rating": 1462,
-      "games": 55,
-      "wins": 21,
-      "losses": 34,
-      "lastPlayed": 1788526684,
-      "timing": {
-        "games": 55,
-        "avgMin": 40,
-        "avgWinMin": 41,
-        "avgLossMin": 40,
-        "short": {
-          "g": 12,
-          "wr": 0.3333333333333333
-        },
-        "mid": {
-          "g": 14,
-          "wr": 0.35714285714285715
-        },
-        "long": {
-          "g": 29,
-          "wr": 0.41379310344827586
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1473,
-        "form10": 0.433,
-        "form45": 0.471,
-        "act": 30,
-        "rust": 1
       }
     },
     {
@@ -12325,7 +12325,7 @@
         "form10": 0.313,
         "form45": 0.417,
         "act": 1,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -12545,7 +12545,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1473,
+        "elo": 1474,
         "form10": 0.375,
         "form45": 0.5,
         "act": 0,
@@ -12679,7 +12679,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -12749,11 +12749,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1465,
+        "elo": 1466,
         "form10": 0.35,
         "form45": 0.357,
         "act": 2,
-        "rust": 7
+        "rust": 8
       }
     },
     {
@@ -12917,7 +12917,7 @@
       "lastPlayed": 1780827934,
       "timing": null,
       "ml": {
-        "elo": 1472,
+        "elo": 1473,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
@@ -13496,7 +13496,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1467,
+        "elo": 1468,
         "form10": 0.346,
         "form45": 0.5,
         "act": 0,
@@ -13535,8 +13535,8 @@
       "ml": {
         "elo": 1432,
         "form10": 0.3,
-        "form45": 0.38,
-        "act": 20,
+        "form45": 0.37,
+        "act": 18,
         "rust": 7
       }
     },
@@ -13574,7 +13574,7 @@
         "form10": 0.367,
         "form45": 0.583,
         "act": 1,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -13759,7 +13759,7 @@
         "form10": 0.3,
         "form45": 0.5,
         "act": 4,
-        "rust": 6
+        "rust": 7
       }
     },
     {
@@ -14319,6 +14319,20 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8984433236,
+      "start_time": 1788631556,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10225542,
+        "name": "DYNASTY"
+      },
+      "dire": {
+        "id": 9948367,
+        "name": "Team Spirit Academy"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8983925037,
       "start_time": 1788614498,
@@ -15142,20 +15156,6 @@
       "dire": {
         "id": 9256405,
         "name": "Level UP esports"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8974508003,
-      "start_time": 1788104148,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10233067,
-        "name": "4ikibamboni"
-      },
-      "dire": {
-        "id": 9928636,
-        "name": "Team Lynx"
       },
       "radiant_win": false
     }
