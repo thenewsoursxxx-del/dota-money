@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-07T17:50:26.415Z",
+  "generatedAt": "2026-09-07T21:35:45.534Z",
   "tier1LeagueCount": 2698,
-  "matchesUsed": 4652,
+  "matchesUsed": 4658,
   "teams": [
     {
       "id": 9572001,
@@ -370,7 +370,7 @@
         "form10": 0.5,
         "form45": 0.57,
         "act": 38,
-        "rust": 17
+        "rust": 18
       }
     },
     {
@@ -407,7 +407,7 @@
         "form10": 0.5,
         "form45": 0.484,
         "act": 27,
-        "rust": 16
+        "rust": 17
       }
     },
     {
@@ -477,7 +477,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1679,
+        "elo": 1678,
         "form10": 0.7,
         "form45": 0.839,
         "act": 23,
@@ -707,43 +707,6 @@
       }
     },
     {
-      "id": 10150633,
-      "name": "Pipsqueak + 4",
-      "tag": "PIPS",
-      "logo": "https://cdn.steamusercontent.com/ugc/17452646076455003343/946D2A15CF8DA1FE5108BF2765BB13E245EDE12B/",
-      "rating": 1663,
-      "games": 26,
-      "wins": 19,
-      "losses": 7,
-      "lastPlayed": 1788693529,
-      "timing": {
-        "games": 26,
-        "avgMin": 43,
-        "avgWinMin": 40,
-        "avgLossMin": 51,
-        "short": {
-          "g": 3,
-          "wr": 1
-        },
-        "mid": {
-          "g": 9,
-          "wr": 0.7777777777777778
-        },
-        "long": {
-          "g": 14,
-          "wr": 0.6428571428571429
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1624,
-        "form10": 0.7,
-        "form45": 0.643,
-        "act": 16,
-        "rust": 1
-      }
-    },
-    {
       "id": 10150538,
       "name": "LGD Gaming",
       "tag": "LGD",
@@ -778,6 +741,43 @@
         "form45": 0.426,
         "act": 22,
         "rust": 22
+      }
+    },
+    {
+      "id": 10150633,
+      "name": "Pipsqueak + 4",
+      "tag": "PIPS",
+      "logo": "https://cdn.steamusercontent.com/ugc/17452646076455003343/946D2A15CF8DA1FE5108BF2765BB13E245EDE12B/",
+      "rating": 1643,
+      "games": 27,
+      "wins": 19,
+      "losses": 8,
+      "lastPlayed": 1788808811,
+      "timing": {
+        "games": 27,
+        "avgMin": 43,
+        "avgWinMin": 40,
+        "avgLossMin": 50,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 9,
+          "wr": 0.7777777777777778
+        },
+        "long": {
+          "g": 15,
+          "wr": 0.6
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1602,
+        "form10": 0.633,
+        "form45": 0.614,
+        "act": 17,
+        "rust": 0
       }
     },
     {
@@ -1114,6 +1114,43 @@
       }
     },
     {
+      "id": 9964962,
+      "name": "GamerLegion",
+      "tag": "GL",
+      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
+      "rating": 1592,
+      "games": 174,
+      "wins": 88,
+      "losses": 86,
+      "lastPlayed": 1788808811,
+      "timing": {
+        "games": 174,
+        "avgMin": 40,
+        "avgWinMin": 35,
+        "avgLossMin": 45,
+        "short": {
+          "g": 31,
+          "wr": 0.9032258064516129
+        },
+        "mid": {
+          "g": 61,
+          "wr": 0.4918032786885246
+        },
+        "long": {
+          "g": 82,
+          "wr": 0.36585365853658536
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1517,
+        "form10": 0.433,
+        "form45": 0.411,
+        "act": 23,
+        "rust": 0
+      }
+    },
+    {
       "id": 10182693,
       "name": "Lebanon",
       "tag": "LB",
@@ -1182,8 +1219,8 @@
       "ml": {
         "elo": 1555,
         "form10": 0.5,
-        "form45": 0.578,
-        "act": 27,
+        "form45": 0.597,
+        "act": 26,
         "rust": 1
       }
     },
@@ -1336,43 +1373,6 @@
       }
     },
     {
-      "id": 10212329,
-      "name": "Team Synapse",
-      "tag": null,
-      "logo": "https://cdn.steamusercontent.com/ugc/14176785811446421230/E9FC96999431CDA69AD21FB9FF85FC022E8338BB/",
-      "rating": 1585,
-      "games": 28,
-      "wins": 17,
-      "losses": 11,
-      "lastPlayed": 1788793751,
-      "timing": {
-        "games": 28,
-        "avgMin": 45,
-        "avgWinMin": 47,
-        "avgLossMin": 41,
-        "short": {
-          "g": 2,
-          "wr": null
-        },
-        "mid": {
-          "g": 7,
-          "wr": 0.14285714285714285
-        },
-        "long": {
-          "g": 19,
-          "wr": 0.7894736842105263
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1573,
-        "form10": 0.633,
-        "form45": 0.591,
-        "act": 28,
-        "rust": 0
-      }
-    },
-    {
       "id": 10182492,
       "name": "Kyrgyzstan",
       "tag": null,
@@ -1476,7 +1476,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1546,
+        "elo": 1545,
         "form10": 0.708,
         "form45": 0.5,
         "act": 0,
@@ -1684,44 +1684,7 @@
         "form10": 0.567,
         "form45": 0.625,
         "act": 7,
-        "rust": 8
-      }
-    },
-    {
-      "id": 9964962,
-      "name": "GamerLegion",
-      "tag": "GL",
-      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
-      "rating": 1572,
-      "games": 173,
-      "wins": 87,
-      "losses": 86,
-      "lastPlayed": 1786863431,
-      "timing": {
-        "games": 173,
-        "avgMin": 40,
-        "avgWinMin": 35,
-        "avgLossMin": 45,
-        "short": {
-          "g": 31,
-          "wr": 0.9032258064516129
-        },
-        "mid": {
-          "g": 61,
-          "wr": 0.4918032786885246
-        },
-        "long": {
-          "g": 81,
-          "wr": 0.35802469135802467
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1496,
-        "form10": 0.433,
-        "form45": 0.389,
-        "act": 22,
-        "rust": 22
+        "rust": 9
       }
     },
     {
@@ -2090,8 +2053,8 @@
       "ml": {
         "elo": 1531,
         "form10": 0.433,
-        "form45": 0.582,
-        "act": 44,
+        "form45": 0.573,
+        "act": 43,
         "rust": 1
       }
     },
@@ -2149,6 +2112,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 9338413,
+      "name": "MOUZ",
+      "tag": "MOUZ",
+      "logo": "https://cdn.steamusercontent.com/ugc/14936784213521439739/3EA33A8516BDE538B7963F044CD1B7AB4B0BB60D/",
+      "rating": 1559,
+      "games": 167,
+      "wins": 72,
+      "losses": 95,
+      "lastPlayed": 1788803529,
+      "timing": {
+        "games": 167,
+        "avgMin": 40,
+        "avgWinMin": 38,
+        "avgLossMin": 41,
+        "short": {
+          "g": 26,
+          "wr": 0.6153846153846154
+        },
+        "mid": {
+          "g": 64,
+          "wr": 0.4375
+        },
+        "long": {
+          "g": 77,
+          "wr": 0.36363636363636365
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1512,
+        "form10": 0.5,
+        "form45": 0.411,
+        "act": 23,
+        "rust": 0
       }
     },
     {
@@ -2519,6 +2519,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10212329,
+      "name": "Team Synapse",
+      "tag": null,
+      "logo": "https://cdn.steamusercontent.com/ugc/14176785811446421230/E9FC96999431CDA69AD21FB9FF85FC022E8338BB/",
+      "rating": 1549,
+      "games": 30,
+      "wins": 17,
+      "losses": 13,
+      "lastPlayed": 1788803529,
+      "timing": {
+        "games": 30,
+        "avgMin": 45,
+        "avgWinMin": 47,
+        "avgLossMin": 42,
+        "short": {
+          "g": 2,
+          "wr": null
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.125
+        },
+        "long": {
+          "g": 20,
+          "wr": 0.75
+        },
+        "closesFast": false
+      },
+      "ml": {
+        "elo": 1534,
+        "form10": 0.5,
+        "form45": 0.557,
+        "act": 30,
+        "rust": 0
       }
     },
     {
@@ -2964,7 +3001,7 @@
         "form10": 0.625,
         "form45": 0.625,
         "act": 7,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -3260,7 +3297,7 @@
         "form10": 0.567,
         "form45": 0.525,
         "act": 15,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -3885,43 +3922,6 @@
       }
     },
     {
-      "id": 9338413,
-      "name": "MOUZ",
-      "tag": "MOUZ",
-      "logo": "https://cdn.steamusercontent.com/ugc/14936784213521439739/3EA33A8516BDE538B7963F044CD1B7AB4B0BB60D/",
-      "rating": 1523,
-      "games": 165,
-      "wins": 70,
-      "losses": 95,
-      "lastPlayed": 1788793751,
-      "timing": {
-        "games": 165,
-        "avgMin": 40,
-        "avgWinMin": 38,
-        "avgLossMin": 41,
-        "short": {
-          "g": 26,
-          "wr": 0.6153846153846154
-        },
-        "mid": {
-          "g": 63,
-          "wr": 0.42857142857142855
-        },
-        "long": {
-          "g": 76,
-          "wr": 0.35526315789473684
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1473,
-        "form10": 0.5,
-        "form45": 0.365,
-        "act": 21,
-        "rust": 0
-      }
-    },
-    {
       "id": 10208071,
       "name": "Xtreme Gaming",
       "tag": null,
@@ -4099,7 +4099,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1509,
+        "elo": 1508,
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
@@ -4140,7 +4140,7 @@
         "form10": 0.5,
         "form45": 0.559,
         "act": 12,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -4175,8 +4175,8 @@
       "ml": {
         "elo": 1511,
         "form10": 0.433,
-        "form45": 0.568,
-        "act": 17,
+        "form45": 0.548,
+        "act": 16,
         "rust": 28
       }
     },
@@ -5270,7 +5270,7 @@
       "lastPlayed": 1775654713,
       "timing": null,
       "ml": {
-        "elo": 1505,
+        "elo": 1504,
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
@@ -5940,6 +5940,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 9799036,
+      "name": "TeamDk",
+      "tag": null,
+      "logo": null,
+      "rating": 1515,
+      "games": 14,
+      "wins": 8,
+      "losses": 6,
+      "lastPlayed": 1788810721,
+      "timing": {
+        "games": 14,
+        "avgMin": 34,
+        "avgWinMin": 34,
+        "avgLossMin": 35,
+        "short": {
+          "g": 5,
+          "wr": 0.4
+        },
+        "mid": {
+          "g": 5,
+          "wr": 0.8
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1514,
+        "form10": 0.5,
+        "form45": 0.563,
+        "act": 3,
+        "rust": 0
       }
     },
     {
@@ -7568,43 +7605,6 @@
       }
     },
     {
-      "id": 9799036,
-      "name": "TeamDk",
-      "tag": null,
-      "logo": null,
-      "rating": 1500,
-      "games": 11,
-      "wins": 6,
-      "losses": 5,
-      "lastPlayed": 1780424891,
-      "timing": {
-        "games": 11,
-        "avgMin": 32,
-        "avgWinMin": 32,
-        "avgLossMin": 32,
-        "short": {
-          "g": 5,
-          "wr": 0.4
-        },
-        "mid": {
-          "g": 4,
-          "wr": 0.75
-        },
-        "long": {
-          "g": 2,
-          "wr": null
-        },
-        "closesFast": false
-      },
-      "ml": {
-        "elo": 1499,
-        "form10": 0.567,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 7587797,
       "name": "The MoB",
       "tag": null,
@@ -8648,7 +8648,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1485,
+        "elo": 1486,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -9173,7 +9173,7 @@
         "form10": 0.464,
         "form45": 0.464,
         "act": 9,
-        "rust": 3
+        "rust": 4
       }
     },
     {
@@ -10344,7 +10344,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 13
+        "rust": 14
       }
     },
     {
@@ -10363,7 +10363,7 @@
         "form10": 0.438,
         "form45": 0.438,
         "act": 3,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -10421,6 +10421,25 @@
         "form45": 0.417,
         "act": 1,
         "rust": 8
+      }
+    },
+    {
+      "id": 10170552,
+      "name": "Rebeldes",
+      "tag": null,
+      "logo": null,
+      "rating": 1485,
+      "games": 3,
+      "wins": 1,
+      "losses": 2,
+      "lastPlayed": 1788810721,
+      "timing": null,
+      "ml": {
+        "elo": 1485,
+        "form10": 0.438,
+        "form45": 0.438,
+        "act": 3,
+        "rust": 0
       }
     },
     {
@@ -11840,7 +11859,7 @@
       "lastPlayed": 1775655528,
       "timing": null,
       "ml": {
-        "elo": 1495,
+        "elo": 1496,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -12011,7 +12030,7 @@
       "lastPlayed": 1777817417,
       "timing": null,
       "ml": {
-        "elo": 1494,
+        "elo": 1495,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -13457,7 +13476,7 @@
         "form10": 0.45,
         "form45": 0.45,
         "act": 5,
-        "rust": 36
+        "rust": 37
       }
     },
     {
@@ -15687,7 +15706,7 @@
         "form10": 0.5,
         "form45": 0.55,
         "act": 5,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -16039,11 +16058,11 @@
       "lastPlayed": 1787986268,
       "timing": null,
       "ml": {
-        "elo": 1469,
+        "elo": 1470,
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -16991,7 +17010,7 @@
         "form10": 0.35,
         "form45": 0.35,
         "act": 5,
-        "rust": 37
+        "rust": 38
       }
     },
     {
@@ -17154,7 +17173,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1466,
+        "elo": 1467,
         "form10": 0.35,
         "form45": 0.357,
         "act": 2,
@@ -17284,7 +17303,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1468,
+        "elo": 1469,
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
@@ -17960,7 +17979,7 @@
         "form10": 0.367,
         "form45": 0.357,
         "act": 2,
-        "rust": 44
+        "rust": 45
       }
     },
     {
@@ -18071,7 +18090,7 @@
         "form10": 0.3,
         "form45": 0.5,
         "act": 4,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -18145,7 +18164,7 @@
         "form10": 0.367,
         "form45": 0.357,
         "act": 2,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -18809,8 +18828,8 @@
       "ml": {
         "elo": 1394,
         "form10": 0.3,
-        "form45": 0.348,
-        "act": 28,
+        "form45": 0.359,
+        "act": 27,
         "rust": 9
       }
     },
@@ -19001,6 +19020,90 @@
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8988014473,
+      "start_time": 1788810721,
+      "league": "NEXUS SERIES I",
+      "radiant": {
+        "id": 9799036,
+        "name": "TeamDk"
+      },
+      "dire": {
+        "id": 10170552,
+        "name": "Rebeldes"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8987965402,
+      "start_time": 1788808811,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 9964962,
+        "name": "GamerLegion"
+      },
+      "dire": {
+        "id": 10150633,
+        "name": "Pipsqueak + 4"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8987895470,
+      "start_time": 1788805759,
+      "league": "NEXUS SERIES I",
+      "radiant": {
+        "id": 10170552,
+        "name": "Rebeldes"
+      },
+      "dire": {
+        "id": 9799036,
+        "name": "TeamDk"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8987833085,
+      "start_time": 1788803529,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10212329,
+        "name": "Team Synapse"
+      },
+      "dire": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8987763157,
+      "start_time": 1788800965,
+      "league": "NEXUS SERIES I",
+      "radiant": {
+        "id": 9799036,
+        "name": "TeamDk"
+      },
+      "dire": {
+        "id": 10170552,
+        "name": "Rebeldes"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8987734661,
+      "start_time": 1788799682,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10212329,
+        "name": "Team Synapse"
+      },
+      "dire": {
+        "id": 9338413,
+        "name": "MOUZ"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8987569122,
       "start_time": 1788793751,
@@ -19756,90 +19859,6 @@
         "name": "Team Spirit Academy"
       },
       "radiant_win": false
-    },
-    {
-      "match_id": 8978023576,
-      "start_time": 1788283964,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10212329,
-        "name": "Team Synapse"
-      },
-      "dire": {
-        "id": 9256405,
-        "name": "Level UP esports"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8977913355,
-      "start_time": 1788279701,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10212329,
-        "name": "Team Synapse"
-      },
-      "dire": {
-        "id": 9256405,
-        "name": "Level UP esports"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8977808817,
-      "start_time": 1788276039,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10212329,
-        "name": "Team Synapse"
-      },
-      "dire": {
-        "id": 9256405,
-        "name": "Level UP esports"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8977623650,
-      "start_time": 1788269914,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10019843,
-        "name": "Inner Circle x Insanity"
-      },
-      "dire": {
-        "id": 9928636,
-        "name": "Team Lynx"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8977476867,
-      "start_time": 1788264638,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10019843,
-        "name": "Inner Circle x Insanity"
-      },
-      "dire": {
-        "id": 9928636,
-        "name": "Team Lynx"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8977325814,
-      "start_time": 1788257559,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10232231,
-        "name": "Klim Sani4"
-      },
-      "dire": {
-        "id": 10164236,
-        "name": "PuckChamp"
-      },
-      "radiant_win": true
     }
   ]
 }

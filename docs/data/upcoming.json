@@ -1,7 +1,7 @@
 {
   "_comment": "Автогенерируется src/fetch_upcoming.mjs из Liquipedia. teamA/teamB — team_id. oddsA/oddsB (кэфы) можно вписать вручную — они сохраняются при следующем автообновлении (матчинг по парам команд и дате).",
   "_source": "Liquipedia (Dota2) · upcoming matches · Tier-1 = обе команды есть в датасете",
-  "generatedAt": "2026-09-07T17:50:28.745Z",
+  "generatedAt": "2026-09-07T21:35:48.271Z",
   "matches": [
     {
       "id": "liq-1788879600-0",
