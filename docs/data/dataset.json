@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-07T21:35:45.534Z",
+  "generatedAt": "2026-09-08T03:47:36.150Z",
   "tier1LeagueCount": 2698,
-  "matchesUsed": 4658,
+  "matchesUsed": 4661,
   "teams": [
     {
       "id": 9572001,
@@ -33,11 +33,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1685,
+        "elo": 1684,
         "form10": 0.5,
         "form45": 0.638,
         "act": 24,
-        "rust": 15
+        "rust": 16
       }
     },
     {
@@ -70,11 +70,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1703,
+        "elo": 1702,
         "form10": 0.7,
         "form45": 0.632,
         "act": 29,
-        "rust": 15
+        "rust": 16
       }
     },
     {
@@ -107,7 +107,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1656,
+        "elo": 1655,
         "form10": 0.7,
         "form45": 0.5,
         "act": 0,
@@ -144,11 +144,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1694,
+        "elo": 1693,
         "form10": 0.833,
         "form45": 0.875,
         "act": 15,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -255,7 +255,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1617,
+        "elo": 1616,
         "form10": 0.433,
         "form45": 0.607,
         "act": 37,
@@ -296,7 +296,7 @@
         "form10": 0.5,
         "form45": 0.522,
         "act": 40,
-        "rust": 16
+        "rust": 17
       }
     },
     {
@@ -329,7 +329,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1560,
+        "elo": 1559,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -403,7 +403,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1598,
+        "elo": 1597,
         "form10": 0.5,
         "form45": 0.484,
         "act": 27,
@@ -481,7 +481,7 @@
         "form10": 0.7,
         "form45": 0.839,
         "act": 23,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -629,7 +629,7 @@
         "form10": 0.567,
         "form45": 0.568,
         "act": 17,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -703,7 +703,7 @@
         "form10": 0.567,
         "form45": 0.519,
         "act": 21,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -740,44 +740,7 @@
         "form10": 0.5,
         "form45": 0.426,
         "act": 22,
-        "rust": 22
-      }
-    },
-    {
-      "id": 10150633,
-      "name": "Pipsqueak + 4",
-      "tag": "PIPS",
-      "logo": "https://cdn.steamusercontent.com/ugc/17452646076455003343/946D2A15CF8DA1FE5108BF2765BB13E245EDE12B/",
-      "rating": 1643,
-      "games": 27,
-      "wins": 19,
-      "losses": 8,
-      "lastPlayed": 1788808811,
-      "timing": {
-        "games": 27,
-        "avgMin": 43,
-        "avgWinMin": 40,
-        "avgLossMin": 50,
-        "short": {
-          "g": 3,
-          "wr": 1
-        },
-        "mid": {
-          "g": 9,
-          "wr": 0.7777777777777778
-        },
-        "long": {
-          "g": 15,
-          "wr": 0.6
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1602,
-        "form10": 0.633,
-        "form45": 0.614,
-        "act": 17,
-        "rust": 0
+        "rust": 23
       }
     },
     {
@@ -855,6 +818,43 @@
       }
     },
     {
+      "id": 10150633,
+      "name": "Pipsqueak + 4",
+      "tag": "PIPS",
+      "logo": "https://cdn.steamusercontent.com/ugc/17452646076455003343/946D2A15CF8DA1FE5108BF2765BB13E245EDE12B/",
+      "rating": 1625,
+      "games": 28,
+      "wins": 19,
+      "losses": 9,
+      "lastPlayed": 1788813513,
+      "timing": {
+        "games": 28,
+        "avgMin": 43,
+        "avgWinMin": 40,
+        "avgLossMin": 49,
+        "short": {
+          "g": 3,
+          "wr": 1
+        },
+        "mid": {
+          "g": 9,
+          "wr": 0.7777777777777778
+        },
+        "long": {
+          "g": 16,
+          "wr": 0.5625
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1582,
+        "form10": 0.633,
+        "form45": 0.587,
+        "act": 18,
+        "rust": 0
+      }
+    },
+    {
       "id": 10182748,
       "name": "Team South Africa",
       "tag": "RSA",
@@ -892,6 +892,43 @@
       }
     },
     {
+      "id": 9964962,
+      "name": "GamerLegion",
+      "tag": "GL",
+      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
+      "rating": 1610,
+      "games": 175,
+      "wins": 89,
+      "losses": 86,
+      "lastPlayed": 1788813513,
+      "timing": {
+        "games": 175,
+        "avgMin": 40,
+        "avgWinMin": 35,
+        "avgLossMin": 45,
+        "short": {
+          "g": 31,
+          "wr": 0.9032258064516129
+        },
+        "mid": {
+          "g": 61,
+          "wr": 0.4918032786885246
+        },
+        "long": {
+          "g": 83,
+          "wr": 0.37349397590361444
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1537,
+        "form10": 0.5,
+        "form45": 0.431,
+        "act": 24,
+        "rust": 0
+      }
+    },
+    {
       "id": 10207983,
       "name": "PlayTime",
       "tag": "PT",
@@ -925,7 +962,7 @@
         "form10": 0.767,
         "form45": 0.675,
         "act": 15,
-        "rust": 33
+        "rust": 34
       }
     },
     {
@@ -1114,43 +1151,6 @@
       }
     },
     {
-      "id": 9964962,
-      "name": "GamerLegion",
-      "tag": "GL",
-      "logo": "https://cdn.steamusercontent.com/ugc/13245379764580870318/1048428BEFAC87EC1C64E15706A4758A173B5BFB/",
-      "rating": 1592,
-      "games": 174,
-      "wins": 88,
-      "losses": 86,
-      "lastPlayed": 1788808811,
-      "timing": {
-        "games": 174,
-        "avgMin": 40,
-        "avgWinMin": 35,
-        "avgLossMin": 45,
-        "short": {
-          "g": 31,
-          "wr": 0.9032258064516129
-        },
-        "mid": {
-          "g": 61,
-          "wr": 0.4918032786885246
-        },
-        "long": {
-          "g": 82,
-          "wr": 0.36585365853658536
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1517,
-        "form10": 0.433,
-        "form45": 0.411,
-        "act": 23,
-        "rust": 0
-      }
-    },
-    {
       "id": 10182693,
       "name": "Lebanon",
       "tag": "LB",
@@ -1180,7 +1180,7 @@
         "closesFast": null
       },
       "ml": {
-        "elo": 1552,
+        "elo": 1551,
         "form10": 0.773,
         "form45": 0.5,
         "act": 0,
@@ -1221,7 +1221,7 @@
         "form10": 0.5,
         "form45": 0.597,
         "act": 26,
-        "rust": 1
+        "rust": 2
       }
     },
     {
@@ -1258,7 +1258,7 @@
         "form10": 0.5,
         "form45": 0.528,
         "act": 13,
-        "rust": 26
+        "rust": 27
       }
     },
     {
@@ -1328,7 +1328,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1550,
+        "elo": 1549,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -1517,7 +1517,7 @@
         "form10": 0.633,
         "form45": 0.417,
         "act": 1,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -1680,7 +1680,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1548,
+        "elo": 1547,
         "form10": 0.567,
         "form45": 0.625,
         "act": 7,
@@ -1717,7 +1717,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1541,
+        "elo": 1540,
         "form10": 0.633,
         "form45": 0.5,
         "act": 0,
@@ -1758,7 +1758,7 @@
         "form10": 0.367,
         "form45": 0.406,
         "act": 11,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -1906,7 +1906,7 @@
         "form10": 0.567,
         "form45": 0.708,
         "act": 7,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -1958,7 +1958,7 @@
       "lastPlayed": 1771699740,
       "timing": null,
       "ml": {
-        "elo": 1513,
+        "elo": 1512,
         "form10": 0.722,
         "form45": 0.5,
         "act": 0,
@@ -1977,7 +1977,7 @@
       "lastPlayed": 1782933382,
       "timing": null,
       "ml": {
-        "elo": 1537,
+        "elo": 1536,
         "form10": 0.722,
         "form45": 0.5,
         "act": 0,
@@ -2018,7 +2018,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 0,
-        "rust": 55
+        "rust": 56
       }
     },
     {
@@ -2053,8 +2053,8 @@
       "ml": {
         "elo": 1531,
         "form10": 0.433,
-        "form45": 0.573,
-        "act": 43,
+        "form45": 0.564,
+        "act": 42,
         "rust": 1
       }
     },
@@ -2292,7 +2292,7 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1532,
+        "elo": 1531,
         "form10": 0.567,
         "form45": 0.5,
         "act": 0,
@@ -2333,7 +2333,7 @@
         "form10": 0.433,
         "form45": 0.557,
         "act": 30,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -2890,7 +2890,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 18,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -3186,7 +3186,7 @@
         "form10": 0.3,
         "form45": 0.397,
         "act": 24,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -3542,7 +3542,7 @@
         "form10": 0.611,
         "form45": 0.583,
         "act": 1,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -3951,11 +3951,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1517,
+        "elo": 1516,
         "form10": 0.577,
         "form45": 0.577,
         "act": 8,
-        "rust": 35
+        "rust": 36
       }
     },
     {
@@ -3992,7 +3992,7 @@
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
-        "rust": 57
+        "rust": 58
       }
     },
     {
@@ -4177,7 +4177,7 @@
         "form10": 0.433,
         "form45": 0.548,
         "act": 16,
-        "rust": 28
+        "rust": 29
       }
     },
     {
@@ -4364,7 +4364,7 @@
         "form10": 0.433,
         "form45": 0.583,
         "act": 1,
-        "rust": 37
+        "rust": 38
       }
     },
     {
@@ -4568,7 +4568,7 @@
       "lastPlayed": 1779024589,
       "timing": null,
       "ml": {
-        "elo": 1507,
+        "elo": 1506,
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
@@ -5289,7 +5289,7 @@
       "lastPlayed": 1775683695,
       "timing": null,
       "ml": {
-        "elo": 1505,
+        "elo": 1504,
         "form10": 0.583,
         "form45": 0.5,
         "act": 0,
@@ -5578,7 +5578,7 @@
         "form10": 0.583,
         "form45": 0.583,
         "act": 1,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -6352,7 +6352,7 @@
         "form10": 0.583,
         "form45": 0.583,
         "act": 1,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -6910,7 +6910,7 @@
         "form10": 0.433,
         "form45": 0.5,
         "act": 0,
-        "rust": 58
+        "rust": 59
       }
     },
     {
@@ -6966,7 +6966,7 @@
         "form10": 0.367,
         "form45": 0.344,
         "act": 11,
-        "rust": 23
+        "rust": 24
       }
     },
     {
@@ -7134,7 +7134,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 2,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -7451,6 +7451,43 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 2885851,
+      "name": "GIOR DOTA",
+      "tag": "SALITAS",
+      "logo": "https://cdn.steamusercontent.com/ugc/15293258910399767219/489BABB65DDA474C37E87D9A19FAB5BBE8B543A6/",
+      "rating": 1502,
+      "games": 17,
+      "wins": 9,
+      "losses": 8,
+      "lastPlayed": 1788819538,
+      "timing": {
+        "games": 17,
+        "avgMin": 34,
+        "avgWinMin": 33,
+        "avgLossMin": 35,
+        "short": {
+          "g": 5,
+          "wr": 0.6
+        },
+        "mid": {
+          "g": 8,
+          "wr": 0.5
+        },
+        "long": {
+          "g": 4,
+          "wr": 0.5
+        },
+        "closesFast": true
+      },
+      "ml": {
+        "elo": 1518,
+        "form10": 0.433,
+        "form45": 0.643,
+        "act": 2,
+        "rust": 0
       }
     },
     {
@@ -8228,25 +8265,6 @@
       }
     },
     {
-      "id": 10122515,
-      "name": "The House Esports",
-      "tag": null,
-      "logo": null,
-      "rating": 1498,
-      "games": 2,
-      "wins": 1,
-      "losses": 1,
-      "lastPlayed": 1780078298,
-      "timing": null,
-      "ml": {
-        "elo": 1499,
-        "form10": 0.5,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10150568,
       "name": "Lindorfitos",
       "tag": null,
@@ -8615,7 +8633,7 @@
         "form10": 0.5,
         "form45": 0.5,
         "act": 10,
-        "rust": 8
+        "rust": 9
       }
     },
     {
@@ -8727,7 +8745,7 @@
         "form10": 0.433,
         "form45": 0.518,
         "act": 23,
-        "rust": 1
+        "rust": 2
       }
     },
     {
@@ -8857,7 +8875,7 @@
         "form10": 0.3,
         "form45": 0.275,
         "act": 15,
-        "rust": 0
+        "rust": 1
       }
     },
     {
@@ -12508,7 +12526,7 @@
         "form10": 0.417,
         "form45": 0.417,
         "act": 1,
-        "rust": 19
+        "rust": 20
       }
     },
     {
@@ -12603,7 +12621,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -14052,7 +14070,7 @@
       "lastPlayed": 1775826147,
       "timing": null,
       "ml": {
-        "elo": 1494,
+        "elo": 1495,
         "form10": 0.417,
         "form45": 0.5,
         "act": 0,
@@ -14112,7 +14130,7 @@
         "form10": 0.409,
         "form45": 0.409,
         "act": 6,
-        "rust": 36
+        "rust": 37
       }
     },
     {
@@ -14238,7 +14256,7 @@
       "lastPlayed": 1771783197,
       "timing": null,
       "ml": {
-        "elo": 1495,
+        "elo": 1496,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
@@ -14335,7 +14353,7 @@
         "form10": 0.433,
         "form45": 0.433,
         "act": 10,
-        "rust": 31
+        "rust": 32
       }
     },
     {
@@ -14599,7 +14617,7 @@
         "form10": 0.357,
         "form45": 0.357,
         "act": 2,
-        "rust": 31
+        "rust": 32
       }
     },
     {
@@ -15221,43 +15239,6 @@
       }
     },
     {
-      "id": 2885851,
-      "name": "GIOR DOTA",
-      "tag": null,
-      "logo": null,
-      "rating": 1469,
-      "games": 15,
-      "wins": 7,
-      "losses": 8,
-      "lastPlayed": 1780164838,
-      "timing": {
-        "games": 15,
-        "avgMin": 34,
-        "avgWinMin": 33,
-        "avgLossMin": 35,
-        "short": {
-          "g": 5,
-          "wr": 0.6
-        },
-        "mid": {
-          "g": 6,
-          "wr": 0.3333333333333333
-        },
-        "long": {
-          "g": 4,
-          "wr": 0.5
-        },
-        "closesFast": true
-      },
-      "ml": {
-        "elo": 1486,
-        "form10": 0.433,
-        "form45": 0.5,
-        "act": 0,
-        "rust": 60
-      }
-    },
-    {
       "id": 10027459,
       "name": "alohasquad",
       "tag": null,
@@ -15702,7 +15683,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1491,
+        "elo": 1492,
         "form10": 0.5,
         "form45": 0.55,
         "act": 5,
@@ -15777,7 +15758,7 @@
       "lastPlayed": 1768425087,
       "timing": null,
       "ml": {
-        "elo": 1495,
+        "elo": 1496,
         "form10": 0.357,
         "form45": 0.5,
         "act": 0,
@@ -15890,7 +15871,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1475,
+        "elo": 1476,
         "form10": 0.423,
         "form45": 0.423,
         "act": 8,
@@ -15928,7 +15909,7 @@
       "lastPlayed": 1787940249,
       "timing": null,
       "ml": {
-        "elo": 1477,
+        "elo": 1478,
         "form10": 0.357,
         "form45": 0.417,
         "act": 1,
@@ -16007,6 +15988,25 @@
         "form45": 0.5,
         "act": 0,
         "rust": 60
+      }
+    },
+    {
+      "id": 10122515,
+      "name": "The House Esports",
+      "tag": null,
+      "logo": null,
+      "rating": 1465,
+      "games": 4,
+      "wins": 1,
+      "losses": 3,
+      "lastPlayed": 1788819538,
+      "timing": null,
+      "ml": {
+        "elo": 1468,
+        "form10": 0.389,
+        "form45": 0.357,
+        "act": 2,
+        "rust": 0
       }
     },
     {
@@ -16708,7 +16708,7 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1474,
+        "elo": 1475,
         "form10": 0.367,
         "form45": 0.5,
         "act": 0,
@@ -17452,7 +17452,7 @@
       "lastPlayed": 1782755056,
       "timing": null,
       "ml": {
-        "elo": 1467,
+        "elo": 1468,
         "form10": 0.278,
         "form45": 0.5,
         "act": 0,
@@ -17774,7 +17774,7 @@
         "form10": 0.433,
         "form45": 0.417,
         "act": 1,
-        "rust": 14
+        "rust": 15
       }
     },
     {
@@ -17812,7 +17812,7 @@
         "form10": 0.278,
         "form45": 0.278,
         "act": 4,
-        "rust": 37
+        "rust": 38
       }
     },
     {
@@ -18016,7 +18016,7 @@
         "form10": 0.3,
         "form45": 0.361,
         "act": 13,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -18275,7 +18275,7 @@
         "form10": 0.233,
         "form45": 0.5,
         "act": 0,
-        "rust": 58
+        "rust": 59
       }
     },
     {
@@ -18423,7 +18423,7 @@
         "form10": 0.3,
         "form45": 0.5,
         "act": 0,
-        "rust": 45
+        "rust": 46
       }
     },
     {
@@ -18456,11 +18456,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1463,
+        "elo": 1464,
         "form10": 0.233,
         "form45": 0.357,
         "act": 2,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -18493,11 +18493,11 @@
         "closesFast": true
       },
       "ml": {
-        "elo": 1422,
+        "elo": 1423,
         "form10": 0.233,
         "form45": 0.306,
         "act": 13,
-        "rust": 9
+        "rust": 10
       }
     },
     {
@@ -18826,11 +18826,11 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1394,
+        "elo": 1395,
         "form10": 0.3,
-        "form45": 0.359,
-        "act": 27,
-        "rust": 9
+        "form45": 0.371,
+        "act": 26,
+        "rust": 10
       }
     },
     {
@@ -19011,15 +19011,57 @@
         "closesFast": false
       },
       "ml": {
-        "elo": 1353,
+        "elo": 1354,
         "form10": 0.167,
         "form45": 0.298,
         "act": 37,
-        "rust": 2
+        "rust": 3
       }
     }
   ],
   "recentMatches": [
+    {
+      "match_id": 8988152817,
+      "start_time": 1788819538,
+      "league": "NEXUS SERIES I",
+      "radiant": {
+        "id": 10122515,
+        "name": "The House Esports"
+      },
+      "dire": {
+        "id": 2885851,
+        "name": "GIOR DOTA"
+      },
+      "radiant_win": false
+    },
+    {
+      "match_id": 8988091750,
+      "start_time": 1788815468,
+      "league": "NEXUS SERIES I",
+      "radiant": {
+        "id": 2885851,
+        "name": "GIOR DOTA"
+      },
+      "dire": {
+        "id": 10122515,
+        "name": "The House Esports"
+      },
+      "radiant_win": true
+    },
+    {
+      "match_id": 8988064818,
+      "start_time": 1788813513,
+      "league": "EPL Masters 2026",
+      "radiant": {
+        "id": 10150633,
+        "name": "Pipsqueak + 4"
+      },
+      "dire": {
+        "id": 9964962,
+        "name": "GamerLegion"
+      },
+      "radiant_win": false
+    },
     {
       "match_id": 8988014473,
       "start_time": 1788810721,
@@ -19815,48 +19857,6 @@
       "dire": {
         "id": 10232572,
         "name": "Team Kinetix"
-      },
-      "radiant_win": false
-    },
-    {
-      "match_id": 8978292022,
-      "start_time": 1788295911,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 9600141,
-        "name": "Zero Tenacity"
-      },
-      "dire": {
-        "id": 9948367,
-        "name": "Team Spirit Academy"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8978242189,
-      "start_time": 1788292847,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 10208035,
-        "name": "Zero Tenacity"
-      },
-      "dire": {
-        "id": 9948367,
-        "name": "Team Spirit Academy"
-      },
-      "radiant_win": true
-    },
-    {
-      "match_id": 8978147287,
-      "start_time": 1788288976,
-      "league": "EPL Masters 2026",
-      "radiant": {
-        "id": 9600141,
-        "name": "Zero Tenacity"
-      },
-      "dire": {
-        "id": 9948367,
-        "name": "Team Spirit Academy"
       },
       "radiant_win": false
     }
