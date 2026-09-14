@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T04:00:19.990Z",
+  "generatedAt": "2026-09-14T12:09:58.671Z",
   "type": "logistic_regression",
   "features": [
     "eloDiff",
@@ -55,7 +55,7 @@
       "mlCal": {
         "name": "ML(calibrated)",
         "acc": 0.5408320493066255,
-        "brier": 0.24903476558290563,
+        "brier": 0.24903476558290558,
         "logloss": 0.6925264200012843
       }
     },
